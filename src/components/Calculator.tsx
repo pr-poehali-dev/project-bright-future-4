@@ -47,11 +47,11 @@ export function Calculator() {
       </div>
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl mb-16">
-          <p className="text-foreground/70 text-sm tracking-[0.3em] uppercase mb-6 font-medium">Оставить заявку</p>
-          <h2 className="text-5xl font-bold leading-[1.15] tracking-tight mb-6 text-balance lg:text-7xl text-foreground">
+          <p className="text-foreground text-sm tracking-[0.3em] uppercase mb-6 font-bold">Оставить заявку</p>
+          <h2 className="text-5xl font-extrabold leading-[1.15] tracking-tight mb-6 text-balance lg:text-7xl text-foreground drop-shadow-sm">
             Расскажите, что хотите <HighlightedText>построить</HighlightedText>
           </h2>
-          <p className="text-foreground/80 text-lg leading-relaxed font-medium">
+          <p className="text-foreground text-lg leading-relaxed font-semibold">
             Заполните форму — мы свяжемся с вами, обсудим детали и подготовим смету бесплатно.
           </p>
         </div>
