@@ -99,7 +99,7 @@ export function Calculator() {
             </div>
 
             <div>
-              <p className="text-sm font-medium mb-3 tracking-wide uppercase text-muted-foreground">Ваше имя</p>
+              <p className="text-sm font-bold mb-3 tracking-wide uppercase text-foreground">Ваше имя</p>
               <input
                 type="text"
                 required
@@ -111,7 +111,7 @@ export function Calculator() {
             </div>
 
             <div>
-              <p className="text-sm font-medium mb-3 tracking-wide uppercase text-muted-foreground">Телефон</p>
+              <p className="text-sm font-bold mb-3 tracking-wide uppercase text-foreground">Телефон</p>
               <input
                 type="tel"
                 required
@@ -123,7 +123,7 @@ export function Calculator() {
             </div>
 
             <div>
-              <p className="text-sm font-medium mb-3 tracking-wide uppercase text-muted-foreground">Пожелания</p>
+              <p className="text-sm font-bold mb-3 tracking-wide uppercase text-foreground">Пожелания</p>
               <textarea
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
