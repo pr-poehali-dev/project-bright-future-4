@@ -1,11 +1,13 @@
 import { useState, useEffect, MouseEvent } from "react"
 import { cn } from "../lib/utils"
 import Icon from "@/components/ui/icon"
+import { GiftModal } from "./GiftModal"
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [contactOpen, setContactOpen] = useState(false)
+  const [giftOpen, setGiftOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,12 +65,21 @@ export function Header() {
             ))}
           </ul>
 
-          <button
-            onClick={() => setContactOpen(true)}
-            className="hidden md:inline-flex items-center gap-2 text-sm px-5 py-2.5 transition-all duration-300 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white"
-          >
-            Наши контакты
-          </button>
+          <div className="hidden md:flex items-center gap-3">
+            <button
+              onClick={() => setGiftOpen(true)}
+              className="inline-flex items-center gap-2 text-sm px-4 py-2.5 transition-all duration-300 bg-orange-500 text-white hover:bg-orange-600"
+            >
+              <Icon name="Gift" size={15} />
+              Подарки на выбор
+            </button>
+            <button
+              onClick={() => setContactOpen(true)}
+              className="inline-flex items-center gap-2 text-sm px-5 py-2.5 transition-all duration-300 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white"
+            >
+              Наши контакты
+            </button>
+          </div>
 
           <button
             className="md:hidden z-50 transition-colors duration-300 text-white"
@@ -125,6 +136,8 @@ export function Header() {
           </div>
         </div>
       </header>
+
+      <GiftModal open={giftOpen} onClose={() => setGiftOpen(false)} />
 
       {/* Модальное окно с контактами */}
       {contactOpen && (
