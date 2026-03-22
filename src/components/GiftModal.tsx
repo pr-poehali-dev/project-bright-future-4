@@ -37,29 +37,24 @@ const gifts = [
 interface GiftModalProps {
   open: boolean
   onClose: () => void
+  onSelect?: (gift: string) => void
 }
 
-export function GiftModal({ open, onClose }: GiftModalProps) {
+export function GiftModal({ open, onClose, onSelect }: GiftModalProps) {
   const [selected, setSelected] = useState<number | null>(null)
 
   if (!open) return null
 
   const handleSubmit = () => {
-    const gift = selected !== null ? gifts[selected].title : ""
-    const anchor = document.getElementById("calculator")
-    if (anchor) {
-      anchor.scrollIntoView({ behavior: "smooth" })
+    if (selected === null) return
+    const gift = gifts[selected].title
+    if (onSelect) {
+      onSelect(gift)
+    } else {
+      const anchor = document.getElementById("calculator")
+      if (anchor) anchor.scrollIntoView({ behavior: "smooth" })
     }
     onClose()
-    if (gift) {
-      setTimeout(() => {
-        const textarea = document.querySelector<HTMLTextAreaElement>("textarea")
-        if (textarea) {
-          textarea.value = `Хочу подарок: ${gift}`
-          textarea.dispatchEvent(new Event("input", { bubbles: true }))
-        }
-      }, 800)
-    }
   }
 
   return (

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { HighlightedText } from "./HighlightedText"
 import Icon from "@/components/ui/icon"
+import { GiftModal } from "./GiftModal"
 
 const buildingTypes = ["Жилой дом", "Баня", "Дача"]
 
@@ -11,28 +12,42 @@ export function Calculator() {
   const [phone, setPhone] = useState("")
   const [comment, setComment] = useState("")
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const [gift, setGift] = useState("")
+  const [giftOpen, setGiftOpen] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (!gift) {
+      setGiftOpen(true)
+      return
+    }
+
     setStatus("loading")
 
     try {
       const res = await fetch("https://functions.poehali.dev/47abad41-4ccf-413e-9fab-2c7da189c73c", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, phone, buildingType, area, comment }),
+        body: JSON.stringify({ name, phone, buildingType, area, comment: comment + (gift ? `\nПодарок: ${gift}` : "") }),
       })
       if (res.ok) {
         setStatus("success")
         setName("")
         setPhone("")
         setComment("")
+        setGift("")
       } else {
         setStatus("error")
       }
     } catch {
       setStatus("error")
     }
+  }
+
+  const handleGiftSelect = (selectedGift: string) => {
+    setGift(selectedGift)
+    setGiftOpen(false)
   }
 
   return (
@@ -133,6 +148,28 @@ export function Calculator() {
               />
             </div>
 
+            {/* Выбранный подарок */}
+            {gift ? (
+              <div className="flex items-center justify-between gap-3 bg-orange-50 border border-orange-300 px-4 py-3">
+                <div className="flex items-center gap-2 text-orange-700 text-sm font-semibold">
+                  <Icon name="Gift" size={16} />
+                  Подарок: {gift}
+                </div>
+                <button type="button" onClick={() => setGiftOpen(true)} className="text-xs text-orange-500 underline">
+                  Изменить
+                </button>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setGiftOpen(true)}
+                className="flex items-center justify-center gap-2 w-full border-2 border-dashed border-orange-300 px-4 py-3 text-sm text-orange-600 font-semibold hover:bg-orange-50 transition-colors"
+              >
+                <Icon name="Gift" size={16} />
+                Выбрать подарок (обязательно)
+              </button>
+            )}
+
             <button
               type="submit"
               disabled={status === "loading"}
@@ -187,6 +224,12 @@ export function Calculator() {
           </div>
         </div>
       </div>
+
+      <GiftModal
+        open={giftOpen}
+        onClose={() => setGiftOpen(false)}
+        onSelect={handleGiftSelect}
+      />
     </section>
   )
 }
