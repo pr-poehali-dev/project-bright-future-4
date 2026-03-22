@@ -7,6 +7,7 @@ export function Hero() {
           alt="Строительство каркасного дома"
           className="w-full h-full object-cover object-center"
         />
+        <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%)'}} />
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 pt-8 md:pt-0">
