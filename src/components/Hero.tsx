@@ -11,15 +11,15 @@ export function Hero() {
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 pt-8 md:pt-0">
         <div className="mb-72 md:mb-60 lg:mb-80 -mt-32 md:-mt-40">
-          <p className="text-sm tracking-[0.3em] uppercase text-center text-white/70 mb-4">{"Тульская область"}</p>
+          <p className="text-5xl md:text-7xl font-extrabold text-center text-white tracking-widest drop-shadow-lg mb-4">TOYSTROY</p>
 
-          <h1 className="text-4xl font-extrabold text-balance text-center text-white mb-6 tracking-tight leading-[1.1] lg:text-6xl drop-shadow-lg">
-            {"Строим профессионально"}
-            <br />
-            <span className="text-orange-300">{"каркасные дома,"}
-            <br />
-            {"бани и дачи"}</span>
+          <h1 className="text-xl md:text-3xl font-semibold text-balance text-center text-white mb-4 tracking-wide drop-shadow-md leading-snug">
+            Каркасные дома, дачи и бани под ключ
           </h1>
+
+          <p className="text-center text-orange-300 text-lg md:text-xl font-bold tracking-widest uppercase drop-shadow-md">
+            Тепло · Надёжно · С гарантией
+          </p>
         </div>
       </div>
     </section>
