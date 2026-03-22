@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees, Wrench, Thermometer } from "lucide-react"
+import { Home, Building, Armchair, Trees, Wrench, Thermometer, PaintBucket, FileText } from "lucide-react"
 import { HighlightedText } from "./HighlightedText"
 
 const expertiseAreas = [
@@ -37,6 +37,18 @@ const expertiseAreas = [
     description:
       "Подбираем оптимальный пирог стен для вашего региона. Дом будет тёплым зимой, прохладным летом и тихим круглый год.",
     icon: Thermometer,
+  },
+  {
+    title: "Фасадные работы",
+    description:
+      "Обшивка фасада сайдингом, имитацией бруса или другими материалами. Защищаем дом от влаги и придаём ему красивый внешний вид.",
+    icon: PaintBucket,
+  },
+  {
+    title: "Согласование и документы",
+    description:
+      "Помогаем оформить уведомление о строительстве и ввести дом в эксплуатацию. Вы получите все необходимые документы для регистрации.",
+    icon: FileText,
   },
 ]
 
