@@ -11,13 +11,19 @@ export function Hero() {
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 pt-8 md:pt-0">
         <div className="mb-72 md:mb-60 lg:mb-80">
-          <p className="text-sm tracking-[0.3em] uppercase text-center text-secondary mb-0">{"Строительство каркасных домов"}</p>
+          <p className="text-sm tracking-[0.3em] uppercase text-center text-white/70 mb-4">{"Тульская область"}</p>
 
-          <h1 className="text-7xl font-medium text-balance text-center text-white mb-0 tracking-tight leading-[0.9] lg:text-8xl">
-            {"Ваш дом — наша"}
+          <h1 className="text-7xl font-extrabold text-balance text-center text-white mb-6 tracking-tight leading-[0.95] lg:text-8xl drop-shadow-lg">
+            {"Строим дома,"}
             <br />
-            <span className="text-orange-200">{"работа"}</span>
+            {"бани и дачи"}
+            <br />
+            <span className="text-orange-300">{"с душой"}</span>
           </h1>
+
+          <p className="text-center text-white/90 text-xl font-medium tracking-wide drop-shadow-md">
+            Каркасное строительство под ключ — быстро, тепло, надёжно
+          </p>
         </div>
       </div>
     </section>
