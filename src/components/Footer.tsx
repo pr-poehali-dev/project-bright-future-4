@@ -64,6 +64,11 @@ export function Footer() {
                   ВКонтакте
                 </a>
               </li>
+              <li>
+                <a href="https://max.ru/join/eBogWRUdUiahBG30wNhO0hpDgvUTSuTV1v0FxL9skhI" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                  MAX
+                </a>
+              </li>
             </ul>
           </div>
         </div>
