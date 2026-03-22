@@ -38,7 +38,6 @@ export function Header() {
           </div>
           <div className="flex flex-col">
             <span className="text-white text-lg font-semibold tracking-widest uppercase leading-tight">TOYSTROY</span>
-            <span className="text-white/70 text-[10px] tracking-wide leading-tight hidden md:block">Строительство каркасных домов, бань, дач</span>
           </div>
         </a>
 
