@@ -78,8 +78,16 @@ export function Expertise() {
   }, [])
 
   return (
-    <section id="services" ref={sectionRef} className="py-32 md:py-29">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="services" ref={sectionRef} className="py-32 md:py-29 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/3404678c-63be-4da2-b56d-5267e2191924.jpg"
+          alt="Строительные инструменты и процесс строительства"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-white/75" />
+      </div>
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl mb-20">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
