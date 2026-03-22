@@ -10,7 +10,7 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 pt-8 md:pt-0">
-        <div className="mb-72 md:mb-60 lg:mb-80">
+        <div className="mb-72 md:mb-60 lg:mb-80 -mt-32 md:-mt-40">
           <p className="text-sm tracking-[0.3em] uppercase text-center text-white/70 mb-4">{"Тульская область"}</p>
 
           <h1 className="text-4xl font-extrabold text-balance text-center text-white mb-6 tracking-tight leading-[1.1] lg:text-6xl drop-shadow-lg">
