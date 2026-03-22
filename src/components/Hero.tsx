@@ -14,11 +14,11 @@ export function Hero() {
           <p className="text-sm tracking-[0.3em] uppercase text-center text-white/70 mb-4">{"Тульская область"}</p>
 
           <h1 className="text-7xl font-extrabold text-balance text-center text-white mb-6 tracking-tight leading-[0.95] lg:text-8xl drop-shadow-lg">
-            {"Профессиональное"}
+            {"Строим профессионально"}
             <br />
-            {"строительство домов,"}
+            <span className="text-orange-300">{"каркасные дома,"}
             <br />
-            <span className="text-orange-300">{"бань и дач на века"}</span>
+            {"бани и дачи"}</span>
           </h1>
         </div>
       </div>
