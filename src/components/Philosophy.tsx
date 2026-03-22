@@ -77,8 +77,16 @@ export function Philosophy() {
   }, [])
 
   return (
-    <section id="about" className="py-32 md:py-29">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="about" className="py-32 md:py-29 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/d7026362-ecf3-411c-b3ab-8cdc8c610cd8.jpg"
+          alt="Команда профессионалов каркасного домостроения"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-white/90" />
+      </div>
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl mb-20">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наш подход</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
@@ -91,7 +99,7 @@ export function Philosophy() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-16 relative z-10">
           {philosophyItems.map((item, index) => (
             <div
               key={item.title}
