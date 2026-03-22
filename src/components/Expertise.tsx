@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees } from "lucide-react"
+import { Home, Building, Armchair, Trees, Wrench, Thermometer } from "lucide-react"
 import { HighlightedText } from "./HighlightedText"
 
 const expertiseAreas = [
@@ -25,6 +25,18 @@ const expertiseAreas = [
     description:
       "Анализ грунта, выбор типа фундамента, привязка к участку. Правильное основание — залог долговечности дома.",
     icon: Trees,
+  },
+  {
+    title: "Инженерные коммуникации",
+    description:
+      "Монтаж электрики, водоснабжения, канализации и отопления. Всё по нормам и с гарантией — готово к заселению с первого дня.",
+    icon: Wrench,
+  },
+  {
+    title: "Утепление и звукоизоляция",
+    description:
+      "Подбираем оптимальный пирог стен для вашего региона. Дом будет тёплым зимой, прохладным летом и тихим круглый год.",
+    icon: Thermometer,
   },
 ]
 
