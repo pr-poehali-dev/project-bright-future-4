@@ -64,8 +64,16 @@ export function Projects() {
   }, [])
 
   return (
-    <section id="projects" className="py-32 md:py-29 bg-secondary/50">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="projects" className="py-32 md:py-29 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/a70ed155-b6af-463b-8401-6e36d49cbd81.jpg"
+          alt="Готовые каркасные дома"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-white/70" />
+      </div>
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
             <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Построенные дома</p>
