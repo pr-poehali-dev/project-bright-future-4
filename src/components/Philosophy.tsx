@@ -84,7 +84,7 @@ export function Philosophy() {
           alt="Команда профессионалов каркасного домостроения"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-white/90" />
+        <div className="absolute inset-0 bg-white/60" />
       </div>
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl mb-20">
