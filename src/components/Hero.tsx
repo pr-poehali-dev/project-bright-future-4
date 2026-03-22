@@ -3,7 +3,7 @@ export function Hero() {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/38532b0c-b9cb-45df-8d92-a2076fa6aa20.jpg"
+          src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/0be34413-e927-4884-bcda-d62e83975329.jpg"
           alt="Строительство каркасного дома"
           className="w-full h-full object-cover object-center"
         />
