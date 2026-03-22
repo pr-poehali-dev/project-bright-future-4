@@ -32,8 +32,14 @@ export function Header() {
       )}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between md:px-[24]">
-        <a href="/" className="flex items-center gap-2 group" onClick={scrollToTop}>
-          <span className="text-white text-xl font-semibold tracking-widest uppercase">TOYSTROY</span>
+        <a href="/" className="flex items-center gap-3 group" onClick={scrollToTop}>
+          <div className="w-10 h-10 bg-white flex items-center justify-center rounded-sm flex-shrink-0">
+            <span className="text-foreground text-lg font-bold tracking-tight">TS</span>
+          </div>
+          <div className="flex flex-col">
+            <span className="text-white text-lg font-semibold tracking-widest uppercase leading-tight">TOYSTROY</span>
+            <span className="text-white/70 text-[10px] tracking-wide leading-tight hidden md:block">Строительство каркасных домов, бань, дач</span>
+          </div>
         </a>
 
         <ul className="hidden md:flex items-center gap-10 text-sm tracking-wide">
