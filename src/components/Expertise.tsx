@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees, Wrench, Thermometer, PaintBucket, FileText } from "lucide-react"
+import { Home, Building, Armchair, Trees, Wrench, Thermometer, PaintBucket, FileText, Truck } from "lucide-react"
 import { HighlightedText } from "./HighlightedText"
 
 const expertiseAreas = [
@@ -49,6 +49,12 @@ const expertiseAreas = [
     description:
       "После сдачи объекта остаёмся на связи. Устраняем любые замечания бесплатно в течение гарантийного срока.",
     icon: FileText,
+  },
+  {
+    title: "Доставка до объекта",
+    description:
+      "Привозим все материалы и инструменты прямо на ваш участок. Работаем по всей Тульской области — никаких лишних забот с логистикой.",
+    icon: Truck,
   },
 ]
 
