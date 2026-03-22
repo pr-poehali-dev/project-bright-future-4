@@ -20,7 +20,7 @@ const gifts = [
   {
     icon: "AppWindow",
     title: "Окна в подарок",
-    description: "Установка окон ПВХ во всём доме",
+    description: "Все окна ПВХ в доме в подарок",
   },
   {
     icon: "Shield",
