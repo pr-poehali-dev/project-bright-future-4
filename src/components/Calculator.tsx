@@ -43,15 +43,15 @@ export function Calculator() {
           alt="Каркасные дома, дачи и бани в разных стилях"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-white/80" />
+        <div className="absolute inset-0 bg-white/50" />
       </div>
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl mb-16">
-          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Оставить заявку</p>
-          <h2 className="text-5xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-7xl">
+          <p className="text-foreground/70 text-sm tracking-[0.3em] uppercase mb-6 font-medium">Оставить заявку</p>
+          <h2 className="text-5xl font-bold leading-[1.15] tracking-tight mb-6 text-balance lg:text-7xl text-foreground">
             Расскажите, что хотите <HighlightedText>построить</HighlightedText>
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-foreground/80 text-lg leading-relaxed font-medium">
             Заполните форму — мы свяжемся с вами, обсудим детали и подготовим смету бесплатно.
           </p>
         </div>
