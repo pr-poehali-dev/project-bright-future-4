@@ -2,7 +2,7 @@ import { useState } from "react"
 import { HighlightedText } from "./HighlightedText"
 import Icon from "@/components/ui/icon"
 
-const buildingTypes = ["Жилой дом", "Баня", "Дача", "Гараж", "Хозпостройка"]
+const buildingTypes = ["Жилой дом", "Баня", "Дача"]
 
 export function Calculator() {
   const [buildingType, setBuildingType] = useState("Жилой дом")
