@@ -36,8 +36,16 @@ export function Calculator() {
   }
 
   return (
-    <section id="calculator" className="py-32 md:py-29 bg-secondary/50">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="calculator" className="py-32 md:py-29 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/2cc9cda7-6263-4332-9434-5755038e74f8.jpg"
+          alt="Каркасные дома, дачи и бани в разных стилях"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-white/80" />
+      </div>
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl mb-16">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Оставить заявку</p>
           <h2 className="text-5xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-7xl">
