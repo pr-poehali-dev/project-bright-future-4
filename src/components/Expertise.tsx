@@ -81,7 +81,7 @@ export function Expertise() {
     <section id="services" ref={sectionRef} className="py-32 md:py-29 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/036f31c1-0a8f-4eda-83a8-4cfabe5b8c27.jpg"
+          src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/1bfa5ddf-65dd-45c2-950c-68c3ec036c87.jpg"
           alt="Строительные инструменты и процесс строительства"
           className="w-full h-full object-cover object-center"
         />
