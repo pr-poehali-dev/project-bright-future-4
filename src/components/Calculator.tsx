@@ -60,7 +60,7 @@ export function Calculator() {
           <form onSubmit={handleSubmit} className="space-y-8">
 
             <div>
-              <p className="text-sm font-medium mb-4 tracking-wide uppercase text-muted-foreground">Тип постройки</p>
+              <p className="text-sm font-bold mb-4 tracking-wide uppercase text-foreground">Тип постройки</p>
               <div className="flex flex-wrap gap-3">
                 {buildingTypes.map((t) => (
                   <button
@@ -80,8 +80,8 @@ export function Calculator() {
             </div>
 
             <div>
-              <p className="text-sm font-medium mb-4 tracking-wide uppercase text-muted-foreground">
-                Желаемая площадь — <span className="text-foreground">{area} м²</span>
+              <p className="text-sm font-bold mb-4 tracking-wide uppercase text-foreground">
+                Желаемая площадь — <span>{area} м²</span>
               </p>
               <input
                 type="range"
