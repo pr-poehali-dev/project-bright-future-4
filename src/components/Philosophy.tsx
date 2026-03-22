@@ -111,8 +111,8 @@ export function Philosophy() {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <Icon name={item.icon} size={40} className="mb-4 text-foreground" strokeWidth={1.25} />
-              <h3 className="text-xl font-medium mb-4">{item.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+              <h3 className="text-xl font-bold mb-4 text-foreground">{item.title}</h3>
+              <p className="text-foreground/80 leading-relaxed font-medium">{item.description}</p>
             </div>
           ))}
         </div>
