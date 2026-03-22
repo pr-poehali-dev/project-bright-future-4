@@ -1,3 +1,6 @@
+import { useState } from "react"
+import Icon from "@/components/ui/icon"
+
 const reviews = [
   {
     name: "Андрей Соколов",
@@ -58,17 +61,45 @@ const reviews = [
 ]
 
 export function Reviews() {
+  const [current, setCurrent] = useState(0)
+  const perPage = 2
+  const total = Math.ceil(reviews.length / perPage)
+
+  const prev = () => setCurrent((c) => Math.max(0, c - 1))
+  const next = () => setCurrent((c) => Math.min(total - 1, c + 1))
+
+  const visible = reviews.slice(current * perPage, current * perPage + perPage)
+
   return (
     <section id="reviews" className="py-32 md:py-29 bg-secondary/50">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="mb-16">
-          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Отзывы клиентов</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Что говорят наши клиенты</h2>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+          <div>
+            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Отзывы клиентов</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Что говорят наши клиенты</h2>
+          </div>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={prev}
+              disabled={current === 0}
+              className="w-12 h-12 border border-border flex items-center justify-center hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              <Icon name="ArrowLeft" size={18} />
+            </button>
+            <span className="text-sm text-muted-foreground">{current + 1} / {total}</span>
+            <button
+              onClick={next}
+              disabled={current === total - 1}
+              className="w-12 h-12 border border-border flex items-center justify-center hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              <Icon name="ArrowRight" size={18} />
+            </button>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-          {reviews.map((review, index) => (
-            <div key={index} className="bg-background p-8 flex flex-col gap-6">
+          {visible.map((review, index) => (
+            <div key={current * perPage + index} className="bg-background p-8 flex flex-col gap-6">
               <div className="flex gap-1">
                 {Array.from({ length: review.rating }).map((_, i) => (
                   <span key={i} className="text-orange-400 text-lg">★</span>
