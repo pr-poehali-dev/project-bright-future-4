@@ -137,8 +137,8 @@ export function Expertise() {
                 >
                   <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
                 </div>
-                <h3 className="text-xl font-medium mb-4">{area.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{area.description}</p>
+                <h3 className="text-xl font-bold mb-4 text-foreground">{area.title}</h3>
+                <p className="text-foreground/80 leading-relaxed font-medium">{area.description}</p>
               </div>
             )
           })}
