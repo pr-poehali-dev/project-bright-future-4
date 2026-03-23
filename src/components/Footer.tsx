@@ -1,4 +1,5 @@
 import { PrivacyModal } from "@/components/PrivacyModal"
+import { TermsModal } from "@/components/TermsModal"
 
 export function Footer() {
   return (
@@ -80,9 +81,7 @@ export function Footer() {
           <p>© Каркасные дома. Все права защищены.</p>
           <div className="flex gap-6">
             <PrivacyModal />
-            <a href="#" className="hover:text-foreground transition-colors">
-              Условия использования
-            </a>
+            <TermsModal />
           </div>
         </div>
       </div>
