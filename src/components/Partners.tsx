@@ -1,12 +1,12 @@
 const partners = [
   { name: "GrandLine", bg: "#CC0000", color: "#ffffff" },
-  { name: "Кровля Изоляция", bg: null, color: null },
-  { name: "Технониколь", bg: null, color: null },
-  { name: 'АО "Лесозавод 25"', bg: null, color: null },
-  { name: "Воскресенский деревообрабатывающий завод", bg: null, color: null },
-  { name: "ТЗСК", bg: null, color: null },
-  { name: "Твои Окна", bg: null, color: null },
-  { name: "Тульский Металлопрокатный завод", bg: null, color: null },
+  { name: "Кровля Изоляция", bg: "#1A5276", color: "#ffffff" },
+  { name: "Технониколь", bg: "#E30613", color: "#ffffff" },
+  { name: 'АО "Лесозавод 25"', bg: "#2D6A2D", color: "#ffffff" },
+  { name: "Воскресенский деревообрабатывающий завод", bg: "#5D4037", color: "#ffffff" },
+  { name: "ТЗСК", bg: "#1565C0", color: "#ffffff" },
+  { name: "Твои Окна", bg: "#FF6F00", color: "#ffffff" },
+  { name: "Тульский Металлопрокатный завод", bg: "#37474F", color: "#ffffff" },
 ]
 
 export function Partners() {
