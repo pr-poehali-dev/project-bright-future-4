@@ -75,6 +75,16 @@ const projects = [
     ],
   },
   {
+    id: 10,
+    title: "Дача из профлиста",
+    category: "Каркасная дача · Профлист коричневый",
+    location: "",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/0973e31d-c52a-4852-94ee-77af2ec39b0e.jpg",
+    ],
+  },
+  {
     id: 6,
     title: "Баня в лесу с купелью",
     category: "Каркасная баня под ключ",
