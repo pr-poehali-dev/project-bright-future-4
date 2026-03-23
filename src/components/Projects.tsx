@@ -77,7 +77,7 @@ const projects = [
   {
     id: 11,
     title: "Дача 2 этажа 8×8",
-    category: "Каркасная дача · Профлист жёлтый",
+    category: "Каркасная дача · Сайдинг GrandLine",
     location: "",
     year: "2025",
     images: [
