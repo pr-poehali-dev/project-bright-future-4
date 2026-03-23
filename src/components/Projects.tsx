@@ -115,6 +115,16 @@ const projects = [
     ],
   },
   {
+    id: 15,
+    title: "Барнхаус «Тёмный лес»",
+    category: "Каркасный дом · Барнхаус · Фасад антрацит",
+    location: "",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/89e6e98c-4414-4bc0-8708-3b65e5d14789.jpg",
+    ],
+  },
+  {
     id: 14,
     title: "Каркасный дом с верандой",
     category: "Каркасный дом · Веранда",
