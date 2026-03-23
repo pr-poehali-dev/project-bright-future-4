@@ -53,16 +53,6 @@ const projects = [
     ],
   },
   {
-    id: 10,
-    title: "Дача 6×6",
-    category: "Каркасная дача · Сайдинг · Кровля профлист GrandLine",
-    location: "",
-    year: "2025",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/0973e31d-c52a-4852-94ee-77af2ec39b0e.jpg",
-    ],
-  },
-  {
     id: 16,
     title: "А-фрейм дом в лесу",
     category: "Каркасный дом · А-фрейм",
@@ -153,6 +143,16 @@ const projects = [
     year: "2023",
     images: [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/1c112150-5572-4103-b24f-c9979e93f076.jpg",
+    ],
+  },
+  {
+    id: 10,
+    title: "Дача 6×6",
+    category: "Каркасная дача · Сайдинг · Кровля профлист GrandLine",
+    location: "",
+    year: "2023",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/0973e31d-c52a-4852-94ee-77af2ec39b0e.jpg",
     ],
   },
   {
