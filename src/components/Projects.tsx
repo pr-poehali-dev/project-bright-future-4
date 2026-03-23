@@ -87,11 +87,11 @@ const projects = [
   {
     id: 13,
     title: "Баня с террасой",
-    category: "Каркасная баня · Терраса · Металлочерепица",
+    category: "Каркасная баня · Терраса · Металлочерепица бежевая",
     location: "",
     year: "2025",
     images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9384993c-0383-4675-9aa4-7e6da70e01a9.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/e33121cd-892b-4742-a088-51174c5bde96.jpg",
     ],
   },
   {
