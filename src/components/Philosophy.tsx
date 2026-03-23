@@ -94,7 +94,7 @@ export function Philosophy() {
             <br />
             <HighlightedText>и с душой</HighlightedText>
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-foreground text-lg leading-relaxed font-semibold">
             Каркасный дом — это не просто технология. Это возможность жить в тёплом, надёжном и красивом доме, построенном точно в срок и без лишних затрат.
           </p>
         </div>
