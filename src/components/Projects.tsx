@@ -33,16 +33,6 @@ const projects = [
     ],
   },
   {
-    id: 11,
-    title: "Дача 2 этажа 8×8",
-    category: "Каркасная дача · Сайдинг GrandLine",
-    location: "",
-    year: "2023",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/14e88435-0238-4183-b8ae-47d93640ed43.jpg",
-    ],
-  },
-  {
     id: 13,
     title: "Компактная банька с террасой",
     category: "Каркасная баня · Терраса",
@@ -163,6 +153,16 @@ const projects = [
     year: "2023",
     images: [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/1c112150-5572-4103-b24f-c9979e93f076.jpg",
+    ],
+  },
+  {
+    id: 11,
+    title: "Дача 2 этажа 8×8",
+    category: "Каркасная дача · Сайдинг GrandLine",
+    location: "",
+    year: "2023",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/14e88435-0238-4183-b8ae-47d93640ed43.jpg",
     ],
   },
 ]
