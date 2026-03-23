@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "А-фрейм дом 9×9",
     category: "Каркасный дом 81 м²",
-    location: "Подмосковье",
+    location: "",
     year: "2024",
     images: [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/55ab852f-7edf-419a-a144-216b0db6505b.jpg",
@@ -160,7 +160,7 @@ export function Projects() {
                   <div>
                     <h3 className="text-xl font-medium mb-2 group-hover:underline underline-offset-4">{project.title}</h3>
                     <p className="text-muted-foreground text-sm">
-                      {project.category} · {project.location}
+                      {project.category}{project.location ? ` · ${project.location}` : ""}
                     </p>
                   </div>
                   <span className="text-muted-foreground/60 text-sm">{project.year}</span>
