@@ -55,6 +55,16 @@ const projects = [
     ],
   },
   {
+    id: 7,
+    title: "Каркасный дом 2 этажа",
+    category: "Каркасный дом · Сайдинг",
+    location: "",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/2f5e1471-80b5-44bd-98dd-e621358ba766.jpg",
+    ],
+  },
+  {
     id: 6,
     title: "Баня в лесу с купелью",
     category: "Каркасная баня под ключ",
