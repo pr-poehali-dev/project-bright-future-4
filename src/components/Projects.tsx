@@ -85,6 +85,16 @@ const projects = [
     ],
   },
   {
+    id: 12,
+    title: "Баня с террасой и купелью",
+    category: "Каркасная баня · Терраса · Металлочерепица",
+    location: "",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/a8db262e-10f4-448d-8cc5-d69cac34e5fc.jpg",
+    ],
+  },
+  {
     id: 10,
     title: "Дача из профлиста",
     category: "Каркасная дача · Профлист коричневый",
