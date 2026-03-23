@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"
+import { useRef } from "react"
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
@@ -127,31 +127,14 @@ const projects = [
 ]
 
 export function Projects() {
-  const [current, setCurrent] = useState(0)
-  const [slideIndexes, setSlideIndexes] = useState<Record<number, number>>({})
-  const touchStartX = useRef<number | null>(null)
+  const scrollRef = useRef<HTMLDivElement>(null)
 
-  const goSlide = (projectId: number, direction: number, totalImages: number, e: React.MouseEvent) => {
-    e.stopPropagation()
-    setSlideIndexes((prev) => {
-      const cur = prev[projectId] || 0
-      const next = (cur + direction + totalImages) % totalImages
-      return { ...prev, [projectId]: next }
-    })
-  }
-
-  const prev = () => setCurrent((c) => Math.max(0, c - 1))
-  const next = () => setCurrent((c) => Math.min(projects.length - 1, c))
-
-  const onTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX
-  }
-  const onTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return
-    const diff = touchStartX.current - e.changedTouches[0].clientX
-    if (diff > 50) next()
-    else if (diff < -50) prev()
-    touchStartX.current = null
+  const scroll = (dir: number) => {
+    const el = scrollRef.current
+    if (!el) return
+    const card = el.querySelector("article") as HTMLElement
+    const cardWidth = card ? card.offsetWidth + 24 : 400
+    el.scrollBy({ left: dir * cardWidth, behavior: "smooth" })
   }
 
   return (
@@ -174,23 +157,18 @@ export function Projects() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <button
-                onClick={prev}
-                disabled={current === 0}
-                className="w-11 h-11 rounded-full border border-foreground/20 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                onClick={() => scroll(-1)}
+                className="w-11 h-11 rounded-full border border-foreground/20 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
-                onClick={next}
-                disabled={current >= projects.length - 1}
-                className="w-11 h-11 rounded-full border border-foreground/20 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                onClick={() => scroll(1)}
+                className="w-11 h-11 rounded-full border border-foreground/20 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
-            <span className="text-sm text-muted-foreground">
-              {current + 1} / {projects.length}
-            </span>
             <a
               href="#"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
@@ -202,84 +180,40 @@ export function Projects() {
         </div>
       </div>
 
-      {/* Слайдер — выходит за container */}
       <div
-        className="relative overflow-hidden pl-6 md:pl-12"
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
+        ref={scrollRef}
+        className="flex gap-6 overflow-x-auto pl-6 md:pl-12 pr-6 md:pr-12 pb-6"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none", scrollSnapType: "x mandatory" }}
       >
-        <div
-          className="flex gap-6 transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(calc(-${current} * (min(45vw, 560px) + 24px)))` }}
-        >
-          {projects.map((project) => {
-            const images = project.images || ["/placeholder.svg"]
-            const currentSlide = slideIndexes[project.id] || 0
-            const hasMultiple = images.length > 1
+        {projects.map((project) => {
+          const images = project.images || ["/placeholder.svg"]
 
-            return (
-              <article
-                key={project.id}
-                className="group cursor-pointer flex-shrink-0"
-                style={{ width: "min(45vw, 560px)" }}
-              >
-                <div className="relative overflow-hidden aspect-[4/3] mb-5">
-                  <img
-                    src={images[currentSlide]}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  {hasMultiple && (
-                    <>
-                      <button
-                        onClick={(e) => goSlide(project.id, -1, images.length, e)}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
-                      >
-                        <ChevronLeft className="w-5 h-5" />
-                      </button>
-                      <button
-                        onClick={(e) => goSlide(project.id, 1, images.length, e)}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
-                      >
-                        <ChevronRight className="w-5 h-5" />
-                      </button>
-                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-                        {images.map((_, i) => (
-                          <div
-                            key={i}
-                            className={`w-1.5 h-1.5 rounded-full transition-colors ${i === currentSlide ? "bg-white" : "bg-white/50"}`}
-                          />
-                        ))}
-                      </div>
-                    </>
+          return (
+            <article
+              key={project.id}
+              className="group cursor-pointer flex-shrink-0 w-[80vw] md:w-[44vw] lg:w-[38vw]"
+              style={{ scrollSnapAlign: "start" }}
+            >
+              <div className="relative overflow-hidden aspect-[4/3] mb-5">
+                <img
+                  src={images[0]}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-lg font-medium mb-1">{project.title}</h3>
+                  <p className="text-sm text-muted-foreground">{project.category}</p>
+                  {project.location && (
+                    <p className="text-sm text-muted-foreground mt-0.5">{project.location}</p>
                   )}
                 </div>
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-lg font-medium mb-1">{project.title}</h3>
-                    <p className="text-sm text-muted-foreground">{project.category}</p>
-                    {project.location && (
-                      <p className="text-sm text-muted-foreground mt-0.5">{project.location}</p>
-                    )}
-                  </div>
-                  <span className="text-sm text-muted-foreground shrink-0">{project.year}</span>
-                </div>
-              </article>
-            )
-          })}
-        </div>
-      </div>
-
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="flex justify-center gap-2 mt-10">
-          {projects.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? "w-6 bg-foreground" : "w-1.5 bg-foreground/20"}`}
-            />
-          ))}
-        </div>
+                <span className="text-sm text-muted-foreground shrink-0">{project.year}</span>
+              </div>
+            </article>
+          )
+        })}
       </div>
     </section>
   )
