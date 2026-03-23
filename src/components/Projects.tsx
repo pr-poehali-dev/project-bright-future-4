@@ -40,7 +40,9 @@ const projects = [
     category: "Каркасный дом 240 м²",
     location: "Карелия",
     year: "2024",
-    image: "/images/hously-4.png",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/4a0f68cd-0b67-4312-a094-0a9f83f31902.jpg",
+    ],
   },
 ]
 
