@@ -16,7 +16,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Барнхаус дом 9×12",
+    title: "Каркасный дом 9×12",
     category: "Каркасный дом 120 м²",
     location: "",
     year: "2023",
