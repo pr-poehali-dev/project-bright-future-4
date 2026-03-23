@@ -121,7 +121,7 @@ const projects = [
     location: "",
     year: "2025",
     images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9818f6e1-7af9-47d6-aeb2-3e5f8e99a161.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/fee3726f-5774-4433-96c1-610dfe762c6b.jpg",
     ],
   },
 ]
