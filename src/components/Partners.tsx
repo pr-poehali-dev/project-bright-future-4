@@ -1,12 +1,12 @@
 const partners = [
-  "GrandLine",
-  "Кровля Изоляция",
-  "Технониколь",
-  'АО "Лесозавод 25"',
-  "Воскресенский деревообрабатывающий завод",
-  "ТЗСК",
-  "Твои Окна",
-  "Тульский Металлопрокатный завод",
+  { name: "GrandLine", bg: "#CC0000", color: "#ffffff" },
+  { name: "Кровля Изоляция", bg: null, color: null },
+  { name: "Технониколь", bg: null, color: null },
+  { name: 'АО "Лесозавод 25"', bg: null, color: null },
+  { name: "Воскресенский деревообрабатывающий завод", bg: null, color: null },
+  { name: "ТЗСК", bg: null, color: null },
+  { name: "Твои Окна", bg: null, color: null },
+  { name: "Тульский Металлопрокатный завод", bg: null, color: null },
 ]
 
 export function Partners() {
@@ -18,12 +18,17 @@ export function Partners() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Наши партнёры</h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {partners.map((name) => (
+          {partners.map((partner) => (
             <div
-              key={name}
-              className="flex items-center justify-center border border-border bg-background px-6 py-6 text-center text-sm font-semibold text-foreground hover:border-foreground transition-colors duration-200 min-h-[80px]"
+              key={partner.name}
+              className="flex items-center justify-center border px-6 py-6 text-center text-sm font-semibold transition-colors duration-200 min-h-[80px]"
+              style={{
+                backgroundColor: partner.bg ?? "var(--background)",
+                color: partner.color ?? "var(--foreground)",
+                borderColor: partner.bg ?? "var(--border)",
+              }}
             >
-              {name}
+              {partner.name}
             </div>
           ))}
         </div>
