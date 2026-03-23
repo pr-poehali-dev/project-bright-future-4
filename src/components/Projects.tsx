@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
@@ -127,15 +127,40 @@ const projects = [
 ]
 
 export function Projects() {
-  const scrollRef = useRef<HTMLDivElement>(null)
+  const [hoveredId, setHoveredId] = useState<number | null>(null)
+  const [revealedImages, setRevealedImages] = useState<Set<number>>(new Set())
+  const [slideIndexes, setSlideIndexes] = useState<Record<number, number>>({})
+  const imageRefs = useRef<(HTMLDivElement | null)[]>([])
 
-  const scroll = (dir: number) => {
-    const el = scrollRef.current
-    if (!el) return
-    const card = el.querySelector("article") as HTMLElement
-    const cardWidth = card ? card.offsetWidth + 24 : 400
-    el.scrollBy({ left: dir * cardWidth, behavior: "smooth" })
+  const goSlide = (projectId: number, direction: number, totalImages: number) => {
+    setSlideIndexes((prev) => {
+      const current = prev[projectId] || 0
+      const next = (current + direction + totalImages) % totalImages
+      return { ...prev, [projectId]: next }
+    })
   }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = imageRefs.current.indexOf(entry.target as HTMLDivElement)
+            if (index !== -1) {
+              setRevealedImages((prev) => new Set(prev).add(projects[index].id))
+            }
+          }
+        })
+      },
+      { threshold: 0.2 },
+    )
+
+    imageRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref)
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <section id="projects" className="py-32 md:py-29 relative overflow-hidden">
@@ -147,73 +172,88 @@ export function Projects() {
         />
         <div className="absolute inset-0 bg-white/70" />
       </div>
-
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
             <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Построенные дома</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Наши работы</h2>
           </div>
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => scroll(-1)}
-                className="w-11 h-11 rounded-full border border-foreground/20 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => scroll(1)}
-                className="w-11 h-11 rounded-full border border-foreground/20 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
-            >
-              Все проекты
-              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
-          </div>
+          <a
+            href="#"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
+          >
+            Смотреть все проекты
+            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
         </div>
-      </div>
 
-      <div
-        ref={scrollRef}
-        className="flex gap-6 overflow-x-auto pl-6 md:pl-12 pr-6 md:pr-12 pb-6"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none", scrollSnapType: "x mandatory" }}
-      >
-        {projects.map((project) => {
-          const images = project.images || ["/placeholder.svg"]
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+          {projects.map((project, index) => {
+            const images = project.images || ["/placeholder.svg"]
+            const currentSlide = slideIndexes[project.id] || 0
+            const hasMultiple = images.length > 1
 
-          return (
-            <article
-              key={project.id}
-              className="group cursor-pointer flex-shrink-0 w-[80vw] md:w-[44vw] lg:w-[38vw]"
-              style={{ scrollSnapAlign: "start" }}
-            >
-              <div className="relative overflow-hidden aspect-[4/3] mb-5">
-                <img
-                  src={images[0]}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-lg font-medium mb-1">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground">{project.category}</p>
-                  {project.location && (
-                    <p className="text-sm text-muted-foreground mt-0.5">{project.location}</p>
+            return (
+              <article
+                key={project.id}
+                className="group cursor-pointer"
+                onMouseEnter={() => setHoveredId(project.id)}
+                onMouseLeave={() => setHoveredId(null)}
+              >
+                <div ref={(el) => (imageRefs.current[index] = el)} className="relative overflow-hidden aspect-[4/3] mb-6">
+                  <img
+                    src={images[currentSlide]}
+                    alt={project.title}
+                    className={`w-full h-full object-cover transition-all duration-700 ${
+                      hoveredId === project.id ? "scale-105" : "scale-100"
+                    }`}
+                  />
+                  <div
+                    className="absolute inset-0 bg-primary origin-top"
+                    style={{
+                      transform: revealedImages.has(project.id) ? "scaleY(0)" : "scaleY(1)",
+                      transition: "transform 1.5s cubic-bezier(0.76, 0, 0.24, 1)",
+                    }}
+                  />
+                  {hasMultiple && (
+                    <>
+                      <button
+                        onClick={(e) => { e.stopPropagation(); goSlide(project.id, -1, images.length) }}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
+                      >
+                        <ChevronLeft className="w-5 h-5" />
+                      </button>
+                      <button
+                        onClick={(e) => { e.stopPropagation(); goSlide(project.id, 1, images.length) }}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
+                      >
+                        <ChevronRight className="w-5 h-5" />
+                      </button>
+                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        {images.map((_, i) => (
+                          <div
+                            key={i}
+                            className={`w-1.5 h-1.5 rounded-full transition-colors ${i === currentSlide ? "bg-white" : "bg-white/50"}`}
+                          />
+                        ))}
+                      </div>
+                    </>
                   )}
                 </div>
-                <span className="text-sm text-muted-foreground shrink-0">{project.year}</span>
-              </div>
-            </article>
-          )
-        })}
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-medium mb-1">{project.title}</h3>
+                    <p className="text-sm text-muted-foreground">{project.category}</p>
+                    {project.location && (
+                      <p className="text-sm text-muted-foreground mt-0.5">{project.location}</p>
+                    )}
+                  </div>
+                  <span className="text-sm text-muted-foreground shrink-0">{project.year}</span>
+                </div>
+              </article>
+            )
+          })}
+        </div>
       </div>
     </section>
   )
