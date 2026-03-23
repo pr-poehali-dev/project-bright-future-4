@@ -117,7 +117,7 @@ const projects = [
   {
     id: 16,
     title: "А-фрейм дом в лесу",
-    category: "Каркасный дом · А-фрейм · Терраса",
+    category: "Каркасный дом · А-фрейм",
     location: "",
     year: "2025",
     images: [
