@@ -45,7 +45,7 @@ export function Header() {
             </div>
           </a>
 
-          <ul className="hidden md:flex items-center gap-10 text-sm tracking-wide">
+          <ul className="hidden md:flex items-center gap-6 text-xs tracking-wide">
             {[
               { label: "Главная", href: "#hero" },
               { label: "О нас", href: "#about" },
