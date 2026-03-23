@@ -55,6 +55,16 @@ const projects = [
     ],
   },
   {
+    id: 8,
+    title: "Каркасный дом одноэтажный",
+    category: "Каркасный дом · Сайдинг",
+    location: "",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/86d46442-6aff-4a74-84ce-470874f9f6c9.jpg",
+    ],
+  },
+  {
     id: 7,
     title: "Каркасный дом 2 этажа",
     category: "Каркасный дом · Сайдинг",
