@@ -54,6 +54,16 @@ const projects = [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/e4ab6219-7cb4-4808-b5c3-8d9537204194.jpg",
     ],
   },
+  {
+    id: 6,
+    title: "Баня в лесу с купелью",
+    category: "Каркасная баня под ключ",
+    location: "",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/c08d0a8a-c48a-46d5-956f-0431dd4a728c.jpg",
+    ],
+  },
 ]
 
 export function Projects() {
