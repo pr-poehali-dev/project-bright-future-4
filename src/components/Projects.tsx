@@ -83,16 +83,6 @@ const projects = [
     ],
   },
   {
-    id: 14,
-    title: "Каркасный дом с верандой",
-    category: "Каркасный дом · Веранда",
-    location: "",
-    year: "2025",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/56d74da9-b326-4a51-905c-a89d487e62c0.jpg",
-    ],
-  },
-  {
     id: 6,
     title: "Баня «Лесная поляна»",
     category: "Каркасная баня под ключ",
@@ -100,6 +90,16 @@ const projects = [
     year: "2025",
     images: [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/cf189aaf-d379-44fc-83f2-6f814611de47.jpg",
+    ],
+  },
+  {
+    id: 14,
+    title: "Каркасный дом с верандой",
+    category: "Каркасный дом · Веранда",
+    location: "",
+    year: "2024",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/56d74da9-b326-4a51-905c-a89d487e62c0.jpg",
     ],
   },
   {
