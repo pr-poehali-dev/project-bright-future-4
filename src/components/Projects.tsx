@@ -44,6 +44,18 @@ const projects = [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/3b75ce94-1321-42e9-b123-c6dbdcf821d5.jpg",
     ],
   },
+  {
+    id: 5,
+    title: "Каркасная баня",
+    category: "Баня под ключ",
+    location: "",
+    year: "2024",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/fd1645ff-9d83-4ba8-87b8-82d37861ecb7.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/6df14c64-6ac0-4963-af49-c1576cf3b138.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/aa40da1d-e5a0-4613-8fa8-b278932b6c2c.jpg",
+    ],
+  },
 ]
 
 export function Projects() {
