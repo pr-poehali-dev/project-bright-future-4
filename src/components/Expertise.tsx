@@ -97,17 +97,17 @@ export function Expertise() {
           alt="Строительные инструменты и процесс строительства"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-white/75" />
       </div>
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl mb-20">
-          <p className="text-white/50 text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
-          <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl text-white">
+          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
+          <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
             <HighlightedText>Услуги</HighlightedText>, которые
             <br />
             решают всё
           </h2>
-          <p className="text-white/70 text-lg leading-relaxed">
+          <p className="text-muted-foreground text-lg leading-relaxed">
             От первого эскиза до ключей в руках — берём на себя все этапы строительства, чтобы вы могли просто ждать результат.
           </p>
         </div>
@@ -122,7 +122,7 @@ export function Expertise() {
                   itemRefs.current[index] = el
                 }}
                 data-index={index}
-                className={`relative pl-8 border-l border-white/20 transition-all duration-700 ${
+                className={`relative pl-8 border-l border-border transition-all duration-700 ${
                   visibleItems.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
@@ -135,10 +135,10 @@ export function Expertise() {
                     transitionDelay: `${index * 150}ms`,
                   }}
                 >
-                  <Icon className="w-10 h-10 mb-4 text-white" strokeWidth={1.25} />
+                  <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-white">{area.title}</h3>
-                <p className="text-white/70 leading-relaxed font-medium">{area.description}</p>
+                <h3 className="text-xl font-bold mb-4 text-foreground">{area.title}</h3>
+                <p className="text-foreground/80 leading-relaxed font-medium">{area.description}</p>
               </div>
             )
           })}
