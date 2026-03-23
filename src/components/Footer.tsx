@@ -1,3 +1,5 @@
+import { PrivacyModal } from "@/components/PrivacyModal"
+
 export function Footer() {
   return (
     <footer className="py-16 md:py-24 border-t border-border">
@@ -77,9 +79,7 @@ export function Footer() {
         <div className="pt-8 border-t border-border flex flex-col md:flex-row md:items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© Каркасные дома. Все права защищены.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-foreground transition-colors">
-              Политика конфиденциальности
-            </a>
+            <PrivacyModal />
             <a href="#" className="hover:text-foreground transition-colors">
               Условия использования
             </a>
