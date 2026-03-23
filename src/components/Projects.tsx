@@ -3,58 +3,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
-    id: 1,
-    title: "А-фрейм дом 9×9",
-    category: "Каркасный дом 81 м²",
-    location: "",
-    year: "2024",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/55ab852f-7edf-419a-a144-216b0db6505b.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/f1a6c2d4-717d-4f7a-8e1b-4368eac1c2d5.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/31d01514-9e06-49b3-aacd-ec4fbe887f58.jpg",
-    ],
-  },
-  {
-    id: 2,
-    title: "Каркасный дом 9×12",
-    category: "Каркасный дом 216 м²",
-    location: "",
-    year: "2023",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/7a6f32c1-a10b-4899-9a6c-e3cd69991c13.jpg",
-    ],
-  },
-  {
-    id: 3,
-    title: "Дом «Тихая гавань»",
-    category: "Каркасный дом 8×6, 2 этажа · Фасад GrandLine антрацит",
-    location: "",
-    year: "2023",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/1c112150-5572-4103-b24f-c9979e93f076.jpg",
-    ],
-  },
-  {
-    id: 4,
-    title: "Усадьба «Северная»",
-    category: "Каркасный дом 240 м²",
-    location: "Карелия",
-    year: "2024",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9e66a153-da16-44d0-826b-d98c881b7c69.jpg",
-    ],
-  },
-  {
-    id: 5,
-    title: "Каркасная баня",
-    category: "Баня под ключ 6×6",
-    location: "",
-    year: "2024",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/e4ab6219-7cb4-4808-b5c3-8d9537204194.jpg",
-    ],
-  },
-  {
     id: 7,
     title: "Каркасный дом 9×9",
     category: "Каркасный дом · Сайдинг GrandLine",
@@ -162,6 +110,58 @@ const projects = [
     year: "2025",
     images: [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/cf189aaf-d379-44fc-83f2-6f814611de47.jpg",
+    ],
+  },
+  {
+    id: 1,
+    title: "А-фрейм дом 9×9",
+    category: "Каркасный дом 81 м²",
+    location: "",
+    year: "2024",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/55ab852f-7edf-419a-a144-216b0db6505b.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/f1a6c2d4-717d-4f7a-8e1b-4368eac1c2d5.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/31d01514-9e06-49b3-aacd-ec4fbe887f58.jpg",
+    ],
+  },
+  {
+    id: 4,
+    title: "Усадьба «Северная»",
+    category: "Каркасный дом 240 м²",
+    location: "Карелия",
+    year: "2024",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9e66a153-da16-44d0-826b-d98c881b7c69.jpg",
+    ],
+  },
+  {
+    id: 5,
+    title: "Каркасная баня",
+    category: "Баня под ключ 6×6",
+    location: "",
+    year: "2024",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/e4ab6219-7cb4-4808-b5c3-8d9537204194.jpg",
+    ],
+  },
+  {
+    id: 2,
+    title: "Каркасный дом 9×12",
+    category: "Каркасный дом 216 м²",
+    location: "",
+    year: "2023",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/7a6f32c1-a10b-4899-9a6c-e3cd69991c13.jpg",
+    ],
+  },
+  {
+    id: 3,
+    title: "Дом «Тихая гавань»",
+    category: "Каркасный дом 8×6, 2 этажа · Фасад GrandLine антрацит",
+    location: "",
+    year: "2023",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/1c112150-5572-4103-b24f-c9979e93f076.jpg",
     ],
   },
 ]
