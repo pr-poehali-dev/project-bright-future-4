@@ -3,6 +3,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
+    id: 4,
+    title: "Усадьба «Северная»",
+    category: "Каркасный дом 240 м²",
+    location: "Карелия",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9e66a153-da16-44d0-826b-d98c881b7c69.jpg",
+    ],
+  },
+  {
     id: 7,
     title: "Каркасный дом 9×9",
     category: "Каркасный дом · Сайдинг GrandLine",
@@ -124,16 +134,7 @@ const projects = [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/31d01514-9e06-49b3-aacd-ec4fbe887f58.jpg",
     ],
   },
-  {
-    id: 4,
-    title: "Усадьба «Северная»",
-    category: "Каркасный дом 240 м²",
-    location: "Карелия",
-    year: "2024",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9e66a153-da16-44d0-826b-d98c881b7c69.jpg",
-    ],
-  },
+
   {
     id: 5,
     title: "Каркасная баня",
