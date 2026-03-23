@@ -37,7 +37,7 @@ const projects = [
     title: "Дача 2 этажа 8×8",
     category: "Каркасная дача · Сайдинг GrandLine",
     location: "",
-    year: "2025",
+    year: "2023",
     images: [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/14e88435-0238-4183-b8ae-47d93640ed43.jpg",
     ],
