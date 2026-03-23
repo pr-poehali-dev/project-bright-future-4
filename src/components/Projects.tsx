@@ -166,20 +166,15 @@ const projects = [
   },
 ]
 
-const years = ["2025", "2024", "2023"]
-
 export function Projects() {
-  const [activeYear, setActiveYear] = useState("2025")
   const [current, setCurrent] = useState(0)
   const [hoveredId, setHoveredId] = useState<number | null>(null)
   const [slideIndexes, setSlideIndexes] = useState<Record<number, number>>({})
 
-  const filtered = projects.filter((p) => p.year === activeYear)
   const perPage = 2
-  const total = Math.ceil(filtered.length / perPage)
-  const visible = filtered.slice(current * perPage, current * perPage + perPage)
+  const total = Math.ceil(projects.length / perPage)
+  const visible = projects.slice(current * perPage, current * perPage + perPage)
 
-  const selectYear = (year: string) => { setActiveYear(year); setCurrent(0) }
   const prev = () => setCurrent((c) => Math.max(0, c - 1))
   const next = () => setCurrent((c) => Math.min(total - 1, c + 1))
 
@@ -226,22 +221,6 @@ export function Projects() {
           </div>
         </div>
 
-        <div className="flex gap-2 mb-12">
-          {years.map((year) => (
-            <button
-              key={year}
-              onClick={() => selectYear(year)}
-              className={`px-5 py-2 text-sm border transition-all duration-200 ${
-                activeYear === year
-                  ? "bg-foreground text-background border-foreground"
-                  : "border-border text-muted-foreground hover:border-foreground hover:text-foreground"
-              }`}
-            >
-              {year}
-            </button>
-          ))}
-        </div>
-
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {visible.map((project, index) => {
             const images = project.images || ["/placeholder.svg"]
@@ -250,7 +229,7 @@ export function Projects() {
 
             return (
               <article
-                key={`${activeYear}-${current}-${index}`}
+                key={`${current}-${index}`}
                 className="group cursor-pointer"
                 onMouseEnter={() => setHoveredId(project.id)}
                 onMouseLeave={() => setHoveredId(null)}
