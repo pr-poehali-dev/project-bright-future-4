@@ -115,6 +115,16 @@ const projects = [
     ],
   },
   {
+    id: 14,
+    title: "Каркасный дом с верандой",
+    category: "Каркасный дом · Веранда · Металлочерепица",
+    location: "",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/3c1bbd82-a0e9-43ce-aa15-8d8730b19aa6.jpg",
+    ],
+  },
+  {
     id: 6,
     title: "Баня «Лесная поляна»",
     category: "Каркасная баня под ключ",
