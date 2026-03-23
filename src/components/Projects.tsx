@@ -1,14 +1,18 @@
 import { useState, useEffect, useRef } from "react"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
     id: 1,
-    title: "Дом «Берёзовый»",
-    category: "Каркасный дом 120 м²",
+    title: "А-фрейм дом 9×9",
+    category: "Каркасный дом 81 м²",
     location: "Подмосковье",
     year: "2024",
-    image: "/images/hously-1.png",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/55ab852f-7edf-419a-a144-216b0db6505b.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/f1a6c2d4-717d-4f7a-8e1b-4368eac1c2d5.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/31d01514-9e06-49b3-aacd-ec4fbe887f58.jpg",
+    ],
   },
   {
     id: 2,
@@ -39,7 +43,16 @@ const projects = [
 export function Projects() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
   const [revealedImages, setRevealedImages] = useState<Set<number>>(new Set())
+  const [slideIndexes, setSlideIndexes] = useState<Record<number, number>>({})
   const imageRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  const goSlide = (projectId: number, direction: number, totalImages: number) => {
+    setSlideIndexes((prev) => {
+      const current = prev[projectId] || 0
+      const next = (current + direction + totalImages) % totalImages
+      return { ...prev, [projectId]: next }
+    })
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -89,41 +102,72 @@ export function Projects() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-          {projects.map((project, index) => (
-            <article
-              key={project.id}
-              className="group cursor-pointer"
-              onMouseEnter={() => setHoveredId(project.id)}
-              onMouseLeave={() => setHoveredId(null)}
-            >
-              <div ref={(el) => (imageRefs.current[index] = el)} className="relative overflow-hidden aspect-[4/3] mb-6">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className={`w-full h-full object-cover transition-transform duration-700 ${
-                    hoveredId === project.id ? "scale-105" : "scale-100"
-                  }`}
-                />
-                <div
-                  className="absolute inset-0 bg-primary origin-top"
-                  style={{
-                    transform: revealedImages.has(project.id) ? "scaleY(0)" : "scaleY(1)",
-                    transition: "transform 1.5s cubic-bezier(0.76, 0, 0.24, 1)",
-                  }}
-                />
-              </div>
+          {projects.map((project, index) => {
+            const images = project.images || (project.image ? [project.image] : ["/placeholder.svg"])
+            const currentSlide = slideIndexes[project.id] || 0
+            const hasMultiple = images.length > 1
 
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-xl font-medium mb-2 group-hover:underline underline-offset-4">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm">
-                    {project.category} · {project.location}
-                  </p>
+            return (
+              <article
+                key={project.id}
+                className="group cursor-pointer"
+                onMouseEnter={() => setHoveredId(project.id)}
+                onMouseLeave={() => setHoveredId(null)}
+              >
+                <div ref={(el) => (imageRefs.current[index] = el)} className="relative overflow-hidden aspect-[4/3] mb-6">
+                  <img
+                    src={images[currentSlide]}
+                    alt={project.title}
+                    className={`w-full h-full object-cover transition-all duration-700 ${
+                      hoveredId === project.id ? "scale-105" : "scale-100"
+                    }`}
+                  />
+                  <div
+                    className="absolute inset-0 bg-primary origin-top"
+                    style={{
+                      transform: revealedImages.has(project.id) ? "scaleY(0)" : "scaleY(1)",
+                      transition: "transform 1.5s cubic-bezier(0.76, 0, 0.24, 1)",
+                    }}
+                  />
+                  {hasMultiple && (
+                    <>
+                      <button
+                        onClick={(e) => { e.stopPropagation(); goSlide(project.id, -1, images.length) }}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
+                      >
+                        <ChevronLeft className="w-5 h-5" />
+                      </button>
+                      <button
+                        onClick={(e) => { e.stopPropagation(); goSlide(project.id, 1, images.length) }}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
+                      >
+                        <ChevronRight className="w-5 h-5" />
+                      </button>
+                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        {images.map((_, i) => (
+                          <button
+                            key={i}
+                            onClick={(e) => { e.stopPropagation(); setSlideIndexes((prev) => ({ ...prev, [project.id]: i })) }}
+                            className={`w-2 h-2 rounded-full transition-all ${i === currentSlide ? "bg-white w-5" : "bg-white/60"}`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
-                <span className="text-muted-foreground/60 text-sm">{project.year}</span>
-              </div>
-            </article>
-          ))}
+
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-medium mb-2 group-hover:underline underline-offset-4">{project.title}</h3>
+                    <p className="text-muted-foreground text-sm">
+                      {project.category} · {project.location}
+                    </p>
+                  </div>
+                  <span className="text-muted-foreground/60 text-sm">{project.year}</span>
+                </div>
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>
