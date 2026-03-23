@@ -1,5 +1,6 @@
 import { PrivacyModal } from "@/components/PrivacyModal"
 import { TermsModal } from "@/components/TermsModal"
+import Icon from "@/components/ui/icon"
 
 export function Footer() {
   return (
@@ -8,7 +9,10 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="md:col-span-2">
-            <a href="/" className="inline-block mb-6">
+            <a href="/" className="inline-flex items-center gap-3 mb-6">
+              <div className="w-9 h-9 bg-foreground rounded flex items-center justify-center flex-shrink-0">
+                <Icon name="House" size={18} className="text-background" />
+              </div>
               <span className="text-foreground text-xl font-semibold tracking-widest uppercase">TOYSTROY</span>
             </a>
             <p className="text-muted-foreground leading-relaxed max-w-sm">
