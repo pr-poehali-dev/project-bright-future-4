@@ -63,16 +63,6 @@ const projects = [
     ],
   },
   {
-    id: 17,
-    title: "Одноэтажный дом с верандой",
-    category: "Каркасный дом · Веранда",
-    location: "",
-    year: "2025",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/1a7ebd95-de31-4fc9-a7f2-9cfb0dfe977d.jpg",
-    ],
-  },
-  {
     id: 16,
     title: "А-фрейм дом в лесу",
     category: "Каркасный дом · А-фрейм",
@@ -110,6 +100,16 @@ const projects = [
     year: "2025",
     images: [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/cf189aaf-d379-44fc-83f2-6f814611de47.jpg",
+    ],
+  },
+  {
+    id: 17,
+    title: "Одноэтажный дом с верандой",
+    category: "Каркасный дом · Веранда",
+    location: "",
+    year: "2024",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/1a7ebd95-de31-4fc9-a7f2-9cfb0dfe977d.jpg",
     ],
   },
   {
