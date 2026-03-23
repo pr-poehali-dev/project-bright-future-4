@@ -66,7 +66,7 @@ const projects = [
   },
   {
     id: 9,
-    title: "Дача у озера",
+    title: "Дача у озера 11×8",
     category: "Каркасный дом 2 этажа · Терраса",
     location: "",
     year: "2025",
