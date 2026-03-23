@@ -107,7 +107,7 @@ const projects = [
   {
     id: 10,
     title: "Дача 6×6",
-    category: "Каркасная дача · Профлист коричневый",
+    category: "Каркасная дача · Сайдинг · Кровля профлист GrandLine",
     location: "",
     year: "2025",
     images: [
