@@ -47,7 +47,7 @@ const projects = [
   {
     id: 5,
     title: "Каркасная баня",
-    category: "Баня под ключ",
+    category: "Баня под ключ 6×6",
     location: "",
     year: "2024",
     images: [
