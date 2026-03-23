@@ -115,6 +115,16 @@ const projects = [
     ],
   },
   {
+    id: 16,
+    title: "А-фрейм дом в лесу",
+    category: "Каркасный дом · А-фрейм · Терраса",
+    location: "",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/d9dcc7df-9e90-48d2-8483-c09b8b5d075a.jpg",
+    ],
+  },
+  {
     id: 15,
     title: "Барнхаус «Тёмный лес»",
     category: "Каркасный дом · Барнхаус · Фасад антрацит",
