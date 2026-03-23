@@ -128,9 +128,8 @@ const projects = [
 
 export function Projects() {
   const [current, setCurrent] = useState(0)
-  const [hoveredId, setHoveredId] = useState<number | null>(null)
   const [slideIndexes, setSlideIndexes] = useState<Record<number, number>>({})
-  const sliderRef = useRef<HTMLDivElement>(null)
+  const touchStartX = useRef<number | null>(null)
 
   const goSlide = (projectId: number, direction: number, totalImages: number, e: React.MouseEvent) => {
     e.stopPropagation()
@@ -141,14 +140,19 @@ export function Projects() {
     })
   }
 
-  const prev = () => setCurrent((c) => (c - 1 + projects.length) % projects.length)
-  const next = () => setCurrent((c) => (c + 1) % projects.length)
+  const prev = () => setCurrent((c) => Math.max(0, c - 1))
+  const next = () => setCurrent((c) => Math.min(projects.length - 1, c))
 
-  const visible = [
-    projects[(current) % projects.length],
-    projects[(current + 1) % projects.length],
-    projects[(current + 2) % projects.length],
-  ]
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (diff > 50) next()
+    else if (diff < -50) prev()
+    touchStartX.current = null
+  }
 
   return (
     <section id="projects" className="py-32 md:py-29 relative overflow-hidden">
@@ -160,6 +164,7 @@ export function Projects() {
         />
         <div className="absolute inset-0 bg-white/70" />
       </div>
+
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
@@ -170,13 +175,15 @@ export function Projects() {
             <div className="flex items-center gap-2">
               <button
                 onClick={prev}
-                className="w-11 h-11 rounded-full border border-foreground/20 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
+                disabled={current === 0}
+                className="w-11 h-11 rounded-full border border-foreground/20 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={next}
-                className="w-11 h-11 rounded-full border border-foreground/20 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
+                disabled={current >= projects.length - 1}
+                className="w-11 h-11 rounded-full border border-foreground/20 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -193,27 +200,34 @@ export function Projects() {
             </a>
           </div>
         </div>
+      </div>
 
-        <div ref={sliderRef} className="grid md:grid-cols-3 gap-6 md:gap-8">
-          {visible.map((project, index) => {
+      {/* Слайдер — выходит за container */}
+      <div
+        className="relative overflow-hidden pl-6 md:pl-12"
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
+        <div
+          className="flex gap-6 transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(calc(-${current} * (min(45vw, 560px) + 24px)))` }}
+        >
+          {projects.map((project) => {
             const images = project.images || ["/placeholder.svg"]
             const currentSlide = slideIndexes[project.id] || 0
             const hasMultiple = images.length > 1
 
             return (
               <article
-                key={`${project.id}-${current}-${index}`}
-                className="group cursor-pointer animate-fade-in"
-                onMouseEnter={() => setHoveredId(project.id)}
-                onMouseLeave={() => setHoveredId(null)}
+                key={project.id}
+                className="group cursor-pointer flex-shrink-0"
+                style={{ width: "min(45vw, 560px)" }}
               >
-                <div className="relative overflow-hidden aspect-[4/3] mb-6">
+                <div className="relative overflow-hidden aspect-[4/3] mb-5">
                   <img
                     src={images[currentSlide]}
                     alt={project.title}
-                    className={`w-full h-full object-cover transition-all duration-700 ${
-                      hoveredId === project.id ? "scale-105" : "scale-100"
-                    }`}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {hasMultiple && (
                     <>
@@ -254,13 +268,15 @@ export function Projects() {
             )
           })}
         </div>
+      </div>
 
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex justify-center gap-2 mt-10">
           {projects.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-2 h-2 rounded-full transition-colors ${i === current ? "bg-foreground" : "bg-foreground/20"}`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? "w-6 bg-foreground" : "w-1.5 bg-foreground/20"}`}
             />
           ))}
         </div>
