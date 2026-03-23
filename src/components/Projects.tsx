@@ -16,11 +16,15 @@ const projects = [
   },
   {
     id: 2,
-    title: "Коттедж «Сосновый бор»",
-    category: "Каркасный дом 180 м²",
-    location: "Ленинградская область",
+    title: "Барнхаус одноэтажный",
+    category: "Каркасный дом 120 м²",
+    location: "",
     year: "2023",
-    image: "/images/hously-2.png",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/e14806ee-79db-4545-af66-3ac6c29b0ca3.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/975ed8a2-a437-40a6-9827-ecad62abfc06.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/7321d33a-8e05-4592-92df-a0f44b8d5fa0.jpg",
+    ],
   },
   {
     id: 3,
