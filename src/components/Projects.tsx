@@ -57,7 +57,7 @@ const projects = [
   {
     id: 7,
     title: "Каркасный дом 9×9",
-    category: "Каркасный дом · Сайдинг",
+    category: "Каркасный дом · Сайдинг GrandLine",
     location: "",
     year: "2025",
     images: [
