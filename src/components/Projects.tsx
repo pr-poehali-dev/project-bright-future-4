@@ -75,6 +75,16 @@ const projects = [
     ],
   },
   {
+    id: 11,
+    title: "Дача 2 этажа из профлиста",
+    category: "Каркасная дача · Профлист жёлтый",
+    location: "",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/d7c0b07c-c4ee-418f-9dbf-13c1260ebbd1.jpg",
+    ],
+  },
+  {
     id: 10,
     title: "Дача из профлиста",
     category: "Каркасная дача · Профлист коричневый",
