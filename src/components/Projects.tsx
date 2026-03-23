@@ -65,6 +65,16 @@ const projects = [
     ],
   },
   {
+    id: 9,
+    title: "Дача у озера",
+    category: "Каркасный дом 2 этажа · Терраса",
+    location: "",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/2309aecd-6b53-40d5-8508-8a222b03f846.jpg",
+    ],
+  },
+  {
     id: 6,
     title: "Баня в лесу с купелью",
     category: "Каркасная баня под ключ",
