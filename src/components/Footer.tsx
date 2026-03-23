@@ -11,7 +11,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <a href="/" className="inline-flex items-center gap-3 mb-6">
               <div className="w-9 h-9 bg-foreground rounded flex items-center justify-center flex-shrink-0">
-                <Icon name="House" size={18} className="text-background" />
+                <span className="text-background text-sm font-bold tracking-tight">TS</span>
               </div>
               <span className="text-foreground text-xl font-semibold tracking-widest uppercase">TOYSTROY</span>
             </a>
