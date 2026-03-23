@@ -51,9 +51,9 @@ const projects = [
     location: "",
     year: "2024",
     images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/fd1645ff-9d83-4ba8-87b8-82d37861ecb7.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/6df14c64-6ac0-4963-af49-c1576cf3b138.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/aa40da1d-e5a0-4613-8fa8-b278932b6c2c.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/36c7f421-2560-4452-bfb5-204801a24445.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/ec45a8c7-2e14-4279-9fa1-39e5d4ec5344.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/69e8ac0e-3a12-4c22-8fc9-dec533073c71.jpg",
     ],
   },
 ]
