@@ -106,7 +106,7 @@ const projects = [
   },
   {
     id: 10,
-    title: "Баня 6×6",
+    title: "Дача 6×6",
     category: "Каркасная дача · Профлист коричневый",
     location: "",
     year: "2025",
