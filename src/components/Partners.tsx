@@ -14,7 +14,7 @@ export function Partners() {
     <section id="partners" className="py-24 bg-secondary/50">
       <div className="container mx-auto px-6 md:px-12">
         <div className="mb-14 text-center">
-          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-4">Доверяют профессионалы</p>
+          <p className="text-foreground text-base md:text-lg font-bold tracking-[0.25em] uppercase mb-4">Доверяют профессионалы</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Наши партнёры</h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
