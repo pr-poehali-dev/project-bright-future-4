@@ -107,7 +107,7 @@ export function Expertise() {
             <br />
             решают всё
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-foreground text-lg leading-relaxed font-semibold">
             От первого эскиза до ключей в руках — берём на себя все этапы строительства, чтобы вы могли просто ждать результат.
           </p>
         </div>
