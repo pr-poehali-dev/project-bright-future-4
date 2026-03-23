@@ -29,7 +29,7 @@ const projects = [
   {
     id: 3,
     title: "Дом «Тихая гавань»",
-    category: "Каркасный дом 8×6, 2 этажа · Фасад GrandLine антрацит · Металлочерепица",
+    category: "Каркасный дом 8×6, 2 этажа · Фасад GrandLine антрацит",
     location: "",
     year: "2023",
     images: [
