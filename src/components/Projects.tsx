@@ -29,10 +29,14 @@ const projects = [
   {
     id: 3,
     title: "Дача «Тихая гавань»",
-    category: "Каркасный домик 60 м²",
-    location: "Тверская область",
+    category: "Каркасный дом 8×6, 2 этажа · Фасад GrandLine антрацит · Металлочерепица",
+    location: "",
     year: "2023",
-    image: "/images/hously-3.png",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/a010d924-59b0-4971-a9da-e8b4a81c4cd7.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/bde0395b-69d8-4ccf-89b8-d0030f83f808.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/b9409bf4-994b-443e-9b55-45af9f4f3c7a.jpg",
+    ],
   },
   {
     id: 4,
