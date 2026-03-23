@@ -41,7 +41,7 @@ const projects = [
     location: "Карелия",
     year: "2024",
     images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/3b75ce94-1321-42e9-b123-c6dbdcf821d5.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9e66a153-da16-44d0-826b-d98c881b7c69.jpg",
     ],
   },
   {
