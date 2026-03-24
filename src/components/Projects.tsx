@@ -25,7 +25,7 @@ const projects = [
   {
     id: 9,
     title: "Дача «Тихое место» 11×8",
-    category: "Каркасная дача 2 этажа · Терраса",
+    category: "Каркасная дача 2 этажа · Терраса · Металлочерепица GrandLine",
     location: "",
     year: "2025",
     images: [
