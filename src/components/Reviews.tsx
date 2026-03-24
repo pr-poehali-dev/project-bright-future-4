@@ -181,7 +181,7 @@ export function Reviews() {
                   <p className="font-medium text-sm">Видеоотзыв клиента</p>
                   <p className="text-muted-foreground text-sm">Тульская область</p>
                 </div>
-                <span className="text-muted-foreground/60 text-xs">2024</span>
+                <span className="text-muted-foreground/60 text-xs">2025</span>
               </div>
             </div>
           </div>
