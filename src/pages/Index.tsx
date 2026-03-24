@@ -7,6 +7,7 @@ import { Calculator } from "../components/Calculator"
 import { FAQ } from "../components/FAQ"
 import { Reviews } from "../components/Reviews"
 import { Partners } from "../components/Partners"
+import { Financing } from "../components/Financing"
 import { Process } from "../components/Process"
 import { Footer } from "../components/Footer"
 
@@ -18,6 +19,7 @@ export default function Index() {
       <Philosophy />
       <Projects />
       <Expertise />
+      <Financing />
       <Process />
       <Calculator />
       <FAQ />
