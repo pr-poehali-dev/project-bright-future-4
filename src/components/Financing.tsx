@@ -20,19 +20,6 @@ const options = [
     description: "Разбиваем оплату на этапы строительства: фундамент, каркас, кровля, отделка.",
     badge: "Без %",
   },
-  {
-    icon: "Building2",
-    title: "Ипотека",
-    description: "Помогаем оформить ипотеку на строительство через ведущие банки России.",
-    badge: "От 6%",
-  },
-]
-
-const banks = [
-  { name: "Сбербанк", icon: "Landmark" },
-  { name: "ВТБ", icon: "Landmark" },
-  { name: "Россельхозбанк", icon: "Landmark" },
-  { name: "Дом.РФ", icon: "Home" },
 ]
 
 export function Financing() {
@@ -58,7 +45,7 @@ export function Financing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {options.map((option) => (
             <div
               key={option.title}
@@ -78,21 +65,6 @@ export function Financing() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="border-t border-border pt-12">
-          <p className="text-sm font-bold tracking-[0.2em] uppercase text-muted-foreground mb-8">Банки-партнёры</p>
-          <div className="flex flex-wrap gap-6">
-            {banks.map((bank) => (
-              <div
-                key={bank.name}
-                className="flex items-center gap-3 border border-border px-6 py-3 bg-white"
-              >
-                <Icon name={bank.icon as Parameters<typeof Icon>[0]["name"]} size={16} className="text-muted-foreground" />
-                <span className="text-sm font-semibold">{bank.name}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
