@@ -201,7 +201,6 @@ export function Calculator() {
                   { icon: "Home", text: `Тип: ${buildingType}` },
                   { icon: "Maximize", text: `Площадь: ${area} м²` },
                   { icon: "Car", text: "Бесплатный выезд на участок" },
-                  { icon: "FileText", text: "Смета без обязательств" },
                   { icon: "Clock", text: "Ответ в течение 1 часа" },
                 ].map((item) => (
                   <li key={item.text} className="flex items-center gap-4 text-sm text-background/80">
