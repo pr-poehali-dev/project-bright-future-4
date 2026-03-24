@@ -18,7 +18,7 @@ export function Footer() {
             <p className="text-muted-foreground leading-relaxed max-w-sm">
               Строим каркасные дома под ключ. Быстро, тепло и с гарантией — от проекта до новоселья.
             </p>
-            <p className="text-muted-foreground text-sm mt-3">ИП Ворожбит В.В.</p>
+            <p className="text-muted-foreground/50 text-xs mt-6">ИП Ворожбит В.В.</p>
           </div>
 
           {/* Navigation */}
