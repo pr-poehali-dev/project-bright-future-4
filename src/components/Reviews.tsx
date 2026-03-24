@@ -1,130 +1,192 @@
 import { useState } from "react"
 import Icon from "@/components/ui/icon"
 
-const reviews = [
+type TextReview = {
+  type: "text"
+  name: string
+  location: string
+  text: string
+  rating: number
+  date: string
+  sortYear: number
+  sortMonth: number
+}
+
+type VideoReview = {
+  type: "video"
+  title: string
+  text: string
+  videoId: string
+  date: string
+  sortYear: number
+  sortMonth: number
+}
+
+type Review = TextReview | VideoReview
+
+const allReviews: Review[] = [
   {
+    type: "video",
+    title: "Видеоотзыв клиента",
+    text: "Заказали каркасный дом 6×8 — результат превзошёл ожидания. Индивидуальный подход, учли все наши пожелания по планировке. Построили быстро, качество материалов отличное. Очень довольны, рекомендуем TOYSTROY!",
+    videoId: "456239021",
+    date: "2025",
+    sortYear: 2025,
+    sortMonth: 1,
+  },
+  {
+    type: "text",
     name: "Елена Громова",
     location: "Тульская область",
     text: "Долго выбирала компанию, остановилась на TOYSTROY — не пожалела. Всё по смете, никаких скрытых доплат. Менеджер на связи в любое время, все вопросы решались быстро. Дача получилась лучше, чем мечтала.",
     rating: 5,
     date: "Март 2025",
+    sortYear: 2025,
+    sortMonth: 3,
   },
   {
+    type: "text",
     name: "Игорь Васильев",
     location: "Тульская область",
     text: "Заказывал дом под ключ с отделкой. Работой доволен: качество материалов хорошее, стыки ровные, коммуникации разведены грамотно. Особенно понравилось, что договор с фиксированной ценой — это редкость.",
     rating: 5,
     date: "Февраль 2025",
+    sortYear: 2025,
+    sortMonth: 2,
   },
   {
+    type: "text",
     name: "Андрей Соколов",
     location: "Тульская область",
     text: "Строили дом 130 м² — уложились в 3 месяца, как и обещали. Бригада аккуратная, мусор убирали каждый день. Перезимовали первую зиму — тепло, никаких продувов. Рекомендую без оговорок.",
     rating: 5,
     date: "Январь 2025",
+    sortYear: 2025,
+    sortMonth: 1,
   },
   {
+    type: "video",
+    title: "Видеоотзыв клиента",
+    text: "Заказали каркасный дом 8×8 под ключ. Очень довольны результатом — качество строительства на высоте, работы выполнены точно в срок. Команда профессиональная, всё объяснили, учли все пожелания. Рекомендуем TOYSTROY всем!",
+    videoId: "456239020",
+    date: "2024",
+    sortYear: 2024,
+    sortMonth: 12,
+  },
+  {
+    type: "text",
     name: "Михаил Захаров",
     location: "Тульская область",
     text: "Заказывали баню 6×4 под ключ. Построили за 5 недель — быстро и аккуратно. Парная держит жар отлично, даже в мороз -25 протапливается за час. Полки ровные, вагонка уложена красиво. Семья в восторге!",
     rating: 5,
     date: "Октябрь 2024",
+    sortYear: 2024,
+    sortMonth: 10,
   },
   {
+    type: "text",
     name: "Светлана Борисова",
     location: "Тульская область",
     text: "Давно мечтала о своей бане — TOYSTROY воплотили мечту. Сделали проект, учли все пожелания: предбанник, комната отдыха, терраса. Качество материалов на высоте, швы проконопачены плотно. Теперь каждые выходные — баня!",
     rating: 5,
     date: "Август 2024",
+    sortYear: 2024,
+    sortMonth: 8,
   },
   {
+    type: "text",
     name: "Сергей Лебедев",
     location: "Тульская область",
     text: "Обратился в TOYSTROY по совету соседа — и не прогадал. Построили дом 100 м² за 10 недель. Прораб постоянно на связи, фото с объекта присылали каждый день. Качество сборки отличное, всё ровно и аккуратно.",
     rating: 5,
     date: "Май 2024",
+    sortYear: 2024,
+    sortMonth: 5,
   },
   {
+    type: "text",
     name: "Татьяна Морозова",
     location: "Тульская область",
     text: "Строили в суровых условиях — морозы, удалённый участок. Ребята справились отлично. Дом 160 м², тёплый, уютный. Уже прошла зима — ни одной претензии. Планируем заказывать баню у них же.",
     rating: 5,
     date: "Апрель 2024",
+    sortYear: 2024,
+    sortMonth: 4,
   },
   {
+    type: "text",
     name: "Алексей Тихонов",
     location: "Тульская область",
     text: "Обращался за баней 5×6 с мансардой. Сложный проект, но команда справилась отлично. Объяснили все нюансы по утеплению и вентиляции, подобрали правильную печь. Уже два сезона — ни одного замечания.",
     rating: 5,
     date: "Ноябрь 2023",
+    sortYear: 2023,
+    sortMonth: 11,
   },
   {
+    type: "text",
     name: "Наталья Федорова",
     location: "Тульская область",
     text: "Очень довольна сотрудничеством. Команда профессионалов — видно, что любят своё дело. Предложили удачные решения по планировке, о которых я сама не подумала. Дом получился функциональным и красивым.",
     rating: 5,
     date: "Сентябрь 2023",
+    sortYear: 2023,
+    sortMonth: 9,
   },
   {
+    type: "text",
     name: "Дмитрий Орлов",
     location: "Тульская область",
     text: "Давно мечтал о своём доме — наконец решился. TOYSTROY предложили хороший проект, объяснили все этапы, помогли выбрать материалы. Дом сдали точно в срок. Сейчас живём уже полгода — всё супер.",
     rating: 5,
     date: "Август 2023",
+    sortYear: 2023,
+    sortMonth: 8,
   },
   {
+    type: "text",
     name: "Павел Кузнецов",
     location: "Тульская область",
     text: "Заказал баню 4×6 — результат превзошёл ожидания. Прораб лично контролировал каждый этап, присылал фото. Парная сделана по уму: правильный пирог, хорошая вентиляция. Первый пар был уже через 6 недель после начала стройки. Советую всем!",
     rating: 5,
     date: "Июль 2023",
+    sortYear: 2023,
+    sortMonth: 7,
   },
   {
+    type: "text",
     name: "Ольга Никитина",
     location: "Тульская область",
     text: "Заказывали небольшой домик для родителей — 75 м², один этаж. Всё сделали быстро и чисто. Родители в восторге: тепло, светло, уютно. Цена оказалась ниже, чем у конкурентов при том же качестве.",
     rating: 5,
     date: "Июнь 2023",
+    sortYear: 2023,
+    sortMonth: 6,
   },
   {
-    name: "Михаил Захаров",
+    type: "text",
+    name: "Каркасный дом 9×12",
     location: "Тульская область",
-    text: "Заказывали баню 6×4 под ключ. Построили за 5 недель — быстро и аккуратно. Парная держит жар отлично, даже в мороз -25 протапливается за час. Полки ровные, вагонка уложена красиво. Семья в восторге!",
+    text: "Заказывал дом под ключ с отделкой. Работой доволен: качество материалов хорошее, стыки ровные, коммуникации разведены грамотно. Особенно понравилось, что договор с фиксированной ценой — это редкость.",
     rating: 5,
-    date: "Октябрь 2024",
-  },
-  {
-    name: "Светлана Борисова",
-    location: "Тульская область",
-    text: "Давно мечтала о своей бане — TOYSTROY воплотили мечту. Сделали проект, учли все пожелания: предбанник, комната отдыха, терраса. Качество материалов на высоте, швы проконопачены плотно. Теперь каждые выходные — баня!",
-    rating: 5,
-    date: "Август 2024",
-  },
-  {
-    name: "Павел Кузнецов",
-    location: "Тульская область",
-    text: "Заказал баню 4×6 — результат превзошёл ожидания. Прораб лично контролировал каждый этап, присылал фото. Парная сделана по уму: правильный пирог, хорошая вентиляция. Первый пар был уже через 6 недель после начала стройки. Советую всем!",
-    rating: 5,
-    date: "Июль 2023",
-  },
-  {
-    name: "Алексей Тихонов",
-    location: "Тульская область",
-    text: "Обращался за баней 5×6 с мансардой. Сложный проект, но команда справилась отлично. Объяснили все нюансы по утеплению и вентиляции, подобрали правильную печь. Уже два сезона — ни одного замечания.",
-    rating: 5,
-    date: "Ноябрь 2023",
+    date: "Февраль 2023",
+    sortYear: 2023,
+    sortMonth: 2,
   },
 ]
+
+const sorted = [...allReviews].sort(
+  (a, b) => b.sortYear - a.sortYear || b.sortMonth - a.sortMonth,
+)
 
 export function Reviews() {
   const [current, setCurrent] = useState(0)
   const perPage = 2
-  const total = Math.ceil(reviews.length / perPage)
+  const total = Math.ceil(sorted.length / perPage)
+  const visible = sorted.slice(current * perPage, current * perPage + perPage)
 
   const prev = () => setCurrent((c) => Math.max(0, c - 1))
   const next = () => setCurrent((c) => Math.min(total - 1, c + 1))
-
-  const visible = reviews.slice(current * perPage, current * perPage + perPage)
 
   return (
     <section id="reviews" className="py-32 md:py-29 bg-secondary/50">
@@ -153,90 +215,61 @@ export function Reviews() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 mb-10">
-          <div className="bg-background p-8 flex flex-col lg:flex-row gap-8">
-            <div className="w-full lg:w-1/2 aspect-video">
-              <iframe
-                src="https://vk.com/video_ext.php?oid=-230059674&id=456239021&hd=2"
-                width="100%"
-                height="100%"
-                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col justify-between gap-6 lg:w-1/2">
-              <div>
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <span key={i} className="text-orange-400 text-lg">★</span>
-                  ))}
-                </div>
-                <p className="text-foreground leading-relaxed text-lg">
-                  "Заказали каркасный дом 6×8 — результат превзошёл ожидания. Индивидуальный подход, учли все наши пожелания по планировке. Построили быстро, качество материалов отличное. Очень довольны, рекомендуем TOYSTROY!"
-                </p>
-              </div>
-              <div className="border-t border-border pt-6 flex items-end justify-between">
-                <div>
-                  <p className="font-medium text-sm">Видеоотзыв клиента</p>
-                  <p className="text-muted-foreground text-sm">Тульская область</p>
-                </div>
-                <span className="text-muted-foreground/60 text-xs">2025</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-background p-8 flex flex-col lg:flex-row gap-8">
-            <div className="w-full lg:w-1/2 aspect-video">
-              <iframe
-                src="https://vk.com/video_ext.php?oid=-230059674&id=456239020&hd=2"
-                width="100%"
-                height="100%"
-                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col justify-between gap-6 lg:w-1/2">
-              <div>
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <span key={i} className="text-orange-400 text-lg">★</span>
-                  ))}
-                </div>
-                <p className="text-foreground leading-relaxed text-lg">
-                  "Заказали каркасный дом 8×8 под ключ. Очень довольны результатом — качество строительства на высоте, работы выполнены точно в срок. Команда профессиональная, всё объяснили, учли все пожелания. Рекомендуем TOYSTROY всем!"
-                </p>
-              </div>
-              <div className="border-t border-border pt-6 flex items-end justify-between">
-                <div>
-                  <p className="font-medium text-sm">Видеоотзыв клиента</p>
-                  <p className="text-muted-foreground text-sm">Тульская область</p>
-                </div>
-                <span className="text-muted-foreground/60 text-xs">2024</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-          {visible.map((review, index) => (
-            <div key={current * perPage + index} className="bg-background p-8 flex flex-col gap-6">
-              <div className="flex gap-1">
-                {Array.from({ length: review.rating }).map((_, i) => (
-                  <span key={i} className="text-orange-400 text-lg">★</span>
-                ))}
-              </div>
-              <p className="text-foreground leading-relaxed flex-1">"{review.text}"</p>
-              <div className="flex items-end justify-between border-t border-border pt-6">
-                <div>
-                  <p className="font-medium text-sm">{review.name}</p>
-                  <p className="text-muted-foreground text-sm">{review.location}</p>
+          {visible.map((review, index) => {
+            if (review.type === "video") {
+              return (
+                <div key={current * perPage + index} className="bg-background p-8 flex flex-col gap-6 md:col-span-2">
+                  <div className="flex flex-col lg:flex-row gap-8">
+                    <div className="w-full lg:w-1/2 aspect-video">
+                      <iframe
+                        src={`https://vk.com/video_ext.php?oid=-230059674&id=${review.videoId}&hd=2`}
+                        width="100%"
+                        height="100%"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-between gap-6 lg:w-1/2">
+                      <div>
+                        <div className="flex gap-1 mb-4">
+                          {Array.from({ length: 5 }).map((_, i) => (
+                            <span key={i} className="text-orange-400 text-lg">★</span>
+                          ))}
+                        </div>
+                        <p className="text-foreground leading-relaxed text-lg">"{review.text}"</p>
+                      </div>
+                      <div className="border-t border-border pt-6 flex items-end justify-between">
+                        <div>
+                          <p className="font-medium text-sm">{review.title}</p>
+                          <p className="text-muted-foreground text-sm">Тульская область</p>
+                        </div>
+                        <span className="text-muted-foreground/60 text-xs">{review.date}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <span className="text-muted-foreground/60 text-xs">{review.date}</span>
+              )
+            }
+            return (
+              <div key={current * perPage + index} className="bg-background p-8 flex flex-col gap-6">
+                <div className="flex gap-1">
+                  {Array.from({ length: review.rating }).map((_, i) => (
+                    <span key={i} className="text-orange-400 text-lg">★</span>
+                  ))}
+                </div>
+                <p className="text-foreground leading-relaxed flex-1">"{review.text}"</p>
+                <div className="flex items-end justify-between border-t border-border pt-6">
+                  <div>
+                    <p className="font-medium text-sm">{review.name}</p>
+                    <p className="text-muted-foreground text-sm">{review.location}</p>
+                  </div>
+                  <span className="text-muted-foreground/60 text-xs">{review.date}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>
