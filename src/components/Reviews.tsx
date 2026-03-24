@@ -155,16 +155,17 @@ export function Reviews() {
 
         <div className="flex flex-col gap-6 mb-10">
           <div className="bg-background p-8 flex flex-col lg:flex-row gap-8">
-            <div className="w-full lg:w-1/2 aspect-video">
-              <iframe
-                src="https://vk.com/video_ext.php?oid=-230059674&id=456239018&hd=2"
-                width="100%"
-                height="100%"
-                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
+            <a
+              href="https://vk.ru/wall-230059674_21"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full lg:w-1/2 aspect-video bg-foreground flex flex-col items-center justify-center gap-4 group hover:bg-foreground/90 transition-colors"
+            >
+              <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                <Icon name="Play" size={28} className="text-white ml-1" />
+              </div>
+              <span className="text-white/80 text-sm font-medium">Смотреть в ВКонтакте</span>
+            </a>
             <div className="flex flex-col justify-between gap-6 lg:w-1/2">
               <div>
                 <div className="flex gap-1 mb-4">
@@ -187,16 +188,17 @@ export function Reviews() {
           </div>
 
           <div className="bg-background p-8 flex flex-col lg:flex-row gap-8">
-            <div className="w-full lg:w-1/2 aspect-video">
-              <iframe
-                src="https://vk.com/video_ext.php?oid=-230059674&id=456239020&hd=2"
-                width="100%"
-                height="100%"
-                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
+            <a
+              href="https://vk.ru/wall-230059674_22"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full lg:w-1/2 aspect-video bg-foreground flex flex-col items-center justify-center gap-4 group hover:bg-foreground/90 transition-colors"
+            >
+              <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                <Icon name="Play" size={28} className="text-white ml-1" />
+              </div>
+              <span className="text-white/80 text-sm font-medium">Смотреть в ВКонтакте</span>
+            </a>
             <div className="flex flex-col justify-between gap-6 lg:w-1/2">
               <div>
                 <div className="flex gap-1 mb-4">
