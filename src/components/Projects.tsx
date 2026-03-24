@@ -95,7 +95,7 @@ const projects = [
   {
     id: 17,
     title: "Одноэтажный дом с верандой",
-    category: "Каркасный дом · Веранда",
+    category: "Каркасный дом · Веранда · Профлист GrandLine",
     location: "",
     year: "2024",
     images: [
