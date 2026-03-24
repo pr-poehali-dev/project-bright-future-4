@@ -94,8 +94,8 @@ const projects = [
   },
   {
     id: 18,
-    title: "Большая баня с верандой",
-    category: "Баня · Веранда · Металлочерепица",
+    title: "Баня с верандой",
+    category: "Баня · Веранда",
     location: "",
     year: "2024",
     images: [
