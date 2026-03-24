@@ -153,6 +153,40 @@ export function Reviews() {
           </div>
         </div>
 
+        <div className="mb-10">
+          <div className="bg-background p-8 flex flex-col lg:flex-row gap-8">
+            <div className="w-full lg:w-1/2 aspect-video">
+              <iframe
+                src="https://vk.com/video_ext.php?oid=-230059674&id=456239020&hd=2"
+                width="100%"
+                height="100%"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <div className="flex flex-col justify-between gap-6 lg:w-1/2">
+              <div>
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <span key={i} className="text-orange-400 text-lg">★</span>
+                  ))}
+                </div>
+                <p className="text-foreground leading-relaxed text-lg">
+                  "Заказали каркасный дом 8×8 под ключ. Очень довольны результатом — качество строительства на высоте, работы выполнены точно в срок. Команда профессиональная, всё объяснили, учли все пожелания. Рекомендуем TOYSTROY всем!"
+                </p>
+              </div>
+              <div className="border-t border-border pt-6 flex items-end justify-between">
+                <div>
+                  <p className="font-medium text-sm">Видеоотзыв клиента</p>
+                  <p className="text-muted-foreground text-sm">Тульская область</p>
+                </div>
+                <span className="text-muted-foreground/60 text-xs">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {visible.map((review, index) => (
             <div key={current * perPage + index} className="bg-background p-8 flex flex-col gap-6">
