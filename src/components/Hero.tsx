@@ -1,6 +1,25 @@
+import { useRef } from "react";
+import html2canvas from "html2canvas";
+import Icon from "@/components/ui/icon";
+
 export function Hero() {
+  const heroRef = useRef<HTMLElement>(null);
+
+  const handleDownload = async () => {
+    if (!heroRef.current) return;
+    const canvas = await html2canvas(heroRef.current, {
+      useCORS: true,
+      allowTaint: true,
+      scale: 2,
+    });
+    const link = document.createElement("a");
+    link.download = "toystroy-hero.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  };
+
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/b5582a93-0e3f-404d-b828-5f4586a070e0.jpg"
@@ -23,6 +42,14 @@ export function Hero() {
           </p>
         </div>
       </div>
+
+      <button
+        onClick={handleDownload}
+        className="absolute bottom-6 right-6 z-20 flex items-center gap-2 bg-black/50 hover:bg-black/70 text-white text-sm font-semibold px-4 py-2 rounded-full backdrop-blur-sm transition-all"
+      >
+        <Icon name="Download" size={16} />
+        Скачать картинку
+      </button>
     </section>
   )
 }
