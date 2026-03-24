@@ -95,7 +95,7 @@ const projects = [
   {
     id: 18,
     title: "Баня с верандой",
-    category: "Баня · Веранда",
+    category: "Баня · Веранда · Профлист GrandLine",
     location: "",
     year: "2024",
     images: [
