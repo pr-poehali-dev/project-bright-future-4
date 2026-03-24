@@ -93,6 +93,16 @@ const projects = [
     ],
   },
   {
+    id: 19,
+    title: "Двухэтажный дом с верандой",
+    category: "Каркасный дом · Веранда · Гибкая черепица",
+    location: "",
+    year: "2022",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/014ed807-ab79-4540-88c0-40b72b26661e.jpg",
+    ],
+  },
+  {
     id: 18,
     title: "Баня с верандой",
     category: "Баня · Веранда · Профлист GrandLine",
