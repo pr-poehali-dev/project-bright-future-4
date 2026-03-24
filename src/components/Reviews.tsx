@@ -153,7 +153,39 @@ export function Reviews() {
           </div>
         </div>
 
-        <div className="mb-10">
+        <div className="flex flex-col gap-6 mb-10">
+          <div className="bg-background p-8 flex flex-col lg:flex-row gap-8">
+            <div className="w-full lg:w-1/2 aspect-video">
+              <iframe
+                src="https://vk.com/video_ext.php?oid=-230059674&id=456239018&hd=2"
+                width="100%"
+                height="100%"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <div className="flex flex-col justify-between gap-6 lg:w-1/2">
+              <div>
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <span key={i} className="text-orange-400 text-lg">★</span>
+                  ))}
+                </div>
+                <p className="text-foreground leading-relaxed text-lg">
+                  "Заказали каркасный дом 6×8 — результат превзошёл ожидания. Индивидуальный подход, учли все наши пожелания по планировке. Построили быстро, качество материалов отличное. Очень довольны, рекомендуем TOYSTROY!"
+                </p>
+              </div>
+              <div className="border-t border-border pt-6 flex items-end justify-between">
+                <div>
+                  <p className="font-medium text-sm">Видеоотзыв клиента</p>
+                  <p className="text-muted-foreground text-sm">Тульская область</p>
+                </div>
+                <span className="text-muted-foreground/60 text-xs">2024</span>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-background p-8 flex flex-col lg:flex-row gap-8">
             <div className="w-full lg:w-1/2 aspect-video">
               <iframe
