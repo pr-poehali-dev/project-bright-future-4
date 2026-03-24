@@ -220,7 +220,7 @@ export function Projects() {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <div>
-            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Построенные дома</p>
+            <p className="text-foreground text-base md:text-lg font-bold tracking-[0.25em] uppercase mb-6">Построенные дома</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Наши работы</h2>
           </div>
           <div className="flex items-center gap-4">
