@@ -13,7 +13,7 @@ export function CallToAction() {
           </h2>
 
           <p className="text-primary-foreground/70 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto">
-            Бесплатный выезд на участок и смета без обязательств. Расскажите о своём проекте — и мы предложим решение под ваш бюджет.
+            Бесплатный выезд на участок. Расскажите о своём проекте — и мы предложим решение под ваш бюджет.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
