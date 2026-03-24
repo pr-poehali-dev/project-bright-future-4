@@ -157,7 +157,7 @@ export function Reviews() {
           <div className="bg-background p-8 flex flex-col lg:flex-row gap-8">
             <div className="w-full lg:w-1/2 aspect-video">
               <iframe
-                src="https://vk.com/video_ext.php?oid=-230059674&id=456239018&hd=2"
+                src="https://vk.com/video_ext.php?oid=-230059674&id=456239021&hd=2"
                 width="100%"
                 height="100%"
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
