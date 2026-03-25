@@ -23,7 +23,7 @@ export function FloatingCall() {
 
   return (
     <>
-      <div className={`md:hidden fixed bottom-6 left-4 z-50 flex flex-col gap-2 transition-all duration-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
+      <div className={`fixed bottom-6 left-4 z-50 flex flex-col gap-2 transition-all duration-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
         <button
           onClick={scrollToTop}
           aria-label="Наверх"
