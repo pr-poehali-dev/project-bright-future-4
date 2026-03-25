@@ -12,6 +12,7 @@ import { Process } from "../components/Process"
 import { Footer } from "../components/Footer"
 import { FloatingCall } from "../components/FloatingCall"
 import { CallToAction } from "../components/CallToAction"
+import { PromoPopup } from "../components/PromoPopup"
 
 export default function Index() {
   return (
@@ -29,6 +30,7 @@ export default function Index() {
       <Partners />
       <Footer />
       <FloatingCall />
+      <PromoPopup />
     </main>
   )
 }
