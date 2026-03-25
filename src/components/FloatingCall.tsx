@@ -38,7 +38,11 @@ export function FloatingCall() {
             </button>
 
             <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-2">TOYSTROY · Тула</p>
-            <h2 className="text-2xl font-bold mb-8">Наши контакты</h2>
+            <h2 className="text-2xl font-bold mb-4">Наши контакты</h2>
+            <div className="flex items-center gap-2 mb-6 text-sm text-muted-foreground">
+              <Icon name="Clock" size={14} />
+              <span>Работаем с 10:00 до 19:00</span>
+            </div>
 
             <div className="space-y-5">
               <a href="tel:+79509170974" className="flex items-center gap-4 group">
