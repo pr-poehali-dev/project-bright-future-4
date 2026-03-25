@@ -89,38 +89,38 @@ export function Header() {
           </div>
         </nav>
 
-        {/* Горизонтальное меню на мобильном — всегда видно */}
-        <div className="md:hidden mt-2 border-t border-white/10">
-          <div className="overflow-x-auto scrollbar-hide">
-            <ul className="flex items-center gap-1 px-4 py-2 min-w-max">
-              {[
-                { label: "Главная", href: "#hero" },
-                { label: "О нас", href: "#about" },
-                { label: "Работы", href: "#projects" },
-                { label: "Услуги", href: "#services" },
-                { label: "Отзывы", href: "#reviews" },
-                { label: "Вопросы", href: "#faq" },
-                { label: "Партнёры", href: "#partners" },
-              ].map((item) => (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className="block px-3 py-1 text-xs font-medium whitespace-nowrap hover:text-orange-400 transition-colors duration-200"
-                    style={{color: '#F5E4A0', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-              <li>
-                <button
-                  onClick={() => setContactOpen(true)}
-                  className="block px-3 py-1 text-xs font-medium whitespace-nowrap text-orange-300 hover:text-orange-400 transition-colors duration-200"
+        {/* Сетка меню на мобильном — 4 сверху + 4 снизу */}
+        <div className="md:hidden mt-2 border-t border-white/10 px-3 py-2">
+          <div className="grid grid-cols-4 gap-1">
+            {[
+              { label: "Главная", href: "#hero" },
+              { label: "О нас", href: "#about" },
+              { label: "Работы", href: "#projects" },
+              { label: "Услуги", href: "#services" },
+              { label: "Отзывы", href: "#reviews" },
+              { label: "Вопросы", href: "#faq" },
+              { label: "Партнёры", href: "#partners" },
+              { label: "Контакты", href: null },
+            ].map((item) =>
+              item.href ? (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="text-center py-1.5 text-[11px] font-medium hover:text-orange-400 transition-colors duration-200"
+                  style={{color: '#F5E4A0', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}
                 >
-                  Контакты
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={() => setContactOpen(true)}
+                  className="text-center py-1.5 text-[11px] font-medium text-orange-300 hover:text-orange-400 transition-colors duration-200"
+                >
+                  {item.label}
                 </button>
-              </li>
-            </ul>
+              )
+            )}
           </div>
         </div>
 
