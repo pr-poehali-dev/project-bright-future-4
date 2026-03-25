@@ -21,11 +21,12 @@ export function Partners() {
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="flex items-center justify-center border px-3 sm:px-6 py-4 sm:py-6 text-center text-xs sm:text-sm font-semibold transition-colors duration-200 min-h-[70px]"
+              className="flex items-center justify-center border px-3 sm:px-6 py-4 sm:py-6 text-center font-semibold transition-colors duration-200 min-h-[70px] leading-tight"
               style={{
                 backgroundColor: partner.bg ?? "var(--background)",
                 color: partner.color ?? "var(--foreground)",
                 borderColor: partner.bg ?? "var(--border)",
+                fontSize: partner.name.length > 20 ? 'clamp(9px, 2vw, 12px)' : undefined,
               }}
             >
               {partner.name}
