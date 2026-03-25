@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { HighlightedText } from "./HighlightedText"
 import Icon from "@/components/ui/icon"
 
@@ -42,8 +41,6 @@ const options = [
 ]
 
 export function Financing() {
-  const [active, setActive] = useState(0)
-
   return (
     <section id="financing" className="py-32 md:py-29 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -56,7 +53,7 @@ export function Financing() {
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="max-w-3xl mb-20">
+        <div className="max-w-3xl mb-16">
           <p className="text-foreground text-base md:text-lg font-bold tracking-[0.25em] uppercase mb-6">Оплата</p>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
             Рассрочка и <HighlightedText>финансирование</HighlightedText>
@@ -66,48 +63,29 @@ export function Financing() {
           </p>
         </div>
 
-        {/* Вкладки */}
-        <div className="grid grid-cols-3 gap-0 mb-0">
-          {options.map((option, index) => (
-            <button
-              key={option.title}
-              onClick={() => setActive(index)}
-              className={`flex flex-col sm:flex-row items-start sm:items-center justify-between px-3 sm:px-6 py-4 sm:py-5 text-left transition-all duration-300 border-b-2 gap-2 sm:gap-0 ${
-                active === index
-                  ? "bg-foreground text-white border-orange-400"
-                  : "bg-foreground/80 text-white/60 border-transparent hover:bg-foreground hover:text-white/90"
-              }`}
-            >
-              <div className="flex items-center gap-2 sm:gap-3">
-                <Icon name={option.icon as Parameters<typeof Icon>[0]["name"]} size={18} className={active === index ? "text-orange-400" : "text-white/40"} />
-                <span className="font-semibold tracking-wide text-sm sm:text-base">{option.title}</span>
+        <div className="grid grid-cols-3 gap-3 md:gap-6">
+          {options.map((option) => (
+            <div key={option.title} className="bg-foreground text-white flex flex-col p-4 md:p-8">
+              <div className="flex items-center justify-between mb-4 md:mb-6">
+                <div className="w-10 h-10 md:w-14 md:h-14 border border-white/20 flex items-center justify-center flex-shrink-0">
+                  <Icon name={option.icon as Parameters<typeof Icon>[0]["name"]} size={20} className="text-orange-400" />
+                </div>
+                <span className="text-[10px] md:text-xs font-bold px-2 py-1 bg-orange-400 text-white">
+                  {option.badge}
+                </span>
               </div>
-              <span className={`text-xs font-bold px-2 py-1 ${active === index ? "bg-orange-400 text-white" : "bg-white/10 text-white/50"}`}>
-                {option.badge}
-              </span>
-            </button>
+              <h3 className="text-sm md:text-xl font-bold text-white mb-2 md:mb-3">{option.title}</h3>
+              <p className="text-white/60 text-[11px] md:text-sm leading-relaxed mb-4 md:mb-6 hidden sm:block">{option.description}</p>
+              <ul className="flex flex-col gap-2 mt-auto">
+                {option.details.map((detail) => (
+                  <li key={detail} className="flex items-start gap-2">
+                    <Icon name="Check" size={13} className="text-orange-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-white/80 text-[10px] md:text-sm leading-relaxed">{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </div>
-
-        {/* Контент активной вкладки */}
-        <div className="bg-foreground text-white p-8 sm:p-12">
-          <div className="flex items-start gap-6 mb-8">
-            <div className="w-14 h-14 border border-white/20 flex items-center justify-center flex-shrink-0">
-              <Icon name={options[active].icon as Parameters<typeof Icon>[0]["name"]} size={26} className="text-orange-400" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-2">{options[active].title}</h3>
-              <p className="text-white/60 leading-relaxed">{options[active].description}</p>
-            </div>
-          </div>
-          <ul className="grid sm:grid-cols-2 gap-4">
-            {options[active].details.map((detail) => (
-              <li key={detail} className="flex items-start gap-3">
-                <Icon name="Check" size={16} className="text-orange-400 mt-1 flex-shrink-0" />
-                <span className="text-white/80 text-sm leading-relaxed">{detail}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>
