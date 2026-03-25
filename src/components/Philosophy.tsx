@@ -80,9 +80,9 @@ export function Philosophy() {
         <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:hidden relative z-10">
           {philosophyItems.map((item) => (
             <div key={item.title} className="relative pl-3 border-l border-border">
-              <Icon name={item.icon} size={22} className="mb-2 text-foreground" strokeWidth={1.25} />
-              <h3 className="text-xs font-bold mb-1 text-foreground leading-snug">{item.title}</h3>
-              <p className="text-foreground/70 text-[11px] leading-relaxed">{item.description}</p>
+              <Icon name={item.icon} size={22} className="mb-2 text-black" strokeWidth={1.25} />
+              <h3 className="text-xs font-bold mb-1 text-black leading-snug">{item.title}</h3>
+              <p className="text-black/80 text-[11px] leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
@@ -91,9 +91,9 @@ export function Philosophy() {
         <div className="hidden md:grid md:grid-cols-2 gap-x-12 gap-y-16 relative z-10">
           {philosophyItems.map((item) => (
             <div key={item.title} className="relative pl-8 border-l border-border">
-              <Icon name={item.icon} size={40} className="mb-4 text-foreground" strokeWidth={1.25} />
-              <h3 className="text-xl font-bold mb-4 text-foreground">{item.title}</h3>
-              <p className="text-foreground/80 leading-relaxed font-medium">{item.description}</p>
+              <Icon name={item.icon} size={40} className="mb-4 text-black" strokeWidth={1.25} />
+              <h3 className="text-xl font-bold mb-4 text-black">{item.title}</h3>
+              <p className="text-black/80 leading-relaxed font-medium">{item.description}</p>
             </div>
           ))}
         </div>

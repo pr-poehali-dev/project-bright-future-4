@@ -94,9 +94,9 @@ export function Expertise() {
             const Icon = area.icon
             return (
               <div key={area.title} className="relative pl-3 border-l border-border">
-                <Icon className="w-5 h-5 mb-2 text-foreground" strokeWidth={1.25} />
-                <h3 className="text-xs font-bold mb-1 text-foreground leading-snug">{area.title}</h3>
-                <p className="text-foreground/70 text-[11px] leading-relaxed">{area.description}</p>
+                <Icon className="w-5 h-5 mb-2 text-black" strokeWidth={1.25} />
+                <h3 className="text-xs font-bold mb-1 text-black leading-snug">{area.title}</h3>
+                <p className="text-black/80 text-[11px] leading-relaxed">{area.description}</p>
               </div>
             )
           })}
@@ -108,9 +108,9 @@ export function Expertise() {
             const Icon = area.icon
             return (
               <div key={area.title} className="relative pl-8 border-l border-border">
-                <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
-                <h3 className="text-xl font-bold mb-4 text-foreground">{area.title}</h3>
-                <p className="text-foreground/80 leading-relaxed font-medium">{area.description}</p>
+                <Icon className="w-10 h-10 mb-4 text-black" strokeWidth={1.25} />
+                <h3 className="text-xl font-bold mb-4 text-black">{area.title}</h3>
+                <p className="text-black/80 leading-relaxed font-medium">{area.description}</p>
               </div>
             )
           })}
