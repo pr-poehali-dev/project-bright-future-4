@@ -63,24 +63,24 @@ export function Financing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-3 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
           {options.map((option) => (
-            <div key={option.title} className="bg-foreground text-white flex flex-col p-4 md:p-8">
+            <div key={option.title} className="bg-foreground text-white flex flex-col p-6 md:p-8">
               <div className="flex items-center justify-between mb-4 md:mb-6">
-                <div className="w-10 h-10 md:w-14 md:h-14 border border-white/20 flex items-center justify-center flex-shrink-0">
-                  <Icon name={option.icon as Parameters<typeof Icon>[0]["name"]} size={20} className="text-orange-400" />
+                <div className="w-12 h-12 md:w-14 md:h-14 border border-white/20 flex items-center justify-center flex-shrink-0">
+                  <Icon name={option.icon as Parameters<typeof Icon>[0]["name"]} size={22} className="text-orange-400" />
                 </div>
-                <span className="text-[10px] md:text-xs font-bold px-2 py-1 bg-orange-400 text-white">
+                <span className="text-xs font-bold px-2 py-1 bg-orange-400 text-white">
                   {option.badge}
                 </span>
               </div>
-              <h3 className="text-sm md:text-xl font-bold text-white mb-2 md:mb-3">{option.title}</h3>
-              <p className="text-white/60 text-[11px] md:text-sm leading-relaxed mb-4 md:mb-6 hidden sm:block">{option.description}</p>
+              <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">{option.title}</h3>
+              <p className="text-white/60 text-sm leading-relaxed mb-4 md:mb-6">{option.description}</p>
               <ul className="flex flex-col gap-2 mt-auto">
                 {option.details.map((detail) => (
                   <li key={detail} className="flex items-start gap-2">
-                    <Icon name="Check" size={13} className="text-orange-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-white/80 text-[10px] md:text-sm leading-relaxed">{detail}</span>
+                    <Icon name="Check" size={14} className="text-orange-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-white/80 text-sm leading-relaxed">{detail}</span>
                   </li>
                 ))}
               </ul>
