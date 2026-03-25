@@ -25,7 +25,6 @@ export default function Index() {
       <Process />
       <Calculator />
       <FAQ />
-      <CallToAction />
       <Reviews />
       <Partners />
       <Footer />
