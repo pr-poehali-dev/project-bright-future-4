@@ -33,9 +33,7 @@ export function Header() {
       >
         <nav className="container mx-auto px-6 flex items-center justify-between md:px-[24]">
           <a href="/" className="flex items-center gap-3 group" onClick={scrollToTop}>
-            <div className="w-10 h-10 bg-white flex items-center justify-center rounded-sm flex-shrink-0">
-              <span className="text-foreground text-lg font-bold tracking-tight">TS</span>
-            </div>
+            <img src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg" alt="TS logo" className="w-10 h-10 rounded-sm flex-shrink-0 object-cover" />
             <div className="flex flex-col">
               <span className="text-white text-lg font-semibold tracking-widest uppercase leading-tight">TOYSTROY</span>
               <span className="text-white/60 text-[10px] tracking-wide leading-tight">Тула</span>
