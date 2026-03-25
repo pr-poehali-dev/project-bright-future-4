@@ -61,18 +61,19 @@ export function Process() {
           </p>
         </div>
 
-        {/* Мобильная версия — компактный список */}
+        {/* Мобильная версия — компактные карточки с описанием */}
         <div className="flex flex-col gap-px md:hidden">
           {steps.map((step) => (
-            <div key={step.number} className="bg-foreground flex items-center gap-4 px-4 py-4">
-              <span className="text-2xl font-black text-background/20 w-7 flex-shrink-0 leading-none">{step.number}</span>
-              <div className="w-8 h-8 border border-background/20 flex items-center justify-center flex-shrink-0">
-                <Icon name={step.icon as Parameters<typeof Icon>[0]["name"]} size={15} className="text-background/60" />
+            <div key={step.number} className="bg-foreground px-4 py-5">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl font-black text-background/20 w-7 flex-shrink-0 leading-none">{step.number}</span>
+                <div className="w-8 h-8 border border-background/20 flex items-center justify-center flex-shrink-0">
+                  <Icon name={step.icon as Parameters<typeof Icon>[0]["name"]} size={15} className="text-background/60" />
+                </div>
+                <h3 className="text-sm font-semibold text-background leading-snug flex-1">{step.title}</h3>
+                <span className="text-background/40 text-xs whitespace-nowrap flex-shrink-0">{step.duration}</span>
               </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-sm font-semibold text-background leading-snug">{step.title}</h3>
-              </div>
-              <span className="text-background/40 text-xs whitespace-nowrap flex-shrink-0">{step.duration}</span>
+              <p className="text-background/50 text-xs leading-relaxed pl-10">{step.description}</p>
             </div>
           ))}
         </div>
