@@ -83,33 +83,78 @@ export function Header() {
             </button>
           </div>
 
-          <button
-            className="md:hidden z-50 transition-colors duration-300 text-white"
-            aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            ) : (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <line x1="4" y1="8" x2="20" y2="8" />
-                <line x1="4" y1="16" x2="20" y2="16" />
-              </svg>
-            )}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={() => setGiftOpen(true)}
+              title="Подарки на выбор"
+              className="w-9 h-9 inline-flex items-center justify-center bg-orange-500 text-white"
+            >
+              <Icon name="Gift" size={16} />
+            </button>
+            <button
+              className="z-50 transition-colors duration-300 text-white"
+              aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              ) : (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <line x1="4" y1="8" x2="20" y2="8" />
+                  <line x1="4" y1="16" x2="20" y2="16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </nav>
 
+        {/* Горизонтальное меню на мобильном — всегда видно */}
+        <div className="md:hidden mt-2 border-t border-white/10">
+          <div className="overflow-x-auto scrollbar-hide">
+            <ul className="flex items-center gap-1 px-4 py-2 min-w-max">
+              {[
+                { label: "Главная", href: "#hero" },
+                { label: "О нас", href: "#about" },
+                { label: "Работы", href: "#projects" },
+                { label: "Услуги", href: "#services" },
+                { label: "Отзывы", href: "#reviews" },
+                { label: "Вопросы", href: "#faq" },
+                { label: "Партнёры", href: "#partners" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    className="block px-3 py-1 text-xs font-medium whitespace-nowrap hover:text-orange-400 transition-colors duration-200"
+                    style={{color: '#F5E4A0', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <button
+                  onClick={() => setContactOpen(true)}
+                  className="block px-3 py-1 text-xs font-medium whitespace-nowrap text-orange-300 hover:text-orange-400 transition-colors duration-200"
+                >
+                  Контакты
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Выпадающее меню (бургер) — убрано, теперь не нужно */}
         <div
           className={cn(
             "md:hidden overflow-hidden transition-all duration-300 ease-in-out",
-            mobileMenuOpen ? "max-h-[600px] opacity-100 mt-8" : "max-h-0 opacity-0",
+            mobileMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0",
           )}
         >
-          <div className="container mx-auto px-6">
-            <ul className="flex flex-col gap-6 mb-8">
+          <div className="container mx-auto px-6 pt-4 pb-6">
+            <ul className="flex flex-col gap-4">
               {[
                 { label: "Главная", href: "#hero" },
                 { label: "О нас", href: "#about" },
@@ -122,7 +167,7 @@ export function Header() {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="hover:text-[rgb(251,146,60)] transition-colors duration-300 text-white text-2xl sm:text-3xl font-light block"
+                    className="hover:text-[rgb(251,146,60)] transition-colors duration-300 text-white text-xl font-light block"
                     onClick={closeMobileMenu}
                   >
                     {item.label}
@@ -130,10 +175,9 @@ export function Header() {
                 </li>
               ))}
             </ul>
-
             <button
               onClick={() => { setContactOpen(true); closeMobileMenu() }}
-              className="inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white transition-all duration-300 mb-4"
+              className="mt-6 inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white transition-all duration-300"
             >
               Наши контакты
             </button>
