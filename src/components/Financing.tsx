@@ -67,20 +67,20 @@ export function Financing() {
         </div>
 
         {/* Вкладки */}
-        <div className="flex flex-col sm:flex-row gap-0 mb-0">
+        <div className="grid grid-cols-3 gap-0 mb-0">
           {options.map((option, index) => (
             <button
               key={option.title}
               onClick={() => setActive(index)}
-              className={`flex-1 flex items-center justify-between px-6 py-5 text-left transition-all duration-300 border-b-2 ${
+              className={`flex flex-col sm:flex-row items-start sm:items-center justify-between px-3 sm:px-6 py-4 sm:py-5 text-left transition-all duration-300 border-b-2 gap-2 sm:gap-0 ${
                 active === index
                   ? "bg-foreground text-white border-orange-400"
                   : "bg-foreground/80 text-white/60 border-transparent hover:bg-foreground hover:text-white/90"
               }`}
             >
-              <div className="flex items-center gap-3">
-                <Icon name={option.icon as Parameters<typeof Icon>[0]["name"]} size={20} className={active === index ? "text-orange-400" : "text-white/40"} />
-                <span className="font-semibold tracking-wide">{option.title}</span>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <Icon name={option.icon as Parameters<typeof Icon>[0]["name"]} size={18} className={active === index ? "text-orange-400" : "text-white/40"} />
+                <span className="font-semibold tracking-wide text-sm sm:text-base">{option.title}</span>
               </div>
               <span className={`text-xs font-bold px-2 py-1 ${active === index ? "bg-orange-400 text-white" : "bg-white/10 text-white/50"}`}>
                 {option.badge}
