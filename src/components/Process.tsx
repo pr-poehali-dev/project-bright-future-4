@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react"
 import { HighlightedText } from "./HighlightedText"
 import Icon from "@/components/ui/icon"
 
@@ -48,28 +47,6 @@ const steps = [
 ]
 
 export function Process() {
-  const [visibleItems, setVisibleItems] = useState<number[]>([])
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = Number(entry.target.getAttribute("data-index"))
-          if (entry.isIntersecting) {
-            setVisibleItems((prev) => [...new Set([...prev, index])])
-          }
-        })
-      },
-      { threshold: 0.15 },
-    )
-
-    itemRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref)
-    })
-
-    return () => observer.disconnect()
-  }, [])
 
   return (
     <section id="process" className="py-32 md:py-29 bg-foreground text-background">
@@ -88,12 +65,7 @@ export function Process() {
           {steps.map((step, index) => (
             <div
               key={step.number}
-              ref={(el) => { itemRefs.current[index] = el }}
-              data-index={index}
-              className={`bg-foreground p-5 sm:p-8 flex flex-col gap-5 transition-all duration-700 ${
-                visibleItems.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-              style={{ transitionDelay: `${(index % 3) * 100}ms` }}
+              className="bg-foreground p-5 sm:p-8 flex flex-col gap-5"
             >
               <div className="flex items-start justify-between">
                 <span className="text-5xl font-black text-background/10 leading-none">{step.number}</span>

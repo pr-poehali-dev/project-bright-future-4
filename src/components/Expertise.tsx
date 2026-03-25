@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react"
 import { Home, Building, Armchair, Trees, Wrench, Thermometer, PaintBucket, FileText, Truck, Layers } from "lucide-react"
 import { HighlightedText } from "./HighlightedText"
 
@@ -65,32 +64,9 @@ const expertiseAreas = [
 ]
 
 export function Expertise() {
-  const [visibleItems, setVisibleItems] = useState<number[]>([])
-  const sectionRef = useRef<HTMLElement>(null)
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = Number(entry.target.getAttribute("data-index"))
-          if (entry.isIntersecting) {
-            setVisibleItems((prev) => [...new Set([...prev, index])])
-          }
-        })
-      },
-      { threshold: 0.2 },
-    )
-
-    itemRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref)
-    })
-
-    return () => observer.disconnect()
-  }, [])
 
   return (
-    <section id="services" ref={sectionRef} className="py-32 md:py-29 relative overflow-hidden">
+    <section id="services" className="py-32 md:py-29 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/cfac98c8-a2e0-4fe6-a4a3-9031bda7a211.jpg"
@@ -118,23 +94,9 @@ export function Expertise() {
             return (
               <div
                 key={area.title}
-                ref={(el) => {
-                  itemRefs.current[index] = el
-                }}
-                data-index={index}
-                className={`relative pl-4 sm:pl-8 border-l border-border transition-all duration-700 ${
-                  visibleItems.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                className="relative pl-4 sm:pl-8 border-l border-border"
               >
-                <div
-                  className={`transition-all duration-1000 ${
-                    visibleItems.includes(index) ? "animate-draw-stroke" : ""
-                  }`}
-                  style={{
-                    transitionDelay: `${index * 150}ms`,
-                  }}
-                >
+                <div>
                   <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-foreground">{area.title}</h3>

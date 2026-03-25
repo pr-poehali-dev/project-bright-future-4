@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react"
 import { HighlightedText } from "./HighlightedText"
 import Icon from "@/components/ui/icon"
 
@@ -53,28 +52,6 @@ const philosophyItems = [
 ]
 
 export function Philosophy() {
-  const [visibleItems, setVisibleItems] = useState<number[]>([])
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = Number(entry.target.getAttribute("data-index"))
-          if (entry.isIntersecting) {
-            setVisibleItems((prev) => [...new Set([...prev, index])])
-          }
-        })
-      },
-      { threshold: 0.2 },
-    )
-
-    itemRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref)
-    })
-
-    return () => observer.disconnect()
-  }, [])
 
   return (
     <section id="about" className="py-32 md:py-29 relative overflow-hidden">
@@ -103,12 +80,7 @@ export function Philosophy() {
           {philosophyItems.map((item, index) => (
             <div
               key={item.title}
-              ref={(el) => { itemRefs.current[index] = el }}
-              data-index={index}
-              className={`relative pl-4 sm:pl-8 border-l border-border transition-all duration-700 ${
-                visibleItems.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              className="relative pl-4 sm:pl-8 border-l border-border"
             >
               <Icon name={item.icon} size={40} className="mb-4 text-foreground" strokeWidth={1.25} />
               <h3 className="text-xl font-bold mb-4 text-foreground">{item.title}</h3>
