@@ -11,6 +11,7 @@ import { Financing } from "../components/Financing"
 import { Process } from "../components/Process"
 import { Footer } from "../components/Footer"
 import { FloatingCall } from "../components/FloatingCall"
+import { CallToAction } from "../components/CallToAction"
 
 export default function Index() {
   return (
@@ -24,6 +25,7 @@ export default function Index() {
       <Process />
       <Calculator />
       <FAQ />
+      <CallToAction />
       <Reviews />
       <Partners />
       <Footer />
