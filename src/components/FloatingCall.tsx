@@ -4,17 +4,42 @@ import Icon from "@/components/ui/icon"
 export function FloatingCall() {
   const [visible, setVisible] = useState(false)
   const [open, setOpen] = useState(false)
+  const [atBottom, setAtBottom] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setVisible(window.scrollY > 300)
+      const scrollY = window.scrollY
+      const windowHeight = window.innerHeight
+      const docHeight = document.documentElement.scrollHeight
+      setVisible(scrollY > 300)
+      setAtBottom(scrollY + windowHeight >= docHeight - 100)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" })
+  const scrollToBottom = () => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" })
+
   return (
     <>
+      <div className={`md:hidden fixed bottom-6 left-4 z-50 flex flex-col gap-2 transition-all duration-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
+        <button
+          onClick={scrollToTop}
+          aria-label="Наверх"
+          className="w-11 h-11 bg-white border border-gray-200 shadow-md flex items-center justify-center text-foreground active:scale-95 transition-transform"
+        >
+          <Icon name="ChevronUp" size={20} />
+        </button>
+        <button
+          onClick={atBottom ? scrollToTop : scrollToBottom}
+          aria-label={atBottom ? "Наверх" : "Вниз"}
+          className="w-11 h-11 bg-white border border-gray-200 shadow-md flex items-center justify-center text-foreground active:scale-95 transition-transform"
+        >
+          <Icon name={atBottom ? "ChevronUp" : "ChevronDown"} size={20} />
+        </button>
+      </div>
+
       <button
         onClick={() => setOpen(true)}
         aria-label="Наши контакты"
