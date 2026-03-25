@@ -10,6 +10,7 @@ import { Partners } from "../components/Partners"
 import { Financing } from "../components/Financing"
 import { Process } from "../components/Process"
 import { Footer } from "../components/Footer"
+import { FloatingCall } from "../components/FloatingCall"
 
 export default function Index() {
   return (
@@ -26,6 +27,7 @@ export default function Index() {
       <Reviews />
       <Partners />
       <Footer />
+      <FloatingCall />
     </main>
   )
 }
