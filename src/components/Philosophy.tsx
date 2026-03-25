@@ -76,24 +76,24 @@ export function Philosophy() {
           </p>
         </div>
 
-        {/* Мобильная версия — два столбца */}
-        <div className="grid grid-cols-2 gap-3 md:hidden relative z-10">
+        {/* Мобильная версия — два столбца, компактно */}
+        <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:hidden relative z-10">
           {philosophyItems.map((item) => (
-            <div key={item.title} className="bg-foreground text-white p-4 flex flex-col gap-2">
-              <Icon name={item.icon} size={22} className="text-orange-400" strokeWidth={1.25} />
-              <h3 className="text-xs font-bold text-white leading-snug">{item.title}</h3>
-              <p className="text-white/70 text-[11px] leading-relaxed">{item.description}</p>
+            <div key={item.title} className="relative pl-3 border-l border-border">
+              <Icon name={item.icon} size={22} className="mb-2 text-foreground" strokeWidth={1.25} />
+              <h3 className="text-xs font-bold mb-1 text-foreground leading-snug">{item.title}</h3>
+              <p className="text-foreground/70 text-[11px] leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
 
         {/* Десктопная версия */}
-        <div className="hidden md:grid md:grid-cols-2 gap-6 relative z-10">
+        <div className="hidden md:grid md:grid-cols-2 gap-x-12 gap-y-16 relative z-10">
           {philosophyItems.map((item) => (
-            <div key={item.title} className="bg-foreground text-white p-8 flex flex-col gap-4">
-              <Icon name={item.icon} size={36} className="text-orange-400" strokeWidth={1.25} />
-              <h3 className="text-xl font-bold text-white">{item.title}</h3>
-              <p className="text-white/70 leading-relaxed">{item.description}</p>
+            <div key={item.title} className="relative pl-8 border-l border-border">
+              <Icon name={item.icon} size={40} className="mb-4 text-foreground" strokeWidth={1.25} />
+              <h3 className="text-xl font-bold mb-4 text-foreground">{item.title}</h3>
+              <p className="text-foreground/80 leading-relaxed font-medium">{item.description}</p>
             </div>
           ))}
         </div>
