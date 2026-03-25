@@ -23,7 +23,6 @@ export default function Index() {
       <Philosophy />
       <Projects />
       <Expertise />
-      <Comparison />
       <Financing />
       <Process />
       <Calculator />
