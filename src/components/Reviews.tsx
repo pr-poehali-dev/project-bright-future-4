@@ -184,8 +184,8 @@ export function Reviews() {
   const perPage = 2
   const total = Math.ceil(sorted.length / perPage)
   const visible = sorted.slice(current * perPage, current * perPage + perPage)
-  const mobileVisible = [sorted[current]]
-  const mobileTotal = sorted.length
+  const mobileVisible = sorted.slice(current * perPage, current * perPage + perPage)
+  const mobileTotal = total
 
   const prev = () => setCurrent((c) => Math.max(0, c - 1))
   const next = () => setCurrent((c) => Math.min(total - 1, c + 1))
