@@ -15,13 +15,13 @@ export function Partners() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="mb-14 text-center">
           <p className="text-foreground text-base md:text-lg font-bold tracking-[0.25em] uppercase mb-4">Доверяют профессионалы</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Наши партнёры</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Наши партнёры</h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="flex items-center justify-center border px-6 py-6 text-center text-sm font-semibold transition-colors duration-200 min-h-[80px]"
+              className="flex items-center justify-center border px-3 sm:px-6 py-4 sm:py-6 text-center text-xs sm:text-sm font-semibold transition-colors duration-200 min-h-[70px]"
               style={{
                 backgroundColor: partner.bg ?? "var(--background)",
                 color: partner.color ?? "var(--foreground)",

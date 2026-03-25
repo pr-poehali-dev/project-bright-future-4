@@ -37,19 +37,19 @@ export function Financing() {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl mb-20">
           <p className="text-foreground text-base md:text-lg font-bold tracking-[0.25em] uppercase mb-6">Оплата</p>
-          <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
             Рассрочка и <HighlightedText>финансирование</HighlightedText>
           </h2>
-          <p className="text-foreground text-lg leading-relaxed font-semibold">
+          <p className="text-foreground text-base sm:text-lg leading-relaxed font-semibold">
             Выберите удобный способ оплаты — строим для всех, вне зависимости от бюджета прямо сейчас.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {options.map((option) => (
             <div
               key={option.title}
-              className="bg-white border border-border p-8 flex flex-col gap-5 hover:border-foreground transition-colors duration-300"
+              className="bg-white border border-border p-5 sm:p-8 flex flex-col gap-5 hover:border-foreground transition-colors duration-300"
             >
               <div className="flex items-start justify-between">
                 <div className="w-11 h-11 border border-border flex items-center justify-center">

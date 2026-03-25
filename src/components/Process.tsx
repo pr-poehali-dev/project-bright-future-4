@@ -76,21 +76,21 @@ export function Process() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mb-20">
           <p className="text-background/60 text-base md:text-lg font-bold tracking-[0.25em] uppercase mb-6">Как мы работаем</p>
-          <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl text-background">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl text-background">
             Этапы <HighlightedText>работы</HighlightedText>
           </h2>
-          <p className="text-background/70 text-lg leading-relaxed font-semibold">
+          <p className="text-background/70 text-base sm:text-lg leading-relaxed font-semibold">
             От первого звонка до ключей в руках — прозрачный процесс без сюрпризов.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-background/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-background/10">
           {steps.map((step, index) => (
             <div
               key={step.number}
               ref={(el) => { itemRefs.current[index] = el }}
               data-index={index}
-              className={`bg-foreground p-8 flex flex-col gap-5 transition-all duration-700 ${
+              className={`bg-foreground p-5 sm:p-8 flex flex-col gap-5 transition-all duration-700 ${
                 visibleItems.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{ transitionDelay: `${(index % 3) * 100}ms` }}

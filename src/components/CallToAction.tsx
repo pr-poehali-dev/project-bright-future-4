@@ -6,13 +6,13 @@ export function CallToAction() {
     <section id="contact" className="py-32 md:py-29 bg-foreground text-primary-foreground">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-6xl font-medium leading-[1.1] tracking-tight mb-8 text-balance">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-medium leading-[1.1] tracking-tight mb-6 sm:mb-8 text-balance">
             Построим дом,
             <br />
             о котором вы <HighlightedText>мечтаете</HighlightedText>
           </h2>
 
-          <p className="text-primary-foreground/70 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto">
+          <p className="text-primary-foreground/70 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-12 max-w-2xl mx-auto">
             Бесплатный выезд на участок. Расскажите о своём проекте — и мы предложим решение под ваш бюджет.
           </p>
 

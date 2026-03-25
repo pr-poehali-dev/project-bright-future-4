@@ -6,9 +6,9 @@ export function Footer() {
   return (
     <footer className="py-16 md:py-24 border-t border-border">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-16">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="col-span-2 md:col-span-2">
             <a href="/" className="inline-flex items-center gap-3 mb-6">
               <div className="w-9 h-9 bg-foreground rounded flex items-center justify-center flex-shrink-0">
                 <span className="text-background text-sm font-bold tracking-tight">TS</span>
@@ -82,7 +82,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row md:items-center justify-between gap-4 text-sm text-muted-foreground">
+        <div className="pt-8 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs sm:text-sm text-muted-foreground">
           <p>© Каркасные дома. Все права защищены.</p>
           <div className="flex gap-6">
             <PrivacyModal />

@@ -56,7 +56,7 @@ export function FAQ() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mb-16">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Вопросы</p>
-          <h2 className="text-4xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-5xl">
+          <h2 className="text-2xl sm:text-4xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-5xl">
             Частые вопросы
           </h2>
         </div>
@@ -66,9 +66,9 @@ export function FAQ() {
             <div key={index} className="border-b border-border">
               <button
                 onClick={() => toggleQuestion(index)}
-                className="w-full py-6 flex items-start justify-between gap-6 text-left group"
+                className="w-full py-4 sm:py-6 flex items-start justify-between gap-4 sm:gap-6 text-left group"
               >
-                <span className="text-lg font-medium text-foreground transition-colors group-hover:text-foreground/70">
+                <span className="text-base sm:text-lg font-medium text-foreground transition-colors group-hover:text-foreground/70">
                   {faq.question}
                 </span>
                 <Plus

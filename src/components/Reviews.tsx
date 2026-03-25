@@ -194,7 +194,7 @@ export function Reviews() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
             <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Отзывы клиентов</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Что говорят наши клиенты</h2>
+            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Что говорят наши клиенты</h2>
           </div>
           <div className="flex items-center gap-4">
             <button
@@ -219,7 +219,7 @@ export function Reviews() {
           {visible.map((review, index) => {
             if (review.type === "video") {
               return (
-                <div key={current * perPage + index} className="bg-background p-8 flex flex-col gap-6 md:col-span-2">
+                <div key={current * perPage + index} className="bg-background p-5 sm:p-8 flex flex-col gap-6 md:col-span-2">
                   <div className="flex flex-col lg:flex-row gap-8">
                     <div className="w-full lg:w-1/2 aspect-video">
                       <iframe
@@ -238,7 +238,7 @@ export function Reviews() {
                             <span key={i} className="text-orange-400 text-lg">★</span>
                           ))}
                         </div>
-                        <p className="text-foreground leading-relaxed text-lg">"{review.text}"</p>
+                        <p className="text-foreground leading-relaxed text-base sm:text-lg">"{review.text}"</p>
                       </div>
                       <div className="border-t border-border pt-6 flex items-end justify-between">
                         <div>
@@ -253,7 +253,7 @@ export function Reviews() {
               )
             }
             return (
-              <div key={current * perPage + index} className="bg-background p-8 flex flex-col gap-6">
+              <div key={current * perPage + index} className="bg-background p-5 sm:p-8 flex flex-col gap-6">
                 <div className="flex gap-1">
                   {Array.from({ length: review.rating }).map((_, i) => (
                     <span key={i} className="text-orange-400 text-lg">★</span>

@@ -102,17 +102,17 @@ export function Expertise() {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-3xl mb-20">
           <p className="text-foreground text-base md:text-lg font-bold tracking-[0.25em] uppercase mb-6">Наши услуги</p>
-          <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
             <HighlightedText>Услуги</HighlightedText>, которые
             <br />
             решают всё
           </h2>
-          <p className="text-foreground text-lg leading-relaxed font-semibold">
+          <p className="text-foreground text-base sm:text-lg leading-relaxed font-semibold">
             От первого эскиза до ключей в руках — берём на себя все этапы строительства, чтобы вы могли просто ждать результат.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
+        <div className="grid md:grid-cols-2 gap-x-6 gap-y-10 md:gap-x-12 md:gap-y-16">
           {expertiseAreas.map((area, index) => {
             const Icon = area.icon
             return (
@@ -122,7 +122,7 @@ export function Expertise() {
                   itemRefs.current[index] = el
                 }}
                 data-index={index}
-                className={`relative pl-8 border-l border-border transition-all duration-700 ${
+                className={`relative pl-4 sm:pl-8 border-l border-border transition-all duration-700 ${
                   visibleItems.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
