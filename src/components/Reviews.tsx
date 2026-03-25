@@ -184,9 +184,68 @@ export function Reviews() {
   const perPage = 2
   const total = Math.ceil(sorted.length / perPage)
   const visible = sorted.slice(current * perPage, current * perPage + perPage)
+  const mobileVisible = [sorted[current]]
+  const mobileTotal = sorted.length
 
   const prev = () => setCurrent((c) => Math.max(0, c - 1))
   const next = () => setCurrent((c) => Math.min(total - 1, c + 1))
+  const mobilePrev = () => setCurrent((c) => Math.max(0, c - 1))
+  const mobileNext = () => setCurrent((c) => Math.min(mobileTotal - 1, c + 1))
+
+  const renderReview = (review: Review, key: number, compact = false) => {
+    if (review.type === "video") {
+      return (
+        <div key={key} className={`bg-background flex flex-col gap-4 ${compact ? "p-4" : "p-5 sm:p-8 gap-6 md:col-span-2"}`}>
+          <div className={`flex flex-col gap-4 ${compact ? "" : "lg:flex-row gap-8"}`}>
+            <div className={`w-full aspect-video ${compact ? "" : "lg:w-1/2"}`}>
+              <iframe
+                src={`https://vk.com/video_ext.php?oid=-230059674&id=${review.videoId}&hd=2`}
+                width="100%"
+                height="100%"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <div className={`flex flex-col justify-between gap-4 ${compact ? "" : "lg:w-1/2 gap-6"}`}>
+              <div>
+                <div className="flex gap-1 mb-2">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <span key={i} className={`text-orange-400 ${compact ? "text-sm" : "text-lg"}`}>★</span>
+                  ))}
+                </div>
+                <p className={`text-foreground leading-relaxed ${compact ? "text-xs" : "text-base sm:text-lg"}`}>"{review.text}"</p>
+              </div>
+              <div className={`border-t border-border flex items-end justify-between ${compact ? "pt-3" : "pt-6"}`}>
+                <div>
+                  <p className={`font-medium ${compact ? "text-xs" : "text-sm"}`}>{review.title}</p>
+                  <p className={`text-muted-foreground ${compact ? "text-xs" : "text-sm"}`}>Тульская область</p>
+                </div>
+                <span className="text-muted-foreground/60 text-xs">{review.date}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+    return (
+      <div key={key} className={`bg-background flex flex-col ${compact ? "p-4 gap-3" : "p-5 sm:p-8 gap-6"}`}>
+        <div className="flex gap-1">
+          {Array.from({ length: review.rating }).map((_, i) => (
+            <span key={i} className={`text-orange-400 ${compact ? "text-sm" : "text-lg"}`}>★</span>
+          ))}
+        </div>
+        <p className={`text-foreground leading-relaxed flex-1 ${compact ? "text-xs" : ""}`}>"{review.text}"</p>
+        <div className={`flex items-end justify-between border-t border-border ${compact ? "pt-3" : "pt-6"}`}>
+          <div>
+            <p className={`font-medium ${compact ? "text-xs" : "text-sm"}`}>{review.name}</p>
+            <p className={`text-muted-foreground ${compact ? "text-xs" : "text-sm"}`}>{review.location}</p>
+          </div>
+          <span className="text-muted-foreground/60 text-xs">{review.date}</span>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <section id="reviews" className="py-32 md:py-29 bg-secondary/50">
@@ -196,80 +255,38 @@ export function Reviews() {
             <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Отзывы клиентов</p>
             <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Что говорят наши клиенты</h2>
           </div>
-          <div className="flex items-center gap-4">
-            <button
-              onClick={prev}
-              disabled={current === 0}
-              className="w-12 h-12 border border-border flex items-center justify-center hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
-            >
+
+          {/* Кнопки навигации десктоп */}
+          <div className="hidden md:flex items-center gap-4">
+            <button onClick={prev} disabled={current === 0} className="w-12 h-12 border border-border flex items-center justify-center hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed">
               <Icon name="ArrowLeft" size={18} />
             </button>
             <span className="text-sm text-muted-foreground">{current + 1} / {total}</span>
-            <button
-              onClick={next}
-              disabled={current === total - 1}
-              className="w-12 h-12 border border-border flex items-center justify-center hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
-            >
+            <button onClick={next} disabled={current === total - 1} className="w-12 h-12 border border-border flex items-center justify-center hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed">
               <Icon name="ArrowRight" size={18} />
             </button>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-          {visible.map((review, index) => {
-            if (review.type === "video") {
-              return (
-                <div key={current * perPage + index} className="bg-background p-5 sm:p-8 flex flex-col gap-6 md:col-span-2">
-                  <div className="flex flex-col lg:flex-row gap-8">
-                    <div className="w-full lg:w-1/2 aspect-video">
-                      <iframe
-                        src={`https://vk.com/video_ext.php?oid=-230059674&id=${review.videoId}&hd=2`}
-                        width="100%"
-                        height="100%"
-                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-full"
-                      />
-                    </div>
-                    <div className="flex flex-col justify-between gap-6 lg:w-1/2">
-                      <div>
-                        <div className="flex gap-1 mb-4">
-                          {Array.from({ length: 5 }).map((_, i) => (
-                            <span key={i} className="text-orange-400 text-lg">★</span>
-                          ))}
-                        </div>
-                        <p className="text-foreground leading-relaxed text-base sm:text-lg">"{review.text}"</p>
-                      </div>
-                      <div className="border-t border-border pt-6 flex items-end justify-between">
-                        <div>
-                          <p className="font-medium text-sm">{review.title}</p>
-                          <p className="text-muted-foreground text-sm">Тульская область</p>
-                        </div>
-                        <span className="text-muted-foreground/60 text-xs">{review.date}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )
-            }
-            return (
-              <div key={current * perPage + index} className="bg-background p-5 sm:p-8 flex flex-col gap-6">
-                <div className="flex gap-1">
-                  {Array.from({ length: review.rating }).map((_, i) => (
-                    <span key={i} className="text-orange-400 text-lg">★</span>
-                  ))}
-                </div>
-                <p className="text-foreground leading-relaxed flex-1">"{review.text}"</p>
-                <div className="flex items-end justify-between border-t border-border pt-6">
-                  <div>
-                    <p className="font-medium text-sm">{review.name}</p>
-                    <p className="text-muted-foreground text-sm">{review.location}</p>
-                  </div>
-                  <span className="text-muted-foreground/60 text-xs">{review.date}</span>
-                </div>
-              </div>
-            )
-          })}
+        {/* Мобильная версия — 1 отзыв, компактно */}
+        <div className="md:hidden">
+          <div className="mb-4">
+            {mobileVisible[0] && renderReview(mobileVisible[0], current, true)}
+          </div>
+          <div className="flex items-center justify-between">
+            <button onClick={mobilePrev} disabled={current === 0} className="w-10 h-10 border border-border flex items-center justify-center hover:bg-foreground hover:text-background transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+              <Icon name="ArrowLeft" size={16} />
+            </button>
+            <span className="text-xs text-muted-foreground">{current + 1} / {mobileTotal}</span>
+            <button onClick={mobileNext} disabled={current === mobileTotal - 1} className="w-10 h-10 border border-border flex items-center justify-center hover:bg-foreground hover:text-background transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+              <Icon name="ArrowRight" size={16} />
+            </button>
+          </div>
+        </div>
+
+        {/* Десктопная версия — 2 отзыва */}
+        <div className="hidden md:grid md:grid-cols-2 gap-6 md:gap-8">
+          {visible.map((review, index) => renderReview(review, current * perPage + index, false))}
         </div>
       </div>
     </section>
