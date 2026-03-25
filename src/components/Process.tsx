@@ -61,11 +61,28 @@ export function Process() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-background/10">
-          {steps.map((step, index) => (
+        {/* Мобильная версия — компактный список */}
+        <div className="flex flex-col gap-px md:hidden">
+          {steps.map((step) => (
+            <div key={step.number} className="bg-foreground flex items-center gap-4 px-4 py-4">
+              <span className="text-2xl font-black text-background/20 w-7 flex-shrink-0 leading-none">{step.number}</span>
+              <div className="w-8 h-8 border border-background/20 flex items-center justify-center flex-shrink-0">
+                <Icon name={step.icon as Parameters<typeof Icon>[0]["name"]} size={15} className="text-background/60" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-sm font-semibold text-background leading-snug">{step.title}</h3>
+              </div>
+              <span className="text-background/40 text-xs whitespace-nowrap flex-shrink-0">{step.duration}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Десктопная версия — карточки */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-background/10">
+          {steps.map((step) => (
             <div
               key={step.number}
-              className="bg-foreground p-5 sm:p-8 flex flex-col gap-5"
+              className="bg-foreground p-8 flex flex-col gap-5"
             >
               <div className="flex items-start justify-between">
                 <span className="text-5xl font-black text-background/10 leading-none">{step.number}</span>
@@ -73,12 +90,10 @@ export function Process() {
                   <Icon name={step.icon as Parameters<typeof Icon>[0]["name"]} size={18} className="text-background/70" />
                 </div>
               </div>
-
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-background mb-3 leading-snug">{step.title}</h3>
                 <p className="text-background/60 text-sm leading-relaxed">{step.description}</p>
               </div>
-
               <div className="flex items-center gap-2 pt-2 border-t border-background/10">
                 <Icon name="Clock" size={13} className="text-background/40" />
                 <span className="text-background/40 text-xs tracking-wide">{step.duration}</span>
