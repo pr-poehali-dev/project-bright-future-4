@@ -88,17 +88,27 @@ export function Expertise() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-x-6 gap-y-10 md:gap-x-12 md:gap-y-16">
-          {expertiseAreas.map((area, index) => {
+        {/* Мобильная версия — два столбца, компактно */}
+        <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:hidden">
+          {expertiseAreas.map((area) => {
             const Icon = area.icon
             return (
-              <div
-                key={area.title}
-                className="relative pl-4 sm:pl-8 border-l border-border"
-              >
-                <div>
-                  <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
-                </div>
+              <div key={area.title} className="relative pl-3 border-l border-border">
+                <Icon className="w-5 h-5 mb-2 text-foreground" strokeWidth={1.25} />
+                <h3 className="text-xs font-bold mb-1 text-foreground leading-snug">{area.title}</h3>
+                <p className="text-foreground/70 text-[11px] leading-relaxed">{area.description}</p>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* Десктопная версия */}
+        <div className="hidden md:grid md:grid-cols-2 gap-x-12 gap-y-16">
+          {expertiseAreas.map((area) => {
+            const Icon = area.icon
+            return (
+              <div key={area.title} className="relative pl-8 border-l border-border">
+                <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
                 <h3 className="text-xl font-bold mb-4 text-foreground">{area.title}</h3>
                 <p className="text-foreground/80 leading-relaxed font-medium">{area.description}</p>
               </div>
