@@ -5,7 +5,6 @@ import { GiftModal } from "./GiftModal"
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [contactOpen, setContactOpen] = useState(false)
   const [giftOpen, setGiftOpen] = useState(false)
 
@@ -17,8 +16,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const closeMobileMenu = () => setMobileMenuOpen(false)
-
   const scrollToTop = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -29,7 +26,7 @@ export function Header() {
       <header
         className={cn(
           "fixed z-50 transition-all duration-500 top-0 left-0 right-0",
-          scrolled || mobileMenuOpen
+          scrolled
             ? "bg-primary backdrop-blur-md py-4"
             : "bg-transparent py-4",
         )}
@@ -83,30 +80,13 @@ export function Header() {
             </button>
           </div>
 
-          <div className="md:hidden flex items-center gap-2">
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setGiftOpen(true)}
               title="Подарки на выбор"
               className="w-9 h-9 inline-flex items-center justify-center bg-orange-500 text-white"
             >
               <Icon name="Gift" size={16} />
-            </button>
-            <button
-              className="z-50 transition-colors duration-300 text-white"
-              aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-              ) : (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <line x1="4" y1="8" x2="20" y2="8" />
-                  <line x1="4" y1="16" x2="20" y2="16" />
-                </svg>
-              )}
             </button>
           </div>
         </nav>
@@ -146,43 +126,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Выпадающее меню (бургер) — убрано, теперь не нужно */}
-        <div
-          className={cn(
-            "md:hidden overflow-hidden transition-all duration-300 ease-in-out",
-            mobileMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0",
-          )}
-        >
-          <div className="container mx-auto px-6 pt-4 pb-6">
-            <ul className="flex flex-col gap-4">
-              {[
-                { label: "Главная", href: "#hero" },
-                { label: "О нас", href: "#about" },
-                { label: "Наши работы", href: "#projects" },
-                { label: "Услуги", href: "#services" },
-                { label: "Отзывы", href: "#reviews" },
-                { label: "Вопросы", href: "#faq" },
-                { label: "Партнёры", href: "#partners" },
-              ].map((item) => (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className="hover:text-[rgb(251,146,60)] transition-colors duration-300 text-white text-xl font-light block"
-                    onClick={closeMobileMenu}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <button
-              onClick={() => { setContactOpen(true); closeMobileMenu() }}
-              className="mt-6 inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white transition-all duration-300"
-            >
-              Наши контакты
-            </button>
-          </div>
-        </div>
+
       </header>
 
       <GiftModal open={giftOpen} onClose={() => setGiftOpen(false)} />
