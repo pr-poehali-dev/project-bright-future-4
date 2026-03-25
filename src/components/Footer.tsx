@@ -10,9 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-2">
             <a href="/" className="inline-flex items-center gap-3 mb-6">
-              <div className="w-9 h-9 bg-foreground rounded flex items-center justify-center flex-shrink-0">
-                <span className="text-background text-sm font-bold tracking-tight">TS</span>
-              </div>
+              <img src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg" alt="TS logo" className="w-9 h-9 rounded flex-shrink-0 object-cover" />
               <span className="text-foreground text-xl font-semibold tracking-widest uppercase">TOYSTROY</span>
             </a>
             <p className="text-muted-foreground leading-relaxed max-w-sm">
