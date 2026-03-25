@@ -13,6 +13,7 @@ import { Footer } from "../components/Footer"
 import { FloatingCall } from "../components/FloatingCall"
 import { CallToAction } from "../components/CallToAction"
 import { PromoPopup } from "../components/PromoPopup"
+import { Comparison } from "../components/Comparison"
 
 export default function Index() {
   return (
@@ -22,6 +23,7 @@ export default function Index() {
       <Philosophy />
       <Projects />
       <Expertise />
+      <Comparison />
       <Financing />
       <Process />
       <Calculator />
