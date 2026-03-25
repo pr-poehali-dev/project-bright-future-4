@@ -268,10 +268,10 @@ export function Reviews() {
           </div>
         </div>
 
-        {/* Мобильная версия — 1 отзыв, компактно */}
+        {/* Мобильная версия — 2 отзыва, как на десктопе */}
         <div className="md:hidden">
-          <div className="mb-4">
-            {mobileVisible[0] && renderReview(mobileVisible[0], current, true)}
+          <div className="flex flex-col gap-4 mb-4">
+            {mobileVisible.map((review, index) => renderReview(review, current * perPage + index, true))}
           </div>
           <div className="flex items-center justify-between">
             <button onClick={mobilePrev} disabled={current === 0} className="w-10 h-10 border border-border flex items-center justify-center hover:bg-foreground hover:text-background transition-all disabled:opacity-30 disabled:cursor-not-allowed">
