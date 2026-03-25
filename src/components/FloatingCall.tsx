@@ -27,14 +27,14 @@ export function FloatingCall() {
         <button
           onClick={scrollToTop}
           aria-label="Наверх"
-          className="w-11 h-11 bg-orange-200 shadow-md flex items-center justify-center text-orange-700 active:scale-95 transition-transform"
+          className="w-11 h-11 bg-white/30 backdrop-blur-sm flex items-center justify-center text-white/80 active:scale-95 transition-transform"
         >
           <Icon name="ChevronUp" size={20} />
         </button>
         <button
           onClick={atBottom ? scrollToTop : scrollToBottom}
           aria-label={atBottom ? "Наверх" : "Вниз"}
-          className="w-11 h-11 bg-orange-200 shadow-md flex items-center justify-center text-orange-700 active:scale-95 transition-transform"
+          className="w-11 h-11 bg-white/30 backdrop-blur-sm flex items-center justify-center text-white/80 active:scale-95 transition-transform"
         >
           <Icon name={atBottom ? "ChevronUp" : "ChevronDown"} size={20} />
         </button>
