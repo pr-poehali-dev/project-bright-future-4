@@ -312,7 +312,7 @@ export function Projects() {
         <div className="md:hidden relative flex items-center">
           <button
             onClick={scrollLeft}
-            className="absolute -left-4 z-10 w-10 h-10 bg-black flex items-center justify-center shrink-0"
+            className="absolute -left-4 z-10 w-10 h-10 bg-orange-500 flex items-center justify-center shrink-0"
           >
             <ChevronLeft className="w-5 h-5 text-white" />
           </button>
@@ -349,7 +349,7 @@ export function Projects() {
 
           <button
             onClick={scrollRight}
-            className="absolute -right-4 z-10 w-10 h-10 bg-black flex items-center justify-center shrink-0"
+            className="absolute -right-4 z-10 w-10 h-10 bg-orange-500 flex items-center justify-center shrink-0"
           >
             <ChevronRight className="w-5 h-5 text-white" />
           </button>
