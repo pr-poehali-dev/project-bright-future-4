@@ -227,7 +227,7 @@ export function Projects() {
             <p className="text-foreground text-base md:text-lg font-bold tracking-[0.25em] uppercase mb-6">Построенные дома</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Наши работы</h2>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4">
             <button
               onClick={prev}
               disabled={current === 0}
