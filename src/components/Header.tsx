@@ -31,7 +31,7 @@ export function Header() {
             : "bg-transparent py-4",
         )}
       >
-        <nav className="container mx-auto px-6 flex items-center justify-between md:px-[24]">
+        <nav className="container mx-auto px-4 flex items-center justify-between md:px-[24]">
           <a href="/" className="flex items-center gap-3 group" onClick={scrollToTop}>
             <img src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg" alt="TS logo" className="w-10 h-10 rounded-sm flex-shrink-0 object-cover" />
             <div className="flex flex-col">
@@ -84,7 +84,7 @@ export function Header() {
 
         {/* Сетка меню на мобильном — 4 сверху + 4 снизу */}
         <div className="md:hidden mt-2 border-t border-white/10 px-3 py-2">
-          <div className="grid grid-cols-4 gap-1">
+          <div className="grid grid-cols-4" style={{gap: '2px'}}>
             {[
               { label: "Главная", href: "#hero" },
               { label: "О нас", href: "#about" },
@@ -99,8 +99,8 @@ export function Header() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-center py-1.5 text-[11px] font-medium hover:text-orange-400 transition-colors duration-200"
-                  style={{color: '#F5E4A0', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}
+                  className="text-center py-1.5 font-medium hover:text-orange-400 transition-colors duration-200 truncate px-0.5"
+                  style={{color: '#F5E4A0', textShadow: '0 1px 3px rgba(0,0,0,0.8)', fontSize: '10px'}}
                 >
                   {item.label}
                 </a>
@@ -108,7 +108,8 @@ export function Header() {
                 <button
                   key={item.label}
                   onClick={() => setContactOpen(true)}
-                  className="text-center py-1.5 text-[11px] font-medium text-orange-300 hover:text-orange-400 transition-colors duration-200"
+                  className="text-center py-1.5 font-medium text-orange-300 hover:text-orange-400 transition-colors duration-200 truncate px-0.5"
+                  style={{fontSize: '10px'}}
                 >
                   {item.label}
                 </button>
