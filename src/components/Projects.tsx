@@ -267,15 +267,15 @@ export function Projects() {
                     <>
                       <button
                         onClick={(e) => { e.stopPropagation(); goSlide(project.id, -1, images.length) }}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
+                        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black flex items-center justify-center md:opacity-0 md:group-hover:opacity-100 transition-opacity"
                       >
-                        <ChevronLeft className="w-5 h-5" />
+                        <ChevronLeft className="w-5 h-5 text-white" />
                       </button>
                       <button
                         onClick={(e) => { e.stopPropagation(); goSlide(project.id, 1, images.length) }}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black flex items-center justify-center md:opacity-0 md:group-hover:opacity-100 transition-opacity"
                       >
-                        <ChevronRight className="w-5 h-5" />
+                        <ChevronRight className="w-5 h-5 text-white" />
                       </button>
                       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
                         {images.map((_, i) => (
