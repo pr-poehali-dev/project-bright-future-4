@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
@@ -191,6 +191,7 @@ export function Projects() {
   const [current, setCurrent] = useState(0)
   const [hoveredId, setHoveredId] = useState<number | null>(null)
   const [slideIndexes, setSlideIndexes] = useState<Record<number, number>>({})
+  const scrollRef = useRef<HTMLDivElement>(null)
 
   const perPage = 2
   const total = Math.ceil(projects.length / perPage)
@@ -198,6 +199,9 @@ export function Projects() {
 
   const prev = () => setCurrent((c) => Math.max(0, c - 1))
   const next = () => setCurrent((c) => Math.min(total - 1, c + 1))
+
+  const scrollLeft = () => scrollRef.current?.scrollBy({ left: -320, behavior: "smooth" })
+  const scrollRight = () => scrollRef.current?.scrollBy({ left: 320, behavior: "smooth" })
 
   const goSlide = (projectId: number, direction: number, totalImages: number) => {
     setSlideIndexes((prev) => {
@@ -242,7 +246,8 @@ export function Projects() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+        {/* Десктоп: постраничный грид */}
+        <div className="hidden md:grid md:grid-cols-2 gap-8">
           {visible.map((project, index) => {
             const images = project.images || ["/placeholder.svg"]
             const currentSlide = slideIndexes[project.id] || 0
@@ -267,15 +272,15 @@ export function Projects() {
                     <>
                       <button
                         onClick={(e) => { e.stopPropagation(); goSlide(project.id, -1, images.length) }}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black flex items-center justify-center md:opacity-0 md:group-hover:opacity-100 transition-opacity"
+                        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
                       >
-                        <ChevronLeft className="w-5 h-5 text-white" />
+                        <ChevronLeft className="w-5 h-5" />
                       </button>
                       <button
                         onClick={(e) => { e.stopPropagation(); goSlide(project.id, 1, images.length) }}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black flex items-center justify-center md:opacity-0 md:group-hover:opacity-100 transition-opacity"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white"
                       >
-                        <ChevronRight className="w-5 h-5 text-white" />
+                        <ChevronRight className="w-5 h-5" />
                       </button>
                       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
                         {images.map((_, i) => (
@@ -301,6 +306,53 @@ export function Projects() {
               </article>
             )
           })}
+        </div>
+
+        {/* Мобильный: горизонтальный скролл со стрелками по бокам */}
+        <div className="md:hidden relative flex items-center">
+          <button
+            onClick={scrollLeft}
+            className="absolute -left-4 z-10 w-10 h-10 bg-black flex items-center justify-center shrink-0"
+          >
+            <ChevronLeft className="w-5 h-5 text-white" />
+          </button>
+
+          <div
+            ref={scrollRef}
+            className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth px-8"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {projects.map((project) => {
+              const images = project.images || ["/placeholder.svg"]
+              const currentSlide = slideIndexes[project.id] || 0
+
+              return (
+                <article key={project.id} className="shrink-0 w-[80vw]">
+                  <div className="relative overflow-hidden aspect-[4/3] mb-4">
+                    <img
+                      src={images[currentSlide]}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="text-lg font-medium mb-1">{project.title}</h3>
+                      <p className="text-sm text-muted-foreground">{project.category}</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground shrink-0">{project.year}</span>
+                  </div>
+                </article>
+              )
+            })}
+          </div>
+
+          <button
+            onClick={scrollRight}
+            className="absolute -right-4 z-10 w-10 h-10 bg-black flex items-center justify-center shrink-0"
+          >
+            <ChevronRight className="w-5 h-5 text-white" />
+          </button>
         </div>
       </div>
     </section>
