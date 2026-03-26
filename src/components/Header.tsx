@@ -79,13 +79,6 @@ export function Header() {
           </div>
 
           <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setGiftOpen(true)}
-              title="Подарки на выбор"
-              className="w-9 h-9 inline-flex items-center justify-center bg-orange-500 text-white"
-            >
-              <Icon name="Gift" size={16} />
-            </button>
           </div>
         </nav>
 
