@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import Icon from "@/components/ui/icon"
 
 type TextReview = {
@@ -181,16 +182,15 @@ const sorted = [...allReviews].sort(
 
 export function Reviews() {
   const [current, setCurrent] = useState(0)
+  const scrollRef = useRef<HTMLDivElement>(null)
   const perPage = 2
   const total = Math.ceil(sorted.length / perPage)
   const visible = sorted.slice(current * perPage, current * perPage + perPage)
-  const mobileVisible = sorted.slice(current * perPage, current * perPage + perPage)
-  const mobileTotal = total
 
   const prev = () => setCurrent((c) => Math.max(0, c - 1))
   const next = () => setCurrent((c) => Math.min(total - 1, c + 1))
-  const mobilePrev = () => setCurrent((c) => Math.max(0, c - 1))
-  const mobileNext = () => setCurrent((c) => Math.min(mobileTotal - 1, c + 1))
+  const scrollLeft = () => scrollRef.current?.scrollBy({ left: -320, behavior: "smooth" })
+  const scrollRight = () => scrollRef.current?.scrollBy({ left: 320, behavior: "smooth" })
 
   const renderReview = (review: Review, key: number, compact = false) => {
     if (review.type === "video") {
@@ -268,20 +268,33 @@ export function Reviews() {
           </div>
         </div>
 
-        {/* Мобильная версия — 2 отзыва, как на десктопе */}
-        <div className="md:hidden">
-          <div className="flex flex-col gap-4 mb-4">
-            {mobileVisible.map((review, index) => renderReview(review, current * perPage + index, true))}
+        {/* Мобильная версия — горизонтальный скролл со стрелками */}
+        <div className="md:hidden relative flex items-center">
+          <button
+            onClick={scrollLeft}
+            className="absolute -left-4 z-10 w-10 h-10 bg-black flex items-center justify-center shrink-0"
+          >
+            <ChevronLeft className="w-5 h-5 text-white" />
+          </button>
+
+          <div
+            ref={scrollRef}
+            className="flex gap-4 overflow-x-auto scroll-smooth px-8"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {sorted.map((review, index) => (
+              <div key={index} className="shrink-0 w-[80vw]">
+                {renderReview(review, index, true)}
+              </div>
+            ))}
           </div>
-          <div className="flex items-center justify-between">
-            <button onClick={mobilePrev} disabled={current === 0} className="w-10 h-10 border border-border flex items-center justify-center hover:bg-foreground hover:text-background transition-all disabled:opacity-30 disabled:cursor-not-allowed">
-              <Icon name="ArrowLeft" size={16} />
-            </button>
-            <span className="text-xs text-muted-foreground">{current + 1} / {mobileTotal}</span>
-            <button onClick={mobileNext} disabled={current === mobileTotal - 1} className="w-10 h-10 border border-border flex items-center justify-center hover:bg-foreground hover:text-background transition-all disabled:opacity-30 disabled:cursor-not-allowed">
-              <Icon name="ArrowRight" size={16} />
-            </button>
-          </div>
+
+          <button
+            onClick={scrollRight}
+            className="absolute -right-4 z-10 w-10 h-10 bg-black flex items-center justify-center shrink-0"
+          >
+            <ChevronRight className="w-5 h-5 text-white" />
+          </button>
         </div>
 
         {/* Десктопная версия — 2 отзыва */}
