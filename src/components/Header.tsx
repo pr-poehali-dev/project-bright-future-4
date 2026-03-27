@@ -7,10 +7,12 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [contactOpen, setContactOpen] = useState(false)
   const [giftOpen, setGiftOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
+      if (window.scrollY <= 50) setMenuOpen(false)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -78,7 +80,16 @@ export function Header() {
             </button>
           </div>
 
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center gap-2">
+            {scrolled && (
+              <button
+                onClick={() => setMenuOpen((v) => !v)}
+                className="px-3 h-10 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider bg-primary/80 border border-white/20 text-yellow-200"
+              >
+                <Icon name={menuOpen ? "X" : "Menu"} size={14} />
+                Меню
+              </button>
+            )}
             <button
               onClick={() => setGiftOpen(true)}
               title="Подарки на выбор"
@@ -89,8 +100,8 @@ export function Header() {
           </div>
         </nav>
 
-        {/* Сетка меню на мобильном — 4 сверху + 4 снизу */}
-        <div className="md:hidden mt-2 border-t border-white/10 px-3 py-2">
+        {/* Сетка меню на мобильном — показывается когда не проскроллено */}
+        <div className={cn("md:hidden mt-2 border-t border-white/10 px-3 py-2 transition-all duration-300", scrolled ? "hidden" : "block")}>
           <div className="grid grid-cols-4 gap-1">
             {[
               { label: "Главная", href: "#hero" },
@@ -123,6 +134,44 @@ export function Header() {
             )}
           </div>
         </div>
+
+        {/* Выпадающее меню при скролле на мобильном */}
+        {scrolled && menuOpen && (
+          <div className="md:hidden border-t border-white/10 px-3 py-2 bg-primary/95">
+            <div className="grid grid-cols-4 gap-1">
+              {[
+                { label: "Главная", href: "#hero" },
+                { label: "О нас", href: "#about" },
+                { label: "Работы", href: "#projects" },
+                { label: "Услуги", href: "#services" },
+                { label: "Вопросы", href: "#faq" },
+                { label: "Отзывы", href: "#reviews" },
+                { label: "Партнёры", href: "#partners" },
+                { label: "Контакты", href: null },
+              ].map((item) =>
+                item.href ? (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-center py-1.5 text-[11px] font-medium hover:text-orange-400 transition-colors duration-200"
+                    style={{color: '#F5E4A0', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <button
+                    key={item.label}
+                    onClick={() => { setContactOpen(true); setMenuOpen(false) }}
+                    className="text-center py-1.5 text-[11px] font-medium text-orange-300 hover:text-orange-400 transition-colors duration-200"
+                  >
+                    {item.label}
+                  </button>
+                )
+              )}
+            </div>
+          </div>
+        )}
 
 
       </header>
