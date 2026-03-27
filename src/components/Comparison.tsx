@@ -64,32 +64,23 @@ export function Comparison() {
           Сравниваем честно — по цене, срокам и качеству жизни в доме
         </p>
 
-        <div className="overflow-x-auto">
+        {/* Десктоп: таблица */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr>
                 <th className="text-left py-4 pr-4 text-gray-400 font-medium w-1/4"></th>
                 <th className="py-4 px-4 text-center w-1/4">
                   <div className="inline-flex flex-col items-center gap-1">
-                    <div className="bg-orange-500 text-white text-xs font-bold px-3 py-1 tracking-wide">
-                      КАРКАС
-                    </div>
+                    <div className="bg-orange-500 text-white text-xs font-bold px-3 py-1 tracking-wide">КАРКАС</div>
                     <span className="text-[10px] text-orange-500 font-semibold">TOYSTROY</span>
                   </div>
                 </th>
                 <th className="py-4 px-4 text-center w-1/4">
-                  <div className="inline-flex flex-col items-center gap-1">
-                    <div className="bg-gray-200 text-gray-600 text-xs font-bold px-3 py-1 tracking-wide">
-                      КИРПИЧ
-                    </div>
-                  </div>
+                  <div className="bg-gray-200 text-gray-600 text-xs font-bold px-3 py-1 tracking-wide inline-block">КИРПИЧ</div>
                 </th>
                 <th className="py-4 px-4 text-center w-1/4">
-                  <div className="inline-flex flex-col items-center gap-1">
-                    <div className="bg-gray-200 text-gray-600 text-xs font-bold px-3 py-1 tracking-wide">
-                      ГАЗОБЕТОН
-                    </div>
-                  </div>
+                  <div className="bg-gray-200 text-gray-600 text-xs font-bold px-3 py-1 tracking-wide inline-block">ГАЗОБЕТОН</div>
                 </th>
               </tr>
             </thead>
@@ -98,7 +89,7 @@ export function Comparison() {
                 <tr key={i} className={i % 2 === 0 ? "bg-white/10" : "bg-white/5"}>
                   <td className="py-4 pr-4 font-medium text-gray-200">{row.label}</td>
                   <td className="py-4 px-4 text-center">
-                    <div className="flex items-center justify-center gap-1.5 text-orange-600 font-semibold">
+                    <div className="flex items-center justify-center gap-1.5 text-orange-400 font-semibold">
                       <Icon name="Check" size={14} className="text-orange-500 flex-shrink-0" />
                       {row.frame}
                     </div>
@@ -109,6 +100,32 @@ export function Comparison() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Мобильный: карточки */}
+        <div className="md:hidden space-y-3">
+          {/* Шапка */}
+          <div className="grid grid-cols-3 gap-2 mb-4">
+            <div className="flex flex-col items-center gap-1">
+              <div className="bg-orange-500 text-white text-[10px] font-bold px-2 py-1 tracking-wide text-center w-full">КАРКАС</div>
+              <span className="text-[9px] text-orange-400 font-semibold">TOYSTROY</span>
+            </div>
+            <div className="bg-gray-700 text-gray-300 text-[10px] font-bold px-2 py-1 tracking-wide text-center">КИРПИЧ</div>
+            <div className="bg-gray-700 text-gray-300 text-[10px] font-bold px-2 py-1 tracking-wide text-center">ГАЗОБЕТОН</div>
+          </div>
+          {rows.map((row, i) => (
+            <div key={i} className={`rounded-sm p-3 ${i % 2 === 0 ? "bg-white/10" : "bg-white/5"}`}>
+              <p className="text-gray-300 text-[11px] font-semibold mb-2 uppercase tracking-wide">{row.label}</p>
+              <div className="grid grid-cols-3 gap-2">
+                <div className="flex flex-col items-center gap-0.5">
+                  <Icon name="Check" size={12} className="text-orange-500" />
+                  <span className="text-orange-400 font-semibold text-[11px] text-center leading-tight">{row.frame}</span>
+                </div>
+                <span className="text-gray-400 text-[11px] text-center leading-tight">{row.brick}</span>
+                <span className="text-gray-400 text-[11px] text-center leading-tight">{row.gas}</span>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="mt-10 bg-orange-500/10 border border-orange-500/30 p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
