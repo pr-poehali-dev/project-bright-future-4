@@ -39,7 +39,7 @@ export default function Flyer() {
           <p className="text-xl font-black uppercase tracking-widest">Строим быстро. Тепло. С гарантией.</p>
         </div>
 
-        <p className="text-sm text-gray-700 mb-6 leading-relaxed text-center">
+        <p className="text-sm text-gray-900 mb-6 leading-relaxed text-center">
           Каркасный дом — это возможность жить в тёплом, надёжном и красивом доме, построенном точно в срок
           и без лишних затрат. Мы работаем по всей Тульской области и выезжаем на участок в любой район <strong>бесплатно</strong>.
         </p>
@@ -48,7 +48,7 @@ export default function Flyer() {
           {/* Почему выбирают */}
           <div>
             <h2 className="text-base font-black uppercase border-b-2 border-orange-500 pb-1 mb-3">Почему выбирают TOYSTROY</h2>
-            <ul className="text-xs space-y-1.5 text-gray-800">
+            <ul className="text-xs space-y-1.5 text-gray-950">
               {[
                 "От 25 000 ₽/м² — в 2 раза дешевле кирпича (55 000 ₽) и газобетона (40 000 ₽)",
                 "Готов за 2–4 месяца — баня за 5 недель",
@@ -74,7 +74,7 @@ export default function Flyer() {
             {/* Что входит */}
             <div>
               <h2 className="text-base font-black uppercase border-b-2 border-orange-500 pb-1 mb-3">Что входит в стоимость</h2>
-              <ul className="text-xs space-y-1 text-gray-800">
+              <ul className="text-xs space-y-1 text-gray-950">
                 {[
                   "Выезд на участок и консультация",
                   "Индивидуальный проект и смета",
@@ -95,7 +95,7 @@ export default function Flyer() {
             {/* Оплата */}
             <div>
               <h2 className="text-base font-black uppercase border-b-2 border-orange-500 pb-1 mb-3">Варианты оплаты</h2>
-              <ul className="text-xs space-y-1 text-gray-800">
+              <ul className="text-xs space-y-1 text-gray-950">
                 <li>💰 100% сразу — скидка <strong>10%</strong></li>
                 <li>💰 50% аванс + 50% при сдаче — скидка <strong>5%</strong></li>
                 <li>💰 Рассрочка по этапам — <strong>без процентов</strong></li>
@@ -107,7 +107,7 @@ export default function Flyer() {
         {/* Подарок */}
         <div className="border-2 border-orange-500 p-4 mb-6">
           <h2 className="text-base font-black uppercase text-center mb-3">🎁 Подарок при заказе (на выбор)</h2>
-          <div className="grid grid-cols-3 gap-2 text-xs text-center text-gray-800">
+          <div className="grid grid-cols-3 gap-2 text-xs text-center text-gray-950">
             {[
               "Фундамент на винтовых сваях",
               "Полная электрика внутри дома",
@@ -124,7 +124,7 @@ export default function Flyer() {
         {/* Гарантия */}
         <div className="bg-gray-100 p-4 mb-6">
           <h2 className="text-base font-black uppercase text-center border-b-2 border-orange-500 pb-1 mb-3">Наши гарантии</h2>
-          <div className="grid grid-cols-2 gap-2 text-xs text-gray-800">
+          <div className="grid grid-cols-2 gap-2 text-xs text-gray-950">
             {[
               { num: "1", text: "Бесплатный выезд на участок и консультация — без обязательств" },
               { num: "2", text: "Индивидуальный проект и подробная смета со стоимостью всех материалов и работ" },
@@ -163,8 +163,8 @@ export default function Flyer() {
               <span className="text-[9px] text-gray-500">Сканируй — переходи на сайт</span>
             </div>
           </div>
-          <p className="text-xs text-gray-500">ВКонтакте: vk.ru/toystroy71 · Работаем с 10:00 до 19:00</p>
-          <div className="mt-3 text-xs text-gray-400 italic">Средняя оценка 5 звёзд</div>
+          <p className="text-xs text-gray-900">ВКонтакте: vk.ru/toystroy71 · Работаем с 10:00 до 19:00</p>
+          <div className="mt-3 text-xs text-gray-700 italic">Средняя оценка 5 звёзд</div>
         </div>
 
       </div>
