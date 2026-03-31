@@ -107,7 +107,7 @@ export default function Flyer() {
         {/* Подарок */}
         <div className="border-2 border-orange-500 p-4 mb-6">
           <h2 className="text-base font-black uppercase text-center mb-3">🎁 Подарок при заказе (на выбор)</h2>
-          <div className="grid grid-cols-3 gap-2 text-sm text-center text-gray-950">
+          <div className="grid grid-cols-3 gap-2 text-sm text-center">
             {[
               "Фундамент на винтовых сваях",
               "Полная электрика внутри дома",
@@ -116,7 +116,7 @@ export default function Flyer() {
               "Огне-биозащита каркаса",
               "Кадастровый учёт дома",
             ].map((item, i) => (
-              <div key={i} className="bg-orange-50 border border-orange-200 p-2 rounded text-[11px]">{item}</div>
+              <div key={i} className="bg-black border border-orange-500 p-2 rounded text-sm font-bold text-orange-500">{item}</div>
             ))}
           </div>
         </div>
