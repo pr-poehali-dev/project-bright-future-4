@@ -139,7 +139,10 @@ export default function Flyer() {
           <div style={{position:"relative", zIndex:1}}>
             <div style={{display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:"6px"}}>
               <img src={LOGO} alt="TS" style={{width:"40px", height:"40px", borderRadius:"7px"}} />
-              <div style={{fontSize:"14px", fontWeight:900, textTransform:"uppercase", textAlign:"center"}}>Консультация и расчёт — БЕСПЛАТНО за 1 день</div>
+              <div style={{textAlign:"center"}}>
+                <div style={{fontSize:"14px", fontWeight:900, textTransform:"uppercase"}}>Консультация и расчёт — БЕСПЛАТНО за 1 день</div>
+                <div style={{fontSize:"12px", fontWeight:700, color:"#f97316", marginTop:"3px"}}>🕐 Режим работы: Пн–Пт 9:00–18:00</div>
+              </div>
               <img src={LOGO} alt="TS" style={{width:"40px", height:"40px", borderRadius:"7px"}} />
             </div>
             <div style={{display:"flex", alignItems:"center", justifyContent:"space-between", gap:"8px"}}>
