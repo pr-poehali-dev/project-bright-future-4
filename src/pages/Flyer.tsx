@@ -159,7 +159,6 @@ export default function Flyer() {
           </div>
           <div className="flex gap-4 items-center justify-between mb-3">
             <div className="text-left space-y-2 text-sm font-bold text-gray-950">
-              <p>📍 г. Тула, ул. Пролетарская, 37</p>
               <p>📞 +7 (950) 917-09-74</p>
               <p>📱 WhatsApp: +7 (950) 917-09-74</p>
               <p>📧 Toystroy71rus@mail.ru</p>
@@ -172,7 +171,7 @@ export default function Flyer() {
               <span className="text-sm font-bold text-gray-950">Сканируй — переходи на сайт</span>
             </div>
           </div>
-          <p className="text-xs text-gray-900">⏰ Работаем с 10:00 до 19:00</p>
+          <p className="text-xs text-gray-900">📍 г. Тула, ул. Пролетарская, 37 · ⏰ Работаем с 10:00 до 19:00</p>
           <div className="mt-3 text-xs text-gray-700 italic">Средняя оценка 5 звёзд</div>
         </div>
 
