@@ -15,13 +15,21 @@ export default function Flyer() {
       <div className="max-w-[210mm] mx-auto px-8 py-10 text-black font-sans">
 
         {/* Шапка */}
-        <div className="border-4 border-orange-500 p-6 mb-6 text-center">
-          <div className="flex items-center justify-center gap-4 mb-2">
-            <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-16 h-16 rounded-xl" />
-            <h1 className="text-4xl font-black uppercase tracking-widest text-orange-500">TOYSTROY</h1>
+        <div className="border-4 border-orange-500 mb-6 text-center relative overflow-hidden" style={{minHeight: 160}}>
+          <img
+            src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/fb966810-b800-4ef5-ae89-150e95c588d8.png"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{opacity: 0.18}}
+          />
+          <div className="relative z-10 p-6">
+            <div className="flex items-center justify-center gap-4 mb-2">
+              <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-16 h-16 rounded-xl shadow-md" />
+              <h1 className="text-4xl font-black uppercase tracking-widest text-orange-500 drop-shadow">TOYSTROY</h1>
+            </div>
+            <p className="text-lg font-bold uppercase tracking-wide text-gray-900">Каркасные дома, дачи и бани под ключ</p>
+            <p className="text-sm font-semibold text-orange-600 mt-1">Тула · Работаем по всей Тульской области</p>
           </div>
-          <p className="text-lg font-bold uppercase tracking-wide text-gray-800">Каркасные дома, дачи и бани под ключ</p>
-          <p className="text-sm text-gray-500 mt-1">Тула · Работаем по всей Тульской области</p>
         </div>
 
         {/* Девиз */}
