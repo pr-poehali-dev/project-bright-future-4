@@ -130,7 +130,7 @@ export default function Flyer() {
         {/* Гарантия */}
         <div className="bg-gray-100 p-4 mb-6">
           <h2 className="text-base font-black uppercase text-center border-b-2 border-orange-500 pb-1 mb-3">Наши гарантии</h2>
-          <div className="grid grid-cols-2 gap-2 text-sm text-gray-950">
+          <div className="flex flex-col gap-2 text-sm text-gray-950">
             {[
               { num: "1", text: "Бесплатный выезд на участок и консультация — без обязательств" },
               { num: "2", text: "Индивидуальный проект и подробная смета со стоимостью всех материалов и работ" },
