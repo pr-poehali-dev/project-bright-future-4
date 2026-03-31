@@ -224,15 +224,6 @@ export function Header() {
                 </div>
               </a>
 
-              <a href="https://t.me/+bl1G2_6xZLRmYTdi" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                <div className="w-10 h-10 bg-foreground/5 flex items-center justify-center flex-shrink-0">
-                  <Icon name="Send" size={18} className="text-foreground" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground mb-0.5">Телеграм</p>
-                  <p className="font-semibold group-hover:text-orange-500 transition-colors">Написать в Telegram</p>
-                </div>
-              </a>
 
               <a href="https://max.ru/join/eBogWRUdUiahBG30wNhO0hpDgvUTSuTV1v0FxL9skhI" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                 <div className="w-10 h-10 bg-foreground/5 flex items-center justify-center flex-shrink-0">

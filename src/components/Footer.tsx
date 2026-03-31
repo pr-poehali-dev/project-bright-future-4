@@ -60,11 +60,7 @@ export function Footer() {
                   +7 (950) 917-09-74
                 </a>
               </li>
-              <li>
-                <a href="https://t.me/+bl1G2_6xZLRmYTdi" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                  Телеграм
-                </a>
-              </li>
+
               <li>
                 <a href="https://vk.ru/toystroy71" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                   ВКонтакте
