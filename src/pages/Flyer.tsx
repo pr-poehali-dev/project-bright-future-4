@@ -151,16 +151,14 @@ export default function Flyer() {
             <p className="text-sm font-bold uppercase">Консультация и расчёт стоимости — БЕСПЛАТНО за 1 день</p>
             <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-12 h-12 rounded-lg" />
           </div>
-          <div className="flex gap-4 items-center mb-3">
-            <div className="flex-1 text-left space-y-1 text-sm">
+          <div className="flex gap-4 items-center justify-between mb-3">
+            <div className="text-left space-y-2 text-sm">
               <p>📞 <strong>+7 (950) 917-09-74</strong></p>
               <p>📱 WhatsApp: <strong>+7 (950) 917-09-74</strong></p>
               <p>📧 Toystroy71rus@mail.ru</p>
               <p>🌐 <strong>toystroy71.ru</strong></p>
             </div>
-            <div className="flex items-center justify-center flex-1">
-              <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-36 h-36 rounded-2xl shadow-lg" />
-            </div>
+            <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-36 h-36 rounded-2xl shadow-lg mx-auto" />
             <div className="flex flex-col items-center gap-1">
               <QRCodeSVG value="https://toystroy71.ru" size={200} />
               <span className="text-sm font-bold text-gray-950">Сканируй — переходи на сайт</span>
