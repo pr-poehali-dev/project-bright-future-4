@@ -160,7 +160,7 @@ export default function Flyer() {
             </div>
             <div className="flex flex-col items-center gap-1">
               <QRCodeSVG value="https://toystroy71.ru" size={80} />
-              <span className="text-[9px] text-gray-500">Сканируй — переходи на сайт</span>
+              <span className="text-sm font-bold text-gray-950">Сканируй — переходи на сайт</span>
             </div>
           </div>
           <p className="text-xs text-gray-900">ВКонтакте: vk.ru/toystroy71 · Работаем с 10:00 до 19:00</p>
