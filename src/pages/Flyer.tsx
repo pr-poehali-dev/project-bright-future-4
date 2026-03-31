@@ -157,7 +157,7 @@ export default function Flyer() {
               <img src={LOGO} alt="TS" style={{width:"130px", height:"130px", borderRadius:"16px", boxShadow:"0 4px 12px rgba(0,0,0,0.2)"}} />
               <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"5px"}}>
                 <QRCodeSVG value="https://toystroy71.ru" size={130} />
-                <span style={{fontSize:"11px", fontWeight:700}}>Сканируй — переходи на сайт</span>
+                <span style={{fontSize:"16px", fontWeight:900}}>Сканируй — переходи на сайт</span>
               </div>
             </div>
             <div style={{textAlign:"center", fontSize:"11px", color:"#444", marginTop:"5px", fontWeight:600}}>
