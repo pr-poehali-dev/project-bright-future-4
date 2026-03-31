@@ -35,8 +35,8 @@ export default function Flyer() {
         </div>
 
         {/* Девиз */}
-        <div className="bg-orange-500 text-white text-center py-3 mb-6">
-          <p className="text-xl font-black uppercase tracking-widest">Строим быстро. Тепло. С гарантией.</p>
+        <div className="bg-black text-center py-3 mb-6">
+          <p className="text-xl font-black uppercase tracking-widest text-orange-500">Тепло · Надёжно · С гарантией</p>
         </div>
 
         <p className="text-sm text-gray-900 mb-6 leading-relaxed text-center">
