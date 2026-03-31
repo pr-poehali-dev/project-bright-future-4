@@ -112,8 +112,25 @@ export default function Flyer() {
         </div>
 
         {/* Гарантия */}
-        <div className="bg-gray-100 p-4 mb-6 text-xs text-center text-gray-700">
-          <strong className="text-sm text-black">ГАРАНТИЯ:</strong> Официальный договор · Фиксированная цена · Гарантия на конструктив · Бесплатное устранение замечаний · Сертификаты на все материалы
+        <div className="bg-gray-100 p-4 mb-6">
+          <h2 className="text-base font-black uppercase text-center border-b-2 border-orange-500 pb-1 mb-3">Наши гарантии</h2>
+          <div className="grid grid-cols-2 gap-2 text-xs text-gray-800">
+            {[
+              { num: "1", text: "Бесплатный выезд на участок и консультация — без обязательств" },
+              { num: "2", text: "Индивидуальный проект и подробная смета со стоимостью всех материалов и работ" },
+              { num: "3", text: "Официальный договор с фиксированной ценой — никаких доплат после подписания" },
+              { num: "4", text: "Прозрачная смета — вы знаете за что платите на каждом этапе" },
+              { num: "5", text: "Гарантия на конструктив и все выполненные работы" },
+              { num: "6", text: "Бесплатное устранение замечаний в течение гарантийного срока" },
+              { num: "7", text: "Сертификаты качества на все используемые материалы" },
+              { num: "8", text: "Гарантийный паспорт и инструкции по эксплуатации при сдаче дома" },
+            ].map((item) => (
+              <div key={item.num} className="flex gap-2 items-start">
+                <span className="bg-orange-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">{item.num}</span>
+                <span>{item.text}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Контакты */}
