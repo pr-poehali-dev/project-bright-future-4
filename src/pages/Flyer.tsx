@@ -1,3 +1,5 @@
+import { QRCodeSVG } from "qrcode.react";
+
 export default function Flyer() {
   return (
     <div className="min-h-screen bg-white">
@@ -141,6 +143,26 @@ export default function Flyer() {
           </div>
         </div>
 
+        {/* Фото работ */}
+        <div className="mb-6">
+          <h2 className="text-base font-black uppercase border-b-2 border-orange-500 pb-1 mb-3">Наши работы</h2>
+          <div className="grid grid-cols-3 gap-2">
+            {[
+              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9e66a153-da16-44d0-826b-d98c881b7c69.jpg", label: "Усадьба «Северная»" },
+              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/602f1d91-8439-4cd5-ba13-8b5596547ac5.jpg", label: "Каркасный дом 9×9" },
+              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/fbe39a78-c2be-4a1c-81a0-4169e556d25b.jpg", label: "Дача «Тихое место»" },
+              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/1e5ca22f-2f9f-4cf3-bf93-a91d6555ec97.jpg", label: "Барнхаус «Тёмный лес»" },
+              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/56d74da9-b326-4a51-905c-a89d487e62c0.jpg", label: "Дом с верандой" },
+              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9e9a6b39-d698-4e09-83bb-a7eb062fad40.jpg", label: "А-фрейм в лесу" },
+            ].map((photo, i) => (
+              <div key={i} className="relative overflow-hidden rounded">
+                <img src={photo.url} alt={photo.label} className="w-full h-24 object-cover" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-[9px] text-center py-0.5 px-1">{photo.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Контакты */}
         <div className="border-4 border-black p-5 text-center">
           <div className="flex items-center justify-between mb-3">
@@ -148,14 +170,16 @@ export default function Flyer() {
             <p className="text-sm font-bold uppercase">Консультация и расчёт стоимости — БЕСПЛАТНО за 1 день</p>
             <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-12 h-12 rounded-lg" />
           </div>
-          <div className="grid grid-cols-2 gap-2 text-sm mb-3">
-            <div className="text-left space-y-1">
+          <div className="flex gap-4 items-center mb-3">
+            <div className="flex-1 text-left space-y-1 text-sm">
               <p>📞 <strong>+7 (950) 917-09-74</strong></p>
               <p>📱 WhatsApp: <strong>+7 (950) 917-09-74</strong></p>
-            </div>
-            <div className="text-left space-y-1">
               <p>📧 Toystroy71rus@mail.ru</p>
               <p>🌐 <strong>toystroy71.ru</strong></p>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <QRCodeSVG value="https://toystroy71.ru" size={80} />
+              <span className="text-[9px] text-gray-500">Сканируй — переходи на сайт</span>
             </div>
           </div>
           <p className="text-xs text-gray-500">ВКонтакте: vk.ru/toystroy71 · Работаем с 10:00 до 19:00</p>
