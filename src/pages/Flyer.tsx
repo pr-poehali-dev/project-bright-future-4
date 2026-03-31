@@ -143,25 +143,6 @@ export default function Flyer() {
           </div>
         </div>
 
-        {/* Фото работ */}
-        <div className="mb-6">
-          <h2 className="text-base font-black uppercase border-b-2 border-orange-500 pb-1 mb-3">Наши работы</h2>
-          <div className="grid grid-cols-3 gap-2">
-            {[
-              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9e66a153-da16-44d0-826b-d98c881b7c69.jpg", label: "Усадьба «Северная»" },
-              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/602f1d91-8439-4cd5-ba13-8b5596547ac5.jpg", label: "Каркасный дом 9×9" },
-              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/fbe39a78-c2be-4a1c-81a0-4169e556d25b.jpg", label: "Дача «Тихое место»" },
-              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/1e5ca22f-2f9f-4cf3-bf93-a91d6555ec97.jpg", label: "Барнхаус «Тёмный лес»" },
-              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/56d74da9-b326-4a51-905c-a89d487e62c0.jpg", label: "Дом с верандой" },
-              { url: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9e9a6b39-d698-4e09-83bb-a7eb062fad40.jpg", label: "А-фрейм в лесу" },
-            ].map((photo, i) => (
-              <div key={i} className="relative overflow-hidden rounded">
-                <img src={photo.url} alt={photo.label} className="w-full h-24 object-cover" />
-                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-[9px] text-center py-0.5 px-1">{photo.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Контакты */}
         <div className="border-4 border-black p-5 text-center">
