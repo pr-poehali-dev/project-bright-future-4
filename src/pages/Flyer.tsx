@@ -157,6 +157,7 @@ export default function Flyer() {
               <p>📱 WhatsApp: <strong>+7 (950) 917-09-74</strong></p>
               <p>📧 Toystroy71rus@mail.ru</p>
               <p>🌐 <strong>toystroy71.ru</strong></p>
+              <p>📘 ВКонтакте: <strong>vk.ru/toystroy71</strong></p>
             </div>
             <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-52 h-52 rounded-2xl shadow-lg mx-auto" />
             <div className="flex flex-col items-center gap-1">
@@ -164,7 +165,7 @@ export default function Flyer() {
               <span className="text-sm font-bold text-gray-950">Сканируй — переходи на сайт</span>
             </div>
           </div>
-          <p className="text-xs text-gray-900">ВКонтакте: vk.ru/toystroy71 · Работаем с 10:00 до 19:00</p>
+          <p className="text-xs text-gray-900">⏰ Работаем с 10:00 до 19:00</p>
           <div className="mt-3 text-xs text-gray-700 italic">Средняя оценка 5 звёзд</div>
         </div>
 
