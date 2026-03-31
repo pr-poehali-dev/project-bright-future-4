@@ -14,7 +14,7 @@ export default function Flyer() {
       </div>
 
       {/* Листовка */}
-      <div className="max-w-[210mm] mx-auto px-8 py-10 text-black font-sans">
+      <div className="max-w-[297mm] mx-auto px-4 py-10 text-black font-sans">
 
         {/* Шапка */}
         <div className="border-4 border-orange-500 mb-6 text-center relative overflow-hidden" style={{minHeight: 160}}>
