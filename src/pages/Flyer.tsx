@@ -39,10 +39,12 @@ export default function Flyer() {
           <p className="text-xl font-black uppercase tracking-widest text-orange-500">Тепло · Надёжно · С гарантией</p>
         </div>
 
-        <p className="text-sm text-gray-900 mb-6 leading-relaxed text-center">
+        <p className="text-base font-bold text-gray-950 mb-6 leading-relaxed text-center">
           Каркасный дом — это возможность жить в тёплом, надёжном и красивом доме, построенном точно в срок
-          и без лишних затрат. Мы работаем по всей Тульской области и выезжаем на участок в любой район <strong>бесплатно</strong>.
+          и без лишних затрат. Мы работаем по всей Тульской области и выезжаем на участок в любой район <span className="text-orange-500">бесплатно</span>.
         </p>
+
+        <div className="border-t-2 border-orange-500 mb-6" />
 
         <div className="grid grid-cols-2 gap-6 mb-6">
           {/* Почему выбирают */}
@@ -104,6 +106,8 @@ export default function Flyer() {
           </div>
         </div>
 
+        <div className="border-t-2 border-orange-500 mb-6" />
+
         {/* Подарок */}
         <div className="border-2 border-orange-500 p-4 mb-6">
           <h2 className="text-base font-black uppercase text-center mb-3">🎁 Подарок при заказе (на выбор)</h2>
@@ -120,6 +124,8 @@ export default function Flyer() {
             ))}
           </div>
         </div>
+
+        <div className="border-t-2 border-orange-500 mb-6" />
 
         {/* Гарантия */}
         <div className="bg-gray-100 p-4 mb-6">
