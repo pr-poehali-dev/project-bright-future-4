@@ -143,7 +143,11 @@ export default function Flyer() {
 
         {/* Контакты */}
         <div className="border-4 border-black p-5 text-center">
-          <p className="text-sm font-bold uppercase mb-3">Консультация и расчёт стоимости — БЕСПЛАТНО за 1 день</p>
+          <div className="flex items-center justify-between mb-3">
+            <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-12 h-12 rounded-lg" />
+            <p className="text-sm font-bold uppercase">Консультация и расчёт стоимости — БЕСПЛАТНО за 1 день</p>
+            <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-12 h-12 rounded-lg" />
+          </div>
           <div className="grid grid-cols-2 gap-2 text-sm mb-3">
             <div className="text-left space-y-1">
               <p>📞 <strong>+7 (950) 917-09-74</strong></p>
