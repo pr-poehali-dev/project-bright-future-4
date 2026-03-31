@@ -21,7 +21,7 @@ export default function Flyer() {
             <h1 className="text-4xl font-black uppercase tracking-widest text-orange-500">TOYSTROY</h1>
           </div>
           <p className="text-lg font-bold uppercase tracking-wide text-gray-800">Каркасные дома, дачи и бани под ключ</p>
-          <p className="text-sm text-gray-500 mt-1">Тульская область · Работаем по всей области</p>
+          <p className="text-sm text-gray-500 mt-1">Тула · Работаем по всей области</p>
         </div>
 
         {/* Девиз */}
