@@ -159,6 +159,7 @@ export default function Flyer() {
           </div>
           <div className="flex gap-4 items-center justify-between mb-3">
             <div className="text-left space-y-2 text-sm font-bold text-gray-950">
+              <p>📍 г. Тула, ул. Пролетарская, 37</p>
               <p>📞 +7 (950) 917-09-74</p>
               <p>📱 WhatsApp: +7 (950) 917-09-74</p>
               <p>📧 Toystroy71rus@mail.ru</p>
