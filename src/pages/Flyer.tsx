@@ -152,12 +152,12 @@ export default function Flyer() {
             <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-12 h-12 rounded-lg" />
           </div>
           <div className="flex gap-4 items-center justify-between mb-3">
-            <div className="text-left space-y-2 text-sm">
-              <p>📞 <strong>+7 (950) 917-09-74</strong></p>
-              <p>📱 WhatsApp: <strong>+7 (950) 917-09-74</strong></p>
+            <div className="text-left space-y-2 text-sm font-bold text-gray-950">
+              <p>📞 +7 (950) 917-09-74</p>
+              <p>📱 WhatsApp: +7 (950) 917-09-74</p>
               <p>📧 Toystroy71rus@mail.ru</p>
-              <p>🌐 <strong>toystroy71.ru</strong></p>
-              <p>📘 ВКонтакте: <strong>vk.ru/toystroy71</strong></p>
+              <p>🌐 toystroy71.ru</p>
+              <p>📘 ВКонтакте: vk.ru/toystroy71</p>
             </div>
             <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-52 h-52 rounded-2xl shadow-lg mx-auto" />
             <div className="flex flex-col items-center gap-1">
