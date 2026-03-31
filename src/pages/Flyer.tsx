@@ -151,13 +151,14 @@ export default function Flyer() {
 
 
         {/* Контакты */}
-        <div className="border-4 border-black p-5 text-center">
-          <div className="flex items-center justify-between mb-3">
+        <div className="border-4 border-black p-5 text-center relative overflow-hidden">
+          <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/fb966810-b800-4ef5-ae89-150e95c588d8.png" alt="" className="absolute inset-0 w-full h-full object-cover" style={{opacity: 0.08}} />
+          <div className="relative z-10 flex items-center justify-between mb-3">
             <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-12 h-12 rounded-lg" />
             <p className="text-sm font-bold uppercase">Консультация и расчёт стоимости — БЕСПЛАТНО за 1 день</p>
             <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-12 h-12 rounded-lg" />
           </div>
-          <div className="flex gap-4 items-center justify-between mb-3">
+          <div className="relative z-10 flex gap-4 items-center justify-between mb-3">
             <div className="text-left space-y-2 text-sm font-bold text-gray-950">
               <p>📞 +7 (950) 917-09-74</p>
               <p>📱 WhatsApp: +7 (950) 917-09-74</p>
@@ -171,8 +172,8 @@ export default function Flyer() {
               <span className="text-sm font-bold text-gray-950">Сканируй — переходи на сайт</span>
             </div>
           </div>
-          <p className="text-xs text-gray-900">📍 г. Тула, ул. Пролетарская, 37 · ⏰ Работаем с 10:00 до 19:00</p>
-          <div className="mt-3 text-xs text-gray-700 italic">Средняя оценка 5 звёзд</div>
+          <p className="relative z-10 text-xs text-gray-900">📍 г. Тула, ул. Пролетарская, 37 · ⏰ Работаем с 10:00 до 19:00</p>
+          <div className="relative z-10 mt-3 text-xs text-gray-700 italic">Средняя оценка 5 звёзд</div>
         </div>
 
       </div>
