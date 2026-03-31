@@ -127,7 +127,7 @@ export default function Flyer() {
             </div>
           </div>
           <p className="text-xs text-gray-500">ВКонтакте: vk.ru/toystroy71 · Работаем с 10:00 до 19:00</p>
-          <div className="mt-3 text-xs text-gray-400 italic">Более 14 довольных клиентов · Средняя оценка 5 звёзд</div>
+          <div className="mt-3 text-xs text-gray-400 italic">Средняя оценка 5 звёзд</div>
         </div>
 
       </div>
