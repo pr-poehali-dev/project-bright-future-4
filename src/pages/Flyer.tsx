@@ -144,7 +144,7 @@ export default function Flyer() {
             </div>
             <div style={{display:"flex", alignItems:"center", justifyContent:"space-between", gap:"8px"}}>
               <div style={{fontSize:"13px", fontWeight:700, lineHeight:2}}>
-                <div>📍 г. Тула, ул. Пролетарская, 37</div>
+                <div>🕐 Режим работы: Пн–Пт 9:00–18:00</div>
                 <div>📞 +7 (950) 917-09-74</div>
                 <div>📱 WhatsApp: +7 (950) 917-09-74</div>
                 <div>📧 Toystroy71rus@mail.ru</div>
