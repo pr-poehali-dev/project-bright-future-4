@@ -1,179 +1,158 @@
 import { QRCodeSVG } from "qrcode.react";
 
+const LOGO = "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png";
+const BG = "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/fb966810-b800-4ef5-ae89-150e95c588d8.png";
+
 export default function Flyer() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Кнопка печати — не печатается */}
-      <div className="print:hidden fixed top-4 right-4 z-50 flex gap-2">
-        <button
-          onClick={() => window.print()}
-          className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded shadow-lg text-sm"
-        >
+    <div className="bg-white">
+      <div className="print:hidden fixed top-4 right-4 z-50">
+        <button onClick={() => window.print()} className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded shadow-lg text-sm">
           🖨️ Распечатать
         </button>
       </div>
 
-      {/* Листовка */}
-      <div className="max-w-[297mm] mx-auto px-4 py-10 text-black font-sans">
+      {/* A4 страница */}
+      <div style={{width: "210mm", minHeight: "297mm", margin: "0 auto", padding: "6mm", boxSizing: "border-box", fontFamily: "sans-serif", fontSize: "11px", color: "#000"}}>
 
         {/* Шапка */}
-        <div className="border-4 border-orange-500 mb-6 text-center relative overflow-hidden" style={{minHeight: 160}}>
-          <img
-            src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/fb966810-b800-4ef5-ae89-150e95c588d8.png"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{opacity: 0.18}}
-          />
-          <div className="relative z-10 p-6">
-            <div className="flex items-center justify-center gap-4 mb-2">
-              <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-16 h-16 rounded-xl shadow-md" />
-              <h1 className="text-4xl font-black uppercase tracking-widest text-orange-500 drop-shadow">TOYSTROY</h1>
+        <div style={{border: "3px solid #f97316", marginBottom: "4mm", position: "relative", overflow: "hidden"}}>
+          <img src={BG} alt="" style={{position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.15}} />
+          <div style={{position: "relative", zIndex: 1, padding: "5mm", textAlign: "center"}}>
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginBottom: "3px"}}>
+              <img src={LOGO} alt="TS" style={{width: "48px", height: "48px", borderRadius: "8px"}} />
+              <span style={{fontSize: "28px", fontWeight: 900, color: "#f97316", textTransform: "uppercase", letterSpacing: "4px"}}>TOYSTROY</span>
             </div>
-            <p className="text-lg font-bold uppercase tracking-wide text-gray-900">Каркасные дома, дачи и бани под ключ</p>
-            <p className="text-sm font-semibold text-orange-600 mt-1">Тула · Работаем по всей Тульской области</p>
+            <div style={{fontSize: "13px", fontWeight: 700, textTransform: "uppercase", color: "#111"}}>Каркасные дома, дачи и бани под ключ</div>
+            <div style={{fontSize: "11px", fontWeight: 600, color: "#ea580c", marginTop: "2px"}}>Тула · Работаем по всей Тульской области</div>
           </div>
         </div>
 
         {/* Девиз */}
-        <div className="bg-black text-center py-3 mb-6">
-          <p className="text-xl font-black uppercase tracking-widest text-orange-500">Тепло · Надёжно · С гарантией</p>
+        <div style={{background: "#000", textAlign: "center", padding: "5px 0", marginBottom: "4mm"}}>
+          <span style={{fontSize: "14px", fontWeight: 900, color: "#f97316", textTransform: "uppercase", letterSpacing: "3px"}}>Тепло · Надёжно · С гарантией</span>
         </div>
 
-        <p className="text-base font-bold text-gray-950 mb-6 leading-relaxed text-center">
-          Каркасный дом — это возможность жить в тёплом, надёжном и красивом доме, построенном точно в срок
-          и без лишних затрат. Мы работаем по всей Тульской области и выезжаем на участок в любой район <span className="text-orange-500">бесплатно</span>.
+        {/* Вводный текст */}
+        <p style={{textAlign: "center", fontWeight: 700, fontSize: "11px", marginBottom: "4mm", lineHeight: 1.5}}>
+          Каркасный дом — это возможность жить в тёплом, надёжном доме, построенном точно в срок и без лишних затрат.
+          Выезжаем на участок в любой район <span style={{color: "#f97316"}}>бесплатно</span>.
         </p>
 
-        <div className="border-t-2 border-orange-500 mb-6" />
+        <div style={{borderTop: "2px solid #f97316", marginBottom: "4mm"}} />
 
-        <div className="grid grid-cols-2 gap-6 mb-6">
+        {/* 3 колонки */}
+        <div style={{display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "4mm", marginBottom: "4mm"}}>
           {/* Почему выбирают */}
           <div>
-            <h2 className="text-base font-black uppercase border-b-2 border-orange-500 pb-1 mb-3">Почему выбирают TOYSTROY</h2>
-            <ul className="text-sm space-y-1.5 text-gray-950">
-              {[
-                "От 25 000 ₽/м² — в 2 раза дешевле кирпича (55 000 ₽) и газобетона (40 000 ₽)",
-                "Готов за 2–4 месяца — баня за 5 недель",
-                "Строим круглый год, в том числе зимой",
-                "Ремонт сразу после сдачи — без усадки 1–2 года",
-                "Мастера строят каркасные дома более 10 лет",
-                "Одна бригада — без субподрядчиков",
-                "Фиксированная цена в договоре — никаких доплат",
-                "Фотоотчёты с площадки каждый день",
-                "Древесина камерной сушки, утеплитель базальтовая вата",
-                "Партнёры: GrandLine, Технониколь, Твои Окна",
-              ].map((item, i) => (
-                <li key={i} className="flex gap-1.5">
-                  <span className="text-orange-500 font-bold flex-shrink-0">✓</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Правая колонка */}
-          <div className="space-y-5">
-            {/* Что входит */}
-            <div>
-              <h2 className="text-base font-black uppercase border-b-2 border-orange-500 pb-1 mb-3">Что входит в стоимость</h2>
-              <ul className="text-sm space-y-1 text-gray-950">
-                {[
-                  "Выезд на участок и консультация",
-                  "Индивидуальный проект и смета",
-                  "Фундамент, каркас, кровля",
-                  "Утепление, окна, двери",
-                  "Электрика, водоснабжение, отопление",
-                  "Доставка всех материалов на объект",
-                  "Гарантийный паспорт при сдаче",
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-1.5">
-                    <span className="text-orange-500 font-bold flex-shrink-0">—</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Оплата */}
-            <div>
-              <h2 className="text-base font-black uppercase border-b-2 border-orange-500 pb-1 mb-3">Варианты оплаты</h2>
-              <ul className="text-sm space-y-1 text-gray-950">
-                <li>💰 100% сразу — скидка <strong>10%</strong></li>
-                <li>💰 50% аванс + 50% при сдаче — скидка <strong>5%</strong></li>
-                <li>💰 Рассрочка по этапам — <strong>без процентов</strong></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t-2 border-orange-500 mb-6" />
-
-        {/* Подарок */}
-        <div className="border-2 border-orange-500 p-4 mb-6">
-          <h2 className="text-base font-black uppercase text-center mb-3">🎁 Подарок при заказе (на выбор)</h2>
-          <div className="grid grid-cols-3 gap-2 text-sm text-center">
+            <div style={{fontSize: "10px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "2px", marginBottom: "4px"}}>Почему выбирают</div>
             {[
-              "Фундамент на винтовых сваях",
-              "Полная электрика внутри дома",
-              "Индивидуальный проект",
-              "Все окна ПВХ в доме",
-              "Огне-биозащита каркаса",
-              "Кадастровый учёт дома",
+              "От 25 000 ₽/м² — в 2 раза дешевле кирпича",
+              "Готов за 2–4 месяца, баня за 5 недель",
+              "Строим круглый год, в т.ч. зимой",
+              "Ремонт сразу после сдачи",
+              "Мастера строят более 10 лет",
+              "Одна бригада — без субподрядчиков",
+              "Фиксированная цена — никаких доплат",
+              "Фотоотчёты с площадки каждый день",
+              "Древесина камерной сушки",
+              "Партнёры: GrandLine, Технониколь",
             ].map((item, i) => (
-              <div key={i} className="bg-black border border-orange-500 p-2 rounded text-sm font-bold text-orange-500">{item}</div>
+              <div key={i} style={{display: "flex", gap: "4px", marginBottom: "2px"}}>
+                <span style={{color: "#f97316", fontWeight: 700, flexShrink: 0}}>✓</span>
+                <span style={{fontWeight: 600}}>{item}</span>
+              </div>
             ))}
           </div>
-        </div>
 
-        <div className="border-t-2 border-orange-500 mb-6" />
-
-        {/* Гарантия */}
-        <div className="bg-gray-100 p-4 mb-6">
-          <h2 className="text-base font-black uppercase text-center border-b-2 border-orange-500 pb-1 mb-3">Наши гарантии</h2>
-          <div className="grid grid-cols-2 gap-2 text-sm text-gray-950">
+          {/* Что входит */}
+          <div>
+            <div style={{fontSize: "10px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "2px", marginBottom: "4px"}}>Что входит в стоимость</div>
             {[
-              { num: "1", text: "Бесплатный выезд на участок и консультация — без обязательств" },
-              { num: "2", text: "Индивидуальный проект и подробная смета со стоимостью всех материалов и работ" },
-              { num: "3", text: "Официальный договор с фиксированной ценой — никаких доплат после подписания" },
-              { num: "4", text: "Прозрачная смета — вы знаете за что платите на каждом этапе" },
-              { num: "5", text: "Гарантия на конструктив и все выполненные работы" },
-              { num: "6", text: "Бесплатное устранение замечаний в течение гарантийного срока" },
-              { num: "7", text: "Сертификаты качества на все используемые материалы" },
-              { num: "8", text: "Гарантийный паспорт и инструкции по эксплуатации при сдаче дома" },
-            ].map((item) => (
-              <div key={item.num} className="flex gap-2 items-start">
-                <span className="bg-orange-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">{item.num}</span>
-                <span>{item.text}</span>
+              "Выезд на участок и консультация",
+              "Индивидуальный проект и смета",
+              "Фундамент, каркас, кровля",
+              "Утепление, окна, двери",
+              "Электрика, водоснабжение, отопление",
+              "Доставка материалов на объект",
+              "Гарантийный паспорт при сдаче",
+            ].map((item, i) => (
+              <div key={i} style={{display: "flex", gap: "4px", marginBottom: "2px"}}>
+                <span style={{color: "#f97316", fontWeight: 700, flexShrink: 0}}>—</span>
+                <span style={{fontWeight: 600}}>{item}</span>
+              </div>
+            ))}
+            <div style={{fontSize: "10px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "2px", marginBottom: "4px", marginTop: "6px"}}>Варианты оплаты</div>
+            {[
+              "💰 100% сразу — скидка 10%",
+              "💰 50%+50% при сдаче — скидка 5%",
+              "💰 Рассрочка по этапам — без %",
+            ].map((item, i) => (
+              <div key={i} style={{fontWeight: 600, marginBottom: "2px"}}>{item}</div>
+            ))}
+          </div>
+
+          {/* Гарантии */}
+          <div>
+            <div style={{fontSize: "10px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "2px", marginBottom: "4px"}}>Наши гарантии</div>
+            {[
+              "Бесплатный выезд — без обязательств",
+              "Индивидуальный проект и смета",
+              "Договор с фиксированной ценой",
+              "Прозрачная смета на каждом этапе",
+              "Гарантия на конструктив",
+              "Бесплатное устранение замечаний",
+              "Сертификаты на все материалы",
+              "Гарантийный паспорт при сдаче",
+            ].map((item, i) => (
+              <div key={i} style={{display: "flex", gap: "4px", alignItems: "flex-start", marginBottom: "2px"}}>
+                <span style={{background: "#f97316", color: "#fff", fontSize: "8px", fontWeight: 700, width: "14px", height: "14px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0}}>{i + 1}</span>
+                <span style={{fontWeight: 600}}>{item}</span>
               </div>
             ))}
           </div>
         </div>
 
+        <div style={{borderTop: "2px solid #f97316", marginBottom: "4mm"}} />
+
+        {/* Подарки */}
+        <div style={{border: "2px solid #f97316", padding: "4px 6px", marginBottom: "4mm"}}>
+          <div style={{textAlign: "center", fontWeight: 900, fontSize: "11px", textTransform: "uppercase", marginBottom: "4px"}}>🎁 Подарок при заказе (на выбор)</div>
+          <div style={{display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "3px"}}>
+            {["Фундамент на сваях", "Полная электрика", "Индивидуальный проект", "Все окна ПВХ", "Огне-биозащита", "Кадастровый учёт"].map((item, i) => (
+              <div key={i} style={{background: "#000", border: "1px solid #f97316", borderRadius: "4px", padding: "4px", textAlign: "center", fontWeight: 700, color: "#f97316", fontSize: "9px"}}>{item}</div>
+            ))}
+          </div>
+        </div>
 
         {/* Контакты */}
-        <div className="border-4 border-black p-5 text-center relative overflow-hidden">
-          <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/fb966810-b800-4ef5-ae89-150e95c588d8.png" alt="" className="absolute inset-0 w-full h-full object-cover" style={{opacity: 0.08}} />
-          <div className="relative z-10 flex items-center justify-between mb-3">
-            <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-12 h-12 rounded-lg" />
-            <p className="text-sm font-bold uppercase">Консультация и расчёт стоимости — БЕСПЛАТНО за 1 день</p>
-            <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-12 h-12 rounded-lg" />
-          </div>
-          <div className="relative z-10 flex gap-4 items-center justify-between mb-3">
-            <div className="text-left space-y-2 text-sm font-bold text-gray-950">
-              <p>📞 +7 (950) 917-09-74</p>
-              <p>📱 WhatsApp: +7 (950) 917-09-74</p>
-              <p>📧 Toystroy71rus@mail.ru</p>
-              <p>🌐 toystroy71.ru</p>
-              <p>📘 ВКонтакте: vk.ru/toystroy71</p>
+        <div style={{border: "3px solid #000", padding: "5px 6px", position: "relative", overflow: "hidden"}}>
+          <img src={BG} alt="" style={{position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.07}} />
+          <div style={{position: "relative", zIndex: 1}}>
+            <div style={{display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "5px"}}>
+              <img src={LOGO} alt="TS" style={{width: "36px", height: "36px", borderRadius: "6px"}} />
+              <div style={{fontSize: "12px", fontWeight: 900, textTransform: "uppercase", textAlign: "center"}}>Консультация и расчёт — БЕСПЛАТНО за 1 день</div>
+              <img src={LOGO} alt="TS" style={{width: "36px", height: "36px", borderRadius: "6px"}} />
             </div>
-            <img src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png" alt="TOYSTROY" className="w-52 h-52 rounded-2xl shadow-lg mx-auto" />
-            <div className="flex flex-col items-center gap-1">
-              <QRCodeSVG value="https://toystroy71.ru" size={200} />
-              <span className="text-sm font-bold text-gray-950">Сканируй — переходи на сайт</span>
+            <div style={{display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px"}}>
+              <div style={{fontSize: "11px", fontWeight: 700, lineHeight: 1.8}}>
+                <div>📍 г. Тула, ул. Пролетарская, 37</div>
+                <div>📞 +7 (950) 917-09-74</div>
+                <div>📱 WhatsApp: +7 (950) 917-09-74</div>
+                <div>📧 Toystroy71rus@mail.ru</div>
+                <div>🌐 toystroy71.ru</div>
+                <div>📘 ВКонтакте: vk.ru/toystroy71</div>
+              </div>
+              <img src={LOGO} alt="TS" style={{width: "120px", height: "120px", borderRadius: "16px", boxShadow: "0 4px 12px rgba(0,0,0,0.2)"}} />
+              <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "4px"}}>
+                <QRCodeSVG value="https://toystroy71.ru" size={120} />
+                <span style={{fontSize: "10px", fontWeight: 700}}>Сканируй — переходи на сайт</span>
+              </div>
+            </div>
+            <div style={{textAlign: "center", fontSize: "10px", color: "#555", marginTop: "4px"}}>
+              ⏰ Работаем с 10:00 до 19:00 · Средняя оценка 5 звёзд
             </div>
           </div>
-          <p className="relative z-10 text-xs text-gray-900">📍 г. Тула, ул. Пролетарская, 37 · ⏰ Работаем с 10:00 до 19:00</p>
-          <div className="relative z-10 mt-3 text-xs text-gray-700 italic">Средняя оценка 5 звёзд</div>
         </div>
 
       </div>
