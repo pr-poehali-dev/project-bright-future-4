@@ -74,22 +74,39 @@ export default function Flyer() {
           </div>
 
           {/* Что входит + Оплата */}
-          <div>
-            <div style={s.heading}>Что входит в стоимость</div>
-            {[
-              "Выезд на участок и консультация",
-              "Индивидуальный проект и смета",
-              "Фундамент, каркас, кровля",
-              "Утепление, окна, двери",
-              "Электрика, водоснабжение, отопление",
-              "Доставка материалов на объект",
-              "Гарантийный паспорт при сдаче",
-            ].map((item, i) => (
-              <div key={i} style={s.row}>
-                <span style={s.check}>—</span>
-                <span style={s.text}>{item}</span>
-              </div>
-            ))}
+          <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between", height:"100%"}}>
+            <div>
+              <div style={s.heading}>Что входит в стоимость</div>
+              {[
+                "Выезд на участок и консультация",
+                "Индивидуальный проект и смета",
+                "Фундамент, каркас, кровля",
+                "Утепление, окна, двери",
+                "Электрика, водоснабжение, отопление",
+                "Доставка материалов на объект",
+                "Гарантийный паспорт при сдаче",
+              ].map((item, i) => (
+                <div key={i} style={s.row}>
+                  <span style={s.check}>—</span>
+                  <span style={s.text}>{item}</span>
+                </div>
+              ))}
+            </div>
+            <div>
+              <div style={{...s.heading, marginTop:"8px"}}>Примерные цены и сроки</div>
+              {[
+                {label:"Баня 4×5 м", price:"от 350 000 ₽", term:"5 нед."},
+                {label:"Дача 6×6 м", price:"от 900 000 ₽", term:"6 нед."},
+                {label:"Дом 8×8 м", price:"от 1 900 000 ₽", term:"3 мес."},
+                {label:"Дом 10×10 м", price:"от 2 500 000 ₽", term:"4 мес."},
+              ].map((item, i) => (
+                <div key={i} style={{display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:"3px", fontSize:"10px"}}>
+                  <span style={{fontWeight:700}}>{item.label}</span>
+                  <span style={{color:"#f97316", fontWeight:800}}>{item.price}</span>
+                  <span style={{color:"#555", fontWeight:600}}>{item.term}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Гарантии */}
