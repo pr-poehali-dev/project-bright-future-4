@@ -93,42 +93,65 @@ export default function Flyer() {
           </div>
 
           {/* Гарантии */}
-          <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between", height:"100%"}}>
-            <div>
-              <div style={s.heading}>Наши гарантии</div>
-              {[
-                "Бесплатный выезд — без обязательств",
-                "Индивидуальный проект и смета",
-                "Договор с фиксированной ценой",
-                "Прозрачная смета на каждом этапе",
-                "Гарантия на конструктив",
-                "Бесплатное устранение замечаний",
-                "Сертификаты на все материалы",
-                "Гарантийный паспорт при сдаче",
-              ].map((item, i) => (
-                <div key={i} style={s.row}>
-                  <span style={{background:"#f97316", color:"#fff", fontSize:"9px", fontWeight:700, width:"16px", height:"16px", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0}}>{i + 1}</span>
-                  <span style={s.text}>{item}</span>
-                </div>
-              ))}
+          <div>
+            <div style={s.heading}>Наши гарантии</div>
+            {[
+              "Бесплатный выезд — без обязательств",
+              "Индивидуальный проект и смета",
+              "Договор с фиксированной ценой",
+              "Прозрачная смета на каждом этапе",
+              "Гарантия на конструктив — 3 года",
+              "Бесплатное устранение замечаний",
+              "Сертификаты на все материалы",
+              "Гарантийный паспорт при сдаче",
+            ].map((item, i) => (
+              <div key={i} style={s.row}>
+                <span style={{background:"#f97316", color:"#fff", fontSize:"9px", fontWeight:700, width:"16px", height:"16px", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0}}>{i + 1}</span>
+                <span style={s.text}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style={{borderTop:"2px solid #f97316", marginBottom:"4mm"}} />
+
+        {/* ВАРИАНТЫ ОПЛАТЫ */}
+        <div style={{marginBottom:"4mm"}}>
+          <div style={{textAlign:"center", fontWeight:900, fontSize:"12px", textTransform:"uppercase" as const, letterSpacing:"2px", borderBottom:"2px solid #f97316", paddingBottom:"3px", marginBottom:"5px"}}>
+            💳 Варианты оплаты
+          </div>
+          <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:"5mm"}}>
+            {/* Карточка 1 */}
+            <div style={{background:"linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%)", border:"2px solid #16a34a", borderRadius:"6px", padding:"6px 8px", position:"relative" as const, overflow:"hidden"}}>
+              <div style={{position:"absolute" as const, top:0, right:0, background:"#16a34a", color:"#fff", fontWeight:900, fontSize:"11px", padding:"2px 8px", borderBottomLeftRadius:"6px"}}>СКИДКА 10%</div>
+              <div style={{fontSize:"13px", fontWeight:900, color:"#15803d", marginBottom:"2px", marginTop:"4px"}}>💰 100% при заключении</div>
+              <div style={{fontSize:"10px", fontWeight:600, color:"#166534", lineHeight:1.4}}>
+                Оплата полной суммы сразу.<br/>
+                Максимальная экономия — фиксируем цену без изменений.
+              </div>
             </div>
-            <div>
-              <div style={{...s.heading, marginTop:"8px"}}>Варианты оплаты</div>
-              {[
-                {icon:"💰", label:"100% сразу", badge:"скидка 10%", badgeColor:"#16a34a"},
-                {icon:"💰", label:"50% + 50% при сдаче", badge:"скидка 5%", badgeColor:"#2563eb"},
-                {icon:"💰", label:"Рассрочка по этапам", badge:"без %", badgeColor:"#f97316"},
-              ].map((item, i) => (
-                <div key={i} style={{display:"flex", alignItems:"center", justifyContent:"space-between", background:"#f9f9f9", border:"1px solid #e5e7eb", borderRadius:"4px", padding:"4px 6px", marginBottom:"4px"}}>
-                  <span style={{fontWeight:700, fontSize:"11px"}}>{item.icon} {item.label}</span>
-                  <span style={{background:item.badgeColor, color:"#fff", fontWeight:800, fontSize:"10px", borderRadius:"3px", padding:"2px 5px", whiteSpace:"nowrap" as const, flexShrink:0, marginLeft:"4px"}}>{item.badge}</span>
-                </div>
-              ))}
+            {/* Карточка 2 */}
+            <div style={{background:"linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%)", border:"2px solid #2563eb", borderRadius:"6px", padding:"6px 8px", position:"relative" as const, overflow:"hidden"}}>
+              <div style={{position:"absolute" as const, top:0, right:0, background:"#2563eb", color:"#fff", fontWeight:900, fontSize:"11px", padding:"2px 8px", borderBottomLeftRadius:"6px"}}>СКИДКА 5%</div>
+              <div style={{fontSize:"13px", fontWeight:900, color:"#1d4ed8", marginBottom:"2px", marginTop:"4px"}}>💳 50% + 50% при сдаче</div>
+              <div style={{fontSize:"10px", fontWeight:600, color:"#1e40af", lineHeight:1.4}}>
+                Аванс 50% — начало работ.<br/>
+                Остаток после приёмки объекта и подписания акта.
+              </div>
+            </div>
+            {/* Карточка 3 */}
+            <div style={{background:"linear-gradient(135deg,#fff7ed 0%,#ffedd5 100%)", border:"2px solid #f97316", borderRadius:"6px", padding:"6px 8px", position:"relative" as const, overflow:"hidden"}}>
+              <div style={{position:"absolute" as const, top:0, right:0, background:"#f97316", color:"#fff", fontWeight:900, fontSize:"11px", padding:"2px 8px", borderBottomLeftRadius:"6px"}}>БЕЗ %</div>
+              <div style={{fontSize:"13px", fontWeight:900, color:"#c2410c", marginBottom:"2px", marginTop:"4px"}}>📋 Рассрочка по этапам</div>
+              <div style={{fontSize:"10px", fontWeight:600, color:"#9a3412", lineHeight:1.4}}>
+                Оплата за каждый завершённый этап.<br/>
+                Фундамент → Каркас → Кровля → Отделка.
+              </div>
             </div>
           </div>
         </div>
 
-        <div style={{borderTop:"2px solid #f97316", marginBottom:"5mm"}} />
+        <div style={{borderTop:"2px solid #f97316", marginBottom:"4mm"}} />
 
         {/* ПОДАРКИ */}
         <div style={{border:"2px solid #f97316", padding:"5px 8px", marginBottom:"5mm"}}>
