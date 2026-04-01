@@ -90,34 +90,38 @@ export default function Flyer() {
                 <span style={s.text}>{item}</span>
               </div>
             ))}
-            <div style={{...s.heading, marginTop:"8px"}}>Варианты оплаты</div>
-            {[
-              "💰 100% сразу — скидка 10%",
-              "💰 50% + 50% при сдаче — скидка 5%",
-              "💰 Рассрочка по этапам — без %",
-            ].map((item, i) => (
-              <div key={i} style={{...s.text, marginBottom:"3px"}}>{item}</div>
-            ))}
           </div>
 
           {/* Гарантии */}
-          <div>
-            <div style={s.heading}>Наши гарантии</div>
-            {[
-              "Бесплатный выезд — без обязательств",
-              "Индивидуальный проект и смета",
-              "Договор с фиксированной ценой",
-              "Прозрачная смета на каждом этапе",
-              "Гарантия на конструктив",
-              "Бесплатное устранение замечаний",
-              "Сертификаты на все материалы",
-              "Гарантийный паспорт при сдаче",
-            ].map((item, i) => (
-              <div key={i} style={s.row}>
-                <span style={{background:"#f97316", color:"#fff", fontSize:"9px", fontWeight:700, width:"16px", height:"16px", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0}}>{i + 1}</span>
-                <span style={s.text}>{item}</span>
-              </div>
-            ))}
+          <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between", height:"100%"}}>
+            <div>
+              <div style={s.heading}>Наши гарантии</div>
+              {[
+                "Бесплатный выезд — без обязательств",
+                "Индивидуальный проект и смета",
+                "Договор с фиксированной ценой",
+                "Прозрачная смета на каждом этапе",
+                "Гарантия на конструктив",
+                "Бесплатное устранение замечаний",
+                "Сертификаты на все материалы",
+                "Гарантийный паспорт при сдаче",
+              ].map((item, i) => (
+                <div key={i} style={s.row}>
+                  <span style={{background:"#f97316", color:"#fff", fontSize:"9px", fontWeight:700, width:"16px", height:"16px", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0}}>{i + 1}</span>
+                  <span style={s.text}>{item}</span>
+                </div>
+              ))}
+            </div>
+            <div>
+              <div style={{...s.heading, marginTop:"8px"}}>Варианты оплаты</div>
+              {[
+                "💰 100% сразу — скидка 10%",
+                "💰 50% + 50% при сдаче — скидка 5%",
+                "💰 Рассрочка по этапам — без %",
+              ].map((item, i) => (
+                <div key={i} style={{...s.text, marginBottom:"3px"}}>{item}</div>
+              ))}
+            </div>
           </div>
         </div>
 
