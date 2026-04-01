@@ -146,7 +146,7 @@ export default function Flyer() {
               <img src={LOGO} alt="TS" style={{width:"40px", height:"40px", borderRadius:"7px"}} />
             </div>
             <div style={{display:"flex", alignItems:"center", justifyContent:"space-between", gap:"8px"}}>
-              <div style={{fontSize:"13px", fontWeight:700, lineHeight:2}}>
+              <div style={{flex:1, fontSize:"13px", fontWeight:700, lineHeight:2}}>
                 <div>📍 г. Тула, ул. Пролетарская, 37</div>
                 <div>📞 +7 (950) 917-09-74</div>
                 <div>📱 WhatsApp: +7 (950) 917-09-74</div>
@@ -154,8 +154,10 @@ export default function Flyer() {
                 <div>🌐 toystroy71.ru</div>
                 <div>📘 ВКонтакте: vk.ru/toystroy71</div>
               </div>
-              <img src={LOGO} alt="TS" style={{width:"130px", height:"130px", borderRadius:"16px", boxShadow:"0 4px 12px rgba(0,0,0,0.2)"}} />
-              <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"5px"}}>
+              <div style={{flex:"0 0 130px", display:"flex", justifyContent:"center"}}>
+                <img src={LOGO} alt="TS" style={{width:"130px", height:"130px", borderRadius:"16px", boxShadow:"0 4px 12px rgba(0,0,0,0.2)"}} />
+              </div>
+              <div style={{flex:1, display:"flex", flexDirection:"column", alignItems:"center", gap:"5px"}}>
                 <QRCodeSVG value="https://toystroy71.ru" size={130} />
                 <span style={{fontSize:"16px", fontWeight:900}}>Сканируй — переходи на сайт</span>
               </div>
