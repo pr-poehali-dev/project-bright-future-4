@@ -3,6 +3,21 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
+    id: 20,
+    title: "Дом «Кирпичный стиль» 10×10",
+    category: "Каркасный дом 100 м² · Крыша металл · Кирпичный фасад",
+    location: "Тульская область",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/c7a02947-3fe9-4198-8d8b-1abbe874244a.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/6d165f26-fcd2-40d2-9374-f7a58abae786.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/5e3b7b6e-fc25-4e83-a8e3-7d2fee782749.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/6926a8bb-0231-430a-b367-3ecc7c7fb830.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/6d7fcef7-b856-48cf-bea0-045b7f1fc0ce.png",
+    ],
+    description: "Одноэтажный каркасный дом 10×10 м с отделкой под кирпич. 3 спальни, гостиная-кухня, 2 санузла. Тёплая крыша с уклоном 22°. Под ключ за 120 дней.",
+  },
+  {
     id: 4,
     title: "Усадьба «Северная»",
     category: "Каркасный дом 240 м²",
@@ -299,6 +314,14 @@ export function Projects() {
                     <p className="text-sm text-muted-foreground">{project.category}</p>
                     {project.location && (
                       <p className="text-sm text-muted-foreground mt-0.5">{project.location}</p>
+                    )}
+                    {project.id === 20 && (
+                      <a
+                        href="/projects/house-10x10"
+                        className="inline-block mt-2 text-xs font-semibold text-orange-500 hover:underline"
+                      >
+                        Подробнее о проекте →
+                      </a>
                     )}
                   </div>
                   <span className="text-sm text-muted-foreground shrink-0">{project.year}</span>
