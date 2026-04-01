@@ -166,27 +166,48 @@ export default function Flyer() {
         </div>
 
         {/* НИЖНЯЯ ПОЛОСА */}
-        <div style={{ borderTop: "2px solid #f97316", paddingTop: "4mm", display: "flex", gap: "8mm", alignItems: "center" }}>
-          <div style={{ flexShrink: 0, background: "#fff", padding: "4px", border: "1px solid #eee", borderRadius: "6px" }}>
-            <QRCodeSVG value="https://toystroy71.ru" size={80} />
+        <div style={{ border: "2px solid #f97316", borderRadius: "6px", overflow: "hidden" }}>
+          {/* Заголовок */}
+          <div style={{ background: "#1a1a2e", color: "#fff", textAlign: "center", padding: "4px 6mm" }}>
+            <div style={{ fontSize: "13px", fontWeight: 900, letterSpacing: "1px" }}>КОНСУЛЬТАЦИЯ И РАСЧЁТ — БЕСПЛАТНО ЗА 1 ДЕНЬ</div>
+            <div style={{ fontSize: "9px", color: "#f97316", marginTop: "1px" }}>🕐 Режим работы: Пн–Пт 9:00–18:00</div>
           </div>
-          <div style={{ flex: 1 }}>
-            <div style={{ fontSize: "11px", fontWeight: 900, marginBottom: "4px" }}>TOYSTROY — Строим каркасные дома в Туле и области</div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2px 8mm" }}>
-              {[
-                { icon: "📞", val: "+7 (950) 917-09-74" },
-                { icon: "📱", val: "WhatsApp: +7 (950) 917-09-74" },
-                { icon: "🌐", val: "toystroy71.ru" },
-                { icon: "📘", val: "vk.ru/toystroy71" },
-                { icon: "📧", val: "Toystroy71rus@mail.ru" },
-                { icon: "📍", val: "ул. Пролетарская, 37, Тула" },
-              ].map((item, i) => (
-                <div key={i} style={{ display: "flex", gap: "4px", fontSize: "10px", fontWeight: 600 }}>
-                  <span>{item.icon}</span>
-                  <span>{item.val}</span>
-                </div>
-              ))}
+          {/* Тело */}
+          <div style={{ background: "#fff", display: "flex", alignItems: "center", padding: "6px 8px", gap: "8px" }}>
+            {/* Лого слева */}
+            <div style={{ flexShrink: 0, background: "#1a1a2e", borderRadius: "6px", width: "44px", height: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <span style={{ color: "#f97316", fontWeight: 900, fontSize: "16px" }}>TS</span>
             </div>
+            {/* Контакты */}
+            <div style={{ flex: 1 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px 6mm" }}>
+                {[
+                  { icon: "📍", val: "г. Тула, ул. Пролетарская, 37" },
+                  { icon: "📞", val: "+7 (950) 917-09-74" },
+                  { icon: "📱", val: "WhatsApp: +7 (950) 917-09-74" },
+                  { icon: "✉️", val: "Toystroy71rus@mail.ru" },
+                  { icon: "🌐", val: "toystroy71.ru" },
+                  { icon: "💬", val: "ВКонтакте: vk.ru/toystroy71" },
+                ].map((item, i) => (
+                  <div key={i} style={{ display: "flex", gap: "3px", fontSize: "9px", fontWeight: 600, alignItems: "flex-start" }}>
+                    <span style={{ flexShrink: 0 }}>{item.icon}</span>
+                    <span>{item.val}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* QR + лого справа */}
+            <div style={{ flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: "3px" }}>
+              <div style={{ background: "#1a1a2e", borderRadius: "6px", width: "44px", height: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "16px" }}>TS</span>
+              </div>
+              <QRCodeSVG value="https://toystroy71.ru" size={72} />
+              <div style={{ fontSize: "8px", fontWeight: 700, textAlign: "center" }}>Сканируй — переходи на сайт</div>
+            </div>
+          </div>
+          {/* Подвал */}
+          <div style={{ background: "#f5f5f5", textAlign: "center", padding: "3px", fontSize: "8px", color: "#666", borderTop: "1px solid #eee" }}>
+            ⏰ Работаем с 10:00 до 19:00 · Средняя оценка 5 звёзд
           </div>
         </div>
 
