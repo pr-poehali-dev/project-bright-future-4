@@ -50,7 +50,7 @@ const included = [
   {
     icon: "ShieldCheck",
     title: "Гарантийный паспорт",
-    description: "При сдаче объекта выдаём гарантийный паспорт с официальными обязательствами на 5 лет",
+    description: "При сдаче объекта выдаём гарантийный паспорт с официальными гарантийными обязательствами",
   },
 ]
 
@@ -147,7 +147,7 @@ export function WhatIsIncluded() {
             {/* Статистика */}
             <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
               <div>
-                <p className="text-2xl md:text-3xl font-bold text-orange-400">5 лет</p>
+                <p className="text-2xl md:text-3xl font-bold text-orange-400">✓</p>
                 <p className="text-white/50 text-xs mt-1 leading-tight">гарантия на все работы</p>
               </div>
               <div>
