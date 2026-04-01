@@ -8,7 +8,6 @@ import { FAQ } from "../components/FAQ"
 import { Reviews } from "../components/Reviews"
 import { Partners } from "../components/Partners"
 import { Financing } from "../components/Financing"
-import { WhatIsIncluded } from "../components/WhatIsIncluded"
 import { Process } from "../components/Process"
 import { Footer } from "../components/Footer"
 import { FloatingCall } from "../components/FloatingCall"
@@ -25,7 +24,6 @@ export default function Index() {
       <Projects />
       <Expertise />
       <Financing />
-      <WhatIsIncluded />
       <Process />
       <Calculator />
       <Comparison />

@@ -90,30 +90,14 @@ export default function Flyer() {
                 <span style={s.text}>{item}</span>
               </div>
             ))}
-            {/* Варианты оплаты под колонкой */}
-            <div style={{marginTop:"6px"}}>
-              <div style={{fontWeight:900, fontSize:"10px", textTransform:"uppercase" as const, letterSpacing:"1px", borderBottom:"2px solid #f97316", paddingBottom:"2px", marginBottom:"5px"}}>
-                💳 Варианты оплаты
-              </div>
-              {/* Карточка 1 */}
-              <div style={{background:"linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%)", border:"1.5px solid #16a34a", borderRadius:"5px", padding:"4px 7px", position:"relative" as const, overflow:"hidden", marginBottom:"4px"}}>
-                <div style={{position:"absolute" as const, top:0, right:0, background:"#16a34a", color:"#fff", fontWeight:900, fontSize:"9px", padding:"1px 6px", borderBottomLeftRadius:"5px"}}>СКИДКА 10%</div>
-                <div style={{fontSize:"10px", fontWeight:900, color:"#15803d", marginTop:"2px"}}>💰 100% при заключении</div>
-                <div style={{fontSize:"9px", fontWeight:600, color:"#166534", lineHeight:1.3}}>Оплата полной суммы сразу — максимальная экономия.</div>
-              </div>
-              {/* Карточка 2 */}
-              <div style={{background:"linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%)", border:"1.5px solid #2563eb", borderRadius:"5px", padding:"4px 7px", position:"relative" as const, overflow:"hidden", marginBottom:"4px"}}>
-                <div style={{position:"absolute" as const, top:0, right:0, background:"#2563eb", color:"#fff", fontWeight:900, fontSize:"9px", padding:"1px 6px", borderBottomLeftRadius:"5px"}}>СКИДКА 5%</div>
-                <div style={{fontSize:"10px", fontWeight:900, color:"#1d4ed8", marginTop:"2px"}}>💳 50% + 50% при сдаче</div>
-                <div style={{fontSize:"9px", fontWeight:600, color:"#1e40af", lineHeight:1.3}}>Аванс 50% — старт. Остаток после подписания акта.</div>
-              </div>
-              {/* Карточка 3 */}
-              <div style={{background:"linear-gradient(135deg,#fff7ed 0%,#ffedd5 100%)", border:"1.5px solid #f97316", borderRadius:"5px", padding:"4px 7px", position:"relative" as const, overflow:"hidden"}}>
-                <div style={{position:"absolute" as const, top:0, right:0, background:"#f97316", color:"#fff", fontWeight:900, fontSize:"9px", padding:"1px 6px", borderBottomLeftRadius:"5px"}}>БЕЗ %</div>
-                <div style={{fontSize:"10px", fontWeight:900, color:"#c2410c", marginTop:"2px"}}>📋 Рассрочка по этапам</div>
-                <div style={{fontSize:"9px", fontWeight:600, color:"#9a3412", lineHeight:1.3}}>Фундамент → Каркас → Кровля → Отделка.</div>
-              </div>
-            </div>
+            <div style={{...s.heading, marginTop:"8px"}}>Варианты оплаты</div>
+            {[
+              "💰 100% сразу — скидка 10%",
+              "💰 50% + 50% при сдаче — скидка 5%",
+              "💰 Рассрочка по этапам — без %",
+            ].map((item, i) => (
+              <div key={i} style={{...s.text, marginBottom:"3px"}}>{item}</div>
+            ))}
           </div>
 
           {/* Гарантии */}
@@ -124,7 +108,7 @@ export default function Flyer() {
               "Индивидуальный проект и смета",
               "Договор с фиксированной ценой",
               "Прозрачная смета на каждом этапе",
-              "Гарантия на конструктив — 3 года",
+              "Гарантия на конструктив",
               "Бесплатное устранение замечаний",
               "Сертификаты на все материалы",
               "Гарантийный паспорт при сдаче",
@@ -137,7 +121,7 @@ export default function Flyer() {
           </div>
         </div>
 
-        <div style={{borderTop:"2px solid #f97316", marginBottom:"4mm"}} />
+        <div style={{borderTop:"2px solid #f97316", marginBottom:"5mm"}} />
 
         {/* ПОДАРКИ */}
         <div style={{border:"2px solid #f97316", padding:"5px 8px", marginBottom:"5mm"}}>
