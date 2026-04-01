@@ -3,6 +3,21 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
+    id: 21,
+    title: "Каркасный дом с террасой 10×10",
+    category: "Каркасный дом 100 м² · Крыша металл · Терраса 17 м²",
+    location: "Тульская область",
+    year: "2025",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/6c8486a0-c3f0-477c-856f-d3268e2beb21.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/bf9301d1-b706-4dc6-bf48-c962d5ce86c7.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/668bc9a9-d71f-44ff-942c-2feda6a5ffe1.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/7808b7f9-971e-45db-9b52-7d0c91b70be2.png",
+    ],
+    description: "Двухэтажный каркасный дом 10×10 м с большой террасой 17 м². 3 спальни, гостиная-кухня 28,5 м², кабинет, 2 санузла. Под ключ за 120 дней.",
+    link: "/projects/house-frame-terrace",
+  },
+  {
     id: 20,
     title: "Дом «Кирпичный стиль» 10×10",
     category: "Каркасный дом 100 м² · Крыша металл · Кирпичный фасад",
@@ -323,6 +338,14 @@ export function Projects() {
                         Подробнее о проекте →
                       </a>
                     )}
+                    {project.id === 21 && (
+                      <a
+                        href="/projects/house-frame-terrace"
+                        className="inline-block mt-2 text-xs font-semibold text-orange-500 hover:underline"
+                      >
+                        Подробнее о проекте →
+                      </a>
+                    )}
                   </div>
                   <span className="text-sm text-muted-foreground shrink-0">{project.year}</span>
                 </div>
@@ -362,6 +385,16 @@ export function Projects() {
                     <div>
                       <h3 className="text-lg font-medium mb-1">{project.title}</h3>
                       <p className="text-sm text-muted-foreground">{project.category}</p>
+                      {project.id === 20 && (
+                        <a href="/projects/house-10x10" className="inline-block mt-1 text-xs font-semibold text-orange-500 hover:underline">
+                          Подробнее →
+                        </a>
+                      )}
+                      {project.id === 21 && (
+                        <a href="/projects/house-frame-terrace" className="inline-block mt-1 text-xs font-semibold text-orange-500 hover:underline">
+                          Подробнее →
+                        </a>
+                      )}
                     </div>
                     <span className="text-sm text-muted-foreground shrink-0">{project.year}</span>
                   </div>
