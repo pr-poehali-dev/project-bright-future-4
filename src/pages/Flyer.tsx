@@ -108,10 +108,12 @@ export default function Flyer() {
               "Индивидуальный проект и смета",
               "Договор с фиксированной ценой",
               "Прозрачная смета на каждом этапе",
-              "Гарантия на конструктив",
+              "Гарантия на конструктив — 5 лет",
               "Бесплатное устранение замечаний",
               "Сертификаты на все материалы",
               "Гарантийный паспорт при сдаче",
+              "Соблюдение сроков или компенсация",
+              "Страхование объекта в процессе стройки",
             ].map((item, i) => (
               <div key={i} style={s.row}>
                 <span style={{background:"#f97316", color:"#fff", fontSize:"9px", fontWeight:700, width:"16px", height:"16px", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0}}>{i + 1}</span>
