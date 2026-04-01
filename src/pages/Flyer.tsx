@@ -173,35 +173,31 @@ export default function Flyer() {
             <div style={{ fontSize: "9px", color: "#f97316", marginTop: "1px" }}>🕐 Режим работы: Пн–Пт 9:00–18:00</div>
           </div>
           {/* Тело */}
-          <div style={{ background: "#fff", display: "flex", alignItems: "center", padding: "6px 8px", gap: "8px" }}>
-            {/* Лого слева */}
-            <div style={{ flexShrink: 0, background: "#1a1a2e", borderRadius: "6px", width: "44px", height: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: "#f97316", fontWeight: 900, fontSize: "16px" }}>TS</span>
+          <div style={{ background: "#fff", display: "flex", alignItems: "center", padding: "8px 10px", gap: "10px" }}>
+            {/* Лого слева — настоящая картинка */}
+            <div style={{ flexShrink: 0 }}>
+              <img src={LOGO} alt="TS" style={{ width: "52px", height: "52px", borderRadius: "8px" }} />
             </div>
-            {/* Контакты */}
+            {/* Контакты — одна колонка */}
             <div style={{ flex: 1 }}>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px 6mm" }}>
-                {[
-                  { icon: "📍", val: "г. Тула, ул. Пролетарская, 37" },
-                  { icon: "📞", val: "+7 (950) 917-09-74" },
-                  { icon: "📱", val: "WhatsApp: +7 (950) 917-09-74" },
-                  { icon: "✉️", val: "Toystroy71rus@mail.ru" },
-                  { icon: "🌐", val: "toystroy71.ru" },
-                  { icon: "💬", val: "ВКонтакте: vk.ru/toystroy71" },
-                ].map((item, i) => (
-                  <div key={i} style={{ display: "flex", gap: "3px", fontSize: "9px", fontWeight: 600, alignItems: "flex-start" }}>
-                    <span style={{ flexShrink: 0 }}>{item.icon}</span>
-                    <span>{item.val}</span>
-                  </div>
-                ))}
-              </div>
+              {[
+                { icon: "📍", val: "г. Тула, ул. Пролетарская, 37" },
+                { icon: "📞", val: "+7 (950) 917-09-74" },
+                { icon: "📱", val: "WhatsApp: +7 (950) 917-09-74" },
+                { icon: "✉️", val: "Toystroy71rus@mail.ru" },
+                { icon: "🌐", val: "toystroy71.ru" },
+                { icon: "💬", val: "ВКонтакте: vk.ru/toystroy71" },
+              ].map((item, i) => (
+                <div key={i} style={{ display: "flex", gap: "4px", fontSize: "9.5px", fontWeight: 600, alignItems: "center", marginBottom: "3px" }}>
+                  <span style={{ flexShrink: 0 }}>{item.icon}</span>
+                  <span>{item.val}</span>
+                </div>
+              ))}
             </div>
             {/* QR + лого справа */}
-            <div style={{ flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: "3px" }}>
-              <div style={{ background: "#1a1a2e", borderRadius: "6px", width: "44px", height: "44px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "16px" }}>TS</span>
-              </div>
-              <QRCodeSVG value="https://toystroy71.ru" size={72} />
+            <div style={{ flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
+              <img src={LOGO} alt="TS" style={{ width: "52px", height: "52px", borderRadius: "8px" }} />
+              <QRCodeSVG value="https://toystroy71.ru" size={80} />
               <div style={{ fontSize: "8px", fontWeight: 700, textAlign: "center" }}>Сканируй — переходи на сайт</div>
             </div>
           </div>
