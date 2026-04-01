@@ -115,11 +115,14 @@ export default function Flyer() {
             <div>
               <div style={{...s.heading, marginTop:"8px"}}>Варианты оплаты</div>
               {[
-                "💰 100% сразу — скидка 10%",
-                "💰 50% + 50% при сдаче — скидка 5%",
-                "💰 Рассрочка по этапам — без %",
+                {icon:"💰", label:"100% сразу", badge:"скидка 10%", badgeColor:"#16a34a"},
+                {icon:"💰", label:"50% + 50% при сдаче", badge:"скидка 5%", badgeColor:"#2563eb"},
+                {icon:"💰", label:"Рассрочка по этапам", badge:"без %", badgeColor:"#f97316"},
               ].map((item, i) => (
-                <div key={i} style={{...s.text, marginBottom:"3px"}}>{item}</div>
+                <div key={i} style={{display:"flex", alignItems:"center", justifyContent:"space-between", background:"#f9f9f9", border:"1px solid #e5e7eb", borderRadius:"4px", padding:"4px 6px", marginBottom:"4px"}}>
+                  <span style={{fontWeight:700, fontSize:"11px"}}>{item.icon} {item.label}</span>
+                  <span style={{background:item.badgeColor, color:"#fff", fontWeight:800, fontSize:"10px", borderRadius:"3px", padding:"2px 5px", whiteSpace:"nowrap" as const, flexShrink:0, marginLeft:"4px"}}>{item.badge}</span>
+                </div>
               ))}
             </div>
           </div>
