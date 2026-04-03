@@ -9,6 +9,7 @@ import Flyer from "./pages/Flyer";
 import House10x10 from "./pages/House10x10";
 import HouseFrameTerrace from "./pages/HouseFrameTerrace";
 import KarkasniyeDomaTula from "./pages/KarkasniyeDomaTula";
+import KarkasniyeBanyaTula from "./pages/KarkasniyeBanyaTula";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/projects/house-10x10" element={<House10x10 />} />
           <Route path="/projects/house-frame-terrace" element={<HouseFrameTerrace />} />
           <Route path="/karkasnye-doma-tula" element={<KarkasniyeDomaTula />} />
+          <Route path="/karkasnye-bani-tula" element={<KarkasniyeBanyaTula />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
