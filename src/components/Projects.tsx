@@ -182,7 +182,7 @@ const projects = [
     location: "Тульская область",
     year: "2023",
     images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/6c8486a0-c3f0-477c-856f-d3268e2beb21.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/eefe6c97-35f2-4174-8455-5490e23dec07.png",
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/bf9301d1-b706-4dc6-bf48-c962d5ce86c7.png",
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/668bc9a9-d71f-44ff-942c-2feda6a5ffe1.png",
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/7808b7f9-971e-45db-9b52-7d0c91b70be2.png",

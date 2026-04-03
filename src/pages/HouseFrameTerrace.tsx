@@ -5,7 +5,7 @@ import { TermsModal } from "@/components/TermsModal"
 
 const images = [
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/6c8486a0-c3f0-477c-856f-d3268e2beb21.png",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/eefe6c97-35f2-4174-8455-5490e23dec07.png",
     alt: "Каркасный дом с террасой 10×10 — вид в лесу",
   },
   {
