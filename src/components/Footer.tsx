@@ -43,6 +43,24 @@ export function Footer() {
                   Контакты
                 </a>
               </li>
+              <li className="pt-2 border-t border-border">
+                <p className="text-xs font-medium text-foreground mb-2">Направления</p>
+              </li>
+              <li>
+                <a href="/karkasnye-doma-tula" className="hover:text-foreground transition-colors">
+                  Каркасные дома в Туле
+                </a>
+              </li>
+              <li>
+                <a href="/karkasnye-bani-tula" className="hover:text-foreground transition-colors">
+                  Каркасные бани в Туле
+                </a>
+              </li>
+              <li>
+                <a href="/dachi-tula" className="hover:text-foreground transition-colors">
+                  Дачи под ключ в Туле
+                </a>
+              </li>
             </ul>
           </div>
 
