@@ -120,14 +120,9 @@ export default function Flyer() {
         <div style={{ height: "2px", background: "#f97316", margin: "0 10mm" }} />
 
         {/* ПОДАРОК */}
-        <div style={{ margin: "5mm 10mm", border: "2px solid #f97316", padding: "5px 8px" }}>
-          <div style={{ textAlign: "center", fontWeight: 900, fontSize: "14px", textTransform: "uppercase", marginBottom: "6px" }}>
+        <div style={{ margin: "5mm 10mm", border: "2px solid #f97316", padding: "8px 12px", textAlign: "center" }}>
+          <div style={{ fontWeight: 900, fontSize: "16px", textTransform: "uppercase" }}>
             🎁 Подарок при заказе (на выбор)
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "5px" }}>
-            {["Проект бесплатно", "Все окна ПВХ", "Полная электрика", "Огне-биозащита", "Фундамент на сваях"].map((item, i) => (
-              <div key={i} style={{ background: "#111", border: "1px solid #f97316", borderRadius: "4px", padding: "7px 4px", textAlign: "center", fontWeight: 700, color: "#f97316", fontSize: "11px", lineHeight: 1.3 }}>{item}</div>
-            ))}
           </div>
         </div>
 
