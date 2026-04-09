@@ -48,8 +48,8 @@ export default function Flyer() {
 
         <div style={{ height: "2px", background: "#f97316", margin: "0 10mm" }} />
 
-        {/* 3 КОЛОНКИ */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "6mm", padding: "6mm 10mm", flex: 1 }}>
+        {/* 2 КОЛОНКИ */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8mm", padding: "6mm 10mm", flex: 1 }}>
 
           {/* Почему TOYSTROY */}
           <div>
@@ -88,26 +88,6 @@ export default function Flyer() {
             ].map((item, i) => (
               <div key={i} style={{ display: "flex", gap: "7px", marginBottom: "8px", alignItems: "flex-start" }}>
                 <span style={{ color: "#f97316", fontWeight: 900, fontSize: "17px", lineHeight: 1.3, flexShrink: 0 }}>—</span>
-                <span style={{ fontSize: "15px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Гарантии */}
-          <div>
-            <div style={{ fontSize: "14px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "4px", marginBottom: "10px", letterSpacing: "0.5px" }}>
-              Наши гарантии
-            </div>
-            {[
-              "Договор с фиксированной ценой",
-              "Гарантия на каркас 5 лет",
-              "Сертификаты на все материалы",
-              "Гарантийный паспорт при сдаче",
-              "Соблюдение сроков или компенсация",
-              "Бесплатное устранение замечаний",
-            ].map((item, i) => (
-              <div key={i} style={{ display: "flex", gap: "7px", marginBottom: "8px", alignItems: "flex-start" }}>
-                <span style={{ background: "#f97316", color: "#fff", fontSize: "11px", fontWeight: 700, width: "20px", height: "20px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, lineHeight: 1 }}>{i + 1}</span>
                 <span style={{ fontSize: "15px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
               </div>
             ))}
