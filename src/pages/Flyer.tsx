@@ -32,7 +32,7 @@ export default function Flyer() {
               <img src={LOGO} alt="TS" style={{ width: "90px", height: "90px", borderRadius: "14px", marginBottom: "10px" }} />
               <div style={{ fontSize: "52px", fontWeight: 900, color: "#f97316", letterSpacing: "8px", lineHeight: 1 }}>TOYSTROY</div>
               <div style={{ fontSize: "28px", fontWeight: 900, color: "#fff", letterSpacing: "4px", textTransform: "uppercase", marginTop: "8px" }}>Каркасные дома, дачи и бани под ключ</div>
-              <div style={{ fontSize: "13px", fontWeight: 600, color: "#bbb", marginTop: "5px" }}>Тула · Работаем по всей Тульской области</div>
+              <div style={{ fontSize: "20px", fontWeight: 700, color: "#bbb", marginTop: "6px", letterSpacing: "2px" }}>Тула · Работаем по всей Тульской области</div>
             </div>
 
 
