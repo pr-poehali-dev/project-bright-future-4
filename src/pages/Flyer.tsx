@@ -115,6 +115,7 @@ export default function Flyer() {
               <div style={{ fontSize: "12px" }}>📧 Toystroy71rus@mail.ru</div>
               <div style={{ fontSize: "12px" }}>🌐 toystroy71.ru</div>
               <div style={{ fontSize: "12px" }}>📍 г. Тула, ул. Пролетарская, 37</div>
+              <div style={{ fontSize: "12px" }}>🕐 Пн–Вс: 10:00 – 19:00</div>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
