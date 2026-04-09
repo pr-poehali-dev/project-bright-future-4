@@ -212,7 +212,6 @@ export function Reviews() {
                   <p className={`font-medium ${compact ? "text-xs" : "text-sm"}`}>{review.title}</p>
                   <p className={`text-muted-foreground ${compact ? "text-xs" : "text-sm"}`}>Тульская область</p>
                 </div>
-                <span className="text-muted-foreground/60 text-xs">{review.date}</span>
               </div>
             </div>
           </div>
@@ -232,7 +231,6 @@ export function Reviews() {
             <p className={`font-medium ${compact ? "text-xs" : "text-sm"}`}>{review.name}</p>
             <p className={`text-muted-foreground ${compact ? "text-xs" : "text-sm"}`}>{review.location}</p>
           </div>
-          <span className="text-muted-foreground/60 text-xs">{review.date}</span>
         </div>
       </div>
     )
