@@ -22,27 +22,22 @@ export default function Flyer() {
         display: "flex", flexDirection: "column",
       }}>
 
-        {/* ШАПКа */}
+        {/* ШАПКА */}
         <div style={{ background: "#111", position: "relative", overflow: "hidden" }}>
           <img src={BG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.12 }} />
           <div style={{ position: "relative", zIndex: 1 }}>
-
-            {/* Шапка по центру */}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "6mm 10mm 5mm", textAlign: "center" }}>
-              <img src={LOGO} alt="TS" style={{ width: "70px", height: "70px", borderRadius: "10px", marginBottom: "7px" }} />
-              <div style={{ fontSize: "48px", fontWeight: 900, color: "#f97316", letterSpacing: "10px", lineHeight: 1 }}>TOYSTROY</div>
-              <div style={{ fontSize: "26px", fontWeight: 900, color: "#fff", letterSpacing: "3px", textTransform: "uppercase", marginTop: "7px" }}>Каркасные дома, дачи и бани под ключ</div>
-              <div style={{ fontSize: "16px", fontWeight: 700, color: "#bbb", marginTop: "5px", letterSpacing: "2px" }}>Тула · Работаем по всей Тульской области</div>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "10mm 10mm 6mm", textAlign: "center" }}>
+              <img src={LOGO} alt="TS" style={{ width: "90px", height: "90px", borderRadius: "14px", marginBottom: "10px" }} />
+              <div style={{ fontSize: "56px", fontWeight: 900, color: "#f97316", letterSpacing: "10px", lineHeight: 1 }}>TOYSTROY</div>
+              <div style={{ fontSize: "36px", fontWeight: 900, color: "#fff", letterSpacing: "4px", textTransform: "uppercase", marginTop: "10px" }}>Каркасные дома, дачи и бани под ключ</div>
+              <div style={{ fontSize: "20px", fontWeight: 700, color: "#bbb", marginTop: "6px", letterSpacing: "2px" }}>Тула · Работаем по всей Тульской области</div>
             </div>
-
-
-
           </div>
         </div>
 
         {/* ВВОДНЫЙ ТЕКСТ */}
-        <div style={{ padding: "4mm 10mm 3mm", textAlign: "center" }}>
-          <p style={{ fontSize: "12px", fontWeight: 600, lineHeight: 1.5, color: "#333", margin: 0 }}>
+        <div style={{ padding: "6mm 10mm 4mm", textAlign: "center" }}>
+          <p style={{ fontSize: "14px", fontWeight: 600, lineHeight: 1.6, color: "#333", margin: 0 }}>
             Каркасный дом — это быстро, практично и по фиксированной цене.
             Берём на себя всё: от фундамента до чистовой отделки.
             Выезжаем на участок в любой район <span style={{ color: "#f97316", fontWeight: 800 }}>бесплатно</span>.
@@ -52,7 +47,7 @@ export default function Flyer() {
         <div style={{ height: "2px", background: "#f97316", margin: "0 10mm" }} />
 
         {/* 3 КОЛОНКИ */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "4mm", padding: "4mm 10mm", flex: 1 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "6mm", padding: "6mm 10mm", flex: 1 }}>
 
           {/* Почему TOYSTROY */}
           <div>
@@ -120,14 +115,14 @@ export default function Flyer() {
         <div style={{ height: "2px", background: "#f97316", margin: "0 10mm" }} />
 
         {/* ПОДАРОК */}
-        <div style={{ margin: "3mm 10mm", border: "2px solid #f97316", padding: "5px 12px", textAlign: "center" }}>
+        <div style={{ margin: "5mm 10mm", border: "2px solid #f97316", padding: "8px 12px", textAlign: "center" }}>
           <div style={{ fontWeight: 900, fontSize: "16px", textTransform: "uppercase" }}>
             🎁 Подарок при заказе (на выбор)
           </div>
         </div>
 
         {/* КОНТАКТЫ */}
-        <div style={{ background: "#111", margin: "0 10mm 7mm", position: "relative", overflow: "hidden", padding: "4mm 8mm" }}>
+        <div style={{ background: "#111", margin: "0 10mm 10mm", position: "relative", overflow: "hidden", padding: "6mm 8mm" }}>
           <img src={BG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.08 }} />
           <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: "8mm", justifyContent: "space-between" }}>
 
