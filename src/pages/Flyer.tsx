@@ -47,8 +47,8 @@ export default function Flyer() {
         </div>
 
         {/* ВВОДНЫЙ ТЕКСТ */}
-        <div style={{ padding: "6mm 10mm 4mm", textAlign: "center" }}>
-          <p style={{ fontSize: "14px", fontWeight: 600, lineHeight: 1.6, color: "#333", margin: 0 }}>
+        <div style={{ padding: "3mm 10mm 3mm", textAlign: "center" }}>
+          <p style={{ fontSize: "13px", fontWeight: 600, lineHeight: 1.5, color: "#333", margin: 0 }}>
             Каркасный дом — это быстро, практично и по фиксированной цене.
             Берём на себя всё: от фундамента до чистовой отделки.
             Выезжаем на участок в любой район <span style={{ color: "#f97316", fontWeight: 800 }}>бесплатно</span>.
@@ -58,7 +58,7 @@ export default function Flyer() {
         <div style={{ height: "2px", background: "#f97316", margin: "0 10mm" }} />
 
         {/* 2 КОЛОНКИ */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8mm", padding: "6mm 10mm", flex: 1 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6mm", padding: "4mm 10mm", flex: 1 }}>
 
           {/* Почему TOYSTROY */}
           <div>
@@ -106,7 +106,7 @@ export default function Flyer() {
         <div style={{ height: "2px", background: "#f97316", margin: "0 10mm" }} />
 
         {/* КОНТАКТЫ */}
-        <div style={{ background: "#111", margin: "0 10mm 10mm", position: "relative", overflow: "hidden", padding: "6mm 8mm" }}>
+        <div style={{ background: "#111", margin: "0 10mm 6mm", position: "relative", overflow: "hidden", padding: "4mm 8mm" }}>
           <img src={BG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.08 }} />
           <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: "8mm", justifyContent: "space-between" }}>
 
