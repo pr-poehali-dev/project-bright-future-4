@@ -3,9 +3,18 @@ import { QRCodeSVG } from "qrcode.react";
 const LOGO = "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png";
 const BG = "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/fb966810-b800-4ef5-ae89-150e95c588d8.png";
 
+const printStyle = `
+  @media print {
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+    body { margin: 0; }
+    .print\\:hidden { display: none !important; }
+  }
+`;
+
 export default function Flyer() {
   return (
     <div style={{ background: "#e5e5e5", minHeight: "100vh", paddingTop: "16px", paddingBottom: "16px" }}>
+      <style>{printStyle}</style>
       <div className="print:hidden" style={{ position: "fixed", top: "12px", right: "12px", zIndex: 999 }}>
         <button
           onClick={() => window.print()}
