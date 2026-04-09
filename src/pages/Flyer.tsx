@@ -23,30 +23,21 @@ export default function Flyer() {
       }}>
 
         {/* ШАПКа */}
-        <div style={{ background: "#111", position: "relative", overflow: "hidden", padding: "10mm 10mm 8mm" }}>
+        <div style={{ background: "#111", position: "relative", overflow: "hidden", padding: "12mm 10mm 12mm" }}>
           <img src={BG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.12 }} />
           <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-              <img src={LOGO} alt="TS" style={{ width: "64px", height: "64px", borderRadius: "10px" }} />
+            <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
+              <img src={LOGO} alt="TS" style={{ width: "90px", height: "90px", borderRadius: "14px" }} />
               <div>
-                <div style={{ fontSize: "36px", fontWeight: 900, color: "#f97316", letterSpacing: "6px", lineHeight: 1 }}>TOYSTROY</div>
-                <div style={{ fontSize: "13px", fontWeight: 700, color: "#fff", letterSpacing: "1px", marginTop: "4px" }}>Каркасные дома, дачи и бани под ключ</div>
+                <div style={{ fontSize: "52px", fontWeight: 900, color: "#f97316", letterSpacing: "8px", lineHeight: 1 }}>TOYSTROY</div>
+                <div style={{ fontSize: "18px", fontWeight: 700, color: "#fff", letterSpacing: "1px", marginTop: "8px" }}>Каркасные дома, дачи и бани под ключ</div>
+                <div style={{ fontSize: "13px", fontWeight: 600, color: "#aaa", marginTop: "4px" }}>Тула · Вся Тульская область</div>
               </div>
             </div>
             <div style={{ textAlign: "right", color: "#fff" }}>
-              <div style={{ fontSize: "20px", fontWeight: 900, color: "#f97316" }}>+7 (950) 917-09-74</div>
-              <div style={{ fontSize: "12px", marginTop: "4px", opacity: 0.8 }}>Тула · Вся Тульская область</div>
+              <div style={{ fontSize: "24px", fontWeight: 900, color: "#f97316" }}>+7 (950) 917-09-74</div>
+              <div style={{ fontSize: "12px", marginTop: "4px", opacity: 0.7 }}>Звонок бесплатный</div>
             </div>
-          </div>
-        </div>
-
-        {/* ГЛАВНЫЙ СЛОГАН */}
-        <div style={{ background: "#f97316", padding: "7mm 10mm", textAlign: "center" }}>
-          <div style={{ fontSize: "26px", fontWeight: 900, color: "#fff", textTransform: "uppercase", letterSpacing: "3px", lineHeight: 1.2 }}>
-            Каркасный дом под ключ
-          </div>
-          <div style={{ fontSize: "15px", fontWeight: 700, color: "#fff", marginTop: "4px", opacity: 0.92 }}>
-            от 25 000 ₽/м² · Срок 90–120 дней · Фиксированная цена в договоре
           </div>
         </div>
 
