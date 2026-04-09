@@ -105,13 +105,6 @@ export default function Flyer() {
 
         <div style={{ height: "2px", background: "#f97316", margin: "0 10mm" }} />
 
-        {/* ПОДАРОК */}
-        <div style={{ margin: "5mm 10mm", border: "2px solid #f97316", padding: "8px 12px", textAlign: "center" }}>
-          <div style={{ fontWeight: 900, fontSize: "16px", textTransform: "uppercase" }}>
-            🎁 Подарок при заказе (на выбор)
-          </div>
-        </div>
-
         {/* КОНТАКТЫ */}
         <div style={{ background: "#111", margin: "0 10mm 10mm", position: "relative", overflow: "hidden", padding: "6mm 8mm" }}>
           <img src={BG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.08 }} />
