@@ -260,32 +260,32 @@ export function Reviews() {
         </div>
 
         {/* Мобильная версия — горизонтальный скролл со стрелками */}
-        <div className="md:hidden flex flex-col gap-4">
+        <div className="md:hidden relative flex items-center">
+          <button
+            onClick={scrollLeft}
+            className="absolute -left-4 z-10 w-10 h-10 flex items-center justify-center shrink-0"
+          >
+            <ChevronLeft className="w-6 h-6 text-orange-500" />
+          </button>
+
           <div
             ref={scrollRef}
-            className="flex gap-4 overflow-x-auto scroll-smooth"
+            className="flex gap-4 overflow-x-auto scroll-smooth px-8"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {sorted.map((review, index) => (
-              <div key={index} className="shrink-0 w-[85vw]">
+              <div key={index} className="shrink-0 w-[80vw]">
                 {renderReview(review, index, true)}
               </div>
             ))}
           </div>
-          <div className="flex items-center justify-center gap-4">
-            <button
-              onClick={scrollLeft}
-              className="w-10 h-10 border border-border flex items-center justify-center hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-200"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={scrollRight}
-              className="w-10 h-10 border border-border flex items-center justify-center hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-200"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
+
+          <button
+            onClick={scrollRight}
+            className="absolute -right-4 z-10 w-10 h-10 flex items-center justify-center shrink-0"
+          >
+            <ChevronRight className="w-6 h-6 text-orange-500" />
+          </button>
         </div>
 
         {/* Десктопная версия — 2 отзыва */}
