@@ -8,6 +8,7 @@ const printStyle = `
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
     body { margin: 0; }
     .print\\:hidden { display: none !important; }
+    @page { margin: 0; size: A4 portrait; }
   }
 `;
 
