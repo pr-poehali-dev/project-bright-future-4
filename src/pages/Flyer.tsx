@@ -3,169 +3,180 @@ import { QRCodeSVG } from "qrcode.react";
 const LOGO = "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4ca54c58-aed3-4b4c-ac87-740a697a6637.png";
 const BG = "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/fb966810-b800-4ef5-ae89-150e95c588d8.png";
 
-const s = {
-  page: {width:"210mm", minHeight:"297mm", margin:"0 auto", padding:"7mm", boxSizing:"border-box" as const, fontFamily:"Arial, sans-serif", fontSize:"12px", color:"#000", background:"#fff"},
-  heading: {fontSize:"10px", fontWeight:900, textTransform:"uppercase" as const, borderBottom:"2px solid #f97316", paddingBottom:"2px", marginBottom:"5px"},
-  row: {display:"flex", gap:"5px", marginBottom:"3px", alignItems:"flex-start" as const},
-  check: {color:"#f97316", fontWeight:700, flexShrink:0},
-  text: {fontWeight:600, lineHeight:1.4},
-};
-
 export default function Flyer() {
   return (
-    <div style={{background:"#f5f5f5", paddingTop:"10px"}}>
-      <div className="print:hidden" style={{position:"fixed", top:"10px", right:"10px", zIndex:999}}>
-        <button onClick={() => window.print()} style={{background:"#f97316", color:"#fff", fontWeight:700, padding:"10px 20px", border:"none", borderRadius:"6px", cursor:"pointer", fontSize:"14px"}}>
+    <div style={{ background: "#e5e5e5", minHeight: "100vh", paddingTop: "16px", paddingBottom: "16px" }}>
+      <div className="print:hidden" style={{ position: "fixed", top: "12px", right: "12px", zIndex: 999 }}>
+        <button
+          onClick={() => window.print()}
+          style={{ background: "#f97316", color: "#fff", fontWeight: 700, padding: "10px 22px", border: "none", borderRadius: "6px", cursor: "pointer", fontSize: "15px" }}
+        >
           🖨️ Распечатать
         </button>
       </div>
 
-      <div style={s.page}>
+      {/* Лист A4 */}
+      <div style={{
+        width: "210mm", minHeight: "297mm", margin: "0 auto", background: "#fff",
+        fontFamily: "Arial, sans-serif", color: "#111", boxSizing: "border-box",
+        display: "flex", flexDirection: "column",
+      }}>
 
-        {/* ШАПКА */}
-        <div style={{border:"3px solid #f97316", marginBottom:"5mm", position:"relative", overflow:"hidden"}}>
-          <img src={BG} alt="" style={{position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", opacity:0.15}} />
-          <div style={{position:"relative", zIndex:1, padding:"6mm", textAlign:"center"}}>
-            <div style={{display:"flex", alignItems:"center", justifyContent:"center", gap:"12px", marginBottom:"4px"}}>
-              <img src={LOGO} alt="TS" style={{width:"60px", height:"60px", borderRadius:"10px"}} />
-              <span style={{fontSize:"34px", fontWeight:900, color:"#f97316", textTransform:"uppercase", letterSpacing:"5px"}}>TOYSTROY</span>
+        {/* ШАПКа */}
+        <div style={{ background: "#111", position: "relative", overflow: "hidden", padding: "10mm 10mm 8mm" }}>
+          <img src={BG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.12 }} />
+          <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+              <img src={LOGO} alt="TS" style={{ width: "64px", height: "64px", borderRadius: "10px" }} />
+              <div>
+                <div style={{ fontSize: "36px", fontWeight: 900, color: "#f97316", letterSpacing: "6px", lineHeight: 1 }}>TOYSTROY</div>
+                <div style={{ fontSize: "13px", fontWeight: 700, color: "#fff", letterSpacing: "1px", marginTop: "4px" }}>Каркасные дома, дачи и бани под ключ</div>
+              </div>
             </div>
-            <div style={{fontSize:"16px", fontWeight:800, textTransform:"uppercase", color:"#111", letterSpacing:"1px"}}>Каркасные дома, дачи и бани под ключ</div>
-            <div style={{fontSize:"13px", fontWeight:700, color:"#ea580c", marginTop:"3px"}}>Тула · Работаем по всей Тульской области</div>
+            <div style={{ textAlign: "right", color: "#fff" }}>
+              <div style={{ fontSize: "20px", fontWeight: 900, color: "#f97316" }}>+7 (950) 917-09-74</div>
+              <div style={{ fontSize: "12px", marginTop: "4px", opacity: 0.8 }}>Тула · Вся Тульская область</div>
+            </div>
           </div>
         </div>
 
-        {/* ДЕВИЗ */}
-        <div style={{background:"#000", textAlign:"center", padding:"7px 0", marginBottom:"5mm"}}>
-          <span style={{fontSize:"16px", fontWeight:900, color:"#f97316", textTransform:"uppercase", letterSpacing:"4px"}}>Тепло · Надёжно · С гарантией</span>
+        {/* ГЛАВНЫЙ СЛОГАН */}
+        <div style={{ background: "#f97316", padding: "7mm 10mm", textAlign: "center" }}>
+          <div style={{ fontSize: "26px", fontWeight: 900, color: "#fff", textTransform: "uppercase", letterSpacing: "3px", lineHeight: 1.2 }}>
+            Каркасный дом под ключ
+          </div>
+          <div style={{ fontSize: "15px", fontWeight: 700, color: "#fff", marginTop: "4px", opacity: 0.92 }}>
+            от 25 000 ₽/м² · Срок 90–120 дней · Фиксированная цена в договоре
+          </div>
         </div>
 
         {/* ВВОДНЫЙ ТЕКСТ */}
-        <p style={{textAlign:"center", fontWeight:700, fontSize:"13px", marginBottom:"5mm", lineHeight:1.5, color:"#111"}}>
-          Каркасный дом — это возможность жить в тёплом, надёжном доме, построенном точно в срок и без лишних затрат.
-          Выезжаем на участок в любой район <span style={{color:"#f97316"}}>бесплатно</span>.
-        </p>
+        <div style={{ padding: "6mm 10mm 4mm", textAlign: "center" }}>
+          <p style={{ fontSize: "14px", fontWeight: 600, lineHeight: 1.6, color: "#333", margin: 0 }}>
+            Каркасный дом — это быстро, практично и по фиксированной цене.
+            Берём на себя всё: от фундамента до чистовой отделки.
+            Выезжаем на участок в любой район <span style={{ color: "#f97316", fontWeight: 800 }}>бесплатно</span>.
+          </p>
+        </div>
 
-        <div style={{borderTop:"2px solid #f97316", marginBottom:"5mm"}} />
+        <div style={{ height: "2px", background: "#f97316", margin: "0 10mm" }} />
 
         {/* 3 КОЛОНКИ */}
-        <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:"5mm", marginBottom:"5mm"}}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "6mm", padding: "6mm 10mm", flex: 1 }}>
 
-          {/* Почему выбирают */}
+          {/* Почему TOYSTROY */}
           <div>
-            <div style={s.heading}>Почему выбирают TOYSTROY</div>
+            <div style={{ fontSize: "11px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "3px", marginBottom: "8px", letterSpacing: "0.5px" }}>
+              Почему выбирают нас
+            </div>
             {[
-              "От 25 000 ₽/м² — в 2 раза дешевле кирпича",
-              "Готов за 2–4 месяца, баня за 5 недель",
-              "Строим круглый год, в т.ч. зимой",
-              "Ремонт сразу после сдачи",
-              "Мастера строят более 10 лет",
-              "Одна бригада — без субподрядчиков",
-              "Фиксированная цена — никаких доплат",
+              "В 2 раза дешевле кирпича",
+              "Готов за 90–120 дней",
+              "Строим круглый год",
+              "Одна бригада без субподрядчиков",
               "Фотоотчёты с площадки каждый день",
               "Древесина камерной сушки",
               "Партнёры: GrandLine, Технониколь",
             ].map((item, i) => (
-              <div key={i} style={s.row}>
-                <span style={s.check}>✓</span>
-                <span style={s.text}>{item}</span>
+              <div key={i} style={{ display: "flex", gap: "6px", marginBottom: "6px", alignItems: "flex-start" }}>
+                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "14px", lineHeight: 1.3, flexShrink: 0 }}>✓</span>
+                <span style={{ fontSize: "12px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
               </div>
             ))}
           </div>
 
-          {/* Что входит + Оплата */}
+          {/* Что входит */}
           <div>
-            <div style={s.heading}>Что входит в стоимость</div>
+            <div style={{ fontSize: "11px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "3px", marginBottom: "8px", letterSpacing: "0.5px" }}>
+              Что входит в стоимость
+            </div>
             {[
               "Выезд на участок и консультация",
               "Индивидуальный проект и смета",
               "Фундамент, каркас, кровля",
               "Утепление, окна, двери",
-              "Электрика, водоснабжение, отопление",
+              "Электрика, водопровод, отопление",
               "Доставка материалов на объект",
               "Гарантийный паспорт при сдаче",
             ].map((item, i) => (
-              <div key={i} style={s.row}>
-                <span style={s.check}>—</span>
-                <span style={s.text}>{item}</span>
+              <div key={i} style={{ display: "flex", gap: "6px", marginBottom: "6px", alignItems: "flex-start" }}>
+                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "14px", lineHeight: 1.3, flexShrink: 0 }}>—</span>
+                <span style={{ fontSize: "12px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
               </div>
-            ))}
-            <div style={{...s.heading, marginTop:"8px"}}>Варианты оплаты</div>
-            {[
-              "💰 100% сразу — скидка 10%",
-              "💰 50% + 50% при сдаче — скидка 5%",
-              "💰 Рассрочка по этапам — без %",
-            ].map((item, i) => (
-              <div key={i} style={{...s.text, marginBottom:"3px"}}>{item}</div>
             ))}
           </div>
 
           {/* Гарантии */}
           <div>
-            <div style={s.heading}>Наши гарантии</div>
+            <div style={{ fontSize: "11px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "3px", marginBottom: "8px", letterSpacing: "0.5px" }}>
+              Наши гарантии
+            </div>
             {[
-              "Бесплатный выезд — без обязательств",
-              "Индивидуальный проект и смета",
               "Договор с фиксированной ценой",
-              "Прозрачная смета на каждом этапе",
-              "Гарантия на конструктив",
-              "Бесплатное устранение замечаний",
+              "Гарантия на каркас 5 лет",
               "Сертификаты на все материалы",
               "Гарантийный паспорт при сдаче",
               "Соблюдение сроков или компенсация",
-              "Страхование объекта в процессе стройки",
+              "Бесплатное устранение замечаний",
             ].map((item, i) => (
-              <div key={i} style={s.row}>
-                <span style={{background:"#f97316", color:"#fff", fontSize:"9px", fontWeight:700, width:"16px", height:"16px", borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0}}>{i + 1}</span>
-                <span style={s.text}>{item}</span>
+              <div key={i} style={{ display: "flex", gap: "6px", marginBottom: "6px", alignItems: "flex-start" }}>
+                <span style={{ background: "#f97316", color: "#fff", fontSize: "9px", fontWeight: 700, width: "17px", height: "17px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, lineHeight: 1 }}>{i + 1}</span>
+                <span style={{ fontSize: "12px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <div style={{borderTop:"2px solid #f97316", marginBottom:"5mm"}} />
+        <div style={{ height: "2px", background: "#f97316", margin: "0 10mm" }} />
 
-        {/* ПОДАРКИ */}
-        <div style={{border:"2px solid #f97316", padding:"5px 8px", marginBottom:"5mm"}}>
-          <div style={{textAlign:"center", fontWeight:900, fontSize:"13px", textTransform:"uppercase", marginBottom:"5px"}}>🎁 Подарок при заказе (на выбор)</div>
-          <div style={{display:"grid", gridTemplateColumns:"repeat(6, 1fr)", gap:"4px"}}>
-            {["Фундамент на сваях", "Полная электрика", "Проект в подарок", "Все окна ПВХ", "Огне-биозащита", "Кадастровый учёт"].map((item, i) => (
-              <div key={i} style={{background:"#000", border:"1px solid #f97316", borderRadius:"4px", padding:"6px 4px", textAlign:"center", fontWeight:700, color:"#f97316", fontSize:"11px", lineHeight:1.3}}>{item}</div>
+        {/* ПОДАРОК */}
+        <div style={{ margin: "5mm 10mm", border: "2px solid #f97316", padding: "5px 8px" }}>
+          <div style={{ textAlign: "center", fontWeight: 900, fontSize: "14px", textTransform: "uppercase", marginBottom: "6px" }}>
+            🎁 Подарок при заказе (на выбор)
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "5px" }}>
+            {["Проект бесплатно", "Все окна ПВХ", "Полная электрика", "Огне-биозащита", "Фундамент на сваях"].map((item, i) => (
+              <div key={i} style={{ background: "#111", border: "1px solid #f97316", borderRadius: "4px", padding: "7px 4px", textAlign: "center", fontWeight: 700, color: "#f97316", fontSize: "11px", lineHeight: 1.3 }}>{item}</div>
             ))}
           </div>
         </div>
 
         {/* КОНТАКТЫ */}
-        <div style={{border:"3px solid #000", padding:"6px 8px", position:"relative", overflow:"hidden"}}>
-          <img src={BG} alt="" style={{position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", opacity:0.07}} />
-          <div style={{position:"relative", zIndex:1}}>
-            <div style={{display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:"6px"}}>
-              <img src={LOGO} alt="TS" style={{width:"40px", height:"40px", borderRadius:"7px"}} />
-              <div style={{textAlign:"center"}}>
-                <div style={{fontSize:"14px", fontWeight:900, textTransform:"uppercase"}}>Консультация и расчёт — БЕСПЛАТНО за 1 день</div>
+        <div style={{ background: "#111", margin: "0 10mm 10mm", position: "relative", overflow: "hidden", padding: "6mm 8mm" }}>
+          <img src={BG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.08 }} />
+          <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: "8mm", justifyContent: "space-between" }}>
 
-              </div>
-              <img src={LOGO} alt="TS" style={{width:"40px", height:"40px", borderRadius:"7px"}} />
+            <div style={{ color: "#fff", lineHeight: 1.9 }}>
+              <div style={{ fontSize: "16px", fontWeight: 900, color: "#f97316", marginBottom: "4px" }}>Свяжитесь с нами</div>
+              <div style={{ fontSize: "13px", fontWeight: 700 }}>📞 +7 (950) 917-09-74</div>
+              <div style={{ fontSize: "12px" }}>📱 WhatsApp: +7 (950) 917-09-74</div>
+              <div style={{ fontSize: "12px" }}>📧 Toystroy71rus@mail.ru</div>
+              <div style={{ fontSize: "12px" }}>🌐 toystroy71.ru</div>
+              <div style={{ fontSize: "12px" }}>📍 г. Тула, ул. Пролетарская, 37</div>
             </div>
-            <div style={{display:"flex", alignItems:"center", justifyContent:"space-between", gap:"8px"}}>
-              <div style={{flex:1, fontSize:"13px", fontWeight:700, lineHeight:2}}>
-                <div>📍 г. Тула, ул. Пролетарская, 37</div>
-                <div>📞 +7 (950) 917-09-74</div>
-                <div>📱 WhatsApp: +7 (950) 917-09-74</div>
-                <div>📧 Toystroy71rus@mail.ru</div>
-                <div>🌐 toystroy71.ru</div>
-                <div>📘 ВКонтакте: vk.ru/toystroy71</div>
+
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "6px" }}>
+              <div style={{ background: "#fff", padding: "6px", borderRadius: "8px" }}>
+                <QRCodeSVG value="https://toystroy71.ru" size={90} />
               </div>
-              <div style={{flex:"0 0 130px", display:"flex", justifyContent:"center"}}>
-                <img src={LOGO} alt="TS" style={{width:"130px", height:"130px", borderRadius:"16px", boxShadow:"0 4px 12px rgba(0,0,0,0.2)"}} />
-              </div>
-              <div style={{flex:1, display:"flex", flexDirection:"column", alignItems:"center", gap:"5px"}}>
-                <QRCodeSVG value="https://toystroy71.ru" size={130} />
-                <span style={{fontSize:"16px", fontWeight:900}}>Сканируй — переходи на сайт</span>
-              </div>
+              <div style={{ color: "#fff", fontSize: "10px", fontWeight: 600, textAlign: "center" }}>Сайт</div>
             </div>
-            <div style={{textAlign:"center", fontSize:"11px", color:"#444", marginTop:"5px", fontWeight:600}}>
-              ⏰ Работаем с 10:00 до 19:00 · Средняя оценка 5 звёзд
+
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "6px" }}>
+              <div style={{ background: "#fff", padding: "6px", borderRadius: "8px" }}>
+                <QRCodeSVG value="https://vk.com/toystroy71" size={90} />
+              </div>
+              <div style={{ color: "#fff", fontSize: "10px", fontWeight: 600, textAlign: "center" }}>ВКонтакте</div>
+            </div>
+
+            <div style={{ textAlign: "right", color: "#fff" }}>
+              <div style={{ fontSize: "13px", fontWeight: 900, color: "#f97316", marginBottom: "6px", textTransform: "uppercase" }}>Консультация бесплатно</div>
+              <div style={{ fontSize: "12px", opacity: 0.85, lineHeight: 1.6 }}>
+                Пн–Пт: 9:00 – 19:00<br />
+                Сб–Вс: 10:00 – 17:00<br />
+                Выезд на участок<br />
+                в любой район
+              </div>
             </div>
           </div>
         </div>
