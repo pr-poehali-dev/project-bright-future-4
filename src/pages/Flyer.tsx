@@ -27,17 +27,12 @@ export default function Flyer() {
           <img src={BG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.12 }} />
           <div style={{ position: "relative", zIndex: 1 }}>
 
-            {/* Верхняя строка: лого + название + телефон */}
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10mm 10mm 6mm" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
-                <img src={LOGO} alt="TS" style={{ width: "90px", height: "90px", borderRadius: "14px" }} />
-                <div>
-                  <div style={{ fontSize: "52px", fontWeight: 900, color: "#f97316", letterSpacing: "8px", lineHeight: 1 }}>TOYSTROY</div>
-                  <div style={{ fontSize: "17px", fontWeight: 800, color: "#fff", letterSpacing: "2px", textTransform: "uppercase", marginTop: "6px" }}>Каркасные дома, дачи и бани под ключ</div>
-                  <div style={{ fontSize: "13px", fontWeight: 600, color: "#bbb", marginTop: "4px" }}>Тула · Работаем по всей Тульской области</div>
-                </div>
-              </div>
-
+            {/* Шапка по центру */}
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "10mm 10mm 6mm", textAlign: "center" }}>
+              <img src={LOGO} alt="TS" style={{ width: "90px", height: "90px", borderRadius: "14px", marginBottom: "10px" }} />
+              <div style={{ fontSize: "52px", fontWeight: 900, color: "#f97316", letterSpacing: "8px", lineHeight: 1 }}>TOYSTROY</div>
+              <div style={{ fontSize: "17px", fontWeight: 800, color: "#fff", letterSpacing: "2px", textTransform: "uppercase", marginTop: "8px" }}>Каркасные дома, дачи и бани под ключ</div>
+              <div style={{ fontSize: "13px", fontWeight: 600, color: "#bbb", marginTop: "5px" }}>Тула · Работаем по всей Тульской области</div>
             </div>
 
             {/* Девиз */}
