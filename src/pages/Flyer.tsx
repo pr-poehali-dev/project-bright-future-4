@@ -122,9 +122,6 @@ export default function Flyer() {
                 <QRCodeSVG value="https://toystroy71.ru" size={150} />
               </div>
               <div style={{ color: "#fff", fontSize: "13px", fontWeight: 700, textAlign: "center" }}>Сайт</div>
-              <div style={{ color: "#bbb", fontSize: "10px", textAlign: "center", lineHeight: 1.5 }}>
-                Пн–Пт: 9:00 – 19:00<br />Сб–Вс: 10:00 – 17:00
-              </div>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
