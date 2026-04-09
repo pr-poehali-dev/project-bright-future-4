@@ -53,7 +53,7 @@ export default function Flyer() {
 
           {/* Почему TOYSTROY */}
           <div>
-            <div style={{ fontSize: "11px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "3px", marginBottom: "8px", letterSpacing: "0.5px" }}>
+            <div style={{ fontSize: "14px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "4px", marginBottom: "10px", letterSpacing: "0.5px" }}>
               Почему выбирают нас
             </div>
             {[
@@ -65,16 +65,16 @@ export default function Flyer() {
               "Древесина камерной сушки",
               "Партнёры: GrandLine, Технониколь",
             ].map((item, i) => (
-              <div key={i} style={{ display: "flex", gap: "6px", marginBottom: "6px", alignItems: "flex-start" }}>
-                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "14px", lineHeight: 1.3, flexShrink: 0 }}>✓</span>
-                <span style={{ fontSize: "12px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
+              <div key={i} style={{ display: "flex", gap: "7px", marginBottom: "8px", alignItems: "flex-start" }}>
+                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "17px", lineHeight: 1.3, flexShrink: 0 }}>✓</span>
+                <span style={{ fontSize: "15px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
               </div>
             ))}
           </div>
 
           {/* Что входит */}
           <div>
-            <div style={{ fontSize: "11px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "3px", marginBottom: "8px", letterSpacing: "0.5px" }}>
+            <div style={{ fontSize: "14px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "4px", marginBottom: "10px", letterSpacing: "0.5px" }}>
               Что входит в стоимость
             </div>
             {[
@@ -86,16 +86,16 @@ export default function Flyer() {
               "Доставка материалов на объект",
               "Гарантийный паспорт при сдаче",
             ].map((item, i) => (
-              <div key={i} style={{ display: "flex", gap: "6px", marginBottom: "6px", alignItems: "flex-start" }}>
-                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "14px", lineHeight: 1.3, flexShrink: 0 }}>—</span>
-                <span style={{ fontSize: "12px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
+              <div key={i} style={{ display: "flex", gap: "7px", marginBottom: "8px", alignItems: "flex-start" }}>
+                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "17px", lineHeight: 1.3, flexShrink: 0 }}>—</span>
+                <span style={{ fontSize: "15px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
               </div>
             ))}
           </div>
 
           {/* Гарантии */}
           <div>
-            <div style={{ fontSize: "11px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "3px", marginBottom: "8px", letterSpacing: "0.5px" }}>
+            <div style={{ fontSize: "14px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "4px", marginBottom: "10px", letterSpacing: "0.5px" }}>
               Наши гарантии
             </div>
             {[
@@ -106,9 +106,9 @@ export default function Flyer() {
               "Соблюдение сроков или компенсация",
               "Бесплатное устранение замечаний",
             ].map((item, i) => (
-              <div key={i} style={{ display: "flex", gap: "6px", marginBottom: "6px", alignItems: "flex-start" }}>
-                <span style={{ background: "#f97316", color: "#fff", fontSize: "9px", fontWeight: 700, width: "17px", height: "17px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, lineHeight: 1 }}>{i + 1}</span>
-                <span style={{ fontSize: "12px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
+              <div key={i} style={{ display: "flex", gap: "7px", marginBottom: "8px", alignItems: "flex-start" }}>
+                <span style={{ background: "#f97316", color: "#fff", fontSize: "11px", fontWeight: 700, width: "20px", height: "20px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, lineHeight: 1 }}>{i + 1}</span>
+                <span style={{ fontSize: "15px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
               </div>
             ))}
           </div>
