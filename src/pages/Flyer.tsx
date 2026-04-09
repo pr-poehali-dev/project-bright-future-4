@@ -132,9 +132,6 @@ export default function Flyer() {
                 <QRCodeSVG value="https://vk.com/toystroy71" size={150} />
               </div>
               <div style={{ color: "#fff", fontSize: "13px", fontWeight: 700, textAlign: "center" }}>ВКонтакте</div>
-              <div style={{ color: "#bbb", fontSize: "10px", textAlign: "center", lineHeight: 1.5 }}>
-                Консультация бесплатно<br />Выезд в любой район
-              </div>
             </div>
           </div>
         </div>
