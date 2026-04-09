@@ -132,8 +132,8 @@ export default function Flyer() {
             </div>
 
             <div style={{ textAlign: "right", color: "#fff" }}>
-              <div style={{ fontSize: "13px", fontWeight: 900, color: "#f97316", marginBottom: "6px", textTransform: "uppercase" }}>Консультация бесплатно</div>
-              <div style={{ fontSize: "12px", opacity: 0.85, lineHeight: 1.6 }}>
+              <div style={{ fontSize: "10px", fontWeight: 900, color: "#f97316", marginBottom: "4px", textTransform: "uppercase" }}>Консультация бесплатно</div>
+              <div style={{ fontSize: "9px", opacity: 0.85, lineHeight: 1.6 }}>
                 Пн–Пт: 9:00 – 19:00<br />
                 Сб–Вс: 10:00 – 17:00<br />
                 Выезд на участок<br />
