@@ -23,21 +23,33 @@ export default function Flyer() {
       }}>
 
         {/* ШАПКа */}
-        <div style={{ background: "#111", position: "relative", overflow: "hidden", padding: "12mm 10mm 12mm" }}>
+        <div style={{ background: "#111", position: "relative", overflow: "hidden" }}>
           <img src={BG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.12 }} />
-          <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
-              <img src={LOGO} alt="TS" style={{ width: "90px", height: "90px", borderRadius: "14px" }} />
-              <div>
-                <div style={{ fontSize: "52px", fontWeight: 900, color: "#f97316", letterSpacing: "8px", lineHeight: 1 }}>TOYSTROY</div>
-                <div style={{ fontSize: "18px", fontWeight: 700, color: "#fff", letterSpacing: "1px", marginTop: "8px" }}>Каркасные дома, дачи и бани под ключ</div>
-                <div style={{ fontSize: "13px", fontWeight: 600, color: "#aaa", marginTop: "4px" }}>Тула · Вся Тульская область</div>
+          <div style={{ position: "relative", zIndex: 1 }}>
+
+            {/* Верхняя строка: лого + название + телефон */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10mm 10mm 6mm" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
+                <img src={LOGO} alt="TS" style={{ width: "90px", height: "90px", borderRadius: "14px" }} />
+                <div>
+                  <div style={{ fontSize: "52px", fontWeight: 900, color: "#f97316", letterSpacing: "8px", lineHeight: 1 }}>TOYSTROY</div>
+                  <div style={{ fontSize: "17px", fontWeight: 800, color: "#fff", letterSpacing: "2px", textTransform: "uppercase", marginTop: "6px" }}>Каркасные дома, дачи и бани под ключ</div>
+                  <div style={{ fontSize: "13px", fontWeight: 600, color: "#bbb", marginTop: "4px" }}>Тула · Работаем по всей Тульской области</div>
+                </div>
+              </div>
+              <div style={{ textAlign: "right", color: "#fff" }}>
+                <div style={{ fontSize: "24px", fontWeight: 900, color: "#f97316" }}>+7 (950) 917-09-74</div>
+                <div style={{ fontSize: "12px", marginTop: "4px", opacity: 0.7 }}>Звонок бесплатный</div>
               </div>
             </div>
-            <div style={{ textAlign: "right", color: "#fff" }}>
-              <div style={{ fontSize: "24px", fontWeight: 900, color: "#f97316" }}>+7 (950) 917-09-74</div>
-              <div style={{ fontSize: "12px", marginTop: "4px", opacity: 0.7 }}>Звонок бесплатный</div>
+
+            {/* Девиз */}
+            <div style={{ background: "#f97316", padding: "5px 0", textAlign: "center" }}>
+              <span style={{ fontSize: "14px", fontWeight: 900, color: "#fff", letterSpacing: "8px", textTransform: "uppercase" }}>
+                Т Е П Л О &nbsp;·&nbsp; Н А Д Ё Ж Н О &nbsp;·&nbsp; С &nbsp; Г А Р А Н Т И Е Й
+              </span>
             </div>
+
           </div>
         </div>
 
