@@ -3,6 +3,20 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
+    id: 22,
+    title: "Каркасный дом «Модерн 63»",
+    category: "Каркасный дом 74 м² · Металлочерепица · Терраса 13 м² · Сауна",
+    location: "Тульская область",
+    year: "2026",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/1bb104b3-1678-4e54-80bd-fb79ae42161b.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9b024708-25cc-423c-b674-ea19f0888b68.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e90cad2f-aedf-4ac8-97bb-f8bce810f3fe.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/3ca6bea4-8b83-485c-9260-614829c4692e.png",
+    ],
+    link: "/projects/house-modern-63",
+  },
+  {
     id: 4,
     title: "Усадьба «Северная»",
     category: "Каркасный дом 240 м²",
