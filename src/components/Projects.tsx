@@ -308,23 +308,20 @@ export function Projects() {
                     </>
                   )}
                 </div>
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-xl font-medium mb-1">{project.title}</h3>
-                    <p className="text-sm text-muted-foreground">{project.category}</p>
-                    {project.location && (
-                      <p className="text-sm text-muted-foreground mt-0.5">{project.location}</p>
-                    )}
-                    {project.id === 21 && (
-                      <a
-                        href="/projects/house-frame-terrace"
-                        className="inline-block mt-2 text-xs font-semibold text-orange-500 hover:underline"
-                      >
-                        Подробнее о проекте →
-                      </a>
-                    )}
-                  </div>
-                  <span className="text-sm text-muted-foreground shrink-0">{project.year}</span>
+                <div>
+                  <h3 className="text-xl font-medium mb-1">{project.title}</h3>
+                  <p className="text-sm text-muted-foreground">{project.category}</p>
+                  {project.location && (
+                    <p className="text-sm text-muted-foreground mt-0.5">{project.location}</p>
+                  )}
+                  {project.id === 21 && (
+                    <a
+                      href="/projects/house-frame-terrace"
+                      className="inline-block mt-2 text-xs font-semibold text-orange-500 hover:underline"
+                    >
+                      Подробнее о проекте →
+                    </a>
+                  )}
                 </div>
               </article>
             )
@@ -358,17 +355,14 @@ export function Projects() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <h3 className="text-lg font-medium mb-1">{project.title}</h3>
-                      <p className="text-sm text-muted-foreground">{project.category}</p>
-                      {project.id === 21 && (
-                        <a href="/projects/house-frame-terrace" className="inline-block mt-1 text-xs font-semibold text-orange-500 hover:underline">
-                          Подробнее →
-                        </a>
-                      )}
-                    </div>
-                    <span className="text-sm text-muted-foreground shrink-0">{project.year}</span>
+                  <div>
+                    <h3 className="text-lg font-medium mb-1">{project.title}</h3>
+                    <p className="text-sm text-muted-foreground">{project.category}</p>
+                    {project.id === 21 && (
+                      <a href="/projects/house-frame-terrace" className="inline-block mt-1 text-xs font-semibold text-orange-500 hover:underline">
+                        Подробнее →
+                      </a>
+                    )}
                   </div>
                 </article>
               )
