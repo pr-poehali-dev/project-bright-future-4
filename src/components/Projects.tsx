@@ -314,9 +314,9 @@ export function Projects() {
                   {project.location && (
                     <p className="text-sm text-muted-foreground mt-0.5">{project.location}</p>
                   )}
-                  {project.id === 21 && (
+                  {project.link && (
                     <a
-                      href="/projects/house-frame-terrace"
+                      href={project.link}
                       className="inline-block mt-2 text-xs font-semibold text-orange-500 hover:underline"
                     >
                       Подробнее о проекте →
@@ -358,8 +358,8 @@ export function Projects() {
                   <div>
                     <h3 className="text-lg font-medium mb-1">{project.title}</h3>
                     <p className="text-sm text-muted-foreground">{project.category}</p>
-                    {project.id === 21 && (
-                      <a href="/projects/house-frame-terrace" className="inline-block mt-1 text-xs font-semibold text-orange-500 hover:underline">
+                    {project.link && (
+                      <a href={project.link} className="inline-block mt-1 text-xs font-semibold text-orange-500 hover:underline">
                         Подробнее →
                       </a>
                     )}
