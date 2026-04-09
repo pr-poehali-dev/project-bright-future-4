@@ -35,12 +35,7 @@ export default function Flyer() {
               <div style={{ fontSize: "13px", fontWeight: 600, color: "#bbb", marginTop: "5px" }}>Тула · Работаем по всей Тульской области</div>
             </div>
 
-            {/* Девиз */}
-            <div style={{ background: "#f97316", padding: "5px 0", textAlign: "center" }}>
-              <span style={{ fontSize: "14px", fontWeight: 900, color: "#fff", letterSpacing: "8px", textTransform: "uppercase" }}>
-                Т Е П Л О &nbsp;·&nbsp; Н А Д Ё Ж Н О &nbsp;·&nbsp; С &nbsp; Г А Р А Н Т И Е Й
-              </span>
-            </div>
+
 
           </div>
         </div>
