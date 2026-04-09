@@ -117,18 +117,18 @@ export default function Flyer() {
               <div style={{ fontSize: "12px" }}>📍 г. Тула, ул. Пролетарская, 37</div>
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "6px" }}>
-              <div style={{ background: "#fff", padding: "6px", borderRadius: "8px" }}>
-                <QRCodeSVG value="https://toystroy71.ru" size={90} />
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
+              <div style={{ background: "#fff", padding: "8px", borderRadius: "10px" }}>
+                <QRCodeSVG value="https://toystroy71.ru" size={150} />
               </div>
-              <div style={{ color: "#fff", fontSize: "10px", fontWeight: 600, textAlign: "center" }}>Сайт</div>
+              <div style={{ color: "#fff", fontSize: "13px", fontWeight: 700, textAlign: "center" }}>Сайт</div>
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "6px" }}>
-              <div style={{ background: "#fff", padding: "6px", borderRadius: "8px" }}>
-                <QRCodeSVG value="https://vk.com/toystroy71" size={90} />
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
+              <div style={{ background: "#fff", padding: "8px", borderRadius: "10px" }}>
+                <QRCodeSVG value="https://vk.com/toystroy71" size={150} />
               </div>
-              <div style={{ color: "#fff", fontSize: "10px", fontWeight: 600, textAlign: "center" }}>ВКонтакте</div>
+              <div style={{ color: "#fff", fontSize: "13px", fontWeight: 700, textAlign: "center" }}>ВКонтакте</div>
             </div>
 
             <div style={{ textAlign: "right", color: "#fff" }}>
