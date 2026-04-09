@@ -37,10 +37,7 @@ export default function Flyer() {
                   <div style={{ fontSize: "13px", fontWeight: 600, color: "#bbb", marginTop: "4px" }}>Тула · Работаем по всей Тульской области</div>
                 </div>
               </div>
-              <div style={{ textAlign: "right", color: "#fff" }}>
-                <div style={{ fontSize: "24px", fontWeight: 900, color: "#f97316" }}>+7 (950) 917-09-74</div>
-                <div style={{ fontSize: "12px", marginTop: "4px", opacity: 0.7 }}>Звонок бесплатный</div>
-              </div>
+
             </div>
 
             {/* Девиз */}
