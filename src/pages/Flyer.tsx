@@ -122,6 +122,9 @@ export default function Flyer() {
                 <QRCodeSVG value="https://toystroy71.ru" size={150} />
               </div>
               <div style={{ color: "#fff", fontSize: "13px", fontWeight: 700, textAlign: "center" }}>Сайт</div>
+              <div style={{ color: "#bbb", fontSize: "10px", textAlign: "center", lineHeight: 1.5 }}>
+                Пн–Пт: 9:00 – 19:00<br />Сб–Вс: 10:00 – 17:00
+              </div>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
@@ -129,15 +132,8 @@ export default function Flyer() {
                 <QRCodeSVG value="https://vk.com/toystroy71" size={150} />
               </div>
               <div style={{ color: "#fff", fontSize: "13px", fontWeight: 700, textAlign: "center" }}>ВКонтакте</div>
-            </div>
-
-            <div style={{ textAlign: "right", color: "#fff" }}>
-              <div style={{ fontSize: "10px", fontWeight: 900, color: "#f97316", marginBottom: "4px", textTransform: "uppercase" }}>Консультация бесплатно</div>
-              <div style={{ fontSize: "9px", opacity: 0.85, lineHeight: 1.6 }}>
-                Пн–Пт: 9:00 – 19:00<br />
-                Сб–Вс: 10:00 – 17:00<br />
-                Выезд на участок<br />
-                в любой район
+              <div style={{ color: "#bbb", fontSize: "10px", textAlign: "center", lineHeight: 1.5 }}>
+                Консультация бесплатно<br />Выезд в любой район
               </div>
             </div>
           </div>
