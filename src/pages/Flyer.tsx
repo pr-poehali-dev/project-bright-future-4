@@ -120,14 +120,14 @@ export default function Flyer() {
 
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
               <div style={{ background: "#fff", padding: "8px", borderRadius: "10px" }}>
-                <QRCodeSVG value="https://toystroy71.ru" size={150} />
+                <QRCodeSVG value="https://toystroy71.ru" size={180} />
               </div>
               <div style={{ color: "#fff", fontSize: "18px", fontWeight: 900, textAlign: "center" }}>Сайт</div>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
               <div style={{ background: "#fff", padding: "8px", borderRadius: "10px" }}>
-                <QRCodeSVG value="https://vk.com/toystroy71" size={150} />
+                <QRCodeSVG value="https://vk.com/toystroy71" size={180} />
               </div>
               <div style={{ color: "#fff", fontSize: "18px", fontWeight: 900, textAlign: "center" }}>ВКонтакте</div>
             </div>
