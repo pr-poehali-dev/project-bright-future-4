@@ -120,7 +120,6 @@ export default function Flyer() {
             <div style={{ color: "#fff", lineHeight: 1.9 }}>
               <div style={{ fontSize: "20px", fontWeight: 900, color: "#f97316", marginBottom: "4px" }}>Свяжитесь с нами</div>
               <div style={{ fontSize: "16px", fontWeight: 700 }}>📞 +7 (950) 917-09-74</div>
-              <div style={{ fontSize: "15px" }}>📱 WhatsApp: +7 (950) 917-09-74</div>
               <div style={{ fontSize: "15px" }}>📧 Toystroy71rus@mail.ru</div>
               <div style={{ fontSize: "15px" }}>🌐 toystroy71.ru</div>
               <div style={{ fontSize: "15px" }}>📍 г. Тула, ул. Пролетарская, 37</div>
