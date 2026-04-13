@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const projects = [
   {
     id: 24,
-    title: "Каркасная баня 48 м²",
+    title: "Баня «Кедровая» 48 м²",
     category: "Баня 48 м² · 12.0 × 4.0 м · Парилка · Душевая · Комната отдыха · Терраса",
     location: "Тульская область",
     year: "2026",

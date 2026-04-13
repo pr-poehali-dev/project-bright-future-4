@@ -100,7 +100,7 @@ export default function BanyaOrderForm() {
                   />
                 </div>
                 <div className="bg-orange-50 border border-orange-100 rounded px-4 py-3 mb-6 text-sm text-orange-700">
-                  <strong>Проект:</strong> Каркасная баня 48 м² · 12,0 × 4,0 м
+                  <strong>Проект:</strong> Баня «Кедровая» 48 м² · 12,0 × 4,0 м
                 </div>
                 <button
                   type="submit"

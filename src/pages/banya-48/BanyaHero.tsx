@@ -78,7 +78,7 @@ export default function BanyaHero() {
             Проекты
           </a>
           <span>/</span>
-          <span className="text-[#1a0f0f] font-medium">Каркасная баня 48 м²</span>
+          <span className="text-[#1a0f0f] font-medium">Баня «Кедровая» 48 м²</span>
         </div>
       </div>
 
@@ -139,7 +139,7 @@ export default function BanyaHero() {
                 Каркасная баня · Тульская область
               </p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-4 leading-tight">
-                Баня 48 м²<br />
+                Баня «Кедровая»<br />
                 <span className="text-orange-500">12,0 × 4,0 м</span>
               </h1>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
