@@ -3,6 +3,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
+    id: 24,
+    title: "Каркасная баня 48 м²",
+    category: "Баня 48 м² · 12.0 × 4.0 м · Парилка · Душевая · Комната отдыха · Терраса",
+    location: "Тульская область",
+    year: "2026",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/eb6d3fe2-b926-4754-b19d-902e64b0b437.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/44c61d2e-57e1-4905-b935-87d86e799e8f.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/0d8abc6b-9765-46db-bab2-b736e58c8b93.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/b93f8806-b2bb-4768-b3ec-eef076cf43dd.jpg",
+    ],
+  },
+  {
     id: 23,
     title: "Каркасный дом «Дача 68»",
     category: "Каркасный дом 68 м² · Планкен · Парная · Две террасы 19,84 м²",
