@@ -82,7 +82,7 @@ export default function Dacha68Hero() {
             Проекты
           </a>
           <span>/</span>
-          <span className="text-[#1a0f0f] font-medium">Дом «Горизонт» 68 м²</span>
+          <span className="text-[#1a0f0f] font-medium">Дача «Горизонт» 68 м²</span>
         </div>
       </div>
 
@@ -143,7 +143,7 @@ export default function Dacha68Hero() {
                 Каркасный дом · Тульская область
               </p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-4 leading-tight">
-                Дом «Горизонт»<br />
+                Дача «Горизонт»<br />
                 <span className="text-orange-500">8,5 × 6,3 м</span>
               </h1>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">

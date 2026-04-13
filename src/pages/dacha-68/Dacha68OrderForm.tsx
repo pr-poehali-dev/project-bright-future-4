@@ -100,7 +100,7 @@ export default function Dacha68OrderForm() {
                   />
                 </div>
                 <div className="bg-orange-50 border border-orange-100 rounded px-4 py-3 mb-6 text-sm text-orange-700">
-                  <strong>Проект:</strong> Дом «Горизонт» 68 м² · 8,5 × 6,3 м
+                  <strong>Проект:</strong> Дача «Горизонт» 68 м² · 8,5 × 6,3 м
                 </div>
                 <button
                   type="submit"
