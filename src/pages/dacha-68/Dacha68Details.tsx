@@ -1,7 +1,7 @@
 import { Check } from "lucide-react"
 
 const rooms = [
-  { name: "Гостиная", area: "13,41 м²" },
+  { name: "Комната отдыха", area: "13,41 м²" },
   { name: "Парная", area: "5,65 м²" },
   { name: "С/У", area: "3,76 м²" },
   { name: "Туалет", area: "1,32 м²" },
@@ -10,10 +10,10 @@ const rooms = [
 ]
 
 const whyList = [
-  "Каркасная технология — дом готов за 90–120 дней",
+  "Каркасная технология — баня готова за 90–120 дней",
   "Тёплые стены 200 мм минваты, минимальный расход тепла",
   "Натуральный планкен — стильный фасад без лишнего ухода",
-  "Парная прямо в доме — удобство для всей семьи",
+  "Парная прямо в бане — удобство для всей семьи",
   "Две террасы общей площадью почти 20 м² — летняя жизнь на природе",
   "Панорамное остекление — максимум света и вид на участок",
   "Работаем по договору с фиксированной ценой — без сюрпризов",
@@ -40,7 +40,7 @@ export default function Dacha68Details() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
             {[
-              { value: "68 м²", label: "Площадь дома", sub: "Одноэтажный дом с продуманной планировкой" },
+              { value: "68 м²", label: "Площадь бани", sub: "Одноэтажная баня с продуманной планировкой" },
               { value: "19,84 м²", label: "Две террасы", sub: "Главная открытая терраса и входное крыльцо" },
               { value: "120 дней", label: "Срок постройки", sub: "Каркасная технология позволяет заселиться уже этим сезоном", orange: true },
             ].map((s) => (
@@ -64,14 +64,14 @@ export default function Dacha68Details() {
               <h2 className="text-2xl md:text-3xl font-medium mb-6">Поэтажный план</h2>
               <p className="text-gray-600 leading-relaxed mb-6">
                 В центре планировки — просторная{" "}
-                <span className="text-orange-500 font-medium">гостиная (13,41 м²)</span> с выходом
+                <span className="text-orange-500 font-medium">комната отдыха (13,41 м²)</span> с выходом
                 на{" "}
                 <span className="text-orange-500 font-medium">главную террасу (14,84 м²)</span>.
                 Большие панорамные окна обеспечивают максимальное освещение и вид на участок.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                В функциональном крыле расположена{" "}
-                <span className="text-orange-500 font-medium">парная (5,65 м²)</span> с комнатой отдыха,
+                В банном крыле расположена{" "}
+                <span className="text-orange-500 font-medium">парная (5,65 м²)</span>,
                 санузел (3,76 м²) и туалет (1,32 м²) — всё компактно и продуманно.
               </p>
               <p className="text-gray-600 leading-relaxed">
@@ -83,7 +83,7 @@ export default function Dacha68Details() {
             <div>
               <img
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9c110775-6519-4a00-8824-951d16babb5a.jpg"
-                alt="План первого этажа Дача 68"
+                alt="План первого этажа Баня «Горизонт» 68"
                 className="w-full object-contain mb-6"
               />
               <div className="bg-gray-50 p-6">
@@ -124,7 +124,7 @@ export default function Dacha68Details() {
             <div>
               <img
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/7c9c495f-ea33-449f-a092-c6c441b285cb.jpg"
-                alt="Каркасный дом Дача 68 — вид с участка"
+                alt="Каркасная баня «Горизонт» 68 — вид с участка"
                 className="w-full object-cover aspect-[4/3]"
               />
             </div>
@@ -151,7 +151,7 @@ export default function Dacha68Details() {
             <div>
               <img
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9910a57e-e9a3-486f-8cd0-550ccb2c11b1.jpg"
-                alt="Каркасный дом Дача 68 — вид сзади"
+                alt="Каркасная баня «Горизонт» 68 — вид сзади"
                 className="w-full object-cover aspect-[4/3]"
               />
             </div>

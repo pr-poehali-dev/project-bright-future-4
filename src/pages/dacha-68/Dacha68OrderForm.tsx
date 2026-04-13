@@ -18,8 +18,8 @@ export default function Dacha68OrderForm() {
         body: JSON.stringify({
           name,
           phone,
-          comment: "Заявка со страницы: Каркасный дом «Дача 68»",
-          buildingType: "Дачный дом",
+          comment: "Заявка со страницы: Каркасная баня «Горизонт 68»",
+          buildingType: "Баня",
           area: 68,
         }),
       })
@@ -34,7 +34,7 @@ export default function Dacha68OrderForm() {
       <section className="py-16 bg-orange-500">
         <div className="container mx-auto px-6 md:px-12 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white mb-4">
-            Хотите такой же дом?
+            Хотите такую же баню?
           </h2>
           <p className="text-orange-100 text-lg mb-8 max-w-xl mx-auto">
             Оставьте заявку — наш специалист свяжется с вами в течение 30 минут, ответит на вопросы
@@ -100,7 +100,7 @@ export default function Dacha68OrderForm() {
                   />
                 </div>
                 <div className="bg-orange-50 border border-orange-100 rounded px-4 py-3 mb-6 text-sm text-orange-700">
-                  <strong>Проект:</strong> Дача «Горизонт» 68 м² · 8,5 × 6,3 м
+                  <strong>Проект:</strong> Баня «Горизонт» 68 м² · 8,5 × 6,3 м
                 </div>
                 <button
                   type="submit"
