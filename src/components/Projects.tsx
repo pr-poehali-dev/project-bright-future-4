@@ -3,49 +3,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
-    id: 24,
-    title: "Баня «Кедровая» 48 м²",
-    category: "Баня 48 м² · 12.0 × 4.0 м · Парилка · Душевая · Комната отдыха · Терраса",
-    location: "Тульская область",
-    year: "2026",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/eb6d3fe2-b926-4754-b19d-902e64b0b437.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/44c61d2e-57e1-4905-b935-87d86e799e8f.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/0d8abc6b-9765-46db-bab2-b736e58c8b93.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/b93f8806-b2bb-4768-b3ec-eef076cf43dd.jpg",
-    ],
-    link: "/projects/banya-48",
-  },
-  {
-    id: 23,
-    title: "Дача «Горизонт» 68 м²",
-    category: "Каркасный дом 68 м² · Планкен · Парная · Две террасы 19,84 м²",
-    location: "Тульская область",
-    year: "2026",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/7c9c495f-ea33-449f-a092-c6c441b285cb.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9910a57e-e9a3-486f-8cd0-550ccb2c11b1.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/85c9bf74-1548-42a0-aedc-5a2154f2fa7f.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/557d76ce-df99-4c89-9eb6-2aafa78be1c8.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9c110775-6519-4a00-8824-951d16babb5a.jpg",
-    ],
-    link: "/projects/dacha-68",
-  },
-  {
-    id: 22,
-    title: "Каркасный дом «Модерн 63»",
-    category: "Каркасный дом 74 м² · Металлочерепица · Терраса 13 м² · Сауна",
-    location: "Тульская область",
-    year: "2026",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/1bb104b3-1678-4e54-80bd-fb79ae42161b.png",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9b024708-25cc-423c-b674-ea19f0888b68.png",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e90cad2f-aedf-4ac8-97bb-f8bce810f3fe.png",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/3ca6bea4-8b83-485c-9260-614829c4692e.png",
-    ],
-    link: "/projects/house-modern-63",
-  },
-  {
     id: 4,
     title: "Усадьба «Северная»",
     category: "Каркасный дом 240 м²",
@@ -242,6 +199,49 @@ const projects = [
     images: [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/014ed807-ab79-4540-88c0-40b72b26661e.jpg",
     ],
+  },
+  {
+    id: 22,
+    title: "Каркасный дом «Модерн 63»",
+    category: "Каркасный дом 74 м² · Металлочерепица · Терраса 13 м² · Сауна",
+    location: "Тульская область",
+    year: "2026",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/1bb104b3-1678-4e54-80bd-fb79ae42161b.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9b024708-25cc-423c-b674-ea19f0888b68.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e90cad2f-aedf-4ac8-97bb-f8bce810f3fe.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/3ca6bea4-8b83-485c-9260-614829c4692e.png",
+    ],
+    link: "/projects/house-modern-63",
+  },
+  {
+    id: 23,
+    title: "Дача «Горизонт» 68 м²",
+    category: "Каркасный дом 68 м² · Планкен · Парная · Две террасы 19,84 м²",
+    location: "Тульская область",
+    year: "2026",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/7c9c495f-ea33-449f-a092-c6c441b285cb.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9910a57e-e9a3-486f-8cd0-550ccb2c11b1.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/85c9bf74-1548-42a0-aedc-5a2154f2fa7f.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/557d76ce-df99-4c89-9eb6-2aafa78be1c8.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9c110775-6519-4a00-8824-951d16babb5a.jpg",
+    ],
+    link: "/projects/dacha-68",
+  },
+  {
+    id: 24,
+    title: "Баня «Кедровая» 48 м²",
+    category: "Баня 48 м² · 12.0 × 4.0 м · Парилка · Душевая · Комната отдыха · Терраса",
+    location: "Тульская область",
+    year: "2026",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/eb6d3fe2-b926-4754-b19d-902e64b0b437.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/44c61d2e-57e1-4905-b935-87d86e799e8f.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/0d8abc6b-9765-46db-bab2-b736e58c8b93.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/b93f8806-b2bb-4768-b3ec-eef076cf43dd.jpg",
+    ],
+    link: "/projects/banya-48",
   },
 ]
 
