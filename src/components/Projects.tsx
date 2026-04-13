@@ -3,6 +3,21 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const projects = [
   {
+    id: 23,
+    title: "Каркасный дом «Дача 68»",
+    category: "Каркасный дом 68 м² · Планкен · Парная · Две террасы 19,84 м²",
+    location: "Тульская область",
+    year: "2026",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/7c9c495f-ea33-449f-a092-c6c441b285cb.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9910a57e-e9a3-486f-8cd0-550ccb2c11b1.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/85c9bf74-1548-42a0-aedc-5a2154f2fa7f.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/557d76ce-df99-4c89-9eb6-2aafa78be1c8.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9c110775-6519-4a00-8824-951d16babb5a.jpg",
+    ],
+    link: "/projects/dacha-68",
+  },
+  {
     id: 22,
     title: "Каркасный дом «Модерн 63»",
     category: "Каркасный дом 74 м² · Металлочерепица · Терраса 13 м² · Сауна",
