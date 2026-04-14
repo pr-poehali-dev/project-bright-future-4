@@ -33,7 +33,7 @@ export function Partners() {
             </div>
           ))}
         </div>
-        <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground space-y-1">
+        <div className="mt-12 pt-8 border-t border-border text-center text-base text-foreground space-y-1 font-medium">
           <p>ИП Атлиханов Рашид Сахиб Оглы</p>
           <p>ИНН: 710710119119</p>
           <p>ОГРНИП: 326710000025923</p>
