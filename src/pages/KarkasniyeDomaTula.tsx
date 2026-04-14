@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Helmet } from "react-helmet-async"
 import { Check, Phone, MessageCircle, ChevronDown } from "lucide-react"
 import { PrivacyModal } from "@/components/PrivacyModal"
 import { TermsModal } from "@/components/TermsModal"
@@ -120,6 +121,15 @@ export default function KarkasniyeDomaTula() {
 
   return (
     <div className="min-h-screen bg-white text-[#1a0f0f]">
+      <Helmet>
+        <title>Каркасные дома под ключ в Туле — цены, проекты | Тойстрой71</title>
+        <meta name="description" content="Строим каркасные дома под ключ в Туле и Тульской области. Более 200 объектов с 2015 года. Фиксированная цена, гарантия 5 лет. Бесплатный выезд и консультация. Звоните!" />
+        <meta name="keywords" content="каркасные дома Тула, каркасный дом под ключ Тула, строительство каркасных домов Тула, каркасные дома цены Тула, купить каркасный дом Тула" />
+        <link rel="canonical" href="https://toystroy71.ru/karkasnye-doma-tula" />
+        <meta property="og:title" content="Каркасные дома под ключ в Туле — Тойстрой71" />
+        <meta property="og:description" content="Строим каркасные дома под ключ в Туле и области. Фиксированная цена, гарантия 5 лет, готовность за 90–120 дней." />
+        <meta property="og:url" content="https://toystroy71.ru/karkasnye-doma-tula" />
+      </Helmet>
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm">
         <div className="container mx-auto px-6 md:px-12 py-4 flex items-center justify-between gap-4">
