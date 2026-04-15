@@ -62,7 +62,7 @@ export default function Flyer() {
 
           {/* Почему TOYSTROY */}
           <div>
-            <div style={{ fontSize: "14px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "4px", marginBottom: "10px", letterSpacing: "0.5px" }}>
+            <div style={{ fontSize: "17px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "4px", marginBottom: "12px", letterSpacing: "0.5px" }}>
               Почему выбирают нас
             </div>
             {[
@@ -74,16 +74,16 @@ export default function Flyer() {
               "Древесина камерной сушки",
               "Партнёры: GrandLine, Технониколь",
             ].map((item, i) => (
-              <div key={i} style={{ display: "flex", gap: "7px", marginBottom: "8px", alignItems: "flex-start" }}>
-                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "17px", lineHeight: 1.3, flexShrink: 0 }}>✓</span>
-                <span style={{ fontSize: "15px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
+              <div key={i} style={{ display: "flex", gap: "8px", marginBottom: "13px", alignItems: "flex-start" }}>
+                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "21px", lineHeight: 1.3, flexShrink: 0 }}>✓</span>
+                <span style={{ fontSize: "19px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
               </div>
             ))}
           </div>
 
           {/* Что входит */}
           <div>
-            <div style={{ fontSize: "14px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "4px", marginBottom: "10px", letterSpacing: "0.5px" }}>
+            <div style={{ fontSize: "17px", fontWeight: 900, textTransform: "uppercase", borderBottom: "2px solid #f97316", paddingBottom: "4px", marginBottom: "12px", letterSpacing: "0.5px" }}>
               Что входит в стоимость
             </div>
             {[
@@ -95,9 +95,9 @@ export default function Flyer() {
               "Доставка материалов на объект",
               "Гарантийный паспорт при сдаче",
             ].map((item, i) => (
-              <div key={i} style={{ display: "flex", gap: "7px", marginBottom: "8px", alignItems: "flex-start" }}>
-                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "17px", lineHeight: 1.3, flexShrink: 0 }}>—</span>
-                <span style={{ fontSize: "15px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
+              <div key={i} style={{ display: "flex", gap: "8px", marginBottom: "13px", alignItems: "flex-start" }}>
+                <span style={{ color: "#f97316", fontWeight: 900, fontSize: "21px", lineHeight: 1.3, flexShrink: 0 }}>—</span>
+                <span style={{ fontSize: "19px", fontWeight: 600, lineHeight: 1.4 }}>{item}</span>
               </div>
             ))}
           </div>
