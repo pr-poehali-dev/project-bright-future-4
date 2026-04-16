@@ -16,6 +16,7 @@ import Dacha68 from "./pages/Dacha68";
 import Banya48 from "./pages/Banya48";
 import Dacha54 from "./pages/Dacha54";
 import House193 from "./pages/House193";
+import Dacha36 from "./pages/Dacha36";
 import AvitoDacha from "./pages/AvitoDacha";
 import NotFound from "./pages/NotFound";
 
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/projects/banya-48" element={<Banya48 />} />
           <Route path="/projects/dacha-54" element={<Dacha54 />} />
           <Route path="/projects/house-193" element={<House193 />} />
+          <Route path="/projects/dacha-36" element={<Dacha36 />} />
           <Route path="/avito-dacha" element={<AvitoDacha />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
