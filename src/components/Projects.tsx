@@ -243,6 +243,22 @@ const projects = [
     ],
     link: "/projects/banya-48",
   },
+  {
+    id: 25,
+    title: "Дача «Сосновый дворик» 54 м²",
+    category: "Каркасная дача 54 м² · 6.0 × 6.0 м · Спальня · Кухня-гостиная · С/У · Терраса",
+    location: "Тульская область",
+    year: "2026",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/37793eb2-d296-4c67-83ba-bec8889712e2.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/7eb3359f-9fbc-4d94-b697-6cc652f0f8ce.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/109ff741-8a30-45bc-b3aa-5ccc37e248c6.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/fc5dffaa-c0a2-4ab4-adfb-44984803f692.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/b5ae438b-ca9b-4807-a18f-663abcaa0313.jpg",
+    ],
+    description: "Уютная каркасная дача площадью 54 м² с тёплым фасадом из планкена и современным остеклением в пол. Продуманная планировка на одном этаже: спальня 7,68 м², просторная кухня-гостиная 17,77 м² с панорамными окнами, совмещённый санузел 4,38 м² и открытая терраса 17,97 м² — идеальное место для летнего отдыха. Тёплый каркас, качественное утепление, кровля из металлочерепицы. Строим под ключ по всей Тульской области.",
+    link: "/projects/dacha-54",
+  },
 ]
 
 export function Projects() {
