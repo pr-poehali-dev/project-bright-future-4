@@ -18,7 +18,7 @@ export default function Banya54OrderForm() {
         body: JSON.stringify({
           name,
           phone,
-          comment: "Заявка со страницы: Каркасная баня «Сосновая пара» 54 м²",
+          comment: "Заявка со страницы: Каркасная баня «Рябина» 54 м²",
           buildingType: "Баня",
           area: 54,
         }),
@@ -100,7 +100,7 @@ export default function Banya54OrderForm() {
                   />
                 </div>
                 <div className="bg-orange-50 border border-orange-100 rounded px-4 py-3 mb-6 text-sm text-orange-700">
-                  <strong>Проект:</strong> Баня «Сосновая пара» 54 м² · 6,00 × 6,00 м · Без спален
+                  <strong>Проект:</strong> Баня «Рябина» 54 м² · 6,00 × 9,00 м · Терраса с мангалом
                 </div>
                 <button
                   type="submit"

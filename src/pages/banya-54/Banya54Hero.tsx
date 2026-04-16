@@ -3,32 +3,36 @@ import { ChevronLeft, ChevronRight, Phone, ArrowLeft } from "lucide-react"
 
 const images = [
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/eb6d3fe2-b926-4754-b19d-902e64b0b437.jpg",
-    alt: "Баня «Сосновая пара» 54 м² — вид спереди с террасой",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/648bc39b-0fb1-4d1b-b56b-1065feb9e5ef.jpg",
+    alt: "Баня «Рябина» 54 м² — вид спереди с террасой и мангалом",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/44c61d2e-57e1-4905-b935-87d86e799e8f.jpg",
-    alt: "Баня «Сосновая пара» 54 м² — вид сзади",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/59efaeea-c797-477f-a056-d96cb5373df3.jpg",
+    alt: "Баня «Рябина» 54 м² — боковой фасад",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/0d8abc6b-9765-46db-bab2-b736e58c8b93.jpg",
-    alt: "Баня «Сосновая пара» 54 м² — 3D-модель фасада",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4d129597-3175-49f6-920b-70bc9b1edbfc.jpg",
+    alt: "Баня «Рябина» 54 м² — фасадный чертёж",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/b93f8806-b2bb-4768-b3ec-eef076cf43dd.jpg",
-    alt: "Баня «Сосновая пара» 54 м² — план помещений",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/59dc09ef-a3c8-4827-90c9-2e2597a2c190.jpg",
+    alt: "Баня «Рябина» 54 м² — боковой чертёж",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/70d32287-babb-4e44-98b9-d605aed274c3.jpg",
+    alt: "Баня «Рябина» 54 м² — план этажа",
   },
 ]
 
 const specs = [
-  { label: "Габариты", value: "6,00 × 6,00 м" },
+  { label: "Габариты", value: "6,00 × 9,00 м" },
   { label: "Общая площадь", value: "54 м²" },
   { label: "Этажей", value: "1" },
   { label: "Спальни", value: "Нет" },
-  { label: "Парилка", value: "есть" },
-  { label: "Комната отдыха", value: "есть" },
-  { label: "Душевая", value: "есть" },
-  { label: "Терраса", value: "открытая" },
+  { label: "Парная", value: "5,90 м²" },
+  { label: "Комната отдыха", value: "15,85 м²" },
+  { label: "Моечная + С/У", value: "5,99 м²" },
+  { label: "Терраса с мангалом", value: "18,42 м²" },
 ]
 
 export default function Banya54Hero() {
@@ -78,7 +82,7 @@ export default function Banya54Hero() {
             Проекты
           </a>
           <span>/</span>
-          <span className="text-[#1a0f0f] font-medium">Баня «Сосновая пара» 54 м²</span>
+          <span className="text-[#1a0f0f] font-medium">Баня «Рябина» 54 м²</span>
         </div>
       </div>
 
@@ -139,14 +143,15 @@ export default function Banya54Hero() {
                 Каркасная баня · Тульская область
               </p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-4 leading-tight">
-                Баня «Сосновая пара»<br />
-                <span className="text-orange-500">6,00 × 6,00 м</span>
+                Баня «Рябина»<br />
+                <span className="text-orange-500">6,00 × 9,00 м</span>
               </h1>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
-                Каркасная баня <strong>54 м²</strong> в квадратных габаритах 6×6 — компактная снаружи, но просторная
-                внутри. Полноценная парилка с жарким сосновым духом, душевая, большая комната отдыха
-                для компании и открытая терраса. Ни одного лишнего квадрата — только то, зачем приходят
-                в баню. Строим под ключ по всей Тульской области.
+                Каркасная баня <strong>54 м²</strong> с тёплым кирпично-красным фасадом и белыми акцентами.
+                Главная изюминка — крытая <strong>терраса 18,42 м²</strong> с кирпичным мангалом:
+                после жаркой парной сразу к шашлыку, не выходя под дождь. Парная, моечная,
+                просторная комната отдыха — всё для настоящего банного дня.
+                Строим под ключ по всей Тульской области.
               </p>
 
               <div className="grid grid-cols-2 gap-3 mb-8">
