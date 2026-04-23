@@ -163,7 +163,7 @@ export default function HouseFrameTerraceDetails() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/668bc9a9-d71f-44ff-942c-2feda6a5ffe1.png"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/1f6be8ce-aed8-42ef-9645-3f021ced5126.jpg"
                 alt="План первого этажа каркасного дома с террасой"
                 className="w-full border border-gray-200"
               />
@@ -171,7 +171,7 @@ export default function HouseFrameTerraceDetails() {
             </div>
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/7808b7f9-971e-45db-9b52-7d0c91b70be2.png"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/09728436-4597-432e-9508-2737628ce33e.jpg"
                 alt="План второго этажа каркасного дома с террасой"
                 className="w-full border border-gray-200"
               />
