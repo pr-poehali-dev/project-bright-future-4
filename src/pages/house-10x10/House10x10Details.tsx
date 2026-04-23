@@ -15,7 +15,7 @@ const rooms = [
 ]
 
 const whyList = [
-  "Каркасная технология — дом готов за 90–120 дней",
+  "Каркасная технология — дом готов за 40–60 дней при хороших погодных условиях",
   "Тёплые стены 200 мм минваты, расход тепла минимальный",
   "Крыша из металла с уклоном 22° — без застоя снега",
   "Облицовка под кирпич — выглядит солидно, весит вдвое меньше",
@@ -37,7 +37,7 @@ const specs = [
   { label: "Фасад", value: "Облицовочный кирпич (имитация)" },
   { label: "Кровля", value: "Металл (тёмно-серый)" },
   { label: "Технология стен", value: "Каркас + минвата 200 мм" },
-  { label: "Срок строительства", value: "90–120 дней" },
+  { label: "Срок строительства", value: "40–60 дней при хороших погодных условиях" },
 ]
 
 const included = [
@@ -82,7 +82,7 @@ export default function House10x10Details() {
               <p className="text-sm text-gray-500">Отдельные санузлы — главная спальня имеет собственный</p>
             </div>
             <div className="bg-white p-6 border-t-4 border-orange-500">
-              <div className="text-3xl font-bold text-orange-500 mb-1">120 дней</div>
+              <div className="text-3xl font-bold text-orange-500 mb-1">40–60 дней</div>
               <div className="font-semibold mb-2">Срок постройки</div>
               <p className="text-sm text-gray-500">Каркасная технология позволяет заселиться уже этим сезоном</p>
             </div>
