@@ -3,19 +3,19 @@ import { ChevronLeft, ChevronRight, Phone, ArrowLeft } from "lucide-react"
 
 const images = [
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/decf1f0e-b35e-4948-be89-cb56b9bb8733.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/833ce24b-c3ee-4207-b762-29d7bcfa961d.jpg",
     alt: "Каркасный дом с террасой 10×10 — вид спереди",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/f67c0819-4139-48dd-80e9-d7a8031114a8.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/83b07ef6-8e62-4c1a-9f79-9b63570f0fe4.jpg",
     alt: "Каркасный дом с террасой 10×10 — 3D визуализация",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/1f6be8ce-aed8-42ef-9645-3f021ced5126.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/02aa7d71-0582-4b06-950d-7f391a7e2152.jpg",
     alt: "Каркасный дом с террасой 10×10 — план первого этажа",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/09728436-4597-432e-9508-2737628ce33e.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/b0cf1a32-c423-493f-99c7-81b3a3972a7f.jpg",
     alt: "Каркасный дом с террасой 10×10 — план второго этажа",
   },
 ]
