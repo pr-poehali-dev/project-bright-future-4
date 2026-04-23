@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Check, Phone, MessageCircle } from "lucide-react"
+import { Check, Phone, Mail } from "lucide-react"
 import { PrivacyModal } from "@/components/PrivacyModal"
 import { TermsModal } from "@/components/TermsModal"
 
@@ -59,11 +59,11 @@ export default function DachiTulaOrderForm() {
               </div>
               <div className="mt-8 flex items-center gap-4">
                 <a
-                  href="https://wa.me/78001234567"
+                  href="mailto:Toystroy71rus@mail.ru"
                   className="flex items-center gap-2 text-sm font-medium text-[#1a0f0f] hover:text-orange-500 transition-colors"
                 >
-                  <MessageCircle size={20} />
-                  Написать в WhatsApp
+                  <Mail size={20} />
+                  Написать на почту
                 </a>
                 <span className="text-gray-300">|</span>
                 <a

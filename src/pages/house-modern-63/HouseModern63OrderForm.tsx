@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { MessageCircle } from "lucide-react"
+import { Mail } from "lucide-react"
 import { PrivacyModal } from "@/components/PrivacyModal"
 import { TermsModal } from "@/components/TermsModal"
 
@@ -49,11 +49,11 @@ export default function HouseModern63OrderForm() {
               Оставить заявку
             </a>
             <a
-              href="https://wa.me/78001234567"
+              href="mailto:Toystroy71rus@mail.ru"
               className="border-2 border-white text-white font-semibold px-8 py-4 hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
             >
-              <MessageCircle size={20} />
-              Написать в WhatsApp
+              <Mail size={20} />
+              Написать на почту
             </a>
           </div>
         </div>
