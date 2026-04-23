@@ -23,7 +23,7 @@ const roomsFloor2 = [
 ]
 
 const whyList = [
-  "Каркасная технология — дом готов за 90–120 дней",
+  "Каркасная технология — дом готов за 40–60 дней при хороших погодных условиях",
   "Тёплые стены 200 мм минваты, расход тепла минимальный",
   "Металлическая кровля с уклоном — без застоя снега и воды",
   "Большая терраса 17,7 м² — летняя гостиная под открытым небом",
@@ -45,7 +45,7 @@ const specs = [
   { label: "Фасад", value: "Сайдинг светлый + акценты дерева" },
   { label: "Кровля", value: "Металл (тёмно-серый)" },
   { label: "Технология стен", value: "Каркас + минвата 200 мм" },
-  { label: "Срок строительства", value: "90–120 дней" },
+  { label: "Срок строительства", value: "40–60 дней при хороших погодных условиях" },
 ]
 
 const included = [
@@ -89,7 +89,7 @@ export default function HouseFrameTerraceDetails() {
               <p className="text-sm text-gray-500">Открытая летняя гостиная с навесом из дерева</p>
             </div>
             <div className="bg-white p-6 border-t-4 border-orange-500">
-              <div className="text-3xl font-bold text-orange-500 mb-1">120 дней</div>
+              <div className="text-3xl font-bold text-orange-500 mb-1">40–60 дней</div>
               <div className="font-semibold mb-2">Срок постройки</div>
               <p className="text-sm text-gray-500">Каркасная технология позволяет заселиться уже этим сезоном</p>
             </div>
