@@ -11,6 +11,7 @@ type TextReview = {
   date: string
   sortYear: number
   sortMonth: number
+  photos?: string[]
 }
 
 type VideoReview = {
@@ -167,13 +168,17 @@ const allReviews: Review[] = [
   },
   {
     type: "text",
-    name: "Анонимный клиент",
+    name: "Илья Михайлович",
     location: "Тульская область",
     text: "Только недавно закончили строительство каркасной бани 5×5 с террасой. Уже успели попробовать — впечатления отличные! Баня быстро прогревается, держит жар хорошо. Терраса небольшая, но очень удобная — посидеть после парилки самое то. Ребята работали чисто и в срок, проблем не было, очень довольны результатом. Спасибо команде за свою работу!",
     rating: 5,
     date: "Май 2026",
     sortYear: 2026,
     sortMonth: 5,
+    photos: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e39f10f3-04a3-460e-88d9-b97ad3df9611.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/bab266f6-de7e-4a73-9a63-8e79893bc4b8.jpg",
+    ],
   },
 ]
 
@@ -236,6 +241,13 @@ export function Reviews() {
           ))}
         </div>
         <p className={`text-foreground leading-relaxed flex-1 ${compact ? "text-xs" : ""}`}>"{review.text}"</p>
+        {review.photos && review.photos.length > 0 && (
+          <div className={`flex gap-2 flex-wrap ${compact ? "" : ""}`}>
+            {review.photos.map((src, i) => (
+              <img key={i} src={src} alt={`Фото ${i + 1}`} className={`object-cover rounded ${compact ? "h-20 w-20" : "h-32 w-32 sm:h-40 sm:w-40"}`} />
+            ))}
+          </div>
+        )}
         <div className={`flex items-end justify-between border-t border-border ${compact ? "pt-3" : "pt-6"}`}>
           <div>
             <p className={`font-medium ${compact ? "text-xs" : "text-sm"}`}>{review.name}</p>
