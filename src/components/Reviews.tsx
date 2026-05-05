@@ -180,6 +180,19 @@ const allReviews: Review[] = [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/bab266f6-de7e-4a73-9a63-8e79893bc4b8.jpg",
     ],
   },
+  {
+    type: "text",
+    name: "Вячеслав",
+    location: "Тульская область",
+    text: "Заказывал в TOYSTROY каркасный дачный дом 8×8 для мамы. Остался доволен на все 100%! Построили быстро, в срок, без лишних вопросов и доплат. Дом тёплый, всё сделано качественно. Мама счастлива! Компания надёжная, люди отвечают за своё слово. Рекомендую!",
+    rating: 5,
+    date: "Май 2026",
+    sortYear: 2026,
+    sortMonth: 4,
+    photos: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/24b669fb-4ed8-41fe-88ae-83302e8894b9.png",
+    ],
+  },
 ]
 
 const sorted = [...allReviews].sort(
