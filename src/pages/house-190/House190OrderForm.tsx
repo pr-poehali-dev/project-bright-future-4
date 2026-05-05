@@ -100,7 +100,7 @@ export default function House190OrderForm() {
                   />
                 </div>
                 <div className="bg-orange-50 border border-orange-100 rounded px-4 py-3 mb-6 text-sm text-orange-700">
-                  <strong>Проект:</strong> Дом «Усадьба» 190 м² · 10,0 × 8,0 м · 2 этажа · 5 спален · Сваи
+                  <strong>Проект:</strong> Дом «Дубрава» 190 м² · 10,0 × 8,0 м · 2 этажа · 5 спален · Сваи
                 </div>
                 <button
                   type="submit"

@@ -160,7 +160,7 @@ export default function House190Details() {
             <div>
               <img
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/70faef60-8126-4ba7-9184-3a4ac85244d7.jpg"
-                alt="Дом «Усадьба» — боковой фасад с террасой"
+                alt="Дом «Дубрава» — боковой фасад с террасой"
                 className="w-full object-cover aspect-[4/3]"
               />
             </div>
@@ -187,7 +187,7 @@ export default function House190Details() {
             <div>
               <img
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/d5cb2f75-14f3-4a9e-b7c7-6433e1c8b9aa.jpg"
-                alt="Дом «Усадьба» — главный фасад"
+                alt="Дом «Дубрава» — главный фасад"
                 className="w-full object-cover aspect-[4/3]"
               />
             </div>
