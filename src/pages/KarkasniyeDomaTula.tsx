@@ -129,6 +129,15 @@ export default function KarkasniyeDomaTula() {
         <meta property="og:title" content="Каркасные дома под ключ в Туле — от 2 800 000 ₽ | Тойстрой71" />
         <meta property="og:description" content="Строим каркасные дома под ключ в Туле и области. От 2 800 000 ₽, гарантия 5 лет, готовность 90–120 дней. Более 200 объектов с 2015 года." />
         <meta property="og:url" content="https://toystroy71.ru/karkasnye-doma-tula" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.map(({ q, a }) => ({
+            "@type": "Question",
+            "name": q,
+            "acceptedAnswer": { "@type": "Answer", "text": a }
+          }))
+        })}</script>
       </Helmet>
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm">

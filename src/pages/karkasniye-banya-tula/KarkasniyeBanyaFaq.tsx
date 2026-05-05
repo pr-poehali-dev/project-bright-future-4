@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
+import { Helmet } from "react-helmet-async"
 
 const faqs = [
   {
@@ -33,6 +34,17 @@ export default function KarkasniyeBanyaFaq() {
 
   return (
     <section className="py-16">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.map(({ q, a }) => ({
+            "@type": "Question",
+            "name": q,
+            "acceptedAnswer": { "@type": "Answer", "text": a }
+          }))
+        })}</script>
+      </Helmet>
       <div className="container mx-auto px-6 md:px-12 max-w-3xl">
         <div className="text-center mb-12">
           <p className="text-orange-500 text-sm font-bold tracking-widest uppercase mb-3">Вопросы и ответы</p>
