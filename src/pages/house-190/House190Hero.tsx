@@ -78,7 +78,7 @@ export default function House190Hero() {
             Проекты
           </a>
           <span>/</span>
-          <span className="text-[#1a0f0f] font-medium">Дом «Берёзка» 190 м²</span>
+          <span className="text-[#1a0f0f] font-medium">Дом «Усадьба» 190 м²</span>
         </div>
       </div>
 
@@ -139,7 +139,7 @@ export default function House190Hero() {
                 Каркасный дом · Тульская область
               </p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-4 leading-tight">
-                Дом «Берёзка»<br />
+                Дом «Усадьба»<br />
                 <span className="text-orange-500">10,0 × 8,0 м</span>
               </h1>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">

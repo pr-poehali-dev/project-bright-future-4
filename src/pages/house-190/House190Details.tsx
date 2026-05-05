@@ -56,7 +56,7 @@ export default function House190Details() {
             {[
               { value: "190 м²", label: "Общая площадь", sub: "Просторный двухэтажный дом для большой семьи" },
               { value: "5 спален", label: "Спальные комнаты", sub: "На двух этажах — места хватит всем" },
-              { value: "90–120 дней", label: "Срок постройки", sub: "Каркасная технология — заезжайте уже этим летом", orange: true },
+              { value: "40–60 дней", label: "Срок постройки", sub: "Каркасная технология — заезжайте уже этим летом", orange: true },
             ].map((s) => (
               <div key={s.label} className="py-10 px-8">
                 <p className={`text-4xl md:text-5xl font-medium mb-2 ${s.orange ? "text-orange-500" : ""}`}>
@@ -160,7 +160,7 @@ export default function House190Details() {
             <div>
               <img
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/70faef60-8126-4ba7-9184-3a4ac85244d7.jpg"
-                alt="Дом «Берёзка» — боковой фасад с террасой"
+                alt="Дом «Усадьба» — боковой фасад с террасой"
                 className="w-full object-cover aspect-[4/3]"
               />
             </div>
@@ -187,7 +187,7 @@ export default function House190Details() {
             <div>
               <img
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/d5cb2f75-14f3-4a9e-b7c7-6433e1c8b9aa.jpg"
-                alt="Дом «Берёзка» — главный фасад"
+                alt="Дом «Усадьба» — главный фасад"
                 className="w-full object-cover aspect-[4/3]"
               />
             </div>
