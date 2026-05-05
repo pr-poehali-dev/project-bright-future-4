@@ -100,7 +100,7 @@ export default function House130OrderForm() {
                   />
                 </div>
                 <div className="bg-orange-50 border border-orange-100 rounded px-4 py-3 mb-6 text-sm text-orange-700">
-                  <strong>Проект:</strong> Дом «Тайга» 130 м² · 13,0 × 8,0 м · 1 этаж · 3 спальни · Сваи
+                  <strong>Проект:</strong> Дом «Кедр 130» · 13,0 × 8,0 м · 1 этаж · 3 спальни · Сваи
                 </div>
                 <button
                   type="submit"
