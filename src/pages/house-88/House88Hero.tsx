@@ -46,6 +46,7 @@ export default function House88Hero() {
               src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg"
               alt="TOYSTROY"
               className="w-9 h-9 rounded object-cover"
+              loading="eager"
             />
             <span className="text-lg font-semibold tracking-widest uppercase text-[#1a0f0f]">TOYSTROY</span>
           </a>
@@ -91,6 +92,8 @@ export default function House88Hero() {
                   src={images[currentImg].src}
                   alt={images[currentImg].alt}
                   className="w-full h-full object-cover transition-all duration-500"
+                  fetchPriority="high"
+                  decoding="async"
                 />
                 <button
                   onClick={prev}
@@ -128,7 +131,7 @@ export default function House88Hero() {
                       i === currentImg ? "border-orange-500" : "border-transparent opacity-60 hover:opacity-100"
                     }`}
                   >
-                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                   </button>
                 ))}
               </div>

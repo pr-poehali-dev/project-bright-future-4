@@ -100,6 +100,8 @@ export default function Banya54Details() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/70d32287-babb-4e44-98b9-d605aed274c3.jpg"
                 alt="План этажа бани «Рябина» 54 м²"
                 className="w-full object-contain"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -126,6 +128,8 @@ export default function Banya54Details() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/59efaeea-c797-477f-a056-d96cb5373df3.jpg"
                 alt="Баня «Рябина» — боковой фасад"
                 className="w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -153,6 +157,8 @@ export default function Banya54Details() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/648bc39b-0fb1-4d1b-b56b-1065feb9e5ef.jpg"
                 alt="Баня «Рябина» — фасад с террасой"
                 className="w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

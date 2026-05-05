@@ -84,6 +84,8 @@ export default function DachaDetails() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/b5ae438b-ca9b-4807-a18f-663abcaa0313.jpg"
                 alt="План помещений дачи 54 м²"
                 className="w-full object-contain mb-6"
+                loading="lazy"
+                decoding="async"
               />
               <div className="bg-gray-50 p-6">
                 <p className="text-sm font-semibold mb-4">Состав помещений</p>
@@ -125,6 +127,8 @@ export default function DachaDetails() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/37793eb2-d296-4c67-83ba-bec8889712e2.jpg"
                 alt="Каркасная дача 54 м² — вид с участка"
                 className="w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -152,6 +156,8 @@ export default function DachaDetails() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/7eb3359f-9fbc-4d94-b697-6cc652f0f8ce.jpg"
                 alt="Каркасная дача 54 м² — вид сзади"
                 className="w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

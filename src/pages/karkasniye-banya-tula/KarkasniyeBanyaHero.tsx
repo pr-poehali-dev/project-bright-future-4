@@ -11,6 +11,7 @@ export default function KarkasniyeBanyaHero() {
               src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg"
               alt="TOYSTROY"
               className="w-9 h-9 rounded object-cover"
+              loading="eager"
             />
             <span className="text-lg font-semibold tracking-widest uppercase text-[#1a0f0f]">TOYSTROY</span>
           </a>
@@ -39,6 +40,8 @@ export default function KarkasniyeBanyaHero() {
             src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/cf189aaf-d379-44fc-83f2-6f814611de47.jpg"
             alt="Каркасные бани в Туле под ключ"
             className="w-full h-full object-cover object-center"
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-[#1a0f0f]/65" />
         </div>

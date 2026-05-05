@@ -99,6 +99,8 @@ export default function Dacha36Details() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/d234f9bf-8e2b-4ce0-99bd-59d1e7e950fb.jpg"
                 alt="План этажа дачи «Берёзка» 36 м²"
                 className="w-full object-contain"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -125,6 +127,8 @@ export default function Dacha36Details() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/ba3f4a22-635b-46db-bead-cd7fc6e58a38.jpg"
                 alt="Дача «Берёзка» — вид с террасой"
                 className="w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -152,6 +156,8 @@ export default function Dacha36Details() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/456f13cb-34f1-4f19-9423-311eb02cfd98.jpg"
                 alt="Дача «Берёзка» — фасад"
                 className="w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

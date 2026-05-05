@@ -127,6 +127,8 @@ export default function House190Details() {
                   src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/1e8fbf6e-b8b1-427d-bc34-65cba05ad098.jpg"
                   alt="План 1 этажа — Дом «Берёзка» 190 м²"
                   className="w-full object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div>
@@ -135,6 +137,8 @@ export default function House190Details() {
                   src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/cb8e2818-2326-4082-9e64-c01406e24f57.jpg"
                   alt="План 2 этажа — Дом «Берёзка» 190 м²"
                   className="w-full object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -162,6 +166,8 @@ export default function House190Details() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/70faef60-8126-4ba7-9184-3a4ac85244d7.jpg"
                 alt="Дом «Дубрава» — боковой фасад с террасой"
                 className="w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -189,6 +195,8 @@ export default function House190Details() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/d5cb2f75-14f3-4a9e-b7c7-6433e1c8b9aa.jpg"
                 alt="Дом «Дубрава» — главный фасад"
                 className="w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

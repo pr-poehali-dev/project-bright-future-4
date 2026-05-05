@@ -102,6 +102,8 @@ export default function House88Details() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4d2ebc35-b514-4a30-a6df-fbdd64e0c10b.jpg"
                 alt="План этажа дома «Графит» 88 м²"
                 className="w-full object-contain"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -128,6 +130,8 @@ export default function House88Details() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/c61506d1-af54-4cc2-b2ea-b9f041a7d6bb.jpg"
                 alt="Дом «Графит» — боковой фасад"
                 className="w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -155,6 +159,8 @@ export default function House88Details() {
                 src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/ee7e2204-d0ce-4a08-97fd-71d2d7c71998.jpg"
                 alt="Дом «Графит» — главный фасад с террасой"
                 className="w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
