@@ -69,6 +69,12 @@ const projects = [
     area: "Баня под ключ 6×6",
     image: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/e4ab6219-7cb4-4808-b5c3-8d9537204194.jpg",
   },
+  {
+    title: "Баня «Парная 25» 5×5",
+    area: "Каркасная баня · Терраса · 2026",
+    image: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e39f10f3-04a3-460e-88d9-b97ad3df9611.png",
+    link: "/projects/banya-25",
+  },
 ]
 
 const process = [
@@ -176,19 +182,23 @@ export default function KarkasniyeBanyaSections() {
             <h2 className="text-3xl md:text-4xl font-medium">Построенные бани в Тульской области</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {projects.map((p) => (
-              <div key={p.title} className="group">
-                <div className="overflow-hidden aspect-square mb-3">
-                  <img
-                    src={p.image}
-                    alt={p.title + " — Тула"}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <h3 className="font-medium text-sm mb-0.5">{p.title}</h3>
-                <p className="text-xs text-gray-500">{p.area}</p>
-              </div>
-            ))}
+            {projects.map((p) => {
+              const Wrapper = p.link ? "a" : "div"
+              return (
+                <Wrapper key={p.title} href={p.link} className="group block">
+                  <div className="overflow-hidden aspect-square mb-3">
+                    <img
+                      src={p.image}
+                      alt={p.title + " — Тула"}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <h3 className="font-medium text-sm mb-0.5">{p.title}</h3>
+                  <p className="text-xs text-gray-500">{p.area}</p>
+                  {p.link && <p className="text-xs text-orange-500 mt-0.5">Смотреть проект →</p>}
+                </Wrapper>
+              )
+            })}
           </div>
           <div className="text-center mt-10">
             <a
