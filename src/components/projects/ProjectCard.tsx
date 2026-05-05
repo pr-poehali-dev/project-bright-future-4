@@ -37,6 +37,8 @@ export default function ProjectCard({
         <img
           src={images[currentSlide]}
           alt={project.title}
+          loading="lazy"
+          decoding="async"
           className={`w-full h-full object-cover transition-all duration-700 ${
             hoveredId === project.id ? "scale-105" : "scale-100"
           }`}
