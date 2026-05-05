@@ -292,6 +292,21 @@ const projects = [
     link: "/projects/dacha-36",
   },
   {
+    id: 31,
+    title: "Дом «Тайга» 130 м²",
+    category: "Каркасный дом 130 м² · 13,0 × 8,0 м · 1 этаж · 3 спальни · Сваи · Терраса 24 м²",
+    location: "Тульская область",
+    year: "2026",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/4bfad1f7-42ee-427b-a66d-6a3cd0f0420c.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/f7ba6f46-2c4f-4693-8128-5ef593af6380.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/2f1f244b-677b-412c-a7f9-d930672b3b52.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e95e67b9-eced-401f-9504-cbfe020d5a3c.jpg",
+    ],
+    description: "Одноэтажный каркасный дом 130 м² в тёмном графитовом фасаде с деревянными акцентами. Кухня-гостиная 26,30 м², три спальни, гардеробная и огромная крытая терраса 24,69 м² с подсветкой. Всё на одном уровне — удобно для всей семьи. На свайном фундаменте, строим под ключ по всей Тульской области.",
+    link: "/projects/house-130",
+  },
+  {
     id: 30,
     title: "Дом «Графит» 88 м²",
     category: "Каркасный дом 88 м² · 10,0 × 9,0 м · 1 этаж · 2 спальни · Сваи · Терраса 11 м²",

@@ -22,6 +22,7 @@ import AvitoDacha from "./pages/AvitoDacha";
 import Card from "./pages/Card";
 import House190 from "./pages/House190";
 import House88 from "./pages/House88";
+import House130 from "./pages/House130";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/card" element={<Card />} />
           <Route path="/projects/house-190" element={<House190 />} />
           <Route path="/projects/house-88" element={<House88 />} />
+          <Route path="/projects/house-130" element={<House130 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
