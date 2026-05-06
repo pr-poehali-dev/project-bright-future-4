@@ -12,8 +12,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 33,
-    title: "Дача 8×8 для мамы",
-    category: "Каркасная дача · 8,0 × 8,0 м · 1 этаж · Сваи · Крытая терраса",
+    title: "Дача «Светлая» 64 м²",
+    category: "Каркасная дача 64 м² · 8,0 × 8,0 м · 1 этаж · Сваи · Крытая терраса",
     location: "Тульская область",
     year: "2026",
     images: [
