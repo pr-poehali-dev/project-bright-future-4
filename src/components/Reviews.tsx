@@ -174,7 +174,7 @@ const allReviews: Review[] = [
     rating: 5,
     date: "Май 2026",
     sortYear: 2026,
-    sortMonth: 5,
+    sortMonth: 4,
     photos: [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e39f10f3-04a3-460e-88d9-b97ad3df9611.png",
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/bab266f6-de7e-4a73-9a63-8e79893bc4b8.jpg",
@@ -188,7 +188,7 @@ const allReviews: Review[] = [
     rating: 5,
     date: "Май 2026",
     sortYear: 2026,
-    sortMonth: 4,
+    sortMonth: 5,
     photos: [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/24b669fb-4ed8-41fe-88ae-83302e8894b9.png",
     ],
