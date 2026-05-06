@@ -168,6 +168,9 @@ const allReviews: Review[] = [
     date: "Февраль 2023",
     sortYear: 2023,
     sortMonth: 2,
+    photos: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/c61a6afe-135c-4846-8821-e52b6e8b46ff.jpg",
+    ],
   },
   {
     type: "text",
