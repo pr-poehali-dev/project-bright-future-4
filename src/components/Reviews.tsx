@@ -104,6 +104,9 @@ const allReviews: Review[] = [
     date: "Май 2024",
     sortYear: 2024,
     sortMonth: 5,
+    photos: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/d8fffe40-3fb8-4f5e-81ef-f9eec7416312.jpg",
+    ],
   },
   {
     type: "text",
