@@ -169,7 +169,7 @@ const allReviews: Review[] = [
     sortYear: 2023,
     sortMonth: 2,
     photos: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/33e41097-1fe4-4e95-a732-149e9dee2240.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/5c067d0a-c24d-4828-974a-86646bae8c13.jpg",
     ],
   },
   {
