@@ -28,6 +28,21 @@ type Review = TextReview | VideoReview
 
 const allReviews: Review[] = [
   {
+    type: "text",
+    name: "Алина Миронова",
+    location: "Тульская область",
+    text: "Наш домик 6×8 с уютной террасой готов. Качество — пушка, сроки — рекордные, а эмоции просто зашкаливают! Спасибо за профессионализм и наш новый уголок счастья. Всем рекомендую!",
+    rating: 5,
+    date: "Май 2026",
+    sortYear: 2026,
+    sortMonth: 5,
+    photos: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/c18ec5f4-dcfd-416d-a1d4-14ceda87620a.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/2bad074b-cbcb-40ea-86bd-62da5bee0e3b.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/2be785fe-3f2f-4f10-9783-276b3842b0f7.png",
+    ],
+  },
+  {
     type: "video",
     title: "Видеоотзыв клиента",
     text: "Заказали каркасный дом 6×8 — результат превзошёл ожидания. Индивидуальный подход, учли все наши пожелания по планировке. Построили быстро, качество материалов отличное. Очень довольны, рекомендуем TOYSTROY!",
