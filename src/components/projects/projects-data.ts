@@ -11,6 +11,20 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 34,
+    title: "Дача «Уютная» 6×8",
+    category: "Каркасная дача 48 м² · 6,0 × 8,0 м · 1 этаж · Сваи · Открытая терраса · Имитация бруса",
+    location: "Тульская область",
+    year: "2026",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/c18ec5f4-dcfd-416d-a1d4-14ceda87620a.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/2be785fe-3f2f-4f10-9783-276b3842b0f7.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/2bad074b-cbcb-40ea-86bd-62da5bee0e3b.jpg",
+    ],
+    description: "Каркасная дача 6×8 м с открытой террасой — имитация бруса, металлочерепица, светлый интерьер с деревянной вагонкой. Построена под ключ для Алины Мироновой: качество, сроки, без доплат.",
+    link: "/projects/dacha-48",
+  },
+  {
     id: 33,
     title: "Дача «Светлая» 64 м²",
     category: "Каркасная дача 64 м² · 8,0 × 8,0 м · 1 этаж · Сваи · Крытая терраса",
