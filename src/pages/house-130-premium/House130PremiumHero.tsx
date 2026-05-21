@@ -3,11 +3,11 @@ import { ChevronLeft, ChevronRight, Phone, ArrowLeft } from "lucide-react"
 
 const images = [
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/0be7cb40-5447-4305-a1f2-c9e2986ea639.jpg",
-    alt: "Дом 13×10 м — фасад с имитацией бруса и террасой",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/729b80bb-9226-4229-93c5-1bdaae07747c.jpg",
+    alt: "Одноэтажный дом 13×10 м — фасад с имитацией бруса и террасой",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/b2cceeee-281a-40f0-96f5-5bcfc6a68d2a.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/35fce8e3-a9ab-4cb3-b009-5fbd9b9d3c26.jpg",
     alt: "Открытая терраса 20 м² с панорамными окнами",
   },
   {

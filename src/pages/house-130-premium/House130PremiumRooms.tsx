@@ -38,7 +38,7 @@ const rooms = [
   {
     name: "Терраса",
     area: "16,2 м²",
-    img: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/b2cceeee-281a-40f0-96f5-5bcfc6a68d2a.jpg",
+    img: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/35fce8e3-a9ab-4cb3-b009-5fbd9b9d3c26.jpg",
     description: "Открытая терраса с деревянным настилом, балюстрадой и крышей. Прямой выход из кухни-гостиной через панорамные двери.",
   },
   {

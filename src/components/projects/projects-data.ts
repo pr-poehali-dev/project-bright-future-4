@@ -17,9 +17,9 @@ export const projects: Project[] = [
     location: "Тульская область",
     year: "2026",
     images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/0be7cb40-5447-4305-a1f2-c9e2986ea639.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/729b80bb-9226-4229-93c5-1bdaae07747c.jpg",
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/342dcc4f-cde0-4a3d-bd42-5aff83af57f5.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/b2cceeee-281a-40f0-96f5-5bcfc6a68d2a.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/35fce8e3-a9ab-4cb3-b009-5fbd9b9d3c26.jpg",
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/6ff183db-49ca-43b2-843c-f1567963f505.jpg",
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9a0575d7-745d-44e8-8a28-56c0fbd60035.jpg",
     ],
