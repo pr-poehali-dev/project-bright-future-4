@@ -11,22 +11,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 35,
-    title: "Дом «Премиум» 130 м² 13×10",
-    category: "Каркасный дом 130 м² + терраса 20 м² · 13,0 × 10,0 м · 1 этаж · Второй свет · Сваи · Сауна · 3 спальни · Имитация бруса · Антрацит",
-    location: "Тульская область",
-    year: "2026",
-    images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/5720e6f1-bbd2-4ab2-a8ec-97c57fce6721.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/b6483cbd-5e6f-4462-9929-3f967daef9d6.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/44676584-71e2-42fd-8de2-735cb2426b53.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/de416346-f043-49b0-9253-e08b4fa80f67.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/0f293ac3-2b0c-4d86-bd17-7941be0d6de5.jpg",
-    ],
-    description: "Просторный одноэтажный каркасный дом 13×10 м с террасой 20 м² сбоку на винтовых сваях. Кухня-гостиная 50 м² со вторым светом и панорамными окнами на террасу, три спальни, мастер-спальня с гардеробной, встроенная сауна с душевой, два санузла. Фасад — имитация бруса, кровля — серая металлочерепица, окна антрацит.",
-    link: "/projects/house-130-premium",
-  },
-  {
     id: 34,
     title: "Дача «Уютная» 6×8",
     category: "Каркасная дача 48 м² · 6,0 × 8,0 м · 1 этаж · Сваи · Открытая терраса · Имитация бруса",
