@@ -3,20 +3,20 @@ import { ChevronLeft, ChevronRight, Phone, ArrowLeft } from "lucide-react"
 
 const images = [
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/3fa8e446-8e0c-4c9f-be71-67b46474cc0f.jpg",
-    alt: "Одноэтажный дом 13×10 м — имитация бруса, антрацитовые окна, второй свет",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/5720e6f1-bbd2-4ab2-a8ec-97c57fce6721.jpg",
+    alt: "Одноэтажный дом 13×10 м — имитация бруса, антрацитовые окна",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/da5b371a-4e15-4946-ab38-c91830122179.jpg",
-    alt: "Вид с террасы — второй свет и панорамное остекление",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/44676584-71e2-42fd-8de2-735cb2426b53.jpg",
+    alt: "Вид с террасы — второй свет внутри одноэтажного дома",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/554fe155-a849-4582-b3d3-daf8e2452000.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/de416346-f043-49b0-9253-e08b4fa80f67.jpg",
     alt: "Открытая терраса 20 м² с мебелью",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/12b93839-f3df-40c8-8dae-de71b45df831.jpg",
-    alt: "Кухня-гостиная 50 м² со вторым светом",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/b6483cbd-5e6f-4462-9929-3f967daef9d6.jpg",
+    alt: "Кухня-гостиная 50 м² со вторым светом и сводчатым потолком",
   },
   {
     src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/0f293ac3-2b0c-4d86-bd17-7941be0d6de5.jpg",
