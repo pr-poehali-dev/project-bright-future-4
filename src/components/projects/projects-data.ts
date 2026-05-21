@@ -11,6 +11,22 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 35,
+    title: "Дом «Премиум» 130 м² 13×10",
+    category: "Каркасный дом 130 м² + терраса 20 м² · 13,0 × 10,0 м · 1 этаж · Сваи · Сауна · 3 спальни · Имитация бруса",
+    location: "Тульская область",
+    year: "2026",
+    images: [
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/0be7cb40-5447-4305-a1f2-c9e2986ea639.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/342dcc4f-cde0-4a3d-bd42-5aff83af57f5.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/b2cceeee-281a-40f0-96f5-5bcfc6a68d2a.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/6ff183db-49ca-43b2-843c-f1567963f505.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9a0575d7-745d-44e8-8a28-56c0fbd60035.jpg",
+    ],
+    description: "Просторный одноэтажный каркасный дом 13×10 м с террасой 20 м² на винтовых сваях. Три спальни, кухня-гостиная 50 м² с панорамными окнами, мастер-спальня с гардеробной, встроенная сауна с душевой, два санузла. Фасад — имитация бруса, кровля — тёмно-серая металлочерепица.",
+    link: "/projects/house-130-premium",
+  },
+  {
     id: 34,
     title: "Дача «Уютная» 6×8",
     category: "Каркасная дача 48 м² · 6,0 × 8,0 м · 1 этаж · Сваи · Открытая терраса · Имитация бруса",

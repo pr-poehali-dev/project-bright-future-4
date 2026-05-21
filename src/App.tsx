@@ -26,6 +26,7 @@ import House130 from "./pages/House130";
 import Banya25 from "./pages/Banya25";
 import Dacha64 from "./pages/Dacha64";
 import Dacha48 from "./pages/Dacha48";
+import House130Premium from "./pages/House130Premium";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -59,6 +60,7 @@ const App = () => (
           <Route path="/projects/banya-25" element={<Banya25 />} />
           <Route path="/projects/dacha-64" element={<Dacha64 />} />
           <Route path="/projects/dacha-48" element={<Dacha48 />} />
+          <Route path="/projects/house-130-premium" element={<House130Premium />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
