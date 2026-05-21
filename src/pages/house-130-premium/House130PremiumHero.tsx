@@ -3,40 +3,48 @@ import { ChevronLeft, ChevronRight, Phone, ArrowLeft } from "lucide-react"
 
 const images = [
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/729b80bb-9226-4229-93c5-1bdaae07747c.jpg",
-    alt: "Одноэтажный дом 13×10 м — фасад с имитацией бруса и террасой",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/3fa8e446-8e0c-4c9f-be71-67b46474cc0f.jpg",
+    alt: "Одноэтажный дом 13×10 м — имитация бруса, антрацитовые окна, второй свет",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/35fce8e3-a9ab-4cb3-b009-5fbd9b9d3c26.jpg",
-    alt: "Открытая терраса 20 м² с панорамными окнами",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/da5b371a-4e15-4946-ab38-c91830122179.jpg",
+    alt: "Вид с террасы — второй свет и панорамное остекление",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/342dcc4f-cde0-4a3d-bd42-5aff83af57f5.jpg",
-    alt: "Кухня-гостиная 50 м² с панорамными окнами",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/554fe155-a849-4582-b3d3-daf8e2452000.jpg",
+    alt: "Открытая терраса 20 м² с мебелью",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/6ff183db-49ca-43b2-843c-f1567963f505.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/12b93839-f3df-40c8-8dae-de71b45df831.jpg",
+    alt: "Кухня-гостиная 50 м² со вторым светом",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/0f293ac3-2b0c-4d86-bd17-7941be0d6de5.jpg",
     alt: "Мастер-спальня с гардеробной",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/15c8fe41-b614-4b6a-98df-c01397fa4a64.jpg",
-    alt: "Гостевая спальня 11 м²",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/e2398154-98c9-4e64-83f4-3f8374be2a5f.jpg",
+    alt: "Спальня 11 м²",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/99f43b09-0e7d-4c5a-a8fd-976f830d9da8.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/d2108b23-6d11-4a78-abd3-745e3ddfe409.jpg",
     alt: "Спальня 10 м²",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/9a0575d7-745d-44e8-8a28-56c0fbd60035.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/67eaf59b-6a1d-4ea4-ad92-911d81d0bd46.jpg",
     alt: "Сауна 4,6 м² с натуральной вагонкой",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/79c307e4-4aa7-47f1-a3be-8114fe442a72.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/c1129423-3bfa-482a-b928-a13e145f914d.jpg",
     alt: "Санузел с душевой кабиной",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/1fdf1805-e1b6-4a29-8ca9-06a9b20b1d61.png",
-    alt: "План дома 13×10 м с террасой",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/661547ed-54fc-4088-b1f3-c1c3a463e541.png",
+    alt: "3D-план дома 13×10 м",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/f5a6ca13-8d6b-4c4b-bcca-361b596ec008.png",
+    alt: "Архитектурный план дома 13×10 м с террасой",
   },
 ]
 
@@ -45,9 +53,11 @@ const specs = [
   { label: "Площадь дома", value: "130 м²" },
   { label: "Терраса", value: "20 м²" },
   { label: "Этажей", value: "1" },
+  { label: "Особенность", value: "Второй свет" },
   { label: "Фундамент", value: "Винтовые сваи" },
   { label: "Фасад", value: "Имитация бруса" },
-  { label: "Кровля", value: "Металлочерепица" },
+  { label: "Кровля", value: "Металлочерепица серая" },
+  { label: "Окна", value: "Антрацит" },
   { label: "Высота потолков", value: "2,7 м" },
 ]
 
@@ -111,9 +121,10 @@ export default function House130PremiumHero() {
               </h1>
               <p className="text-2xl md:text-3xl text-orange-500 font-medium mb-6">13,0 × 10,0 м · 130 м² + терраса 20 м²</p>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Просторный одноэтажный дом <strong>130 м²</strong> на винтовых сваях с большой террасой 20 м².
-                Три спальни, кухня-гостиная 50 м² с панорамными окнами, мастер-спальня с гардеробной,
-                встроенная сауна с душевой и два санузла. Фасад — имитация бруса, кровля — тёмно-серая металлочерепица.
+                Просторный одноэтажный дом <strong>130 м²</strong> на винтовых сваях с террасой 20 м² сбоку.
+                Кухня-гостиная 50 м² со <strong>вторым светом</strong> и панорамными окнами на террасу,
+                три спальни, мастер-спальня с гардеробной, встроенная сауна с душевой и два санузла.
+                Фасад — имитация бруса, кровля — серая металлочерепица, окна антрацит.
               </p>
 
               <div className="grid grid-cols-2 gap-3 mb-8">
@@ -165,7 +176,7 @@ export default function House130PremiumHero() {
                   <span className="text-white text-xs font-medium">{currentImg + 1} / {images.length}</span>
                 </div>
               </div>
-              <div className="grid grid-cols-5 gap-2 mt-2">
+              <div className="grid grid-cols-6 gap-2 mt-2">
                 {images.map((img, i) => (
                   <button
                     key={i}
@@ -177,7 +188,7 @@ export default function House130PremiumHero() {
                 ))}
               </div>
               <p className="text-xs text-gray-400 text-center mt-3">
-                Фасад · Терраса · Кухня-гостиная · Спальни · Сауна · Санузел · План
+                Фасад · Второй свет · Терраса · Кухня-гостиная · Спальни · Сауна · Санузел · План
               </p>
             </div>
           </div>
