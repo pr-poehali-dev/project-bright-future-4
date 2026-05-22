@@ -32,16 +32,15 @@ export default function Flyer() {
       }}>
 
         {/* ШАПКА */}
-        <div style={{ background: "#111", position: "relative", overflow: "hidden" }}>
-          <img src={BG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.12 }} />
+        <div style={{ background: "#fff", position: "relative", overflow: "hidden", borderBottom: "3px solid #f97316" }}>
           <div style={{ position: "relative", zIndex: 1 }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "10mm 10mm 6mm", textAlign: "center" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "16px", justifyContent: "center" }}>
                 <img src={LOGO} alt="TS" style={{ width: "90px", height: "90px", borderRadius: "14px" }} />
                 <div style={{ fontSize: "56px", fontWeight: 900, color: "#f97316", letterSpacing: "10px", lineHeight: 1 }}>TOYSTROY</div>
               </div>
-              <div style={{ fontSize: "36px", fontWeight: 900, color: "#fff", letterSpacing: "4px", textTransform: "uppercase", marginTop: "10px" }}>Каркасные дома, дачи и бани под ключ</div>
-              <div style={{ fontSize: "20px", fontWeight: 700, color: "#bbb", marginTop: "6px", letterSpacing: "2px" }}>Тула · Работаем по всей Тульской области</div>
+              <div style={{ fontSize: "36px", fontWeight: 900, color: "#111", letterSpacing: "4px", textTransform: "uppercase", marginTop: "10px" }}>Каркасные дома, дачи и бани под ключ</div>
+              <div style={{ fontSize: "20px", fontWeight: 700, color: "#666", marginTop: "6px", letterSpacing: "2px" }}>Тула · Работаем по всей Тульской области</div>
             </div>
           </div>
         </div>
@@ -106,11 +105,10 @@ export default function Flyer() {
         <div style={{ height: "2px", background: "#f97316", margin: "0 10mm" }} />
 
         {/* КОНТАКТЫ */}
-        <div style={{ background: "#111", margin: "0 10mm 6mm", position: "relative", overflow: "hidden", padding: "4mm 8mm" }}>
-          <img src={BG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.08 }} />
+        <div style={{ background: "#fff", margin: "0 10mm 6mm", position: "relative", overflow: "hidden", padding: "4mm 8mm", border: "2px solid #f97316", borderRadius: "8px" }}>
           <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: "8mm", justifyContent: "space-between" }}>
 
-            <div style={{ color: "#fff", lineHeight: 1.9 }}>
+            <div style={{ color: "#111", lineHeight: 1.9 }}>
               <div style={{ fontSize: "20px", fontWeight: 900, color: "#f97316", marginBottom: "4px" }}>Свяжитесь с нами</div>
               <div style={{ fontSize: "16px", fontWeight: 700 }}>📞 +7 (950) 917-09-74</div>
               <div style={{ fontSize: "15px" }}>📧 Toystroy71rus@mail.ru</div>
@@ -123,14 +121,14 @@ export default function Flyer() {
               <div style={{ background: "#fff", padding: "8px", borderRadius: "10px" }}>
                 <QRCodeSVG value="https://toystroy71.ru" size={180} />
               </div>
-              <div style={{ color: "#fff", fontSize: "18px", fontWeight: 900, textAlign: "center" }}>Сайт</div>
+              <div style={{ color: "#111", fontSize: "18px", fontWeight: 900, textAlign: "center" }}>Сайт</div>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
               <div style={{ background: "#fff", padding: "8px", borderRadius: "10px" }}>
                 <QRCodeSVG value="https://vk.com/toystroy71" size={180} />
               </div>
-              <div style={{ color: "#fff", fontSize: "18px", fontWeight: 900, textAlign: "center" }}>ВКонтакте</div>
+              <div style={{ color: "#111", fontSize: "18px", fontWeight: 900, textAlign: "center" }}>ВКонтакте</div>
             </div>
           </div>
         </div>
