@@ -3,6 +3,7 @@ import DachiTulaHero from "@/pages/dachi-tula/DachiTulaHero"
 import DachiTulaSections from "@/pages/dachi-tula/DachiTulaSections"
 import DachiTulaFaq from "@/pages/dachi-tula/DachiTulaFaq"
 import DachiTulaOrderForm from "@/pages/dachi-tula/DachiTulaOrderForm"
+import DachiTulaSeoText from "@/pages/dachi-tula/DachiTulaSeoText"
 
 export default function DachiTula() {
   return (
@@ -19,6 +20,7 @@ export default function DachiTula() {
       <DachiTulaHero />
       <DachiTulaSections />
       <DachiTulaFaq />
+      <DachiTulaSeoText />
       <DachiTulaOrderForm />
     </div>
   )

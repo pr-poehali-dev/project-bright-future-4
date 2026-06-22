@@ -3,6 +3,7 @@ import KarkasniyeBanyaHero from "@/pages/karkasniye-banya-tula/KarkasniyeBanyaHe
 import KarkasniyeBanyaSections from "@/pages/karkasniye-banya-tula/KarkasniyeBanyaSections"
 import KarkasniyeBanyaFaq from "@/pages/karkasniye-banya-tula/KarkasniyeBanyaFaq"
 import KarkasniyeBanyaOrderForm from "@/pages/karkasniye-banya-tula/KarkasniyeBanyaOrderForm"
+import KarkasniyeBanyaSeoText from "@/pages/karkasniye-banya-tula/KarkasniyeBanyaSeoText"
 
 export default function KarkasniyeBanyaTula() {
   return (
@@ -19,6 +20,7 @@ export default function KarkasniyeBanyaTula() {
       <KarkasniyeBanyaHero />
       <KarkasniyeBanyaSections />
       <KarkasniyeBanyaFaq />
+      <KarkasniyeBanyaSeoText />
       <KarkasniyeBanyaOrderForm />
     </div>
   )
