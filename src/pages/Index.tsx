@@ -14,6 +14,7 @@ import { FloatingCall } from "../components/FloatingCall"
 import { CallToAction } from "../components/CallToAction"
 import { PromoPopup } from "../components/PromoPopup"
 import { Comparison } from "../components/Comparison"
+import { SeoText } from "../components/SeoText"
 
 export default function Index() {
   return (
@@ -30,6 +31,7 @@ export default function Index() {
       <FAQ />
       <Reviews />
       <Partners />
+      <SeoText />
       <Footer />
       <FloatingCall />
       <PromoPopup />
