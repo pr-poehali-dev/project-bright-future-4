@@ -50,7 +50,8 @@ export default function Banya54Hero() {
               src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg"
               alt="TOYSTROY"
               className="w-9 h-9 rounded object-cover"
-              loading="eager"
+              loading="lazy"
+              decoding="async"
             />
             <span className="text-lg font-semibold tracking-widest uppercase text-[#1a0f0f]">TOYSTROY</span>
           </a>

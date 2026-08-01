@@ -65,6 +65,8 @@ export function Philosophy() {
         <img
           src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/d7026362-ecf3-411c-b3ab-8cdc8c610cd8.jpg"
           alt="Команда профессионалов каркасного домостроения"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-white/60" />

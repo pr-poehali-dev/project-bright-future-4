@@ -278,7 +278,7 @@ export function Reviews() {
         {review.photos && review.photos.length > 0 && (
           <div className={`flex gap-2 flex-wrap ${compact ? "" : ""}`}>
             {review.photos.map((src, i) => (
-              <img key={i} src={src} alt={`Фото ${i + 1}`} className={`object-cover rounded ${compact ? "h-20 w-20" : "h-32 w-32 sm:h-40 sm:w-40"}`} />
+              <img key={i} src={src} alt={`Фото ${i + 1}`} loading="lazy" decoding="async" className={`object-cover rounded ${compact ? "h-20 w-20" : "h-32 w-32 sm:h-40 sm:w-40"}`} />
             ))}
           </div>
         )}

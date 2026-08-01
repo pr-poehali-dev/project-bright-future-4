@@ -49,6 +49,8 @@ export default function Dacha68Hero() {
             <img
               src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg"
               alt="TOYSTROY"
+              loading="lazy"
+              decoding="async"
               className="w-9 h-9 rounded object-cover"
             />
             <span className="text-lg font-semibold tracking-widest uppercase text-[#1a0f0f]">TOYSTROY</span>
@@ -94,6 +96,8 @@ export default function Dacha68Hero() {
                 <img
                   src={images[currentImg].src}
                   alt={images[currentImg].alt}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-all duration-500"
                 />
                 <button
@@ -132,7 +136,7 @@ export default function Dacha68Hero() {
                       i === currentImg ? "border-orange-500" : "border-transparent opacity-60 hover:opacity-100"
                     }`}
                   >
-                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                    <img src={img.src} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>

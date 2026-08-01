@@ -71,6 +71,8 @@ export function Expertise() {
         <img
           src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/cfac98c8-a2e0-4fe6-a4a3-9031bda7a211.jpg"
           alt="Строительные инструменты и процесс строительства"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-white/75" />

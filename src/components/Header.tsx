@@ -35,7 +35,7 @@ export function Header() {
       >
         <nav className="container mx-auto px-4 flex items-center justify-between md:px-[24]">
           <a href="/" className="flex items-center gap-3 group" onClick={scrollToTop}>
-            <img src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg" alt="TS logo" className="w-10 h-10 rounded-sm flex-shrink-0 object-cover" />
+            <img src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg" alt="TS logo" loading="lazy" decoding="async" className="w-10 h-10 rounded-sm flex-shrink-0 object-cover" />
             <div className="flex flex-col">
               <span className="text-lg font-semibold tracking-widest uppercase leading-tight" style={{color: '#F2DC8A', textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.6), 2px 2px 0px rgba(0,0,0,0.5)'}}>TOYSTROY</span>
               <span className="text-[10px] tracking-wide leading-tight" style={{color: '#EDD06A', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}>Тула</span>

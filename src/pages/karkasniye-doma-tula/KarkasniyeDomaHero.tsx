@@ -9,6 +9,8 @@ export default function KarkasniyeDomaHero() {
             <img
               src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg"
               alt="TOYSTROY"
+              loading="lazy"
+              decoding="async"
               className="w-9 h-9 rounded object-cover"
             />
             <span className="text-lg font-semibold tracking-widest uppercase text-[#1a0f0f]">TOYSTROY</span>
@@ -36,6 +38,8 @@ export default function KarkasniyeDomaHero() {
           <img
             src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/eefe6c97-35f2-4174-8455-5490e23dec07.png"
             alt="Каркасные дома в Туле под ключ"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-[#1a0f0f]/65" />

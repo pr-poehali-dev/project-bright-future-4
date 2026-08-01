@@ -56,6 +56,8 @@ export function Calculator() {
         <img
           src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/2cc9cda7-6263-4332-9434-5755038e74f8.jpg"
           alt="Каркасные дома, дачи и бани в разных стилях"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-white/50" />

@@ -42,7 +42,8 @@ export default function Dacha48Hero() {
               src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg"
               alt="TOYSTROY"
               className="w-9 h-9 rounded object-cover"
-              loading="eager"
+              loading="lazy"
+              decoding="async"
             />
             <span className="text-lg font-semibold tracking-widest uppercase text-[#1a0f0f]">TOYSTROY</span>
           </a>
@@ -123,7 +124,8 @@ export default function Dacha48Hero() {
                   src={images[currentImg].src}
                   alt={images[currentImg].alt}
                   className="w-full h-full object-cover transition-opacity duration-300"
-                  loading="eager"
+                  loading="lazy"
+                  decoding="async"
                 />
                 {images.length > 1 && (
                   <>
@@ -158,7 +160,7 @@ export default function Dacha48Hero() {
                     onClick={() => setCurrentImg(i)}
                     className={`overflow-hidden aspect-[4/3] border-2 transition-colors ${i === currentImg ? "border-orange-500" : "border-transparent"}`}
                   >
-                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
+                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                   </button>
                 ))}
               </div>

@@ -47,6 +47,8 @@ export function Financing() {
         <img
           src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/files/ff1f5213-dbd6-4d56-83bb-8adcfcd22743.jpg"
           alt="Финансирование строительства дома"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-white/80" />

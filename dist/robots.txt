@@ -12,3 +12,8 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /flyer
+Disallow: /card
+
+Sitemap: https://toystroy71.ru/sitemap.xml
+Host: https://toystroy71.ru
