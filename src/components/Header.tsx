@@ -27,7 +27,7 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed z-50 transition-all duration-500 top-0 left-0 right-0",
+          "fixed z-50 transition-all duration-500 top-0 left-0 right-0 animate-header-in",
           scrolled
             ? "bg-primary backdrop-blur-md py-4"
             : "bg-transparent py-4",
@@ -35,7 +35,7 @@ export function Header() {
       >
         <nav className="container mx-auto px-4 flex items-center justify-between md:px-[24]">
           <a href="/" className="flex items-center gap-3 group" onClick={scrollToTop}>
-            <div className="w-10 h-10 rounded-sm flex-shrink-0 bg-[#2b2b2b] flex items-center justify-center overflow-hidden p-1">
+            <div className="w-10 h-10 rounded-sm flex-shrink-0 bg-[#2b2b2b] flex items-center justify-center overflow-hidden p-1 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
               <img
                 src="/toystroy-logo.png"
                 alt="TS logo"
@@ -63,7 +63,7 @@ export function Header() {
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="hover:text-[rgb(251,146,60)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 hover:after:w-full after:bg-[rgb(251,146,60)] after:transition-all after:duration-300"
+                  className="inline-block hover:text-[rgb(251,146,60)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 hover:after:w-full after:bg-[rgb(251,146,60)] after:transition-all after:duration-300 animate-menu-float"
                   style={{color: '#E9A662', textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 10px rgba(0,0,0,0.5), 2px 2px 0px rgba(0,0,0,0.4)'}}
                 >
                   {item.label}
@@ -82,7 +82,7 @@ export function Header() {
             <button
               onClick={() => setGiftOpen(true)}
               title="Подарки на выбор"
-              className="w-10 h-10 inline-flex items-center justify-center transition-all duration-300 bg-[#2b2b2b] hover:bg-[#3a3a3a]"
+              className="w-10 h-10 inline-flex items-center justify-center transition-all duration-300 bg-[#2b2b2b] hover:bg-[#3a3a3a] hover:scale-110 rounded-sm animate-gift-pulse"
               style={{color: '#E9A662'}}
             >
               <Icon name="Gift" size={18} />
@@ -103,7 +103,7 @@ export function Header() {
             <button
               onClick={() => setGiftOpen(true)}
               title="Подарки на выбор"
-              className="w-10 h-10 inline-flex items-center justify-center bg-[#2b2b2b]"
+              className="w-10 h-10 inline-flex items-center justify-center bg-[#2b2b2b] rounded-sm animate-gift-pulse"
               style={{color: '#E9A662'}}
             >
               <Icon name="Gift" size={18} />
