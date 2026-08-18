@@ -3,12 +3,13 @@ export function Hero() {
     <section id="hero" className="relative h-[50vh] md:min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <video
-          src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/5f512dc1-d74f-4683-abf3-619fb61c9af1.mp4"
+          src="/hero-video.mp4"
+          poster="/hero-poster.jpg"
           autoPlay
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           className="w-full h-full object-cover object-center"
           aria-label="Строительство каркасного дома в Туле под ключ — Тойстрой71"
         />
