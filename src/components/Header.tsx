@@ -74,7 +74,8 @@ export function Header() {
             <button
               onClick={() => setGiftOpen(true)}
               title="Подарки на выбор"
-              className="w-10 h-10 inline-flex items-center justify-center transition-all duration-300 bg-orange-500 text-white hover:bg-orange-600"
+              className="w-10 h-10 inline-flex items-center justify-center transition-all duration-300 bg-[#2b2b2b] hover:bg-[#3a3a3a]"
+              style={{color: '#E9A662'}}
             >
               <Icon name="Gift" size={18} />
             </button>
@@ -94,7 +95,8 @@ export function Header() {
             <button
               onClick={() => setGiftOpen(true)}
               title="Подарки на выбор"
-              className="w-10 h-10 inline-flex items-center justify-center bg-orange-500 text-white"
+              className="w-10 h-10 inline-flex items-center justify-center bg-[#2b2b2b]"
+              style={{color: '#E9A662'}}
             >
               <Icon name="Gift" size={18} />
             </button>
