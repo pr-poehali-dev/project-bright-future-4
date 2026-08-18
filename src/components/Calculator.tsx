@@ -221,6 +221,10 @@ export function Calculator() {
                 <Icon name="Phone" size={16} />
                 <span className="text-sm font-medium">+7 (950) 917-09-74</span>
               </a>
+              <a href="tel:+79509170972" className="flex items-center gap-3 text-background hover:text-background/80 transition-colors mt-2">
+                <Icon name="Phone" size={16} />
+                <span className="text-sm font-medium">+7 (950) 917-09-72</span>
+              </a>
             </div>
           </div>
         </div>

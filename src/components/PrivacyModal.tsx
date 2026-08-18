@@ -71,7 +71,7 @@ export function PrivacyModal() {
             <p className="text-foreground font-medium mb-2">7. Контакты</p>
             <p>По всем вопросам, связанным с обработкой персональных данных, вы можете обратиться к нам:</p>
             <p className="mt-1">Email: <a href="mailto:Toystroy71rus@mail.ru" className="text-foreground hover:underline">Toystroy71rus@mail.ru</a></p>
-            <p>Телефон: <a href="tel:+79509170974" className="text-foreground hover:underline">+7 (950) 917-09-74</a></p>
+            <p>Телефон: <a href="tel:+79509170974" className="text-foreground hover:underline">+7 (950) 917-09-74</a>, <a href="tel:+79509170972" className="text-foreground hover:underline">+7 (950) 917-09-72</a></p>
           </div>
 
           <div>

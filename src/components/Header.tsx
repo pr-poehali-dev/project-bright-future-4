@@ -215,6 +215,16 @@ export function Header() {
                 </div>
               </a>
 
+              <a href="tel:+79509170972" className="flex items-center gap-4 group">
+                <div className="w-10 h-10 bg-foreground/5 flex items-center justify-center flex-shrink-0">
+                  <Icon name="Phone" size={18} className="text-foreground" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground mb-0.5">Телефон</p>
+                  <p className="font-semibold group-hover:text-orange-500 transition-colors">+7 (950) 917-09-72</p>
+                </div>
+              </a>
+
               <a href="mailto:Toystroy71rus@mail.ru" className="flex items-center gap-4 group">
                 <div className="w-10 h-10 bg-foreground/5 flex items-center justify-center flex-shrink-0">
                   <Icon name="Mail" size={18} className="text-foreground" />

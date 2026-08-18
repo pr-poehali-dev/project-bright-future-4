@@ -57,7 +57,7 @@ export default function KarkasniyeBanyaOrderForm() {
                   </div>
                 ))}
               </div>
-              <div className="mt-8 flex items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
                   href="mailto:Toystroy71rus@mail.ru"
                   className="flex items-center gap-2 text-sm font-medium text-[#1a0f0f] hover:text-orange-500 transition-colors"
@@ -67,11 +67,19 @@ export default function KarkasniyeBanyaOrderForm() {
                 </a>
                 <span className="text-gray-300">|</span>
                 <a
-                  href="tel:+78001234567"
+                  href="tel:+79509170974"
                   className="flex items-center gap-2 text-sm font-medium text-[#1a0f0f] hover:text-orange-500 transition-colors"
                 >
                   <Phone size={20} />
-                  8 (800) 123-45-67
+                  +7 (950) 917-09-74
+                </a>
+                <span className="text-gray-300">|</span>
+                <a
+                  href="tel:+79509170972"
+                  className="flex items-center gap-2 text-sm font-medium text-[#1a0f0f] hover:text-orange-500 transition-colors"
+                >
+                  <Phone size={20} />
+                  +7 (950) 917-09-72
                 </a>
               </div>
             </div>
@@ -117,7 +125,7 @@ export default function KarkasniyeBanyaOrderForm() {
                   </button>
                   {status === "error" && (
                     <p className="text-red-500 text-sm mt-3 text-center">
-                      Ошибка. Позвоните нам: 8 (800) 123-45-67
+                      Ошибка. Позвоните нам: +7 (950) 917-09-74 или +7 (950) 917-09-72
                     </p>
                   )}
                   <p className="text-xs text-gray-400 mt-3 text-center">

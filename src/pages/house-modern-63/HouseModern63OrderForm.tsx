@@ -113,7 +113,7 @@ export default function HouseModern63OrderForm() {
                 </button>
                 {status === "error" && (
                   <p className="text-red-500 text-sm mt-3 text-center">
-                    Ошибка отправки. Позвоните нам: 8 (800) 123-45-67
+                    Ошибка отправки. Позвоните нам: +7 (950) 917-09-74 или +7 (950) 917-09-72
                   </p>
                 )}
                 <p className="text-xs text-gray-400 mt-3 text-center">

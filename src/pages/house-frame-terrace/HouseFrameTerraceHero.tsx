@@ -55,14 +55,16 @@ export default function HouseFrameTerraceHero() {
             <span className="text-lg font-semibold tracking-widest uppercase" style={{color: '#E9A662'}}>TOYSTROY</span>
           </a>
           <div className="flex items-center gap-3">
-            <a
-              href="tel:+78001234567"
-              className="hidden md:flex items-center gap-2 text-sm font-medium hover:text-orange-400 transition-colors"
-              style={{color: '#E9A662'}}
-            >
-              <Phone size={16} />
-              8 (800) 123-45-67
-            </a>
+            <div className="hidden md:flex flex-col items-start gap-0.5 text-sm font-medium">
+              <a href="tel:+79509170974" className="flex items-center gap-2 hover:text-orange-400 transition-colors" style={{color: '#E9A662'}}>
+                <Phone size={14} />
+                +7 (950) 917-09-74
+              </a>
+              <a href="tel:+79509170972" className="flex items-center gap-2 hover:text-orange-400 transition-colors" style={{color: '#E9A662'}}>
+                <Phone size={14} />
+                +7 (950) 917-09-72
+              </a>
+            </div>
             <a
               href="/#calculator"
               className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium px-4 py-2 transition-colors"

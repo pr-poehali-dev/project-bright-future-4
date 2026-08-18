@@ -60,6 +60,23 @@ export default function Card() {
             <div className="border-t border-white/10" />
 
             <a
+              href="tel:+79509170972"
+              className="flex items-center gap-4 group"
+            >
+              <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-400 transition-colors">
+                <svg width="18" height="18" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <div className="text-gray-400 text-xs">Позвонить</div>
+                <div className="text-white font-semibold text-base group-hover:text-orange-400 transition-colors">+7 (950) 917-09-72</div>
+              </div>
+            </a>
+
+            <div className="border-t border-white/10" />
+
+            <a
               href="mailto:Toystroy71rus@mail.ru"
               className="flex items-center gap-4 group"
             >
