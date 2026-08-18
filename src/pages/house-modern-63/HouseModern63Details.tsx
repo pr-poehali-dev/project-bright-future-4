@@ -13,26 +13,25 @@ const rooms = [
 ]
 
 const whyList = [
-  "Каркасная технология — дом готов за 40–60 дней при хороших погодных условиях",
-  "Тёплые стены 200 мм минваты, расход тепла минимальный",
+  "Каркасная технология — дом готов за 30–50 дней при хороших погодных условиях",
+  "Тёплые стены 150–200 мм минваты, расход тепла минимальный",
   "Тёмный планкен + термодерево — стильный фасад без лишнего ухода",
   "Сауна прямо в доме — удобство для всей семьи",
   "Просторная терраса 13 м² — летняя гостиная под открытым небом",
   "Одноэтажная планировка — удобна для пожилых и детей",
   "Работаем по договору с фиксированной ценой — без сюрпризов",
-  "Гарантия на каркас 5 лет, на кровлю 3 года",
 ]
 
 const included = [
-  "Фундамент на винтовых сваях или ленточный",
-  "Силовой каркас из камерной сушки",
-  "Утепление минватой 200 мм + ветробарьер",
+  "Фундамент на ЖБИ",
+  "Силовой каркас из сухой строганной доски",
+  "Утепление минватой 150–200 мм + ветробарьер",
   "Кровля из металлочерепицы / профлиста",
   "Фасадная отделка (планкен + деревянные акценты)",
   "Терраса с деревянными перилами",
   "Окна ПВХ двойной стеклопакет",
   "Входная дверь металлическая утеплённая",
-  "Черновая внутренняя отделка (ГКЛ / ОСБ)",
+  "Черновая внутренняя отделка",
   "Разводка электрики, водопровода, канализации",
 ]
 
@@ -46,7 +45,7 @@ export default function HouseModern63Details() {
             {[
               { value: "74 м²", label: "Общая площадь", sub: "Одноэтажный дом с продуманной планировкой" },
               { value: "13 м²", label: "Терраса", sub: "Открытая летняя гостиная с деревянными перилами" },
-              { value: "40–60 дней", label: "Срок постройки", sub: "Каркасная технология позволяет заселиться уже этим сезоном", orange: true },
+              { value: "30–50 дней", label: "Срок постройки", sub: "Каркасная технология позволяет заселиться уже этим сезоном", orange: true },
             ].map((s) => (
               <div key={s.label} className="py-10 px-8">
                 <p className={`text-4xl md:text-5xl font-medium mb-2 ${s.orange ? "text-orange-500" : ""}`}>
@@ -88,8 +87,10 @@ export default function HouseModern63Details() {
 
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e90cad2f-aedf-4ac8-97bb-f8bce810f3fe.png"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/3f1de1dd-ae88-4a1f-a61e-17a656dbf1a7.png"
                 alt="Планировка дома Модерн 63"
+                loading="lazy"
+                decoding="async"
                 className="w-full object-contain mb-6"
               />
               <div className="bg-gray-50 p-6">
@@ -130,8 +131,10 @@ export default function HouseModern63Details() {
             </div>
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/1bb104b3-1678-4e54-80bd-fb79ae42161b.png"
-                alt="Каркасный дом Модерн 63 вечером"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e5fa488e-a164-4562-a3ec-c0e5fa92aa4b.png"
+                alt="Каркасный дом Модерн 63 — фасад"
+                loading="lazy"
+                decoding="async"
                 className="w-full object-cover aspect-[4/3]"
               />
             </div>
@@ -158,8 +161,10 @@ export default function HouseModern63Details() {
             </div>
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/3ca6bea4-8b83-485c-9260-614829c4692e.png"
-                alt="Каркасный дом Модерн 63 — вид сбоку"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/067886c0-b6b3-4405-aba4-582687c3a88d.png"
+                alt="Каркасный дом Модерн 63 — вид со стороны крыльца"
+                loading="lazy"
+                decoding="async"
                 className="w-full object-cover aspect-[4/3]"
               />
             </div>

@@ -3,20 +3,16 @@ import { ChevronLeft, ChevronRight, Phone, ArrowLeft } from "lucide-react"
 
 const images = [
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/1bb104b3-1678-4e54-80bd-fb79ae42161b.png",
-    alt: "Каркасный дом «Модерн 63» — вид спереди вечером",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e5fa488e-a164-4562-a3ec-c0e5fa92aa4b.png",
+    alt: "Каркасный дом «Модерн 63» — фасад с деревянным акцентом",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9b024708-25cc-423c-b674-ea19f0888b68.png",
-    alt: "Каркасный дом «Модерн 63» — вид сзади",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/067886c0-b6b3-4405-aba4-582687c3a88d.png",
+    alt: "Каркасный дом «Модерн 63» — вид со стороны крыльца",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e90cad2f-aedf-4ac8-97bb-f8bce810f3fe.png",
-    alt: "Каркасный дом «Модерн 63» — вид спереди днём",
-  },
-  {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/3ca6bea4-8b83-485c-9260-614829c4692e.png",
-    alt: "Каркасный дом «Модерн 63» — вид сбоку",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/86caea5c-bbf5-4bbc-8e3e-65121a457fb5.png",
+    alt: "Планировка дома «Модерн 63» — вид сверху",
   },
 ]
 
@@ -158,6 +154,11 @@ export default function HouseModern63Hero() {
                 и терраса 13 м² — компактный и функциональный дом для постоянного проживания или загородного
                 отдыха. Строим под ключ по всей Тульской области.
               </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="bg-orange-50 text-orange-600 text-xs font-semibold px-3 py-1.5">🎁 Подарок при заключении договора</span>
+                <span className="bg-orange-50 text-orange-600 text-xs font-semibold px-3 py-1.5">📐 Проект и смета бесплатно</span>
+                <span className="bg-orange-50 text-orange-600 text-xs font-semibold px-3 py-1.5">🚘 Бесплатный выезд на участок</span>
+              </div>
 
               {/* Specs grid */}
               <div className="grid grid-cols-2 gap-3 mb-8">
