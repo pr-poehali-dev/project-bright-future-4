@@ -14,6 +14,10 @@ const images = [
     src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/86caea5c-bbf5-4bbc-8e3e-65121a457fb5.png",
     alt: "Планировка дома «Модерн 63» — вид сверху",
   },
+  {
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/f70426df-e359-447d-86ac-16a048e4db96.png",
+    alt: "Поэтажный план дома «Модерн 63» с расстановкой мебели",
+  },
 ]
 
 const specs = [
