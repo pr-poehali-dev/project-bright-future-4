@@ -35,8 +35,14 @@ export function Header() {
       >
         <nav className="container mx-auto px-4 flex items-center justify-between md:px-[24]">
           <a href="/" className="flex items-center gap-3 group" onClick={scrollToTop}>
-            <div className="w-10 h-10 rounded-sm flex-shrink-0 bg-[#2b2b2b] flex items-center justify-center font-bold text-sm" style={{color: '#E9A662'}}>
-              TS
+            <div className="w-10 h-10 rounded-sm flex-shrink-0 bg-[#2b2b2b] flex items-center justify-center overflow-hidden">
+              <img
+                src="/toystroy-logo.png"
+                alt="TS logo"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-contain scale-125"
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-semibold tracking-widest uppercase leading-tight" style={{color: '#E9A662', textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.6), 2px 2px 0px rgba(0,0,0,0.5)'}}>TOYSTROY</span>
