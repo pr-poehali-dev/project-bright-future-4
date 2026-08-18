@@ -263,16 +263,15 @@ export const projects: Project[] = [
   {
     id: 23,
     title: "Баня «Горизонт» 68 м²",
-    category: "Каркасная баня 68 м² · Планкен · Парная · Две террасы 19,84 м²",
+    category: "Каркасная баня 68 м² · Имитация бруса · Парная · Две террасы 19,84 м²",
     location: "Тульская область",
     year: "2026",
     images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/7c9c495f-ea33-449f-a092-c6c441b285cb.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9910a57e-e9a3-486f-8cd0-550ccb2c11b1.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/85c9bf74-1548-42a0-aedc-5a2154f2fa7f.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/557d76ce-df99-4c89-9eb6-2aafa78be1c8.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9c110775-6519-4a00-8824-951d16babb5a.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/ad66a9be-ac00-4ccb-9271-6093b23c8173.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/7186adcf-ce04-475c-aa28-52ca0c9bffe7.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/29b91531-6144-4d0b-afcb-7b58483d8b0e.png",
     ],
+    description: "Каркасная баня 68 м² с комнатой отдыха 13,41 м², парной и двумя террасами почти 20 м². Строим под ключ по всей Тульской области.",
     link: "/projects/dacha-68",
   },
   {
