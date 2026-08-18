@@ -40,22 +40,25 @@ export default function HouseFrameTerraceHero() {
   return (
     <>
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm">
+      <header className="sticky top-0 z-50 bg-[#2b2b2b] backdrop-blur border-b border-black/40 shadow-sm">
         <div className="container mx-auto px-6 md:px-12 py-4 flex items-center justify-between gap-4">
           <a href="/" className="flex items-center gap-3 group">
-            <img
-              src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg"
-              alt="TOYSTROY"
-              loading="lazy"
-              decoding="async"
-              className="w-9 h-9 rounded object-cover"
-            />
-            <span className="text-lg font-semibold tracking-widest uppercase text-[#1a0f0f]">TOYSTROY</span>
+            <div className="w-9 h-9 rounded-sm bg-[#3a3a3a] flex items-center justify-center overflow-hidden p-1 flex-shrink-0">
+              <img
+                src="/toystroy-logo.png"
+                alt="TOYSTROY"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <span className="text-lg font-semibold tracking-widest uppercase" style={{color: '#E9A662'}}>TOYSTROY</span>
           </a>
           <div className="flex items-center gap-3">
             <a
               href="tel:+78001234567"
-              className="hidden md:flex items-center gap-2 text-sm font-medium text-[#1a0f0f] hover:text-orange-500 transition-colors"
+              className="hidden md:flex items-center gap-2 text-sm font-medium hover:text-orange-400 transition-colors"
+              style={{color: '#E9A662'}}
             >
               <Phone size={16} />
               8 (800) 123-45-67
