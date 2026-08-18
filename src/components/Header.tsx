@@ -37,8 +37,8 @@ export function Header() {
           <a href="/" className="flex items-center gap-3 group" onClick={scrollToTop}>
             <img src="https://cdn.poehali.dev/files/81218afd-c0f8-4ab8-8954-5409def67550.jpg" alt="TS logo" loading="lazy" decoding="async" className="w-10 h-10 rounded-sm flex-shrink-0 object-cover" />
             <div className="flex flex-col">
-              <span className="text-lg font-semibold tracking-widest uppercase leading-tight" style={{color: '#F2DC8A', textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.6), 2px 2px 0px rgba(0,0,0,0.5)'}}>TOYSTROY</span>
-              <span className="text-[10px] tracking-wide leading-tight" style={{color: '#EDD06A', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}>Тула</span>
+              <span className="text-lg font-semibold tracking-widest uppercase leading-tight" style={{color: '#E9A662', textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.6), 2px 2px 0px rgba(0,0,0,0.5)'}}>TOYSTROY</span>
+              <span className="text-[10px] tracking-wide leading-tight" style={{color: '#E9A662', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}>Тула</span>
             </div>
           </a>
 
@@ -56,7 +56,7 @@ export function Header() {
                 <a
                   href={item.href}
                   className="hover:text-[rgb(251,146,60)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 hover:after:w-full after:bg-[rgb(251,146,60)] after:transition-all after:duration-300"
-                  style={{color: '#F5E4A0', textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 10px rgba(0,0,0,0.5), 2px 2px 0px rgba(0,0,0,0.4)'}}
+                  style={{color: '#E9A662', textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 10px rgba(0,0,0,0.5), 2px 2px 0px rgba(0,0,0,0.4)'}}
                 >
                   {item.label}
                 </a>
@@ -84,7 +84,8 @@ export function Header() {
             {scrolled && (
               <button
                 onClick={() => setMenuOpen((v) => !v)}
-                className="px-3 h-10 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider bg-primary/80 border border-white/20 text-yellow-200"
+                className="px-3 h-10 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider bg-primary/80 border border-white/20"
+                style={{color: '#E9A662'}}
               >
                 <Icon name={menuOpen ? "X" : "Menu"} size={14} />
                 Меню
@@ -118,7 +119,7 @@ export function Header() {
                   key={item.label}
                   href={item.href}
                   className="text-center py-1.5 text-[11px] font-medium hover:text-orange-400 transition-colors duration-200"
-                  style={{color: '#F5E4A0', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}
+                  style={{color: '#E9A662', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}
                 >
                   {item.label}
                 </a>
@@ -155,7 +156,7 @@ export function Header() {
                     href={item.href}
                     onClick={() => setMenuOpen(false)}
                     className="text-center py-1.5 text-[11px] font-medium hover:text-orange-400 transition-colors duration-200"
-                    style={{color: '#F5E4A0', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}
+                    style={{color: '#E9A662', textShadow: '0 1px 3px rgba(0,0,0,0.8)'}}
                   >
                     {item.label}
                   </a>
