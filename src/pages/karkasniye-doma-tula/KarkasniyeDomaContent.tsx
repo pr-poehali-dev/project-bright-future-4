@@ -20,7 +20,7 @@ const houseTypes = [
     title: "Каркасный дом 100–150 м²",
     price: "от 3 900 000 ₽",
     desc: "Двухэтажный дом с террасой для семьи из 4–5 человек. 3 спальни, 2 санузла, кабинет.",
-    image: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/bf9301d1-b706-4dc6-bf48-c962d5ce86c7.png",
+    image: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/518e4c00-3189-44d3-83dd-09cdf1bf946a.png",
   },
   {
     title: "Каркасный дом от 150 м²",
