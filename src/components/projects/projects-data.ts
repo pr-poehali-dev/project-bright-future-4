@@ -228,12 +228,12 @@ export const projects: Project[] = [
     location: "Тульская область",
     year: "2023",
     images: [
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/63c85357-f998-4090-b271-f70fec4753f3.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/ac83e35b-466e-47e6-a078-01833d92adbd.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9c2e61df-2edf-4e26-9248-f297f95f0d07.jpg",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/2304a9a5-6812-46d7-a725-20ec7ac0f5f7.jpg",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/518e4c00-3189-44d3-83dd-09cdf1bf946a.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/2c3be85d-e7c2-40fd-af20-dd37bf39f47f.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/c48d9e94-ddd3-409c-b20e-5e12627b2d22.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/0ebbb923-74fd-49b0-bd0f-034ec155fce8.png",
     ],
-    description: "Двухэтажный каркасный дом 10×10 м с большой террасой 17 м². 3 спальни, гостиная-кухня 28,5 м², кабинет, 2 санузла. Под ключ за 120 дней.",
+    description: "Двухэтажный каркасный дом 10×10 м с террасой 17,70 м². 3 спальни, кухня-гостиная 28,52 м², кабинет, 2 санузла. Строим под ключ по всей Тульской области.",
     link: "/projects/house-frame-terrace",
   },
   {

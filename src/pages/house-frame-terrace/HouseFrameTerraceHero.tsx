@@ -3,19 +3,19 @@ import { ChevronLeft, ChevronRight, Phone, ArrowLeft } from "lucide-react"
 
 const images = [
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/63c85357-f998-4090-b271-f70fec4753f3.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/518e4c00-3189-44d3-83dd-09cdf1bf946a.png",
     alt: "Каркасный дом с террасой 10×10 — вид спереди",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/ac83e35b-466e-47e6-a078-01833d92adbd.jpg",
-    alt: "Каркасный дом с террасой 10×10 — 3D визуализация",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/2c3be85d-e7c2-40fd-af20-dd37bf39f47f.png",
+    alt: "Каркасный дом с террасой 10×10 — вид сбоку",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9c2e61df-2edf-4e26-9248-f297f95f0d07.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/c48d9e94-ddd3-409c-b20e-5e12627b2d22.png",
     alt: "Каркасный дом с террасой 10×10 — план первого этажа",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/2304a9a5-6812-46d7-a725-20ec7ac0f5f7.jpg",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/0ebbb923-74fd-49b0-bd0f-034ec155fce8.png",
     alt: "Каркасный дом с террасой 10×10 — план второго этажа",
   },
 ]
@@ -153,10 +153,15 @@ export default function HouseFrameTerraceHero() {
                 <span className="text-orange-500">10 × 10 м</span>
               </h1>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
-                Двухэтажный каркасный дом площадью <strong>≈ 100 м²</strong> с просторной террасой 17,7 м²
-                и деревянными акцентами в фасаде. Три спальни, два санузла, кухня-гостиная 28,5 м² и кабинет —
-                идеально для семьи из 4–5 человек. Строим под ключ по всей Тульской области.
+                Двухэтажный каркасный дом площадью <strong>≈ 100 м²</strong> с просторной террасой 17,70 м².
+                Три спальни, два санузла, кухня-гостиная 28,52 м² и кабинет — идеально для семьи из 4–5 человек.
+                Строим под ключ по всей Тульской области.
               </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="bg-orange-50 text-orange-600 text-xs font-semibold px-3 py-1.5">🎁 Подарок при заключении договора</span>
+                <span className="bg-orange-50 text-orange-600 text-xs font-semibold px-3 py-1.5">📐 Проект и смета бесплатно</span>
+                <span className="bg-orange-50 text-orange-600 text-xs font-semibold px-3 py-1.5">🚘 Бесплатный выезд на участок</span>
+              </div>
 
               {/* Specs grid */}
               <div className="grid grid-cols-2 gap-3 mb-8">

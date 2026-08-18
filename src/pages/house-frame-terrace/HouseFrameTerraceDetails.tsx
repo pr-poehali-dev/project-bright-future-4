@@ -49,15 +49,15 @@ const specs = [
 ]
 
 const included = [
-  "Фундамент на винтовых сваях или ленточный",
-  "Силовой каркас из камерной сушки",
+  "Фундамент ЖБИ",
+  "Силовой каркас из сухой строганной доски",
   "Утепление минватой 200 мм + ветробарьер",
-  "Кровля из металлочерепицы / профлиста",
-  "Фасадная отделка (сайдинг + деревянные акценты)",
+  "Кровля из металлочерепицы",
+  "Фасадная отделка сайдинг",
   "Терраса с деревянными перилами и навесом",
   "Окна ПВХ двойной стеклопакет",
-  "Входная дверь металлическая утеплённая",
-  "Черновая внутренняя отделка (ГКЛ / ОСБ)",
+  "Входная дверь с терморазрывом",
+  "Черновая внутренняя отделка",
   "Разводка электрики, водопровода, канализации",
 ]
 
@@ -163,16 +163,20 @@ export default function HouseFrameTerraceDetails() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/9c2e61df-2edf-4e26-9248-f297f95f0d07.jpg"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/c48d9e94-ddd3-409c-b20e-5e12627b2d22.png"
                 alt="План первого этажа каркасного дома с террасой"
+                loading="lazy"
+                decoding="async"
                 className="w-full border border-gray-200"
               />
               <p className="text-xs text-gray-400 mt-2 text-center">Первый этаж</p>
             </div>
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/2304a9a5-6812-46d7-a725-20ec7ac0f5f7.jpg"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/0ebbb923-74fd-49b0-bd0f-034ec155fce8.png"
                 alt="План второго этажа каркасного дома с террасой"
+                loading="lazy"
+                decoding="async"
                 className="w-full border border-gray-200"
               />
               <p className="text-xs text-gray-400 mt-2 text-center">Второй этаж</p>
@@ -225,8 +229,10 @@ export default function HouseFrameTerraceDetails() {
             </div>
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/bf9301d1-b706-4dc6-bf48-c962d5ce86c7.png"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/2c3be85d-e7c2-40fd-af20-dd37bf39f47f.png"
                 alt="3D визуализация каркасного дома с террасой"
+                loading="lazy"
+                decoding="async"
                 className="w-full border border-gray-200 bg-white"
               />
             </div>
