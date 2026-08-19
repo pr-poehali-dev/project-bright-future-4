@@ -82,10 +82,10 @@ export function Header() {
             <button
               onClick={() => setGiftOpen(true)}
               title="Подарки на выбор"
-              className="w-10 h-10 inline-flex items-center justify-center transition-all duration-300 bg-[#2b2b2b] hover:bg-[#3a3a3a] hover:scale-110 rounded-sm animate-gift-pulse"
-              style={{color: '#E9A662'}}
+              className="w-10 h-10 inline-flex items-center justify-center transition-all duration-300 bg-[#2b2b2b] hover:bg-[#3a3a3a] hover:scale-110 rounded-sm animate-gift-glow-gold"
+              style={{color: '#FFD9A0'}}
             >
-              <Icon name="Gift" size={18} />
+              <Icon name="Gift" size={18} style={{filter: 'drop-shadow(0 0 6px rgba(255, 217, 160, 0.9))'}} />
             </button>
           </div>
 
@@ -103,10 +103,10 @@ export function Header() {
             <button
               onClick={() => setGiftOpen(true)}
               title="Подарки на выбор"
-              className="w-10 h-10 inline-flex items-center justify-center bg-[#2b2b2b] rounded-sm animate-gift-pulse"
-              style={{color: '#E9A662'}}
+              className="w-10 h-10 inline-flex items-center justify-center bg-[#2b2b2b] rounded-sm animate-gift-glow-gold"
+              style={{color: '#FFD9A0'}}
             >
-              <Icon name="Gift" size={18} />
+              <Icon name="Gift" size={18} style={{filter: 'drop-shadow(0 0 6px rgba(255, 217, 160, 0.9))'}} />
             </button>
           </div>
         </nav>
