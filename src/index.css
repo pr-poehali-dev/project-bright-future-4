@@ -184,3 +184,22 @@
 .animate-gift-pulse-graphite {
   animation: gift-pulse-graphite 2.2s ease-out infinite;
 }
+
+/* Bright golden glow for the gift CTA button */
+@keyframes gift-glow-gold {
+  0%,
+  100% {
+    box-shadow:
+      0 0 12px 2px rgba(233, 166, 98, 0.55),
+      0 0 0 1px rgba(233, 166, 98, 0.9) inset;
+  }
+  50% {
+    box-shadow:
+      0 0 32px 10px rgba(233, 166, 98, 0.95),
+      0 0 0 1px rgba(255, 214, 160, 1) inset;
+  }
+}
+
+.animate-gift-glow-gold {
+  animation: gift-glow-gold 1.8s ease-in-out infinite;
+}
