@@ -67,21 +67,21 @@ export function Financing() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
           {options.map((option) => (
-            <div key={option.title} className="bg-foreground text-white flex flex-col p-6 md:p-8">
+            <div key={option.title} className="text-white flex flex-col p-6 md:p-8" style={{backgroundColor: '#2b2b2b'}}>
               <div className="flex items-center justify-between mb-4 md:mb-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 border border-white/20 flex items-center justify-center flex-shrink-0">
-                  <Icon name={option.icon as Parameters<typeof Icon>[0]["name"]} size={22} className="text-orange-400" />
+                <div className="w-12 h-12 md:w-14 md:h-14 border flex items-center justify-center flex-shrink-0" style={{borderColor: 'rgba(233, 166, 98, 0.3)'}}>
+                  <Icon name={option.icon as Parameters<typeof Icon>[0]["name"]} size={22} style={{color: '#E9A662'}} />
                 </div>
-                <span className="text-xs font-bold px-2 py-1 bg-orange-400 text-white">
+                <span className="text-xs font-bold px-2 py-1" style={{backgroundColor: '#E9A662', color: '#2b2b2b'}}>
                   {option.badge}
                 </span>
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">{option.title}</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3" style={{color: '#E9A662'}}>{option.title}</h3>
               <p className="text-white/60 text-sm leading-relaxed mb-4 md:mb-6">{option.description}</p>
               <ul className="flex flex-col gap-2 mt-auto">
                 {option.details.map((detail) => (
                   <li key={detail} className="flex items-start gap-2">
-                    <Icon name="Check" size={14} className="text-orange-400 mt-0.5 flex-shrink-0" />
+                    <Icon name="Check" size={14} className="mt-0.5 flex-shrink-0" style={{color: '#E9A662'}} />
                     <span className="text-white/80 text-sm leading-relaxed">{detail}</span>
                   </li>
                 ))}
