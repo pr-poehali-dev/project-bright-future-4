@@ -49,10 +49,10 @@ const steps = [
 export function Process() {
 
   return (
-    <section id="process" className="py-32 md:py-29 bg-foreground text-background">
+    <section id="process" className="py-32 md:py-29 text-background" style={{backgroundColor: '#2b2b2b'}}>
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mb-20">
-          <p className="text-background/60 text-base md:text-lg font-bold tracking-[0.25em] uppercase mb-6">Как мы работаем</p>
+          <p className="text-base md:text-lg font-bold tracking-[0.25em] uppercase mb-6" style={{color: 'rgba(233, 166, 98, 0.7)'}}>Как мы работаем</p>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl text-background">
             Этапы <HighlightedText>работы</HighlightedText>
           </h2>
@@ -64,11 +64,11 @@ export function Process() {
         {/* Мобильная версия — компактные карточки с описанием */}
         <div className="flex flex-col gap-px md:hidden">
           {steps.map((step) => (
-            <div key={step.number} className="bg-foreground px-4 py-5">
+            <div key={step.number} className="px-4 py-5" style={{backgroundColor: '#2b2b2b'}}>
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl font-black text-background/20 w-7 flex-shrink-0 leading-none">{step.number}</span>
-                <div className="w-8 h-8 border border-background/20 flex items-center justify-center flex-shrink-0">
-                  <Icon name={step.icon as Parameters<typeof Icon>[0]["name"]} size={15} className="text-background/60" />
+                <span className="text-2xl font-black w-7 flex-shrink-0 leading-none" style={{color: 'rgba(233, 166, 98, 0.3)'}}>{step.number}</span>
+                <div className="w-8 h-8 border flex items-center justify-center flex-shrink-0" style={{borderColor: 'rgba(233, 166, 98, 0.3)'}}>
+                  <Icon name={step.icon as Parameters<typeof Icon>[0]["name"]} size={15} style={{color: '#E9A662'}} />
                 </div>
                 <h3 className="text-sm font-semibold text-background leading-snug flex-1">{step.title}</h3>
                 <span className="text-background/40 text-xs whitespace-nowrap flex-shrink-0">{step.duration}</span>
@@ -79,24 +79,25 @@ export function Process() {
         </div>
 
         {/* Десктопная версия — карточки */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-background/10">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-px" style={{backgroundColor: 'rgba(233, 166, 98, 0.15)'}}>
           {steps.map((step) => (
             <div
               key={step.number}
-              className="bg-foreground p-8 flex flex-col gap-5"
+              className="p-8 flex flex-col gap-5"
+              style={{backgroundColor: '#2b2b2b'}}
             >
               <div className="flex items-start justify-between">
-                <span className="text-5xl font-black text-background/10 leading-none">{step.number}</span>
-                <div className="w-10 h-10 border border-background/20 flex items-center justify-center">
-                  <Icon name={step.icon as Parameters<typeof Icon>[0]["name"]} size={18} className="text-background/70" />
+                <span className="text-5xl font-black leading-none" style={{color: 'rgba(233, 166, 98, 0.2)'}}>{step.number}</span>
+                <div className="w-10 h-10 border flex items-center justify-center" style={{borderColor: 'rgba(233, 166, 98, 0.3)'}}>
+                  <Icon name={step.icon as Parameters<typeof Icon>[0]["name"]} size={18} style={{color: '#E9A662'}} />
                 </div>
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-background mb-3 leading-snug">{step.title}</h3>
                 <p className="text-background/60 text-sm leading-relaxed">{step.description}</p>
               </div>
-              <div className="flex items-center gap-2 pt-2 border-t border-background/10">
-                <Icon name="Clock" size={13} className="text-background/40" />
+              <div className="flex items-center gap-2 pt-2 border-t" style={{borderColor: 'rgba(233, 166, 98, 0.15)'}}>
+                <Icon name="Clock" size={13} style={{color: 'rgba(233, 166, 98, 0.5)'}} />
                 <span className="text-background/40 text-xs tracking-wide">{step.duration}</span>
               </div>
             </div>
