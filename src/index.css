@@ -169,3 +169,18 @@
 .animate-gift-pulse {
   animation: gift-pulse 2.2s ease-out infinite;
 }
+
+/* Pulsing graphite glow for high-contrast gift CTA button */
+@keyframes gift-pulse-graphite {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(148, 148, 148, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(148, 148, 148, 0);
+  }
+}
+
+.animate-gift-pulse-graphite {
+  animation: gift-pulse-graphite 2.2s ease-out infinite;
+}
