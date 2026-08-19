@@ -3,20 +3,16 @@ import { ChevronLeft, ChevronRight, Phone, ArrowLeft } from "lucide-react"
 
 const images = [
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/eb6d3fe2-b926-4754-b19d-902e64b0b437.jpg",
-    alt: "Каркасная баня 48 м² — вид спереди с террасой",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e4144e2b-189d-4d48-8218-451469d54ca2.png",
+    alt: "Баня «Кедровая» 48 м² — вид спереди с террасой и купелью",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/44c61d2e-57e1-4905-b935-87d86e799e8f.jpg",
-    alt: "Каркасная баня 48 м² — вид сзади",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/d57fc79a-35df-4307-99b0-98c559f58be9.jpg",
+    alt: "Баня «Кедровая» 48 м² — вид сбоку в вечернем освещении",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/0d8abc6b-9765-46db-bab2-b736e58c8b93.jpg",
-    alt: "Каркасная баня 48 м² — 3D-модель фасада",
-  },
-  {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/b93f8806-b2bb-4768-b3ec-eef076cf43dd.jpg",
-    alt: "Каркасная баня 48 м² — план помещений",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/a69c3b3f-9dcc-41b5-a547-96ae64782849.png",
+    alt: "Баня «Кедровая» 48 м² — план помещений",
   },
 ]
 

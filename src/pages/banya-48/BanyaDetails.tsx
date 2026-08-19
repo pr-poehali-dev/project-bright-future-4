@@ -1,4 +1,4 @@
-import { Check } from "lucide-react"
+import { Check, Gift, Percent, Truck, FileText, Car } from "lucide-react"
 
 const rooms = [
   { name: "Парилка", area: "8,04 м²" },
@@ -11,7 +11,7 @@ const rooms = [
 
 const whyList = [
   "Каркасная технология — баня готова за 40–60 дней при хороших погодных условиях",
-  "Тёплые стены 200 мм минваты — баня быстро прогревается и держит тепло",
+  "Тёплые стены 150–200 мм минваты — баня быстро прогревается и держит тепло",
   "Натуральный планкен с тёмными акцентами — современный стильный фасад",
   "Полноценная парилка 8 м² с печью — классический банный жар",
   "Угловая ванна и душевая — максимум комфорта после пара",
@@ -23,7 +23,7 @@ const whyList = [
 const included = [
   "Фундамент на винтовых сваях или ленточный",
   "Силовой каркас из сухой строганой доски",
-  "Утепление минватой 200 мм + ветробарьер",
+  "Утепление минватой 150–200 мм + ветробарьер",
   "Кровля из металлочерепицы / профлиста",
   "Фасадная отделка (планкен натуральный с тёмными акцентами)",
   "Терраса с настилом из доски",
@@ -31,6 +31,14 @@ const included = [
   "Входная дверь металлическая утеплённая",
   "Внутренняя отделка парилки вагонкой из липы или осины",
   "Разводка электрики, водопровода, канализации",
+]
+
+const bonuses = [
+  { icon: Gift, text: "Один подарок из 5 на выбор — при заключении договора" },
+  { icon: Percent, text: "Действуют сезонные скидки" },
+  { icon: Truck, text: "Бесплатная доставка материалов по Туле" },
+  { icon: FileText, text: "Проект и смета — бесплатно" },
+  { icon: Car, text: "Выезд на участок бесплатно" },
 ]
 
 export default function BanyaDetails() {
@@ -83,7 +91,7 @@ export default function BanyaDetails() {
 
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/b93f8806-b2bb-4768-b3ec-eef076cf43dd.jpg"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/a69c3b3f-9dcc-41b5-a547-96ae64782849.png"
                 alt="План помещений бани 48 м²"
                 className="w-full object-contain mb-6"
               />
@@ -124,8 +132,8 @@ export default function BanyaDetails() {
             </div>
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/eb6d3fe2-b926-4754-b19d-902e64b0b437.jpg"
-                alt="Каркасная баня 48 м² — вид с участка"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e4144e2b-189d-4d48-8218-451469d54ca2.png"
+                alt="Баня «Кедровая» 48 м² — вид с участка вечером"
                 className="w-full object-cover aspect-[4/3]"
               />
             </div>
@@ -151,11 +159,26 @@ export default function BanyaDetails() {
             </div>
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/44c61d2e-57e1-4905-b935-87d86e799e8f.jpg"
-                alt="Каркасная баня 48 м² — вид сзади"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/d57fc79a-35df-4307-99b0-98c559f58be9.jpg"
+                alt="Баня «Кедровая» 48 м² — вид сбоку в вечернем освещении"
                 className="w-full object-cover aspect-[4/3]"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6 md:px-12">
+          <p className="text-orange-500 text-sm font-bold tracking-widest uppercase mb-3 text-center">Бонусы для клиентов</p>
+          <h2 className="text-2xl md:text-3xl font-medium mb-10 text-center">Что вы получаете дополнительно</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {bonuses.map((b) => (
+              <div key={b.text} className="bg-white p-6 flex flex-col items-center text-center gap-3">
+                <b.icon size={28} className="text-orange-500" />
+                <p className="text-sm text-gray-700 leading-relaxed">{b.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

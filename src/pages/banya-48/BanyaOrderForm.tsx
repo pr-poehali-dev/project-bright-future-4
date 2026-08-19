@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Mail } from "lucide-react"
+import { Mail, Phone, MapPin, Globe } from "lucide-react"
 import { PrivacyModal } from "@/components/PrivacyModal"
 import { TermsModal } from "@/components/TermsModal"
 
@@ -54,6 +54,36 @@ export default function BanyaOrderForm() {
               <Mail size={20} />
               Написать на почту
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-[#1a0f0f] text-white">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-orange-500 text-sm font-bold tracking-widest uppercase mb-3">Свяжитесь с нами</p>
+            <h2 className="text-2xl md:text-3xl font-medium mb-3">Проконсультируем и рассчитаем стоимость</h2>
+            <p className="text-white/60 mb-8">
+              Отвечаем в день обращения. Проконсультируем, рассчитаем стоимость и подберём проект под ваш бюджет и участок.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm">
+              <span className="flex items-center gap-2">
+                <MapPin size={16} className="text-orange-500" />
+                Тула и Тульская область
+              </span>
+              <a href="tel:+79509170972" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+                <Phone size={16} className="text-orange-500" />
+                +7 (950) 917-09-72
+              </a>
+              <a href="tel:+79509170974" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+                <Phone size={16} className="text-orange-500" />
+                +7 (950) 917-09-74
+              </a>
+              <a href="https://toystroy71.ru" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+                <Globe size={16} className="text-orange-500" />
+                toystroy71.ru
+              </a>
+            </div>
           </div>
         </div>
       </section>
