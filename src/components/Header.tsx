@@ -75,7 +75,8 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={() => setContactOpen(true)}
-              className="inline-flex items-center gap-2 text-sm px-5 py-2.5 transition-all duration-300 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white"
+              className="inline-flex items-center gap-2 text-sm px-5 py-2.5 transition-all duration-300 hover:opacity-90"
+              style={{backgroundColor: '#2b2b2b', color: '#E9A662'}}
             >
               Наши контакты
             </button>
@@ -193,73 +194,74 @@ export function Header() {
       {contactOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setContactOpen(false)} />
-          <div className="relative bg-white w-full max-w-md p-8 shadow-2xl">
+          <div className="relative w-full max-w-md p-8 shadow-2xl" style={{backgroundColor: '#2b2b2b'}}>
             <button
               onClick={() => setContactOpen(false)}
-              className="absolute top-4 right-4 text-foreground/50 hover:text-foreground transition-colors"
+              className="absolute top-4 right-4 transition-opacity hover:opacity-70"
+              style={{color: '#E9A662'}}
             >
               <Icon name="X" size={20} />
             </button>
 
-            <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-2">TOYSTROY · Тула</p>
-            <h2 className="text-2xl font-bold mb-8">Наши контакты</h2>
+            <p className="text-xs tracking-[0.3em] uppercase mb-2" style={{color: 'rgba(233, 166, 98, 0.6)'}}>TOYSTROY · Тула</p>
+            <h2 className="text-2xl font-bold mb-8" style={{color: '#E9A662'}}>Наши контакты</h2>
 
             <div className="space-y-5">
               <a href="tel:+79509170974" className="flex items-center gap-4 group">
-                <div className="w-10 h-10 bg-foreground/5 flex items-center justify-center flex-shrink-0">
-                  <Icon name="Phone" size={18} className="text-foreground" />
+                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'rgba(233, 166, 98, 0.1)'}}>
+                  <Icon name="Phone" size={18} style={{color: '#E9A662'}} />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-0.5">Телефон</p>
-                  <p className="font-semibold group-hover:text-orange-500 transition-colors">+7 (950) 917-09-74</p>
+                  <p className="text-xs mb-0.5" style={{color: 'rgba(233, 166, 98, 0.5)'}}>Телефон</p>
+                  <p className="font-semibold transition-opacity group-hover:opacity-80" style={{color: '#E9A662'}}>+7 (950) 917-09-74</p>
                 </div>
               </a>
 
               <a href="tel:+79509170972" className="flex items-center gap-4 group">
-                <div className="w-10 h-10 bg-foreground/5 flex items-center justify-center flex-shrink-0">
-                  <Icon name="Phone" size={18} className="text-foreground" />
+                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'rgba(233, 166, 98, 0.1)'}}>
+                  <Icon name="Phone" size={18} style={{color: '#E9A662'}} />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-0.5">Телефон</p>
-                  <p className="font-semibold group-hover:text-orange-500 transition-colors">+7 (950) 917-09-72</p>
+                  <p className="text-xs mb-0.5" style={{color: 'rgba(233, 166, 98, 0.5)'}}>Телефон</p>
+                  <p className="font-semibold transition-opacity group-hover:opacity-80" style={{color: '#E9A662'}}>+7 (950) 917-09-72</p>
                 </div>
               </a>
 
               <a href="mailto:Toystroy71rus@mail.ru" className="flex items-center gap-4 group">
-                <div className="w-10 h-10 bg-foreground/5 flex items-center justify-center flex-shrink-0">
-                  <Icon name="Mail" size={18} className="text-foreground" />
+                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'rgba(233, 166, 98, 0.1)'}}>
+                  <Icon name="Mail" size={18} style={{color: '#E9A662'}} />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-0.5">Email</p>
-                  <p className="font-semibold group-hover:text-orange-500 transition-colors">Toystroy71rus@mail.ru</p>
+                  <p className="text-xs mb-0.5" style={{color: 'rgba(233, 166, 98, 0.5)'}}>Email</p>
+                  <p className="font-semibold transition-opacity group-hover:opacity-80" style={{color: '#E9A662'}}>Toystroy71rus@mail.ru</p>
                 </div>
               </a>
 
               <a href="https://vk.ru/toystroy71" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                <div className="w-10 h-10 bg-foreground/5 flex items-center justify-center flex-shrink-0">
-                  <Icon name="Users" size={18} className="text-foreground" />
+                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'rgba(233, 166, 98, 0.1)'}}>
+                  <Icon name="Users" size={18} style={{color: '#E9A662'}} />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-0.5">ВКонтакте</p>
-                  <p className="font-semibold group-hover:text-orange-500 transition-colors">vk.ru/toystroy71</p>
+                  <p className="text-xs mb-0.5" style={{color: 'rgba(233, 166, 98, 0.5)'}}>ВКонтакте</p>
+                  <p className="font-semibold transition-opacity group-hover:opacity-80" style={{color: '#E9A662'}}>vk.ru/toystroy71</p>
                 </div>
               </a>
 
-
-              <a href="https://max.ru/join/eBogWRUdUiahBG30wNhO0hpDgvUTSuTV1v0FxL9skhI" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                <div className="w-10 h-10 bg-foreground/5 flex items-center justify-center flex-shrink-0">
-                  <Icon name="MessageCircle" size={18} className="text-foreground" />
+              <a href="https://max.ru/u/f9LHodD0cOJqKCLQhDVmA3cij32nug6Rb5T_Gb5T1pFCYeT9fKo5dFTsGdU" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'rgba(233, 166, 98, 0.1)'}}>
+                  <Icon name="MessageCircle" size={18} style={{color: '#E9A662'}} />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-0.5">MAX</p>
-                  <p className="font-semibold group-hover:text-orange-500 transition-colors">Написать в MAX</p>
+                  <p className="text-xs mb-0.5" style={{color: 'rgba(233, 166, 98, 0.5)'}}>MAX</p>
+                  <p className="font-semibold transition-opacity group-hover:opacity-80" style={{color: '#E9A662'}}>Написать в MAX · +7 (950) 917-09-74 / 09-72</p>
                 </div>
               </a>
             </div>
 
             <a
               href="tel:+79509170974"
-              className="mt-8 w-full inline-flex items-center justify-center gap-2 bg-foreground text-white px-6 py-3 text-sm font-medium hover:bg-foreground/90 transition-colors"
+              className="mt-8 w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium transition-opacity hover:opacity-90"
+              style={{backgroundColor: '#E9A662', color: '#2b2b2b'}}
             >
               <Icon name="Phone" size={16} />
               Позвонить сейчас

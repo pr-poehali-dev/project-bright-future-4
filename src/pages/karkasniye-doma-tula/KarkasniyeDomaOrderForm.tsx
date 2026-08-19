@@ -60,11 +60,13 @@ export default function KarkasniyeDomaOrderForm() {
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
-                  href="https://wa.me/79509170974"
+                  href="https://max.ru/u/f9LHodD0cOJqKCLQhDVmA3cij32nug6Rb5T_Gb5T1pFCYeT9fKo5dFTsGdU"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm font-medium text-[#1a0f0f] hover:text-orange-500 transition-colors"
                 >
                   <MessageCircle size={20} />
-                  Написать в WhatsApp
+                  Написать в MAX
                 </a>
                 <span className="text-gray-300">|</span>
                 <a
