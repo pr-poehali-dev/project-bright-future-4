@@ -195,9 +195,9 @@ export function Calculator() {
             )}
           </form>
 
-          <div className="bg-foreground text-background p-6 sm:p-10 flex flex-col gap-8 lg:sticky lg:top-32">
+          <div className="text-background p-6 sm:p-10 flex flex-col gap-8 lg:sticky lg:top-32" style={{backgroundColor: '#2b2b2b'}}>
             <div>
-              <p className="text-background/60 text-sm tracking-[0.2em] uppercase mb-6">Ваша заявка включает</p>
+              <p className="text-sm tracking-[0.2em] uppercase mb-6" style={{color: 'rgba(233, 166, 98, 0.7)'}}>Ваша заявка включает</p>
               <ul className="space-y-4">
                 {[
                   { icon: "Home", text: `Тип: ${buildingType}` },
@@ -206,23 +206,23 @@ export function Calculator() {
                   { icon: "Clock", text: "Ответ в течение 1 часа" },
                 ].map((item) => (
                   <li key={item.text} className="flex items-center gap-4 text-sm text-background/80">
-                    <Icon name={item.icon} size={18} className="text-background/50 flex-shrink-0" />
+                    <Icon name={item.icon} size={18} className="flex-shrink-0" style={{color: '#E9A662'}} />
                     {item.text}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="border-t border-background/20 pt-8">
+            <div className="border-t pt-8" style={{borderColor: 'rgba(233, 166, 98, 0.2)'}}>
               <p className="text-background/50 text-xs leading-relaxed mb-4">
                 Или свяжитесь с нами напрямую.
               </p>
-              <a href="tel:+79509170974" className="flex items-center gap-3 text-background hover:text-background/80 transition-colors">
-                <Icon name="Phone" size={16} />
+              <a href="tel:+79509170974" className="flex items-center gap-3 text-background hover:opacity-80 transition-colors">
+                <Icon name="Phone" size={16} style={{color: '#E9A662'}} />
                 <span className="text-sm font-medium">+7 (950) 917-09-74</span>
               </a>
-              <a href="tel:+79509170972" className="flex items-center gap-3 text-background hover:text-background/80 transition-colors mt-2">
-                <Icon name="Phone" size={16} />
+              <a href="tel:+79509170972" className="flex items-center gap-3 text-background hover:opacity-80 transition-colors mt-2">
+                <Icon name="Phone" size={16} style={{color: '#E9A662'}} />
                 <span className="text-sm font-medium">+7 (950) 917-09-72</span>
               </a>
             </div>

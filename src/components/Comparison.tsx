@@ -54,11 +54,11 @@ const rows = [
 
 export function Comparison() {
   return (
-    <section className="py-20 relative overflow-hidden bg-black">
+    <section className="py-20 relative overflow-hidden" style={{backgroundColor: '#2b2b2b'}}>
       <div className="max-w-5xl mx-auto px-4 relative z-10">
-        <p className="text-xs tracking-[0.3em] uppercase text-orange-400 mb-3">Сравнение материалов</p>
+        <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{color: 'rgba(233, 166, 98, 0.7)'}}>Сравнение материалов</p>
         <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">
-          Почему каркас — <span className="text-orange-500">лучший выбор?</span>
+          Почему каркас — <span style={{color: '#E9A662'}}>лучший выбор?</span>
         </h2>
         <p className="text-gray-400 mb-12 max-w-xl">
           Сравниваем честно — по цене, срокам и качеству жизни в доме
@@ -72,25 +72,25 @@ export function Comparison() {
                 <th className="text-left py-4 pr-4 text-gray-400 font-medium w-1/4"></th>
                 <th className="py-4 px-4 text-center w-1/4">
                   <div className="inline-flex flex-col items-center gap-1">
-                    <div className="bg-orange-500 text-white text-xs font-bold px-3 py-1 tracking-wide">КАРКАС</div>
-                    <span className="text-[10px] text-orange-500 font-semibold">TOYSTROY</span>
+                    <div className="text-xs font-bold px-3 py-1 tracking-wide" style={{backgroundColor: '#E9A662', color: '#2b2b2b'}}>КАРКАС</div>
+                    <span className="text-[10px] font-semibold" style={{color: '#E9A662'}}>TOYSTROY</span>
                   </div>
                 </th>
                 <th className="py-4 px-4 text-center w-1/4">
-                  <div className="bg-gray-200 text-gray-600 text-xs font-bold px-3 py-1 tracking-wide inline-block">КИРПИЧ</div>
+                  <div className="bg-gray-700 text-gray-300 text-xs font-bold px-3 py-1 tracking-wide inline-block">КИРПИЧ</div>
                 </th>
                 <th className="py-4 px-4 text-center w-1/4">
-                  <div className="bg-gray-200 text-gray-600 text-xs font-bold px-3 py-1 tracking-wide inline-block">ГАЗОБЕТОН</div>
+                  <div className="bg-gray-700 text-gray-300 text-xs font-bold px-3 py-1 tracking-wide inline-block">ГАЗОБЕТОН</div>
                 </th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row, i) => (
-                <tr key={i} className={i % 2 === 0 ? "bg-white/10" : "bg-white/5"}>
+                <tr key={i} style={{backgroundColor: i % 2 === 0 ? 'rgba(233, 166, 98, 0.06)' : 'transparent'}}>
                   <td className="py-4 pr-4 font-medium text-gray-200">{row.label}</td>
                   <td className="py-4 px-4 text-center">
-                    <div className="flex items-center justify-center gap-1.5 text-orange-400 font-semibold">
-                      <Icon name="Check" size={14} className="text-orange-500 flex-shrink-0" />
+                    <div className="flex items-center justify-center gap-1.5 font-semibold" style={{color: '#E9A662'}}>
+                      <Icon name="Check" size={14} className="flex-shrink-0" style={{color: '#E9A662'}} />
                       {row.frame}
                     </div>
                   </td>
@@ -107,19 +107,19 @@ export function Comparison() {
           {/* Шапка */}
           <div className="grid grid-cols-3 gap-2 mb-4">
             <div className="flex flex-col items-center gap-1">
-              <div className="bg-orange-500 text-white text-[10px] font-bold px-2 py-1 tracking-wide text-center w-full">КАРКАС</div>
-              <span className="text-[9px] text-orange-400 font-semibold">TOYSTROY</span>
+              <div className="text-[10px] font-bold px-2 py-1 tracking-wide text-center w-full" style={{backgroundColor: '#E9A662', color: '#2b2b2b'}}>КАРКАС</div>
+              <span className="text-[9px] font-semibold" style={{color: '#E9A662'}}>TOYSTROY</span>
             </div>
             <div className="bg-gray-700 text-gray-300 text-[10px] font-bold px-2 py-1 tracking-wide text-center">КИРПИЧ</div>
             <div className="bg-gray-700 text-gray-300 text-[10px] font-bold px-2 py-1 tracking-wide text-center">ГАЗОБЕТОН</div>
           </div>
           {rows.map((row, i) => (
-            <div key={i} className={`rounded-sm p-3 ${i % 2 === 0 ? "bg-white/10" : "bg-white/5"}`}>
+            <div key={i} className="rounded-sm p-3" style={{backgroundColor: i % 2 === 0 ? 'rgba(233, 166, 98, 0.06)' : 'transparent'}}>
               <p className="text-gray-300 text-[11px] font-semibold mb-2 uppercase tracking-wide">{row.label}</p>
               <div className="grid grid-cols-3 gap-2">
                 <div className="flex flex-col items-center gap-0.5">
-                  <Icon name="Check" size={12} className="text-orange-500" />
-                  <span className="text-orange-400 font-semibold text-[11px] text-center leading-tight">{row.frame}</span>
+                  <Icon name="Check" size={12} style={{color: '#E9A662'}} />
+                  <span className="font-semibold text-[11px] text-center leading-tight" style={{color: '#E9A662'}}>{row.frame}</span>
                 </div>
                 <span className="text-gray-400 text-[11px] text-center leading-tight">{row.brick}</span>
                 <span className="text-gray-400 text-[11px] text-center leading-tight">{row.gas}</span>
@@ -128,8 +128,8 @@ export function Comparison() {
           ))}
         </div>
 
-        <div className="mt-10 bg-orange-500/10 border border-orange-500/30 p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <Icon name="Lightbulb" size={28} className="text-orange-400 flex-shrink-0" />
+        <div className="mt-10 border p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4" style={{backgroundColor: 'rgba(233, 166, 98, 0.08)', borderColor: 'rgba(233, 166, 98, 0.3)'}}>
+          <Icon name="Lightbulb" size={28} className="flex-shrink-0" style={{color: '#E9A662'}} />
           <p className="text-sm text-gray-200 leading-relaxed">
             <strong className="text-white">Вывод:</strong> каркасный дом обходится в 2 раза дешевле кирпичного, строится в 4 раза быстрее и готов к отделке сразу после сдачи — без ожидания усадки.
           </p>
