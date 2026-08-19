@@ -165,9 +165,10 @@ export function Calculator() {
               <button
                 type="button"
                 onClick={() => setGiftOpen(true)}
-                className="flex items-center justify-center gap-2 w-full bg-black px-4 py-3 text-sm text-amber-200 font-black hover:bg-neutral-900 transition-colors"
+                className="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-black transition-opacity hover:opacity-90"
+                style={{backgroundColor: '#2b2b2b', color: '#E9A662'}}
               >
-                <Icon name="Gift" size={16} />
+                <Icon name="Gift" size={16} style={{color: '#E9A662'}} />
                 Выбрать подарок (обязательно)
               </button>
             )}
