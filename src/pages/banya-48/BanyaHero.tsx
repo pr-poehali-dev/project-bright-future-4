@@ -7,7 +7,7 @@ const images = [
     alt: "Баня «Кедровая» 48 м² — вид спереди с террасой и купелью",
   },
   {
-    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/910edd4a-8196-45ce-b227-dc3d4f08442a.png",
+    src: "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/43561082-00eb-45f5-9e56-a2894b16ccfe.png",
     alt: "Баня «Кедровая» 48 м² — вид сбоку в вечернем освещении",
   },
   {

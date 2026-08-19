@@ -282,7 +282,7 @@ export const projects: Project[] = [
     year: "2026",
     images: [
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/e4144e2b-189d-4d48-8218-451469d54ca2.png",
-      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/910edd4a-8196-45ce-b227-dc3d4f08442a.png",
+      "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/43561082-00eb-45f5-9e56-a2894b16ccfe.png",
       "https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/a69c3b3f-9dcc-41b5-a547-96ae64782849.png",
     ],
     link: "/projects/banya-48",
