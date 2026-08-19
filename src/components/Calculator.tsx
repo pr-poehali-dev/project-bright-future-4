@@ -165,10 +165,10 @@ export function Calculator() {
               <button
                 type="button"
                 onClick={() => setGiftOpen(true)}
-                className="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-black transition-opacity hover:opacity-90"
-                style={{backgroundColor: '#2b2b2b', color: '#E9A662'}}
+                className="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-black transition-opacity hover:opacity-90 animate-gift-pulse"
+                style={{backgroundColor: '#2b2b2b', color: '#E9A662', textShadow: '0 0 10px rgba(233, 166, 98, 0.9), 0 0 20px rgba(233, 166, 98, 0.5)'}}
               >
-                <Icon name="Gift" size={16} style={{color: '#E9A662'}} />
+                <Icon name="Gift" size={16} style={{color: '#E9A662', filter: 'drop-shadow(0 0 6px rgba(233, 166, 98, 0.9))'}} />
                 Выбрать подарок (обязательно)
               </button>
             )}
