@@ -43,10 +43,9 @@ export function FloatingCall() {
       <button
         onClick={() => setOpen(true)}
         aria-label="Наши контакты"
-        className={`md:hidden fixed bottom-6 right-4 z-50 flex items-center gap-2 px-4 py-3 shadow-lg transition-all duration-300 ${
+        className={`md:hidden fixed bottom-6 right-4 z-50 flex items-center gap-2 bg-orange-500 text-white px-4 py-3 shadow-lg transition-all duration-300 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
         }`}
-        style={{backgroundColor: '#2b2b2b', color: '#E9A662'}}
       >
         <Icon name="Phone" size={18} />
         <span className="text-sm font-bold tracking-wide">Наши контакты</span>
