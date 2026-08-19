@@ -70,7 +70,7 @@ export default function Flyer() {
               "Строим круглый год",
               "Одна бригада без субподрядчиков",
               "Фотоотчёты с площадки каждый день",
-              "Древесина камерной сушки",
+              "Сухая строганая доска",
               "Партнёры: GrandLine, Технониколь",
             ].map((item, i) => (
               <div key={i} style={{ display: "flex", gap: "8px", marginBottom: "13px", alignItems: "flex-start" }}>
