@@ -159,7 +159,7 @@ export default function BanyaDetails() {
             </div>
             <div>
               <img
-                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/d57fc79a-35df-4307-99b0-98c559f58be9.jpg"
+                src="https://cdn.poehali.dev/projects/614242ea-a957-4915-8b40-2cdf0c2c40f1/bucket/910edd4a-8196-45ce-b227-dc3d4f08442a.png"
                 alt="Баня «Кедровая» 48 м² — вид сбоку в вечернем освещении"
                 className="w-full object-cover aspect-[4/3]"
               />
